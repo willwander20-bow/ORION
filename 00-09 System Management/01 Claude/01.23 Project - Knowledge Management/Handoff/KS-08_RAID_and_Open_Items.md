@@ -709,7 +709,9 @@ Findings:
 - F1. Rulebook §1: the access check (step 4) comes before the Source ID (step 6). A failed access check then has no record to set to `failed`. In O2 the Orchestrator made the record anyway. Proposed fix: assign the ID and save the Source as `new` at step 3, before the duplicate check and the access check.
 - F2. The quote check script works and is fast. It is now only in the scratchpad. Proposal: save it in the vault as `20.04 Knowledge Reference\Quote Check.ps1` and name it in Rulebook §4.1. Limits: web pages only, not companion files or PDFs. A quote that contains a `"` character is not read.
 
-Next: Justin decides F1, F2, and the "(new)" rules. Then O1.
+F1 and F2 APPLIED 2026-11-13 (KS-D-40): Rulebook draft v0.2, `Quote Check.ps1` in `20.04`. The vault copy of the script gave the same result on BRF-003 (21 of 21) and on the changed copy (1 failed).
+
+Next: Justin confirms the "(new)" rules. Then O1.
 
 ## 9. Change log
 
@@ -741,3 +743,4 @@ Next: Justin decides F1, F2, and the "(new)" rules. Then O1.
 | 2026-11-13 | 0.24 | New §8.11: Phase 5 plan (draft, Justin to approve). |
 | 2026-11-13 | 0.25 | §8.11: plan approved (KS-D-39). KS-G-02 resolved. Orchestrator Rulebook made. |
 | 2026-11-13 | 0.26 | §8.11: test results O2 and O3 (PASS). Findings F1 and F2. |
+| 2026-11-13 | 0.27 | F1 and F2 applied (KS-D-40). |

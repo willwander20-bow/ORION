@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: draft v0.1, Phase 5. Justin has not reviewed it. A rule marked **(new)** is not current practice. Justin must confirm it. All other rules come from the documents named in the rule.
+Status: draft v0.2, Phase 5. Justin has not reviewed it. A rule marked **(new)** is not current practice. Justin must confirm it. All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -20,10 +20,10 @@ Routing is the first stage for each source (KS-03 §6.1, KS-D-07). Do these step
 
 1. **Record the submission.** Copy the `url` (or the file path) and Justin's reason. Put Justin's words in `submission-context`. Keep them separate from the source content.
 2. **Source type.** Set `source-type` (Schema §5.4).
-3. **Duplicate check.** Search `22.21 Sources` for the same `url` and for a similar title. If a match exists, make the Source with `duplicate-of` and status `skipped`. Stop. Do not invoke the Reporter (test E4).
-4. **Access check (new).** Get the page (for example, `curl`). If the page does not load, or it gives no source text, record the error in the work log, set the Source to `failed`, and stop. Ask Justin for a file or a different link. Do not invoke the Reporter (KS-03 §6.1, area `CLAUDE.md` rule 7).
-5. **Work content.** If the source relates to Charter or Spectrum, set the Source to `needs-review` and stop until Justin decides (X-D-12, X-D-13). Note: no criteria exist yet for "relates to" (KS-G-24). If you are not sure, ask Justin.
-6. **Source ID.** Assign the ID (section 3). Save the Source from `TPL Source.md` with status `new`.
+3. **Source ID.** Assign the ID (section 3). Save the Source from `TPL Source.md` with status `new`. Each later step then has a record to update (F1, KS-D-40).
+4. **Duplicate check.** Search `22.21 Sources` for the same `url` and for a similar title. If a match exists, set `duplicate-of` and the status `skipped`. Stop. Do not invoke the Reporter (test E4).
+5. **Access check (new).** Get the page (for example, `curl`). If the page does not load, or it gives no source text, set `access-status: none`, record the error in the work log, set the Source to `failed`, and stop. Ask Justin for a file or a different link. Do not invoke the Reporter (KS-03 §6.1, area `CLAUDE.md` rule 7, test O2).
+6. **Work content.** If the source relates to Charter or Spectrum, set the Source to `needs-review` and stop until Justin decides (X-D-12, X-D-13). Note: no criteria exist yet for "relates to" (KS-G-24). If you are not sure, ask Justin.
 7. **Processing level.** Set `processing-level` (section 1.1).
 8. **Routing result.** Set the Source to `routed`. Write one log row: the level and the scope.
 
@@ -43,7 +43,7 @@ The Source `status` is the workflow state (Schema §5.1, KS-D-25). There is no s
 
 | From | To | Who | Condition |
 |---|---|---|---|
-| — | `new` | Orchestrator | Source saved (routing step 6). |
+| — | `new` | Orchestrator | Source saved (routing step 3). |
 | `new` | `routed` | Orchestrator | Routing steps 1 to 8 complete. |
 | `new` | `skipped` | Orchestrator | Duplicate, or Justin says do not process. Reason recorded. |
 | `new` | `archived` | Orchestrator | `archive-only`. |
@@ -80,6 +80,8 @@ Validate each output before the next stage. If a check fails, set the output to 
 1. The Reporter's final check (reporter §11) is in Brief §12, and each item passes.
 2. Frontmatter: all fields of `TPL Reference Brief.md` are present. Values are in Schema §5.5. `source` links to the Source. `claim-count` equals the rows in §7.
 3. **Quote check.** Check each `Quote:` against the raw page (`curl` with tags removed) or the companion file. Each quote must match exactly and have 15 words or fewer. WebFetch text is not proof (area `CLAUDE.md` rule 9a, KS-D-31).
+   - Web page: run `Quote Check.ps1` in this folder (F2, KS-D-40). Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Quote Check.ps1" -Brief "<Brief path>" -Url "<url>"`. Pass: "Failed: 0".
+   - The script does not check a companion file or a PDF. It does not read a quote that contains a `"` character. Check these by hand.
 4. Locators: each heading or `¶` locator exists in the source. Check all of them for a short source. Check a sample of at least 5 for a long source (new).
 5. Sections: `full-review` uses all 12 sections. `quick-brief` uses 1, 3, 7, 8, 10.
 6. `git status` shows no file changed by the Reporter (new).
@@ -151,3 +153,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | Date | Version | Change |
 |---|---|---|
 | 2026-11-13 | 0.1 | First draft (KS-D-39). |
+| 2026-11-13 | 0.2 | F1: Source ID and save moved to routing step 3. F2: `Quote Check.ps1` named in §4.1 (KS-D-40). |

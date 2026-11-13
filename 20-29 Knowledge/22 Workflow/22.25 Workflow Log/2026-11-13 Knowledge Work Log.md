@@ -69,6 +69,8 @@
 | 13:00 | orchestrator | O2: routing. Duplicate check: no match. Access check: HTTP 404. Source saved, Reporter not invoked | [[SRC-20261113-007 O2 test, page does not exist]] | `failed` |
 | 13:05 | orchestrator | O3: quote check on a scratchpad copy of the Brief. Control 21 of 21 exact. Changed copy: 1 failed quote (E3). Not set to `validated`. Editor not invoked | [[BRF-20261113-003 Write plain text files]] (copy, not changed) | PASS |
 | 13:05 | orchestrator | O2 and O3 results and findings F1, F2 written in KS-08 §8.11 | KS-08 §8.11 | PASS |
+| 13:15 | justin | "Apply F1 and F2". Recorded as KS-D-40 | KS-07, KS-08 §8.11 | `approved` |
+| 13:15 | orchestrator | F1 and F2 applied: Rulebook draft v0.2, `Quote Check.ps1` saved and run again (same result) | `20.04 Knowledge Reference\Orchestrator Rulebook.md`, `20.04 Knowledge Reference\Quote Check.ps1` | OK |
 
 ## Errors
 
