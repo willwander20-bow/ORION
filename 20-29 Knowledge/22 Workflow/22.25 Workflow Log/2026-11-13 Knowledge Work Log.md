@@ -82,6 +82,9 @@
 | 14:20 | orchestrator | Validation (Rulebook §4.2): Editor final check passes, `brain-version` current, 4 of 4 Brain links resolve, title copied from the Brief, `git status`: no file changed by the Editor. Column check on the raw page for A2: "Plain text" is in the Acceptable column (confirmed). Note added to the Assessment | [[KAS-20261113-006 LoC Recommended Formats, textual works]] | `validated` |
 | 14:20 | orchestrator | Source set to `assessed` | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | `assessed` |
 | 14:35 | orchestrator | YAML fix (Justin found it): `submission-context` had an unquoted ": ", so Obsidian could not read the frontmatter. Value put in single quotes. Scan of all `22 Workflow` records: no other case | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | OK |
+| 14:30 | managing-editor | O1: Change Order returned at `CO-20261113-006`. 5 rows (X1 to X5). No record unseen by the Assessment. No open Change Orders | [[CO-20261113-007 LoC Recommended Formats, textual works]] | OK |
+| 14:40 | orchestrator | Validation (Rulebook §4.3): Managing Editor final check passes, `brain-version` current, decision fields empty, each row cites `E` labels and a finding, 10 of 10 "current state" quotes found in the Brain, `git status`: no file changed by the Managing Editor, `21 Brain` not changed. Saved and presented to Justin | [[CO-20261113-007 LoC Recommended Formats, textual works]] | `open` |
+| 14:40 | orchestrator | Source set to `change-proposed` | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | `change-proposed` |
 
 ## Errors
 
