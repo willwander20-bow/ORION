@@ -837,6 +837,23 @@ Result: PASS, subject to Justin's review.
 Findings from C2:
 - G3. `Link Check.ps1` does not report a Brain record with an empty `change-orders` list. KS-D-03 requires each Brain record to link the Change Order that made it. The Curator found it (H1), and noted the gap in the script. Proposed fix: a `NO-CO` line for each Claim, Concept, or MOC with no `change-orders` entry.
 
+#### Test result C3 (2026-11-13)
+
+Input: mode `retrieval`, real Brain, Brain version `CO-20261113-007`. Question: "Which formats are safest for lasting notes?" The answer is not a record (Schema §5.12). It stays in the session.
+
+| Check | Result |
+|---|---|
+| Status of each claim | Yes. CLM-001 `accepted`, `confidence: medium`, `evidence-strength: weak`. Both Concepts `accepted`. No proposed content (no `draft`, `open`, or `decided` Change Order). |
+| Evidence linked | Yes. All 5 Briefs linked, with their type and limits, as the MOC gives them. |
+| Nothing invented | Yes. The claim quotation is exact. The encoding lists, NARA and LoC preferences, and the Bologov conditions match CLM-001 and the MOC. It says that the Brain gives no ranked list of "safest" formats, and it does not fill the gap from its own knowledge. It names one possible Research Question. |
+| Conflict visible | Yes. NARA and LoC rank plain text differently. |
+| No write | `git status`: no agent change. |
+
+Result: PASS, subject to Justin's review.
+
+Finding from C3:
+- G4 (minor). The answer labels LoC "Qualifies, and conflicts with NARA's ranking". The MOC says "Qualifies, and supports in part", and the answer leaves out that LoC supports the encoding condition. The body of the answer gives that condition. No change proposed.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -874,3 +891,4 @@ Findings from C2:
 | 2026-11-13 | 0.31 | New §8.12: Phase 6 plan approved (KS-D-43). KS-C-32, KS-C-38, KS-Q-20, KS-G-12 resolved. Step 1 done. New gap KS-G-29. |
 | 2026-11-13 | 0.32 | §8.12: test result C1 (PASS, subject to Justin's review). Findings G1, G2. |
 | 2026-11-13 | 0.33 | §8.12: test result C2 (8 of 8, PASS, subject to Justin's review). Finding G3. |
+| 2026-11-13 | 0.34 | §8.12: test result C3 (PASS, subject to Justin's review). Finding G4. |
