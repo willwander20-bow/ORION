@@ -85,6 +85,10 @@
 | 14:30 | managing-editor | O1: Change Order returned at `CO-20261113-006`. 5 rows (X1 to X5). No record unseen by the Assessment. No open Change Orders | [[CO-20261113-007 LoC Recommended Formats, textual works]] | OK |
 | 14:40 | orchestrator | Validation (Rulebook §4.3): Managing Editor final check passes, `brain-version` current, decision fields empty, each row cites `E` labels and a finding, 10 of 10 "current state" quotes found in the Brain, `git status`: no file changed by the Managing Editor, `21 Brain` not changed. Saved and presented to Justin | [[CO-20261113-007 LoC Recommended Formats, textual works]] | `open` |
 | 14:40 | orchestrator | Source set to `change-proposed` | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | `change-proposed` |
+| 14:50 | justin | Decision on the Change Order: "Approve all rows" | [[CO-20261113-007 LoC Recommended Formats, textual works]] | `approved` |
+| 14:55 | orchestrator | Version check (`CO-20261113-006` matched), then Change Order applied: 2 Brain records changed (X1 to X3 on CLM-001, X4 and X5 on MOC-001). Source set to `done` | [[CO-20261113-007 LoC Recommended Formats, textual works]] | Brain version `CO-20261113-006` to `CO-20261113-007` |
+| 15:00 | orchestrator | YAML scan of 31 records (unquoted `: `, ` #`, special first character): no problem found | `21`, `22.21` to `22.24` | OK |
+| 15:00 | orchestrator | O1 result and findings F3 to F5 written in KS-08 §8.11 | KS-08 §8.11 | PASS, subject to Justin's review |
 
 ## Errors
 

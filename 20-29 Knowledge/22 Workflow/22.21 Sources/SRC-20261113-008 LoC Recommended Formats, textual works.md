@@ -2,9 +2,9 @@
 id: SRC-20261113-008
 type: source
 title: "Recommended Formats Statement - Textual Works"
-status: change-proposed
+status: done
 created: 2026-11-13T13:35
-updated: 2026-11-13T14:40
+updated: 2026-11-13T14:55
 created-by: orchestrator
 schema-version: "0.9"
 url: https://www.loc.gov/preservation/resources/rfs/text.html

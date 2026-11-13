@@ -713,7 +713,33 @@ F1 and F2 APPLIED 2026-11-13 (KS-D-40): Rulebook draft v0.2, `Quote Check.ps1` i
 
 New rules APPROVED 2026-11-13 (KS-D-41). Rulebook v0.3, status `approved`. KS-G-20 resolved (retry rule).
 
-Next: O1, the full workflow on the Library of Congress source.
+#### Test result O1 (2026-11-13)
+
+Source `SRC-20261113-008`, Library of Congress, "Recommended Formats Statement - Textual Works", `full-review`.
+
+| Stage | Record | Result |
+|---|---|---|
+| Routing | SRC-008 | Duplicate check: no match. Access check: HTTP 200. `routed`. |
+| Reporter | BRF-20261113-006 | 14 Claim Candidates. Quotes 11 of 11 exact (2 by hand, F3). Locators 19 of 19 found. `validated`. |
+| Editor | KAS-20261113-006 | 7 findings, `advance`. Column placement for A2 checked on the raw page (confirmed). `validated`. |
+| Managing Editor | CO-20261113-007 | 5 rows. 10 of 10 "current state" quotes found in the Brain. `open`. |
+| Decision | CO-007 | Justin: "Approve all rows". |
+| Apply | CO-007 | Version check: `CO-20261113-006` matched. CLM-001 and MOC-001 changed. Brain version `CO-20261113-007`. Source `done`. |
+
+Exit test (KS-06 Phase 5): "one source moves through the full workflow with no silent failure and no unauthorized change."
+
+Result: PASS, subject to Justin's review, with one defect (F4).
+- Full workflow: the source moved from `new` to `done`. Each state change has a log row. Each output passed its checklist before the next stage.
+- No unauthorized change: `git status` after each agent run showed no agent write. `21 Brain` changed only after Justin's approval and the version check.
+- Silent failure: one. The Orchestrator wrote SRC-008 with an unquoted `: ` in `submission-context`. The frontmatter was not valid YAML. No check found it. Justin found it in Obsidian. A forked session fixed it (commit `63b2258`). Refer to F4.
+
+Findings:
+- F3. `Quote Check.ps1` puts a space where a tag was. When a link tag is next to punctuation (`EPUB3</a>-compliant`), a correct quote fails. Proposed fix: remove inline tags (`a`, `span`, `em`, `strong`, `b`, `i`, `abbr`) with no space, and other tags with a space.
+- F4. No YAML check. Rulebook §4 checks the fields, but not that the frontmatter is valid YAML. Proposed fix: (1) Rulebook rule: put a value in quotes when it contains `: `, ` #`, or starts with a special character; (2) a check after each save. A scan of 31 records with this rule found no other case. Python (with a YAML parser) remains a possible enhancement (KS-D-37).
+- F5. The Reporter has no shell tool, so it cannot run the quote check itself. The Orchestrator check worked. No change proposed.
+- The Brief reported a ranked list "1 to 8". The raw page has 6 items. The Brief marked it as not confirmed. No Brain text uses the number.
+
+Next: Justin reviews the O1 result and decides F3 and F4. Then the Phase 5 exit test can pass.
 
 ## 9. Change log
 
@@ -747,3 +773,4 @@ Next: O1, the full workflow on the Library of Congress source.
 | 2026-11-13 | 0.26 | §8.11: test results O2 and O3 (PASS). Findings F1 and F2. |
 | 2026-11-13 | 0.27 | F1 and F2 applied (KS-D-40). |
 | 2026-11-13 | 0.28 | Rulebook new rules approved (KS-D-41). KS-G-20 resolved. |
+| 2026-11-13 | 0.29 | §8.11: test result O1. Exit test PASS, subject to Justin's review. Findings F3 to F5. |
