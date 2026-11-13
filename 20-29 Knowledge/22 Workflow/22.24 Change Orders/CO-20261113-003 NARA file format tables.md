@@ -1,0 +1,74 @@
+---
+id: CO-20261113-003
+type: change-order
+title: NARA file format tables
+status: open
+created: 2026-11-13T11:50
+updated: 2026-11-13T11:50
+created-by: managing-editor
+schema-version: "0.8"
+assessment: "[[KAS-20261113-003 NARA file format tables]]"
+source: "[[SRC-20261113-002 NARA file format tables]]"
+brain-version: CO-20261113-001
+change-types:
+  - add-evidence
+  - qualify
+affected:
+  - "[[CLM-20261113-001 Lasting notes belong in open files]]"
+  - "[[MOC-20261113-001 Note durability]]"
+priority: low
+decision:
+decided:
+decision-note:
+applied:
+brain-version-after:
+---
+
+<!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
+
+## 1. Summary
+
+Add the NARA file format tables as a second, independent source for the claim "Lasting notes belong in open files". NARA prefers plain text (ASCII, UTF-8, UTF-16) for textual records and lists both Word formats as acceptable only. This points the same way as the claim. But NARA gives no reasons, and its scope is federal records, so the evidence strength stays `weak`. The change also adds one condition to the claim (the encoding of plain text is known) and updates the MOC, which now says "only one source".
+
+## 2. Proposed changes
+
+| Label | Change type | Record | Current state | Proposed state | Evidence | Reason |
+|---|---|---|---|---|---|---|
+| X1 | add-evidence | [[CLM-20261113-001 Lasting notes belong in open files\|Lasting notes belong in open files]] | Claim text unchanged. `confidence: medium`, `evidence-strength: weak`. Evidence: 3 lines, all from BRF-20261113-001 (E1, E2, E6). Caveats 1 and 2: "One opinion source. The author leads Obsidian, so the principle supports his product." / "The source gives no data. Evidence strength is `weak` until a second, independent source supports it." | Claim text: no change. `confidence: medium` (no change). `evidence-strength: weak` (no change). Add to **Evidence**: (a) `[[BRF-20261113-002 NARA file format tables\|NARA file format tables (reviewed 2026)]] · E2 · § Born-Digital Textual Data, Preferred Formats table, rows ASCII Text and Unicode Text · supports (indirect) · NARA prefers plain text for textual records.` (b) `[[BRF-20261113-002 NARA file format tables\|NARA file format tables (reviewed 2026)]] · E6 · § Born-Digital Textual Data, Acceptable Formats table, row Microsoft Word (DOCX) Office Open XML · supports (indirect) · DOCX is acceptable only, not preferred.` (c) `[[BRF-20261113-002 NARA file format tables\|NARA file format tables (reviewed 2026)]] · E7 · § Born-Digital Textual Data, Acceptable Formats table, row DOC · supports (indirect) · DOC is acceptable only, not preferred.` Replace caveats 1 and 2 in **Disputes and caveats** with: "- Two sources. Ango (2023) is an opinion source. The author leads Obsidian, so the principle supports his product." / "- NARA (BRF-20261113-002) is independent and institutional, but its support is indirect. It ranks plain text above Word formats for the transfer of federal records. It gives no reasons, so it does not support the reason in this claim. Its scope is federal records, not personal notes. The part of the page that the Brief read does not define 'preferred' and 'acceptable'." / "- NARA also prefers ODT and PDF/A-1 and PDF/A-2, and lists general PDF 1.0–1.7 as acceptable only. NARA does not call these formats open. Openness alone possibly does not explain its ranking." / "- Currency: the NARA page was last reviewed on 2026-03-11, but its DOCX row names Word 2007–2010 only. The lists can be older than the current versions of the formats." / "- Evidence strength stays `weak`. Neither source gives data or reasons that show that open files outlast apps." Keep the ORION caveat as it is. Frontmatter: set `last-reviewed` and `updated` to the apply date. Add this Change Order to `change-orders`. | [[BRF-20261113-002 NARA file format tables]] · E2, E6, E7 (support); E3, E4, E5 (caveat) | A1: independent institutional support for the direction of the claim, with the limits of scope, no reasons, and tiers that are not defined. Caveat text from A3, A4, A7. |
+| X2 | qualify | [[CLM-20261113-001 Lasting notes belong in open files\|Lasting notes belong in open files]] | **Context and conditions**: "Applies to personal knowledge that must stay usable for years or decades. It does not say that every tool must use plain text." No condition on encoding. | Claim text: no change. Add this paragraph to **Context and conditions**, after the current text: "Condition for plain text: the character encoding is known. NARA requires agencies to identify the encoding of each text file, and it prefers ASCII 7-bit, UTF-8, and UTF-16. This rule is for the transfer of federal records. Its use for personal notes is an extension. NARA does not say why or how to record the encoding." Add to **Evidence**: `[[BRF-20261113-002 NARA file format tables\|NARA file format tables (reviewed 2026)]] · E1 · § Born-Digital Textual Data (prose before the tables) · supports · encoding rule for plain text.` | [[BRF-20261113-002 NARA file format tables]] · E1, E2 | A2: the claim says "plain text" but names no encoding. NARA names the encodings and requires that the encoding is identified. |
+| X3 | add-evidence | [[MOC-20261113-001 Note durability\|Note durability]] | **Important claims**: "(evidence `weak`, one source)". **Evidence for and against**: For: Ango (2023) only. **Disputes and gaps**: "Only one source. Look for an independent source, for example from digital preservation work." | **Important claims**: change the suffix to "(evidence `weak`, two sources: one opinion source, one institutional source with indirect support)". **Evidence for and against**: add a line after the Ango line: "- For (indirect): [[BRF-20261113-002 NARA file format tables\|NARA file format tables (reviewed 2026)]]. Transfer guidance for federal records. It ranks plain text above Word formats. It gives no reasons. The lists can be older than the current format versions (page reviewed 2026-03-11; the DOCX row names Word 2007–2010 only)." Keep "Against: none yet." **Disputes and gaps**: replace the line with "- One independent source (NARA) supports the direction of the claim, but not its reason. Look for a source that gives reasons or data on how long file formats stay readable." **Open research questions**: no change. Frontmatter: set `last-reviewed` and `updated` to the apply date. Add this Change Order to `change-orders`. | [[BRF-20261113-002 NARA file format tables]] · E2, E6 | A1 (MOC gap "look for an independent source" is partly filled), A6 (the plain text question stays open), A7 (date caveat for the MOC evidence list). Navigation follows X1. |
+
+## 3. Impact
+
+- Direct: two Brain records change, CLM-20261113-001 and MOC-20261113-001. No new record. No status change. The claim text does not change. `confidence` and `evidence-strength` do not change.
+- Direct: the claim gets a second source and a new condition on plain text encoding. The MOC no longer says "only one source".
+- Direct: after the change is applied, the Brain version changes from CO-20261113-001 to the ID of this Change Order.
+- Possible: ORION's own Markdown files can follow the encoding condition (for example UTF-8). This Change Order does not propose a rule for ORION.
+- Possible: later sources about format durability can take the gap that X3 states ("reasons or data").
+- CON-20261113-001 (File over app) does not change. Its statement that open formats stay readable is possibly qualified by A4, but the source gives no reasons.
+
+## 4. Risks and limits
+
+- The support is indirect. NARA's ranking is direct and authoritative, but the link from the ranking to "lasting notes belong in open files" is an inference (Assessment A1). Do not read X1 as proof of the claim's reason.
+- Scope: the NARA rules are for federal record transfer. X2 states the encoding condition as an extension for personal notes.
+- The Brief covers one section of the page only (`extraction-completeness: partial`). The page parts that define "preferred" and "acceptable" were not analyzed.
+- Date: some version ranges look old (DOCX 2007–2010). If a format is not in the list, that does not show that NARA rejects it.
+- Not proposed: A3 does not change the claim text. ODT and PDF/A are only a caveat, because NARA does not call them "open". The definition of "plain text" (A5) does not become a new Concept, because the Assessment did not advance it. Justin can ask for either one as a later change.
+- X2 uses `qualify` and keeps the claim sentence the same. The Assessment typed A2 as `refines`. Refer to §6 for the other option.
+- Risk if no action: the claim and the MOC keep saying "one source". That is out of date now that an independent source has been assessed. The encoding condition stays out of the Brain. The risk is low, and no other record depends on these records.
+
+## 5. Priority
+
+`low`. Impact: two records get better evidence notes and one condition. Nothing that depends on them changes. Urgency: none. Scope: one claim and one MOC. Risk of delay: low. The Assessment stays valid until the Brain version changes.
+
+## 6. Decision required
+
+1. Approve X1 (add the NARA evidence and new caveats to the claim, with `evidence-strength` kept at `weak`)? Options: `approved`, `approved-with-changes`, `rejected`, `deferred`.
+2. Approve X2 (add the encoding condition to "Context and conditions", claim text unchanged)? Other option: put the condition in the claim sentence as a `refine`, for example "... in open, readable formats such as plain text with a known encoding." Tell the Orchestrator if you prefer this text.
+3. Approve X3 (update the MOC to show the second source and the new gap)? X3 depends on X1. If you reject X1, reject X3 too.
+
+You can decide X1 and X2 separately. X3 follows X1.
+
+## 7. Decision record
+
+## 8. Implementation record

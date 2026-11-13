@@ -37,6 +37,15 @@
 | 11:33 | orchestrator | E3: Assessment checked and saved as `draft`. Source set to `assessed` | [[KAS-20261113-005 Write hypertext, not plaintext]] | PASS |
 | 11:35 | orchestrator | E3 result and Phase 3 exit test (PASS, subject to Justin's review) written in KS-08 §8.9 | KS-08 §8.9 | OK |
 | 11:45 | orchestrator | Phase 4 start (Justin: "Yes, draft both"). Managing Editor draft v0.2 written. Phase 4 test plan M0 to M5 written in KS-08 §8.10 (write outside `20-29` approved). Area `CLAUDE.md` agent status updated. Plan not approved yet. Agent not invoked | `.claude\agents\managing-editor.md`, KS-08 §8.10 | OK |
+| 11:47 | justin | Phase 4 plan approved: "Approve, run M0-M3". Recorded as KS-D-36. KS-08 §8.10 set APPROVED. Area `CLAUDE.md` §4 updated | KS-07, KS-08 §8.10 | `approved` |
+| 11:48 | managing-editor | M0: stopped at the input check (`no-action`). No Change Order | [[KAS-20261113-004 What is a second brain app]] | PASS |
+| 11:50 | managing-editor | M1: Change Order returned. Brain version `CO-20261113-001` | [[KAS-20261113-002 Write plain text files]] | OK |
+| 11:50 | orchestrator | M1: checked (evidence labels correct, 1 unsupported statement in X1) and saved as `open`. Source set to `change-proposed` | [[CO-20261113-002 Write plain text files]] | PASS, with 1 defect |
+| 11:50 | managing-editor | M2: Change Order returned. Brain version `CO-20261113-001` | [[KAS-20261113-003 NARA file format tables]] | OK |
+| 11:50 | orchestrator | M2: checked (evidence labels correct, no `create` row: plan expectation wrong) and saved as `open`. Source set to `change-proposed` | [[CO-20261113-003 NARA file format tables]] | PASS, with 1 plan deviation |
+| 11:53 | managing-editor | M3: Change Order returned. Found the open CO-002 and CO-003 on the same records | [[KAS-20261113-005 Write hypertext, not plaintext]] | OK |
+| 11:53 | orchestrator | M3: checked and saved as `open`. Source set to `change-proposed` | [[CO-20261113-004 Write hypertext, not plaintext]] | PASS |
+| 11:55 | orchestrator | Results M0 to M3 and proposed edits R1 to R3 written in KS-08 §8.10 (write outside `20-29` approved) | KS-08 §8.10 | OK |
 
 ## Errors
 
@@ -48,4 +57,5 @@
 - Phase 2 Reporter tests T1 to T3 (KS-D-30). An Orchestrator session in `20-29 Knowledge` did the work. The Reporter subagent (draft v0.2) made the Briefs. The Reporter read no file in `21 Brain` (KS-R-25). No Assessments or Change Orders. `21 Brain` not changed. Justin has not reviewed the Briefs yet.
 - Reporter times are approximate.
 - Phase 3 Editor tests E1 to E5 (KS-D-33, KS-08 §8.9). E3 Editor step ran after Justin validated the Brief. An Orchestrator session in `20-29 Knowledge` did the work. The Editor subagent (draft v0.2) made the Assessments. The Reporter (v0.3) made the E3 Brief. No Change Orders. `21 Brain` not changed. Brain version stays `CO-20261113-001`.
+- Phase 4 Managing Editor tests M0 to M3 (KS-D-36, KS-08 §8.10). The Managing Editor subagent (draft v0.2) made the Change Orders. No Change Order is decided or applied. `21 Brain` not changed. Brain version stays `CO-20261113-001`. M0 to M2 ran at the same time, so their times are approximate.
 - The Phase 3 rows use the system clock. Some earlier rows have later, approximate times, so the table is not in time order.

@@ -2,9 +2,9 @@
 id: SRC-20261113-003
 type: source
 title: Write plain text files
-status: assessed
+status: change-proposed
 created: 2026-11-13T11:00
-updated: 2026-11-13T11:19
+updated: 2026-11-13T11:50
 created-by: orchestrator
 schema-version: "0.6"
 url: https://sive.rs/plaintext

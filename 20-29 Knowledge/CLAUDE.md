@@ -48,7 +48,7 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 Phase 3 passed its exit test (KS-D-35). Next: Phase 4, the Managing Editor. Refer to KS-06 §3.
 
-The Reporter and the Editor can be invoked. Do not invoke the Managing Editor until its Phase 4 plan is approved. Do not make Change Orders by agent before then.
+Phase 4 is in progress. The plan is approved (KS-D-36, KS-08 §8.10). The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it.
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 

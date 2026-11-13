@@ -529,7 +529,7 @@ Proposed edits to `editor.md`. APPLIED 2026-11-13 (KS-D-34): Editor draft v0.3. 
 
 ### 8.10 Phase 4: Managing Editor
 
-Status: DRAFT, 2026-11-13. Justin has not approved this plan. Do not invoke the Managing Editor until he approves it.
+Status: APPROVED, 2026-11-13 (KS-D-36). Justin: "Approve, run M0-M3".
 
 Status of items:
 
@@ -562,6 +562,51 @@ Limits:
 
 Exit test (KS-06): the Managing Editor makes clear proposals and never changes the Brain.
 
+#### Test results M0 to M3 (2026-11-13)
+
+Agent: Managing Editor draft v0.2. Brain version for all tests: `CO-20261113-001`. M0, M1, and M2 ran at the same time. M3 ran after CO-002 and CO-003 were saved as `open`.
+
+| Test | Result | Output |
+|---|---|---|
+| M0 | PASS | Stopped at the input check (`no-action`). Read only the Assessment. No Change Order. |
+| M1 | PASS, with 1 defect | [[CO-20261113-002 Write plain text files]]. 9 rows: `add-evidence`, `extend`, `create` (process Concept), `relate` (2 rows, incl. the MOC row), `refine`, `qualify`. |
+| M2 | PASS, with 1 plan deviation | [[CO-20261113-003 NARA file format tables]]. 3 rows: `add-evidence` (2), `qualify`. |
+| M3 | PASS | [[CO-20261113-004 Write hypertext, not plaintext]]. 4 rows: `qualify` (2), `refine`, `add-evidence`. |
+
+M1 (main types):
+- `add-evidence` for A1 (X1) and A2 (X3). `extend` for A4 (X4) and for C9 of A3 (X2). The offline part of A3 (C8) has no row, with a reason: E13 is `indirect`. `create` for A5 (X5), with links X6 and the MOC row X7. Meets "Pass if".
+- `confidence` and `evidence-strength` do not change. The agent says that a second opinion essay is a second voice, not stronger evidence.
+- Evidence labels checked against the Brief: all correct (E4, E5, E8, E9, E11, E14 to E17, E19 to E26, E6, E25).
+- Defect: X1 caveat text says "The Brief on Sivers reports no commercial interest in a note app". The Brief does not say this. It gives no information on the author's interests. Low impact, but it is a statement that the source record does not carry (rule 7). Saved as returned. Justin can fix it with `approved-with-changes`.
+
+M2 (more than one claim):
+- Plan deviation: no `create` row. The plan expected a new claim for the preferred text formats. The Assessment has no `new` finding and advances A1 to A3 only. The agent gives a reason for each finding with no row (A3: NARA does not call ODT or PDF/A "open"; A5: not advanced). The agent's reading is correct. The plan expectation was wrong.
+- X2 uses `qualify` where the Assessment typed A2 `refines`. The agent says why (a condition, scope federal records) and gives the `refine` option in §6. Good.
+- KS-06 step 4 ("a proposal that affects more than one claim") is only partly tested. The Brain has one claim. CO-002 and CO-004 each change three records, and CO-002 makes a new one.
+- Type gap: X3 changes MOC text and uses `add-evidence`. Schema §5.8 has no type for a MOC edit. The agent flagged this.
+- Evidence labels checked: all correct (E1 to E7). Dates and version ranges match the Brief.
+
+M3 (overlap):
+- `qualify` and `refine` only. No `challenge`. Meets "Pass if".
+- Found CO-002 and CO-003 as `open` on the same records. Says that the first applied Change Order makes the other two stale. Names one text conflict: CO-003 X3 keeps "Against: none yet." and CO-004 X4 replaces it.
+- A7 (second-hand Sivers quote) has no row. The reason: Sivers has its own Change Order. Meets "Pass if".
+- Evidence labels checked: correct. `source-quality: low` matches the Brief.
+
+Common findings:
+- No agent changed a file (`git status` after each run). Each file list matches agent §3. No agent read the Source page.
+- Overlap between CO-002 and CO-003: both replace the same two caveat lines of CLM-20261113-001 and the MOC gap line, with different text. They ran at the same time, so neither saw the other. M3 ran later and saw both.
+- Each Change Order gives the exact proposed text, the unchanged ratings, and a decision for each row.
+
+Proposed edits (not applied, Justin to decide):
+
+| No. | Where | Proposed text | Reason |
+|---|---|---|---|
+| R1 | `managing-editor.md` §5 Rules | Add: "Do not say that the Brief reports something unless it does. If the Brief gives no information, write 'The Brief gives no information on …'." | M1 defect. |
+| R2 | Schema §5.8 | Add a rule for a MOC edit: `relate` for a link change; `add-evidence` for a change to the MOC evidence list; `refine` for other MOC text. | M2 type gap. |
+| R3 | Orchestrator (area `CLAUDE.md` §7 or the routing rulebook) | "Invoke the Managing Editor for one Assessment at a time when the Assessments affect the same Brain records. Save each Change Order before the next run." | M1 and M2 overlap. |
+
+Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -583,3 +628,4 @@ Exit test (KS-06): the Managing Editor makes clear proposals and never changes t
 | 2026-11-13 | 0.15 | D1 to D3 applied (KS-D-34). |
 | 2026-11-13 | 0.16 | Phase 3 exit test PASSED (KS-D-35). |
 | 2026-11-13 | 0.17 | New §8.10: Phase 4 status and test plan M0 to M5 (draft, Justin to approve). |
+| 2026-11-13 | 0.18 | §8.10: plan approved (KS-D-36). Test results M0 to M3. Proposed edits R1 to R3. |
