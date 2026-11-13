@@ -375,6 +375,59 @@ For each test:
 
 Exit test (KS-06): the Reporter makes traceable Briefs and does not invent source details.
 
+#### Test results (2026-11-13)
+
+The Orchestrator ran T1 to T3 in one session that started in `20-29 Knowledge`. One test at a time. The Reporter is draft v0.2. Justin has not reviewed the Briefs yet. All three Briefs have status `draft`.
+
+Check method: the Orchestrator got each page with `curl` (raw HTML, tags removed) and searched for each `Quote:` as an exact string. This check does not use WebFetch, so it is independent of the Reporter's tool. Each Brief has an "Orchestrator check" section with the details.
+
+| Test | Source | Brief | Result | Quotes | Locators checked | Invented details |
+|---|---|---|---|---|---|---|
+| T1 | [[SRC-20261113-002 NARA file format tables]] | [[BRF-20261113-002 NARA file format tables]] | PASS | 5 of 5 exact (3 `Quote:` rows, 2 quoted fragments in `Summary:` rows) | E1, E5, E8: correct | None |
+| T2 | [[SRC-20261113-003 Write plain text files]] | [[BRF-20261113-003 Write plain text files]] | PASS | 21 of 21 exact | E5, E12, E19: correct | None. One count error (below). |
+| T3 | [[SRC-20261113-004 What is a second brain app]] | [[BRF-20261113-004 What is a second brain app]] | PASS, with 2 defects | 19 of 19 exact | E16, E19, E21: correct | None. Two typing defects (below). |
+
+T1 (NARA, "Born-Digital Textual Data" only):
+- Scope: respected. Other sections are used only for the page dates and the tier names, and the Brief says so.
+- Encoding condition: recorded as C1 (`normative`), with an exact quote (E1).
+- Locators: all use `§ Born-Digital Textual Data`, with the table row or ¶ added.
+- Good: the Reporter did not use a missing format (for example PDF 2.0, UTF-32) as evidence that NARA rejects it (Reporter §7).
+
+T2 (Sivers, article body):
+- Locators: all use `§ Heading`. The page has eight `h2` headings. The opening part has none, so the Reporter used `§ Write plain text files (opening section, before § PORTABLE)`.
+- Personal experience: not presented as data. Self-reports (C1, C3, C11) say "The author …" and the limits say "Self-report. Not checked." Predictions are typed `predictive`.
+- Date conflict found by the Reporter and confirmed: the page date is 2022-03-02. A comment by the author is dated 2022-03-01. `published` stays empty.
+- Error: Brief §5 says "six named benefit sections" and omits § NEED HIERARCHY? and § NEED VISUALS OR GRAPHICS?. Low impact. The claims cover all eight sections.
+
+T3 (Nemos, article body):
+- Vendor interest: flagged (§2, §10, Objectivity 2).
+- Survey with no method: flagged for each survey figure (E16, E19 to E21, §10).
+- Date conflicts: flagged. Zettelkasten "in the 1960s" against "1951-1997". BASB cohort 2017 against "the term comes from the 2022 book".
+- Source quality: `low`.
+- Defect 1: C10 to C13 state the vendor's ratings of competitors ("slow on iPhone", "not great on iPhone") as `factual` claims with `high` confidence. The claim text has no attribution. Only the §8 limits say "Competitor rating by a vendor". This breaks Reporter §7 ("Do not change an opinion into a fact"). The survey numbers themselves are not stated as fact: C14 and C17 name the survey.
+- Defect 2: C18 states survey results without "In the publisher's survey".
+- Not flagged: "60 years before Wikipedia and 75 years before Notion" (from 1945). A check needs outside facts, which Reporter §4 does not allow. Not a defect.
+- New finding: the site serves a Markdown version to agents (`Accept: text/markdown`). WebFetch got that version. Its footer has "Site index for agents: llms.txt". The HTML version does not. The body text is the same. No text in either version is directed at an AI. The Reporter reported the link and did not open it (Reporter §5).
+
+Files read (KS-R-25), from the Reporter's access log in each test:
+- The Source record, `TPL Reference Brief.md`, and `Knowledge System Schema.md`. The Read tool loads the whole Schema, not only §2 to §4, §5.2, §5.5. Each Reporter reported this.
+- No file in `21 Brain`. No WebSearch. No links opened from a source. One URL only, 3 or 4 WebFetch calls in each test.
+- Limit of this check: the access log is the Reporter's own report. The Orchestrator cannot see the agent's tool calls separately in this setup.
+
+Common finding: WebFetch passes the page through a model. It does not return the full text word for word. Each Reporter said so and asked the Orchestrator to check the quotes. All 45 quotes and quoted fragments were exact. But the Reporter cannot prove exactness itself. The Orchestrator raw-text check (or a companion file from Justin) is necessary for each Brief.
+
+Exit test (KS-06): PASS, subject to Justin's review. The three Briefs are traceable. No source detail is invented. The T3 defects are typing and attribution errors, not invented details.
+
+Proposed edits to `reporter.md` (not applied; Justin decides):
+
+| No. | Section | Proposed text | Reason |
+|---|---|---|---|
+| P1 | §7 Rules | Add: "A rating or judgment by the source (for example 'best', 'slow', 'not great') is `normative`. Or the claim names who says it: 'The source rates …'. Use `factual` only for a statement that can be checked." | T3 Defect 1 |
+| P2 | §7 Rules | Add: "A figure from a survey or study: each claim names the survey, for example 'In the publisher's 2026 survey, …'." | T3 Defect 2 |
+| P3 | §3 | Change to: "Read the Schema. Use only sections 2 to 4, 5.2, and 5.5." | The Read tool loads the whole file. The current text cannot be followed. |
+| P4 | §4 | Add: "WebFetch does not return exact text. Copy each quote as the tool returns it. Say in §12 that the Orchestrator must check the quotes." Orchestrator side (area `CLAUDE.md` or the routing rulebook): "The Orchestrator checks each `Quote:` against the raw page before it sets `validated`." | Common finding |
+| P5 | §8 Locator table | Add the combined forms that all three tests used: `§ Heading, ¶3` and `§ Heading, table name, row name`. Move the list to Schema §5.5 (KS-G-26). | The tests needed a locator inside a section. |
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -387,3 +440,4 @@ Exit test (KS-06): the Reporter makes traceable Briefs and does not invent sourc
 | 2026-11-13 | 0.6 | Phase 1 templates approved (KS-D-27). §8.6 review list closed. |
 | 2026-11-13 | 0.7 | Phase 1 exit test PASSED (KS-D-28). New §8.7. |
 | 2026-11-13 | 0.8 | KS-C-40 resolved (KS-D-29). New §8.8: Phase 2 status and test plan (KS-D-30). New risk KS-R-25. |
+| 2026-11-13 | 0.9 | §8.8: Phase 2 test results T1 to T3. Proposed Reporter edits P1 to P5. |
