@@ -47,3 +47,12 @@ Decisions by Justin:
 Follow-up changes:
 - KS-07 KS-D-28 and KS-08 §8.6: exit test PASSED.
 - `20-29 Knowledge\CLAUDE.md` to v0.4: §4 says Phase 1 passed, Phase 2 next after KS-C-40.
+
+## Morning — Git ignore fix
+
+Changes:
+- Commit `4e088f1` included `.obsidian/graph.json`, a change by Obsidian, not by Claude. This broke root §5.3. Claude told Justin. History not changed.
+- `.gitignore`: added `.obsidian/graph.json`. Removed it from tracking. The file stays on disk.
+
+Decisions by Justin:
+- Ignore `graph.json`, like `workspace.json`.

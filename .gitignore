@@ -6,6 +6,9 @@
 .obsidian/workspace-mobile.json
 .obsidian/workspaces.json
 
+# Graph view display settings (change on each graph use). Added 2026-11-13 by Justin.
+.obsidian/graph.json
+
 # Obsidian caches
 .obsidian/cache
 .trash/

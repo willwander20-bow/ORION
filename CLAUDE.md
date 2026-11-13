@@ -99,7 +99,7 @@ The vault is a Git repository. The remote is a private GitHub repository (`origi
 3. Commit only the changes of your session. If `git status` shows other changes, tell Justin. Do not commit them without his approval.
 4. Do not rewrite history. Do not use `push --force`, `reset --hard`, or `rebase`.
 5. Do not change `.gitignore` or `.gitattributes` without Justin's approval.
-6. Git tracks the `.obsidian` settings and plugins. It ignores `workspace.json`.
+6. Git tracks the `.obsidian` settings and plugins. It ignores `workspace.json` and `graph.json`.
 7. If the push fails because of sign-in, tell Justin. The commit stays local until the next push.
 
 ## 6. Open items
