@@ -1,0 +1,16 @@
+# ORION vault - Git ignore rules
+# Decided 2026-11-13: track .obsidian settings and plugins, not workspace state.
+
+# Obsidian workspace state (changes on every click)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+
+# Obsidian caches
+.obsidian/cache
+.trash/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
