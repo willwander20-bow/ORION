@@ -105,3 +105,14 @@ Decisions by Justin:
 - The Editor searches `21 Brain` itself.
 - `Research Questions.md` needs no Change Order.
 - Approved the Editor rewrite and tests E1 to E5.
+
+## Afternoon — Editor test results and fixes
+
+Changes:
+- Started the session "Phase 3 Editor tests E1–E5" in `20-29 Knowledge`. It ran E1 to E5 and pushed `1edfe64` and `38aa0f9`. All five pass. Claude checked the commits, statuses, and records.
+- Applied D1 to D3: `editor.md` to draft v0.3. `20-29 Knowledge\CLAUDE.md` names v0.3.
+- Recorded KS-D-34 (KS-07 v0.19). KS-08 v0.15.
+
+Decisions by Justin:
+- Validated BRF-20261113-005 (in the test session).
+- Apply all three Editor edits.

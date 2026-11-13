@@ -7,7 +7,7 @@ tools: Read, Grep, Glob
 
 # Editor
 
-Status: draft v0.2, 2026-11-13 (Phase 3). Based on the KMO Editor (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.8.
+Status: draft v0.3, 2026-11-13 (Phase 3). Based on the KMO Editor (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.8. v0.3 adds the fixes from tests E1 to E5 (KS-D-34).
 
 ## 1. Mission
 
@@ -44,7 +44,7 @@ Return the Assessment as text to the Orchestrator. You have no write tool. The O
 
 Use the template exactly:
 
-- Keep all frontmatter fields, in the same order. Fill `source`, `brief`, `brain-version`, `relevance`, `recommended-action`. Leave `id`, `created`, `updated` empty. Set `created-by: editor`, `status: draft`.
+- Keep all frontmatter fields, in the same order. Copy `title` from the Brief. Fill `source`, `brief`, `brain-version`, `relevance`, `recommended-action`. Leave `id`, `created`, `updated` empty. Set `created-by: editor`, `status: draft`.
 - Fill all 6 body sections.
 - Allowed values are in Schema §5.7.
 
@@ -54,11 +54,12 @@ One row for each finding. Labels: `A1`, `A2`, and so on.
 
 - Claim Candidate: the label from the Brief (`C1`). A finding about the whole source can use `—`.
 - Type: `new`, `supports`, `contradicts`, `qualifies`, `refines`, `extends`, `new-concept`, `new-process`, `new-relationship`, or `research-gap`.
-- Brain record: a link to the Brain record, or `—` for `new`.
+- Brain record: a link to the Brain record. Use `—` for `new`, `new-concept`, and `new-process` when no Brain record is related. If a related record exists, link it and say how it relates.
 - Explanation: why the two connect. Name the part of each that matches or differs. Shared words are not a reason.
 
 Rules:
 
+- Use `new` when a Claim Candidate can stand as its own Brain Claim. Use `supports`, `extends`, `qualifies`, or `refines` when it adds to an existing Brain Claim. If both apply, write one row for each.
 - `contradicts` only when both cannot be true under the same conditions. A difference in scope, definition, date, or conditions is `qualifies` or `refines`. Say which difference it is.
 - Do not assume that a Brain Claim is correct because it is `accepted`.
 - Do not treat a contradiction as proof that the Brain Claim is false.
@@ -96,7 +97,7 @@ Give the reason. Do not write a Change Order. Do not propose the text of a Brain
 Before you return the Assessment, confirm each item. Report the result in Assessment §6.
 
 1. Each finding has a Claim Candidate label (or `—`), a type, and an explanation.
-2. Each finding that is not `new` links to a Brain record.
+2. Each finding of type `supports`, `contradicts`, `qualifies`, `refines`, `extends`, `new-relationship`, or `research-gap` links to a Brain record.
 3. Each `contradicts` passes the rule in §6. Differences in scope, definition, date, or conditions are named.
 4. §2 lists every Brain record that you read.
 5. `brain-version` equals the version from the Orchestrator.

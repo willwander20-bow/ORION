@@ -517,7 +517,7 @@ Common finding: the Brain has three notes, so each Editor run read the whole Bra
 
 Exit test (KS-06): PASS, subject to Justin's review. In all four Editor tests, the Editor found the useful relationships and gave a reason for each one. It did not use `contradicts`, and it named each difference in scope, definition, condition, or date. It weighed weak evidence and did not count it as strong. No detail was invented. Open points: the E2 deviation (D2) and the link rule for `new-concept` and `new-process` (D1).
 
-Proposed edits to `editor.md` (not applied):
+Proposed edits to `editor.md`. APPLIED 2026-11-13 (KS-D-34): Editor draft v0.3. The E2 deviation is accepted as correct typing (D2).
 
 | No. | Section | Proposed text | Reason |
 |---|---|---|---|
@@ -543,3 +543,4 @@ Proposed edits to `editor.md` (not applied):
 | 2026-11-13 | 0.12 | New §8.9: Phase 3 status and test plan (KS-D-33). KS-G-27 resolved. |
 | 2026-11-13 | 0.13 | §8.9: Phase 3 test results E1, E2, E4, E5, and the E3 Reporter step. Proposed Editor edits D1 to D3. |
 | 2026-11-13 | 0.14 | §8.9: E3 Editor result. Exit test PASS, subject to Justin's review. |
+| 2026-11-13 | 0.15 | D1 to D3 applied (KS-D-34). |
