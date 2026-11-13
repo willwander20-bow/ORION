@@ -739,7 +739,14 @@ Findings:
 - F5. The Reporter has no shell tool, so it cannot run the quote check itself. The Orchestrator check worked. No change proposed.
 - The Brief reported a ranked list "1 to 8". The raw page has 6 items. The Brief marked it as not confirmed. No Brain text uses the number.
 
-Next: Justin reviews the O1 result and decides F3 and F4. Then the Phase 5 exit test can pass.
+Justin's review, 2026-11-13: Phase 5 exit test PASSED (KS-D-42). Justin: "Pass and apply F3, F4".
+
+F3 and F4 APPLIED 2026-11-13 (KS-D-42):
+- F3: `Quote Check.ps1` v0.2. Retest: BRF-006 11 of 11 (no hand check now), BRF-003 21 of 21, BRF-002 3 of 3, the changed O3 copy 1 failed.
+- F4: Rulebook v0.4 §4.0 and `Frontmatter Check.ps1`. Retest: 31 records, 0 problems. A copy of SRC-008 with the old unquoted value: 1 problem found.
+- Area `CLAUDE.md` v0.11: Phase 5 passed, next Phase 6. It names the Rulebook and the two scripts.
+
+Phase 5 is complete. Next: Phase 6, the Knowledge Curator. Its plan needs Justin's approval.
 
 ## 9. Change log
 
@@ -774,3 +781,4 @@ Next: Justin reviews the O1 result and decides F3 and F4. Then the Phase 5 exit 
 | 2026-11-13 | 0.27 | F1 and F2 applied (KS-D-40). |
 | 2026-11-13 | 0.28 | Rulebook new rules approved (KS-D-41). KS-G-20 resolved. |
 | 2026-11-13 | 0.29 | §8.11: test result O1. Exit test PASS, subject to Justin's review. Findings F3 to F5. |
+| 2026-11-13 | 0.30 | Phase 5 exit test PASSED (KS-D-42). F3 and F4 applied. |

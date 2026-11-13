@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38).
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Version v0.11.
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,7 +46,9 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 4 passed its exit test (KS-D-37). Next: Phase 5, Orchestration. Refer to KS-06 §3. Do not start Phase 5 work until its plan is approved.
+Phase 5 passed its exit test (KS-D-42). Next: Phase 6, the Knowledge Curator. Refer to KS-06 §3. Do not start Phase 6 work until its plan is approved.
+
+For each source, follow `20.04 Knowledge Reference\Orchestrator Rulebook.md` (KS-D-39 to KS-D-42): routing, workflow states, IDs, validation, errors and retry, approval and apply, and the log. Use `Quote Check.ps1` and `Frontmatter Check.ps1` in the same folder.
 
 The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it and the version check passes (Schema §5.6). The Managing Editor rules in §7 steps 5 and 7 apply now (KS-D-38).
 

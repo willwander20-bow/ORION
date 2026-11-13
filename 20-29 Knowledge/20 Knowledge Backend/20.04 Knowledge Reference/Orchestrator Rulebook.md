@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: v0.3, Phase 5. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. All other rules come from the documents named in the rule.
+Status: v0.4, Phase 5. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -74,6 +74,13 @@ Rules:
 ## 4. Validation
 
 Validate each output before the next stage. If a check fails, set the output to `rejected`, write the reason in the log, and go to section 5.
+
+### 4.0 All records: valid frontmatter (KS-D-42)
+
+1. When you write a frontmatter value, put it in quotes if it contains `: ` or ` #`, or if it starts with a special character (`@` `` ` `` `&` `*` `!` `|` `>` `%` `{` `[` `#` `,` `?` `-`). Use double quotes. If the value contains `"`, use single quotes.
+2. After you save or change a record, run `Frontmatter Check.ps1` in this folder on it. Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Frontmatter Check.ps1" -Path "<file>"`. With no `-Path`, it checks `21 Brain` and `22.21` to `22.24`. Pass: "Problems: 0".
+3. Run it with no `-Path` before each commit.
+4. The script is a rule check, not a full YAML parser. Reason: test O1, where invalid frontmatter was found only by Justin in Obsidian (F4).
 
 ### 4.1 Reference Brief
 
@@ -155,3 +162,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | 2026-11-13 | 0.1 | First draft (KS-D-39). |
 | 2026-11-13 | 0.2 | F1: Source ID and save moved to routing step 3. F2: `Quote Check.ps1` named in §4.1 (KS-D-40). |
 | 2026-11-13 | 0.3 | Justin approved the new rules (KS-D-41). Status `approved`. |
+| 2026-11-13 | 0.4 | New §4.0: frontmatter rule and `Frontmatter Check.ps1` (F4). `Quote Check.ps1` v0.2: inline tags removed with no space (F3). KS-D-42. |

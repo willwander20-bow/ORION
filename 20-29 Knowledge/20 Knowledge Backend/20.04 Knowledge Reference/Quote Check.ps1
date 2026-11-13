@@ -1,4 +1,4 @@
-# Quote Check v0.1 (KS-D-40). Orchestrator Rulebook section 4.1.
+# Quote Check v0.2 (KS-D-40, KS-D-42). Orchestrator Rulebook section 4.1.
 # Checks each Quote: "..." in a Reference Brief against the raw web page (area CLAUDE.md rule 9a).
 # Pass: each quote is in the page text and has 15 words or fewer. Output ends with "Failed: N".
 # Limits: web pages only (not companion files or PDFs). A quote that contains a " character is not read.
@@ -17,6 +17,9 @@ function Norm([string]$s) {
 $raw = (curl.exe -s -L --max-time 30 -A "Mozilla/5.0" $Url) -join "`n"
 if (-not $raw) { "ERROR: no page text from $Url"; exit 1 }
 $raw = [regex]::Replace($raw, '(?is)<(script|style)[^>]*>.*?</\1>', ' ')
+# Inline tags: remove with no space, so "EPUB3</a>-compliant" reads "EPUB3-compliant" (F3, KS-D-42).
+$raw = [regex]::Replace($raw, '(?i)</?(a|span|em|strong|b|i|abbr|code|sup|sub)(\s[^>]*)?>', '')
+# Other tags: replace with a space.
 $text = [regex]::Replace($raw, '<[^>]+>', ' ')
 Add-Type -AssemblyName System.Web
 $text = Norm ([System.Web.HttpUtility]::HtmlDecode($text))

@@ -89,6 +89,8 @@
 | 14:55 | orchestrator | Version check (`CO-20261113-006` matched), then Change Order applied: 2 Brain records changed (X1 to X3 on CLM-001, X4 and X5 on MOC-001). Source set to `done` | [[CO-20261113-007 LoC Recommended Formats, textual works]] | Brain version `CO-20261113-006` to `CO-20261113-007` |
 | 15:00 | orchestrator | YAML scan of 31 records (unquoted `: `, ` #`, special first character): no problem found | `21`, `22.21` to `22.24` | OK |
 | 15:00 | orchestrator | O1 result and findings F3 to F5 written in KS-08 §8.11 | KS-08 §8.11 | PASS, subject to Justin's review |
+| 15:10 | justin | Phase 5 exit test: "Pass and apply F3, F4". Recorded as KS-D-42 | KS-07, KS-08 §8.11 | PASSED |
+| 15:15 | orchestrator | F3 and F4 applied: `Quote Check.ps1` v0.2, new `Frontmatter Check.ps1`, Rulebook v0.4 §4.0, area `CLAUDE.md` v0.11. Retests pass | `20.04`, `CLAUDE.md` | OK |
 
 ## Errors
 
