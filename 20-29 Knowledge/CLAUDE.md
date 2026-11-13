@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.3, 2026-11-12. Phase 0. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24).
+Status: v0.4, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28).
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,7 +46,9 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 1: data model and templates. Phase 0 passed its exit test (KS-D-23). Refer to KS-06 §3.
+Phase 1 passed its exit test (KS-D-28). Next: Phase 2, the Reporter. Phase 2 starts after Justin decides KS-C-40 (stored source text). Refer to KS-06 §3.
+
+The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
 - The four agent files in `.claude\agents\` are draft input (KS-D-13). They are copies of the KMO package files, with no changes.
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
@@ -57,7 +59,7 @@ Phase 1: data model and templates. Phase 0 passed its exit test (KS-D-23). Refer
 | Editor | 3 |
 | Managing Editor | 4 |
 | Knowledge Curator | 6 |
-- The output templates do not exist yet (KS-G-03). Phase 1 makes them.
+- The templates are in `20.07 Knowledge Templates` (KS-D-27).
 
 ## 5. Hard rules
 

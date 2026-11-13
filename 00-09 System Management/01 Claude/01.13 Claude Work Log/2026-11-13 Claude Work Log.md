@@ -42,3 +42,8 @@ Changes:
 Decisions by Justin:
 - Claude selects the test article.
 - `CO-20261113-001`: approved. Keep the records in the Brain.
+- Read check in Obsidian: "They read fine". Phase 1 PASSED.
+
+Follow-up changes:
+- KS-07 KS-D-28 and KS-08 §8.6: exit test PASSED.
+- `20-29 Knowledge\CLAUDE.md` to v0.4: §4 says Phase 1 passed, Phase 2 next after KS-C-40.

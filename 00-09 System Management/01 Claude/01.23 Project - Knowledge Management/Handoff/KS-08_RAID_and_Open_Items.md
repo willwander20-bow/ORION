@@ -314,7 +314,7 @@ This review made these assumptions to consolidate the documents. Confirm each on
 | KS-Q-15 | RESOLVED in part | KS-D-26. Values set. Transition rules come with the templates. |
 | KS-Q-18 | RESOLVED in part | KS-D-26. Source status is the workflow state. |
 | Templates | APPROVED | KS-D-27. All seven in `20.07`, Schema v0.6. |
-| Exit test | RECORDS MADE | KS-D-28. Seven records from "File over app". Justin's read check in Obsidian is open. Findings in §8.7. |
+| Exit test | PASSED | KS-D-28. Seven records from "File over app". Justin read them in Obsidian. Phase 1 is complete. Findings in §8.7. |
 | KS-G-01 | RESOLVED | KS-D-27. Brain version = ID of the last applied Change Order (Schema §5.6). |
 | KS-G-04 | RESOLVED | KS-D-27. Fields for all seven types. |
 | KS-G-05 | RESOLVED | KS-D-27. Relationship types: `supports`, `contradicts`, `refines`, `extends`, `related`. |
@@ -355,4 +355,4 @@ Items not in this table have no change.
 | 2026-11-12 | 0.4 | Phase 0: package import, `CLAUDE.md` drafts, Phase 0 checklist (§8.4). |
 | 2026-11-13 | 0.5 | Backup and version control done (X-D-25). KS-Q-09, KS-DEP-04 resolved. |
 | 2026-11-13 | 0.6 | Phase 1 templates approved (KS-D-27). §8.6 review list closed. |
-| 2026-11-13 | 0.7 | Phase 1 exit test records made (KS-D-28). New §8.7. |
+| 2026-11-13 | 0.7 | Phase 1 exit test PASSED (KS-D-28). New §8.7. |
