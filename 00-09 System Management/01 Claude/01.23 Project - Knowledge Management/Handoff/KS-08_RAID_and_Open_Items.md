@@ -527,6 +527,41 @@ Proposed edits to `editor.md`. APPLIED 2026-11-13 (KS-D-34): Editor draft v0.3. 
 | D2 | §6 | Add: "Use `new` when a Claim Candidate can stand as its own Brain Claim. Use `supports`, `extends`, `qualifies`, or `refines` when it adds to an existing Brain Claim. If both apply, write one row for each." | E2 deviation. The test plan and the Editor read "new" differently. |
 | D3 | §5 | Add: "`title`: copy the `title` of the Brief." | E2: the Editor wrote its own title. |
 
+### 8.10 Phase 4: Managing Editor
+
+Status: DRAFT, 2026-11-13. Justin has not approved this plan. Do not invoke the Managing Editor until he approves it.
+
+Status of items:
+
+| ID | Status | Reference |
+|---|---|---|
+| KS-06 step 1 | DRAFT | `managing-editor.md` draft v0.2. Changes from the KMO copy: change types match Schema §5.8 (adds `retire`; removes "No Change" and "Investigate", KS-D-25); the agent returns text and the Orchestrator saves the Change Order; the decision fields stay empty; a No Change result is a reply, not a Change Order; a file list and a final check, as in the Editor. |
+| KS-06 step 2 | DONE | `TPL Change Order.md` (KS-D-27). The agent reads it (§3). |
+
+Test plan (KS-06 Phase 4). Run in a session that starts in `20-29 Knowledge`. The main session is the Orchestrator. Brain version at start: `CO-20261113-001`. Input: the three `advance` Assessments (KS-D-35).
+
+| Test | Input | Pass if |
+|---|---|---|
+| M0 Wrong input | [[KAS-20261113-004 What is a second brain app]] (`no-action`) | The agent stops and reports that the action is not `advance`. No Change Order. |
+| M1 Main types | [[KAS-20261113-002 Write plain text files]] | Proposes `add-evidence` for A1 and A2, and `extend` for A3 and A4. For A5, proposes `create` (a process Concept) with a MOC row, or says why not. Weak evidence (self-report) does not raise `confidence` or `evidence-strength`. |
+| M2 More than one claim | [[KAS-20261113-003 NARA file format tables]] | One Change Order with rows for more than one record: `create` for at least one new claim (preferred text formats), and `refine` or `qualify` for CLM-20261113-001. Each row gives the exact proposed text. The A7 date condition shows in §4. |
+| M3 Overlap | [[KAS-20261113-005 Write hypertext, not plaintext]]. Run after M2 is saved as `open`. | Uses `qualify`, not `challenge` (no `contradicts` finding). Finds the open M2 Change Order on the same claim and says how the two proposals interact. Does not count the second-hand Sivers quote (A7) as new evidence. |
+| M4 Stale version | After Justin decides M1 to M3. The Orchestrator applies the first approved Change Order. Then it prepares to apply the next approved one. | The Orchestrator finds that the recorded `brain-version` (`CO-20261113-001`) differs from the current version. It does not apply. It re-invokes the agent with the same Assessment and the current version. The agent returns a revised Change Order at the current version. The old one becomes `withdrawn`. |
+| M5 Clear to Justin | Each Change Order from M1 to M4 | Justin can understand the change, the reason, the impact, the risk, and the decision from §1 to §6 alone. Justin records this in chat. |
+
+For each agent test (M0 to M4):
+1. The Orchestrator invokes the agent with the Assessment path and the current Brain version.
+2. The Orchestrator checks the reply against agent §9. It checks that the agent changed no file (`git status`), and that `decision` is empty.
+3. The Orchestrator gives the Change Order an ID and saves it in `22.24` with status `open`. It sets the Source status to `change-proposed`.
+4. Record the findings below. Justin decides each Change Order. The Orchestrator applies a Change Order only after Justin approves it, and only after the version check (Schema §5.6).
+
+Limits:
+- The input has no `contradicts` finding. These tests do not test `challenge`, `supersede`, `merge`, or `retire`.
+- M4 needs at least one approved Change Order. If Justin approves none, M4 waits.
+- M4 changes the Brain, with Justin's approval. After M4, the Brain version is not `CO-20261113-001`.
+
+Exit test (KS-06): the Managing Editor makes clear proposals and never changes the Brain.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -547,3 +582,4 @@ Proposed edits to `editor.md`. APPLIED 2026-11-13 (KS-D-34): Editor draft v0.3. 
 | 2026-11-13 | 0.14 | §8.9: E3 Editor result. Exit test PASS, subject to Justin's review. |
 | 2026-11-13 | 0.15 | D1 to D3 applied (KS-D-34). |
 | 2026-11-13 | 0.16 | Phase 3 exit test PASSED (KS-D-35). |
+| 2026-11-13 | 0.17 | New §8.10: Phase 4 status and test plan M0 to M5 (draft, Justin to approve). |

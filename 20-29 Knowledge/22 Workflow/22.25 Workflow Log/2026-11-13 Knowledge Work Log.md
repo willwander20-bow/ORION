@@ -36,6 +36,7 @@
 | 11:33 | editor | E3: Assessment returned. Brain version `CO-20261113-001` | [[BRF-20261113-005 Write hypertext, not plaintext]] | `advance` |
 | 11:33 | orchestrator | E3: Assessment checked and saved as `draft`. Source set to `assessed` | [[KAS-20261113-005 Write hypertext, not plaintext]] | PASS |
 | 11:35 | orchestrator | E3 result and Phase 3 exit test (PASS, subject to Justin's review) written in KS-08 §8.9 | KS-08 §8.9 | OK |
+| 11:45 | orchestrator | Phase 4 start (Justin: "Yes, draft both"). Managing Editor draft v0.2 written. Phase 4 test plan M0 to M5 written in KS-08 §8.10 (write outside `20-29` approved). Area `CLAUDE.md` agent status updated. Plan not approved yet. Agent not invoked | `.claude\agents\managing-editor.md`, KS-08 §8.10 | OK |
 
 ## Errors
 
