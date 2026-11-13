@@ -2,7 +2,7 @@
 id: CO-20261113-006
 type: change-order
 title: Write hypertext, not plaintext
-status: open
+status: applied
 created: 2026-11-13T12:18
 updated: 2026-11-13T12:18
 created-by: managing-editor
@@ -20,11 +20,11 @@ affected:
   - "[[CON-20261113-002 Work with plain-text notes]]"
   - "[[MOC-20261113-001 Note durability]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-13T12:18
+decision-note: "Approve all rows."
+applied: 2026-11-13T12:18
+brain-version-after: CO-20261113-006
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -84,4 +84,15 @@ For each row, the options are `approved`, `approved-with-changes`, `rejected`, a
 
 ## 7. Decision record
 
+Justin, 2026-11-13, in the Orchestrator session (`20-29 Knowledge`). The Orchestrator copied his words exactly: "Approve all rows".
+
 ## 8. Implementation record
+
+- Version check: `brain-version` `CO-20261113-005` matched the current version (newest `applied` in `22.24`: CO-20261113-005).
+- Files changed:
+  - X1, X2: `21 Brain\CLM-20261113-001 Lasting notes belong in open files.md`
+  - X3: `21 Brain\CON-20261113-001 File over app.md`
+  - X4: `21 Brain\CON-20261113-002 Work with plain-text notes.md`
+  - X5: `21 Brain\MOC-20261113-001 Note durability.md`
+- Brain version is now `CO-20261113-006`.
+- Times: the session clock ran behind some recorded times. Times are approximate to a few minutes.

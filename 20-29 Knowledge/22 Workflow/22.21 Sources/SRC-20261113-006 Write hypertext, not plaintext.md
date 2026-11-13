@@ -2,9 +2,9 @@
 id: SRC-20261113-006
 type: source
 title: Write hypertext, not plaintext
-status: change-proposed
+status: done
 created: 2026-11-13T11:23
-updated: 2026-11-13T11:53
+updated: 2026-11-13T12:18
 created-by: orchestrator
 schema-version: "0.8"
 url: https://aartaka.me/hypertext

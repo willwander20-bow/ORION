@@ -4,7 +4,7 @@ type: concept
 title: Work with plain-text notes
 status: accepted
 created: 2026-11-13T12:05
-updated: 2026-11-13T12:05
+updated: 2026-11-13T12:18
 created-by: orchestrator
 schema-version: "0.8"
 kind: process
@@ -13,6 +13,7 @@ related:
 last-reviewed: 2026-11-13
 change-orders:
   - "[[CO-20261113-002 Write plain text files]]"
+  - "[[CO-20261113-006 Write hypertext, not plaintext]]"
 aliases:
   - Plain-text note methods
 ---
@@ -29,6 +30,7 @@ Caveats:
 - One source. Advice only, with no tests.
 - Step 2 needs basic programming skill. The locator of E19 has `medium` confidence.
 - Step 3 does not say how to link a graphic to its text.
+- Step 2: another source (Bologov, opinion, low source quality) argues that metadata lines of this kind make a plain-text file non-portable, non-standard rich text. Its example is Sivers's own date, tags, and title headers. Argument only, no data.
 
 ## Steps
 
@@ -43,3 +45,4 @@ Caveats:
 ## Sources
 
 - [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E19, E20, E21, E22, E23, E24
+- [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E2 · § All You Need is Plaintext · qualifies step 2

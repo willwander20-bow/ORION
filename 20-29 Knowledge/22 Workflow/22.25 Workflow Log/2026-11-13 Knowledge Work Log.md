@@ -57,10 +57,13 @@
 | 12:14 | orchestrator | Version check on CO-004 failed (`CO-20261113-001` is not the current version). Not presented. Managing Editor re-invoked at `CO-20261113-005` | [[CO-20261113-004 Write hypertext, not plaintext]] | stale |
 | 12:18 | managing-editor | Revised Change Order returned at `CO-20261113-005`. New row for CON-20261113-002 | [[KAS-20261113-005 Write hypertext, not plaintext]] | OK |
 | 12:18 | orchestrator | Checked and saved as `open`. CO-004 set to `withdrawn`. Result and possible edit R5 written in KS-08 §8.10 | [[CO-20261113-006 Write hypertext, not plaintext]] | PASS |
+| 12:18 | justin | Decision on the Change Order: "Approve all rows" | [[CO-20261113-006 Write hypertext, not plaintext]] | `approved` |
+| 12:18 | orchestrator | Version check (`CO-20261113-005` matched), then Change Order applied: 4 Brain records changed. Source set to `done` | [[CO-20261113-006 Write hypertext, not plaintext]] | Brain version `CO-20261113-005` to `CO-20261113-006` |
+| 12:20 | orchestrator | Phase 4 exit test written in KS-08 §8.10 | KS-08 §8.10 | PASS, subject to Justin's review |
 
 ## Errors
 
-- None.
+- 12:18: a Python script to apply CO-006 did not run (Python is not installed). No Brain file changed. The Orchestrator applied the rows with the edit tool. No effect on the result.
 
 ## Notes
 

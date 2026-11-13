@@ -628,6 +628,23 @@ CO-005 and second re-check (2026-11-13):
 - The re-check found a record that did not exist at Assessment time: CON-20261113-002. It added row X4 (Bologov E2 qualifies Step 2, metadata lines), and its Reason column says that the Editor did not review this link. It removed the references to the withdrawn CO-003. It kept "Against: none yet." and used a "Qualifies:" line, in the same style as CO-005.
 - Finding: an Assessment can become stale too. KAS-005 was made at `CO-20261113-001` and does not know CON-002. The agent handled this, but no rule covers it. Possible edit R5 (for Phase 5): when the Brain version changed since the Assessment, the Managing Editor names each record that the Assessment did not see, and the Orchestrator decides if the Editor must re-run.
 
+CO-006 (2026-11-13): Justin: "Approve all rows". `approved` and applied at 12:18. Brain version `CO-20261113-006`. All three `advance` Assessments are now applied. Sources SRC-002, SRC-003, SRC-006 are `done`.
+
+#### Phase 4 exit test (2026-11-13)
+
+Exit test (KS-06): the Managing Editor makes clear proposals and never changes the Brain.
+
+Result: PASS, subject to Justin's review.
+- Never changes the Brain: in 6 runs (M0 to M3 and two re-checks), no agent changed a file (`git status` after each run). Only the Orchestrator changed `21 Brain`, and only after Justin approved each Change Order and the version check passed.
+- Clear proposals: Justin approved CO-002, CO-005, and CO-006 from the Change Orders. One change, on the Orchestrator's advice (CO-002 X1). M5: the content was clear, but the wide tables were hard to read (R4).
+- Each Change Order gave exact text, kept the ratings when the evidence was weak, used `qualify` and not `challenge` for a difference in conditions, and named overlaps with other Change Orders.
+- The version check stopped two stale Change Orders (CO-003, CO-004). Each re-check found what had changed.
+
+Open points:
+- Proposed edits R1 to R5 are not applied. Justin decides.
+- Not tested: `challenge`, `supersede`, `merge`, `retire` (no input had a `contradicts` finding). A proposal on more than one claim is only partly tested (the Brain has one claim).
+- Brain records: the record body has no Caveats section in `TPL Concept.md`. CON-002 keeps its caveats under "Explanation".
+
 Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
 
 ## 9. Change log
@@ -654,3 +671,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.18 | §8.10: plan approved (KS-D-36). Test results M0 to M3. Proposed edits R1 to R3. |
 | 2026-11-13 | 0.19 | §8.10: CO-002 decision and M5 result. Test result M4. Proposed edit R4. |
 | 2026-11-13 | 0.20 | §8.10: CO-005 applied. CO-004 re-checked as CO-006. Possible edit R5. |
+| 2026-11-13 | 0.21 | §8.10: CO-006 applied. Phase 4 exit test PASS, subject to Justin's review. |
