@@ -604,6 +604,23 @@ Proposed edits (not applied, Justin to decide):
 | R1 | `managing-editor.md` §5 Rules | Add: "Do not say that the Brief reports something unless it does. If the Brief gives no information, write 'The Brief gives no information on …'." | M1 defect. |
 | R2 | Schema §5.8 | Add a rule for a MOC edit: `relate` for a link change; `add-evidence` for a change to the MOC evidence list; `refine` for other MOC text. | M2 type gap. |
 | R3 | Orchestrator (area `CLAUDE.md` §7 or the routing rulebook) | "Invoke the Managing Editor for one Assessment at a time when the Assessments affect the same Brain records. Save each Change Order before the next run." | M1 and M2 overlap. |
+| R4 | `TPL Change Order.md` §2, `managing-editor.md` §6 | Keep the §2 table short: Label, Change type, Record, one-line change. Under the table, give one subsection for each row (`### X1`) with "Current state", "Proposed state", "Evidence", and "Reason". | M5: Justin said that the tables were hard to read. Long text in table cells needs a wide reading area. |
+
+#### Decision on CO-20261113-002 and M5 (2026-11-13)
+
+- Justin: "approve all changes". On the X1 fix: "Yes, with the fix". Decision `approved-with-changes`. Applied at 12:05. Brain version `CO-20261113-002`. New record: CON-20261113-002 (first process).
+- M5 for CO-002: Justin: "The Change Order read well but the tables were a bit hard to read." He added a CSS snippet in Obsidian that widened the reading area, and that helped. Result: PASS for content, with a format defect (R4).
+
+#### Test result M4 (2026-11-13)
+
+PASS.
+- Version check: CO-003 records `CO-20261113-001`. The current version is `CO-20261113-002`. The Orchestrator did not present CO-003 for a decision. It re-invoked the agent with KAS-003 and the current version.
+- The agent recorded the mismatch at the top of its reply and reviewed against the current Brain. It returned [[CO-20261113-005 NARA file format tables]] at `CO-20261113-002`. CO-003 is `withdrawn`, with a note that links CO-005.
+- The agent named each stale part of CO-003: the "Two sources" caveat (now three sources), "one reason" (the claim now has two), the MOC source count and gap line, and the MOC question "Neither source discusses encoding" (NARA does). It added one row (X4 `refine`) for the last one.
+- It flagged that CO-004 is also stale and places text after a CO-003 paragraph.
+- The agent changed no file (`git status`). Its file list matches agent §3.
+
+Next: Justin decides CO-005. Then the Orchestrator re-checks CO-004 in the same way (R3: one at a time).
 
 Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
 
@@ -629,3 +646,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.16 | Phase 3 exit test PASSED (KS-D-35). |
 | 2026-11-13 | 0.17 | New §8.10: Phase 4 status and test plan M0 to M5 (draft, Justin to approve). |
 | 2026-11-13 | 0.18 | §8.10: plan approved (KS-D-36). Test results M0 to M3. Proposed edits R1 to R3. |
+| 2026-11-13 | 0.19 | §8.10: CO-002 decision and M5 result. Test result M4. Proposed edit R4. |

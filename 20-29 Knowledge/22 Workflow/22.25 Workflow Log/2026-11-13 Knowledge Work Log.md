@@ -46,6 +46,12 @@
 | 11:53 | managing-editor | M3: Change Order returned. Found the open CO-002 and CO-003 on the same records | [[KAS-20261113-005 Write hypertext, not plaintext]] | OK |
 | 11:53 | orchestrator | M3: checked and saved as `open`. Source set to `change-proposed` | [[CO-20261113-004 Write hypertext, not plaintext]] | PASS |
 | 11:55 | orchestrator | Results M0 to M3 and proposed edits R1 to R3 written in KS-08 §8.10 (write outside `20-29` approved) | KS-08 §8.10 | OK |
+| 12:03 | justin | Decision on the Change Order: "approve all changes"; X1 fix: "Yes, with the fix". M5 feedback: tables hard to read | [[CO-20261113-002 Write plain text files]] | `approved-with-changes` |
+| 12:05 | orchestrator | Version check (`CO-20261113-001` matched), then Change Order applied: 3 Brain records changed, 1 made (CON-20261113-002). Source set to `done` | [[CO-20261113-002 Write plain text files]] | Brain version `CO-20261113-001` to `CO-20261113-002` |
+| 12:06 | orchestrator | M4: version check on CO-003 failed (`CO-20261113-001` is not the current version). Not presented. Managing Editor re-invoked | [[CO-20261113-003 NARA file format tables]] | stale |
+| 12:12 | managing-editor | M4: revised Change Order returned at `CO-20261113-002` | [[KAS-20261113-003 NARA file format tables]] | OK |
+| 12:12 | orchestrator | M4: checked and saved as `open`. CO-003 set to `withdrawn` | [[CO-20261113-005 NARA file format tables]] | PASS |
+| 12:14 | orchestrator | CO-002 decision, M5 result, M4 result, and proposed edit R4 written in KS-08 §8.10 | KS-08 §8.10 | OK |
 
 ## Errors
 

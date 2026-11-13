@@ -2,9 +2,9 @@
 id: CO-20261113-002
 type: change-order
 title: Write plain text files
-status: open
+status: applied
 created: 2026-11-13T11:50
-updated: 2026-11-13T11:50
+updated: 2026-11-13T12:05
 created-by: managing-editor
 schema-version: "0.8"
 assessment: "[[KAS-20261113-002 Write plain text files]]"
@@ -22,11 +22,11 @@ affected:
   - "[[CON-20261113-001 File over app]]"
   - "[[MOC-20261113-001 Note durability]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved-with-changes
+decided: 2026-11-13T12:03
+decision-note: "All rows approved. X1: first caveat line uses the Orchestrator's fix for the unsupported Sivers sentence."
+applied: 2026-11-13T12:05
+brain-version-after: CO-20261113-002
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -89,4 +89,20 @@ For each row, the options are `approved`, `approved-with-changes`, `rejected`, a
 
 ## 7. Decision record
 
+Justin, 2026-11-13, in the Orchestrator session (`20-29 Knowledge`). The Orchestrator copied his words exactly:
+- "approve all changes. The Change Order read well but the tables were a bit hard to read."
+- On the X1 fix: "Yes, with the fix".
+
+Change to X1: the Orchestrator found that the first caveat line says "The Brief on Sivers reports no commercial interest in a note app". The Brief does not say this (KS-08 §8.10, M1 defect). Applied text: "The Brief gives no information on the author's interests, so it does not show that the two authors are independent."
+
 ## 8. Implementation record
+
+- Version check: `brain-version` `CO-20261113-001` matched the current version (newest `applied` in `22.24`: CO-20261113-001).
+- Files changed:
+  - X1, X2: `21 Brain\CLM-20261113-001 Lasting notes belong in open files.md`
+  - X3, X4, X6: `21 Brain\CON-20261113-001 File over app.md`
+  - X7, X8, X9: `21 Brain\MOC-20261113-001 Note durability.md`
+- File made:
+  - X5: `21 Brain\CON-20261113-002 Work with plain-text notes.md`. `<X5 file name>` in X6 and X7 is this file.
+- Placement: `TPL Concept.md` has no Caveats section. The X5 caveats are under "Explanation", with the note "The steps are independent". The X5 "Related" line is under "Related claims".
+- Brain version is now `CO-20261113-002`.
