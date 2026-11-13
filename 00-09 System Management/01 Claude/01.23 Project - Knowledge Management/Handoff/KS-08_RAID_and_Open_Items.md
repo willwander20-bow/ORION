@@ -650,6 +650,48 @@ Justin's review, 2026-11-13: Phase 4 exit test PASSED (KS-D-37). R1 to R5 stay o
 
 R1 to R5 APPLIED 2026-11-13 (KS-D-38): Managing Editor draft v0.3 (R1, R4, R5), Schema v0.9 §5.8 (R2), `TPL Change Order.md` §2 (R4), area `CLAUDE.md` §7 steps 5 and 7 (R3, R5). Templates `schema-version` "0.9".
 
+### 8.11 Phase 5: Orchestration
+
+Status: DRAFT, 2026-11-13. Justin has not approved this plan.
+
+KS-06 Phase 5: "Define workflow states and validation checks. Add: ID creation, output validation, workflow logs, duplicate checks, error and retry handling, approval records, Brain version checks." Exit test: "one source moves through the full workflow with no silent failure and no unauthorized change."
+
+Most of these rules exist now, but in many places: the Schema, three agent files, area `CLAUDE.md`, and the work log. Phase 5 puts the Orchestrator's rules in one note and tests them on one new source.
+
+#### Step 1. Orchestrator Rulebook
+
+Make one note: `20.04 Knowledge Reference\Orchestrator Rulebook.md`. It is a reference note, not a new Johnny.Decimal ID. Justin controls it (KS-03 §6.2). Content:
+
+| Section | Content | Closes |
+|---|---|---|
+| Routing | Steps (KS-03 §6.1). Processing level: `full-review` by default; `quick-brief` or `archive-only` when Justin asks. Duplicate check on `url` and title. Access check. Charter or Spectrum: `needs-review` (X-D-12). | KS-G-21, KS-C-29 |
+| Workflow states | The Source `status` is the workflow state (Schema §5.1). No separate workflow task record. A table of allowed transitions and who makes each one. | KS-Q-18 |
+| ID creation | Prefix and date from Schema. Next free number for that prefix and day. Search the whole vault before use (root rule 1.2.7). | |
+| Validation | One checklist for each stage: Brief (Reporter final check, quote check rule 9a, locators), Assessment (Editor §10), Change Order (Managing Editor §9, `git status` shows no agent write). | |
+| Errors and retry | A failed stage: record the error in the work log, set the Source to `failed`, stop. One retry only when it is safe (same input, no file written). A second failure goes to Justin. | KS-G-20 |
+| Approval and apply | Justin's words copied exactly. The Orchestrator applies the change only after approval and the version check. The stale-version path (area `CLAUDE.md` §7 step 7). | KS-G-02 |
+| Log | One row for each state change, in the format of the work log. | |
+
+Proposed decision: the Orchestrator is the actor that applies an approved Change Order (KS-G-02). This is the current practice (CO-001 to CO-006).
+
+#### Step 2. Tests
+
+| Test | Input | Pass if |
+|---|---|---|
+| O1 Full workflow | One new source that Justin selects. Proposal: Library of Congress, "Recommended Formats Statement", textual works section (`full-review`). Reason: the MOC asks for a source with reasons on format durability, and the Brain has none. | The source moves from `new` to `done` (or to `skipped` or `failed` with a reason). Each state change has a log row. Each output passes its checklist before the next stage. The Brain changes only after Justin approves, and the version check passes. |
+| O2 Source not accessible | A URL that does not exist on a real site. | The Orchestrator records the access failure, sets the Source to `failed`, and stops. No Reporter run with invented content. |
+| O3 Invalid output | A copy of a validated Brief in the scratchpad, with one `Quote:` changed. Not saved in the vault. | The quote check finds the changed quote. The Orchestrator does not set `validated` and does not start the Editor. |
+
+The Knowledge Curator (step 8 of area `CLAUDE.md` §7) starts in Phase 6. O1 stops after the Change Order is applied.
+
+Time: about 2 to 3 hours with Justin's reviews.
+
+#### Decisions for Justin
+
+1. Approve the Rulebook note (Step 1) and its location.
+2. Approve the Orchestrator as the actor that applies Change Orders (KS-G-02).
+3. Approve tests O1 to O3. For O1, accept the proposed source or select another one.
+
 Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
 
 ## 9. Change log
@@ -679,3 +721,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.21 | §8.10: CO-006 applied. Phase 4 exit test PASS, subject to Justin's review. |
 | 2026-11-13 | 0.22 | Phase 4 exit test PASSED (KS-D-37). Python recorded as a possible enhancement. |
 | 2026-11-13 | 0.23 | R1 to R5 applied (KS-D-38). |
+| 2026-11-13 | 0.24 | New §8.11: Phase 5 plan (draft, Justin to approve). |
