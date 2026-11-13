@@ -6,7 +6,7 @@ status: accepted
 created:
 updated:
 created-by:
-schema-version: "0.9"
+schema-version: "0.10"
 confidence:
 evidence-strength:
 supports: []

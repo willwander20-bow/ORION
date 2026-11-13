@@ -2,7 +2,7 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.9"
+schema-version: "0.10"
 updated: 2026-11-13
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.9, Phase 4. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.10, Phase 6. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -35,7 +35,7 @@ Example: the second Source on 12 November 2026 is `SRC-20261112-002`.
 
 ### 2.2 Prefixes
 
-Seven record types are notes (KS-D-25).
+Eight record types are notes (KS-D-25, KS-D-43).
 
 | Record type | Prefix | `type` value |
 |---|---|---|
@@ -46,6 +46,7 @@ Seven record types are notes (KS-D-25).
 | Brain Claim | `CLM` | `brain-claim` |
 | Concept (includes processes) | `CON` | `concept` |
 | MOC | `MOC` | `moc` |
+| Knowledge Health Report | `KHR` | `knowledge-health-report` |
 
 Reserved prefix: `RQ` for a Research Question, if one becomes its own note later. The KMO prefixes `CCL`, `EVD`, `PRC`, `REL`, `TSK`, and `AUD` are not used. Refer to section 2.5.
 
@@ -64,6 +65,7 @@ Reserved prefix: `RQ` for a Research Question, if one becomes its own note later
 | Reference Brief | `22.22 Reference Briefs` |
 | Knowledge Assessment | `22.23 Knowledge Assessments` |
 | Change Order, with the approval fields | `22.24 Change Orders` |
+| Knowledge Health Report | `22.26 Knowledge Health Reports` |
 | Daily work log (`YYYY-MM-DD Knowledge Work Log.md`, no record ID), with audit rows and error records | `22.25 Workflow Log` |
 | Brain Claim, Concept, MOC | `21 Brain`, flat (KS-D-10) |
 | `Research Questions.md` (one list note, no record ID) | `21 Brain` |
@@ -348,7 +350,28 @@ Status: the Brain Claim list (§5.1).
 
 Status: `active`, `retired`, `needs-review`.
 
-A MOC is Brain content, so each change needs a Change Order. This includes a change to a link only. KS-C-38 can change this rule for navigation-only edits in Phase 6 (KS-D-27).
+A MOC is Brain content, so each change needs a Change Order. This includes a change to a link only (KS-D-27). KS-D-43 keeps this rule: no low-risk Curator action without a Change Order.
+
+### 5.12 Knowledge Health Report fields (KS-D-43)
+
+The Curator writes the report. The Orchestrator saves it in `22.26 Knowledge Health Reports`. A retrieval answer is not a record. It stays in the chat.
+
+| Field | Value | Rule |
+|---|---|---|
+| `mode` | `maintenance`, `impact-review` | The Orchestrator states the mode. |
+| `brain-version` | Change Order ID or `none` | The version at review (§5.6). |
+| `scope` | `all` or a list of links | The Brain records that the Curator was asked to review. |
+| `trigger` | Link | For `impact-review`: the Change Order that started it. Empty for `maintenance`. |
+| `link-check` | Text | The last line of `Link Check.ps1` output, for example "Problems: 2." |
+| `change-orders` | List of links | Each Change Order made from a finding in this report. The Orchestrator adds them. |
+
+Status: `draft`, `validated`, `closed`, `needs-review`. `closed`: Justin decided each finding that needs approval.
+
+Rules:
+- The report proposes. It does not change the Brain (KS-D-43).
+- For a finding that needs a Brain change, the Orchestrator gives the report and the finding labels to the Managing Editor. The Change Order field `assessment` stays empty. The body links the report.
+- Each finding has a label (`H1`, `H2`), the record, the problem, the evidence, why it matters, the recommended action, and if approval is necessary.
+- Each health measure has an explanation. A count with no context is not permitted.
 
 ## 6. Change log
 
@@ -363,3 +386,4 @@ A MOC is Brain content, so each change needs a Change Order. This includes a cha
 | 2026-11-13 | 0.7 | §5.5: locator list and excerpt prefixes, moved from the Reporter and extended after tests T1 to T3 (KS-D-31). |
 | 2026-11-13 | 0.8 | §2.5: `Research Questions.md` needs no Change Order; the Orchestrator adds rows (KS-D-33). |
 | 2026-11-13 | 0.9 | §5.8: change types for a MOC edit (KS-D-38). |
+| 2026-11-13 | 0.10 | Phase 6 (KS-D-43): `KHR` prefix (§2.2), folder `22.26` (§2.4), §5.12 Knowledge Health Report fields. §5.11: MOC rule kept. |

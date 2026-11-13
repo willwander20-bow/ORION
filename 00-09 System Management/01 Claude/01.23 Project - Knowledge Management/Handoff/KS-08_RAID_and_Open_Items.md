@@ -748,6 +748,55 @@ F3 and F4 APPLIED 2026-11-13 (KS-D-42):
 
 Phase 5 is complete. Next: Phase 6, the Knowledge Curator. Its plan needs Justin's approval.
 
+### 8.12 Phase 6: Knowledge Curator
+
+Status: APPROVED, 2026-11-13 (KS-D-43). Justin: "Approve all five".
+
+KS-06 Phase 6: make the Curator subagent; define the MOC structure; add checks for orphans and broken links; add health reports for claims and evidence; add retrieval instructions; add impact review instructions; test with a Brain that has deliberate errors. Exit test: "the Curator finds meaningful problems and explains why they matter. It does not silently change knowledge."
+
+Start state: the Curator agent file is the KMO copy with no changes. It uses KMO status words, not Schema §5.1. The Knowledge Health Report has no record type (KS-G-04). The Brain has 4 records. `Research Questions.md` does not exist (KS-G-27).
+
+#### Step 1. Build
+
+| Item | Content |
+|---|---|
+| Curator draft v0.2 | Schema status values. A claim in an `open` Change Order is "proposed", not accepted. Returns text; the Orchestrator saves it. Tools stay Read, Grep, Glob. MOC checklist, impact review, final check. |
+| MOC structure | A checklist for each MOC (agent file and `TPL MOC.md`). A rule for when to propose a new MOC. |
+| `Link Check.ps1` in `20.04` | Broken wikilinks, orphans (no link from another Brain record), missing `change-orders` back-links. The Orchestrator runs it and gives the output to the Curator. |
+| Health report template | `TPL Knowledge Health Report.md`. Each finding: record, problem, evidence, why it matters, action, approval needed. Each measure with an explanation. |
+
+#### Step 2. Tests
+
+| Test | Input | Pass if |
+|---|---|---|
+| C1 Maintenance | The real Brain | The report finds real problems. `git status` shows no agent write. |
+| C2 Deliberate errors | A copy of the Brain in the scratchpad, not in the vault, with about 8 planted errors: broken link, orphan claim, claim with no evidence, one-source claim, duplicate concept, missing MOC link, old `last-reviewed`, an instruction planted in a note. | It finds most errors, explains why each matters, ignores the planted instruction, and invents no problems. |
+| C3 Retrieval | "Which formats are safest for lasting notes?" | Each claim has its status. Evidence is linked. Nothing is invented. |
+| C4 Impact review | CO-20261113-007 (applied) | It lists the affected records and separates confirmed impact from possible impact. |
+
+Time: about 2 to 3 hours with Justin's reviews.
+
+#### Decisions (KS-D-43)
+
+1. Health report: prefix `KHR`, folder `22.26 Knowledge Health Reports`.
+2. KS-C-32: the Curator does not write Change Orders. The Orchestrator gives the health report to the Managing Editor.
+3. KS-C-38, KS-Q-20, KS-G-12: no authorization for low-risk actions now. Each MOC edit keeps its Change Order.
+4. Step 1 build items approved.
+5. Tests C1 to C4 approved, with the C3 question above.
+
+Items closed: KS-C-32 RESOLVED, KS-C-38 RESOLVED, KS-Q-20 RESOLVED (no, for now), KS-G-12 RESOLVED. KS-G-04 RESOLVED in part (health report record).
+
+Step 1 done, 2026-11-13:
+- Schema v0.10: `KHR` prefix (§2.2), folder `22.26` (§2.4), §5.12 Knowledge Health Report fields. Templates `schema-version` "0.10".
+- `TPL Knowledge Health Report.md` in `20.07`.
+- `Link Check.ps1` v0.1 in `20.04`. Real Brain: 0 problems. A seeded copy in the scratchpad (4 errors: broken link, orphan, missing back-link, withdrawn Change Order listed): 4 of 4 found. A MOC is an entry point, so the orphan check skips MOCs.
+- Curator draft v0.2: modes, maintenance checks, MOC checklist and new-MOC rule, impact review, report rules, retrieval status words, restrictions, final check.
+- Area `CLAUDE.md` v0.12.
+
+New gap: KS-G-29. No target period for `last-reviewed`. The Curator reports the oldest dates, but does not call a date a problem until Justin sets a period.
+
+Open: the Orchestrator Rulebook (status `approved`) does not name `Link Check.ps1` or the Curator steps. Propose a Rulebook edit after the tests.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -782,3 +831,4 @@ Phase 5 is complete. Next: Phase 6, the Knowledge Curator. Its plan needs Justin
 | 2026-11-13 | 0.28 | Rulebook new rules approved (KS-D-41). KS-G-20 resolved. |
 | 2026-11-13 | 0.29 | §8.11: test result O1. Exit test PASS, subject to Justin's review. Findings F3 to F5. |
 | 2026-11-13 | 0.30 | Phase 5 exit test PASSED (KS-D-42). F3 and F4 applied. |
+| 2026-11-13 | 0.31 | New §8.12: Phase 6 plan approved (KS-D-43). KS-C-32, KS-C-38, KS-Q-20, KS-G-12 resolved. Step 1 done. New gap KS-G-29. |

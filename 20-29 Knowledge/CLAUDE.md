@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Version v0.11.
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Version v0.12.
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -37,7 +37,7 @@ Names, record IDs, links, and fields follow `20.04 Knowledge Reference\Knowledge
 |---|---|
 | `20 Knowledge Backend` | `20.00` JDex, `20.04` Reference, `20.07` Templates, `20.09` Archive |
 | `21 Brain` | Approved knowledge. Mostly flat. Folders by record type at most. No topic folders (KS-D-10). |
-| `22 Workflow` | `22.21 Sources`, `22.22 Reference Briefs`, `22.23 Knowledge Assessments`, `22.24 Change Orders`, `22.25 Workflow Log`. Schema §2.4 gives the folder for each record type. |
+| `22 Workflow` | `22.21 Sources`, `22.22 Reference Briefs`, `22.23 Knowledge Assessments`, `22.24 Change Orders`, `22.25 Workflow Log`, `22.26 Knowledge Health Reports`. Schema §2.4 gives the folder for each record type. |
 | `.claude\agents\` | Agent files. |
 
 Archive: `20.09 Knowledge Archive` is the archive for the whole area, including `21` and `22`.
@@ -46,7 +46,7 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 5 passed its exit test (KS-D-42). Next: Phase 6, the Knowledge Curator. Refer to KS-06 §3. Do not start Phase 6 work until its plan is approved.
+Phase 6, the Knowledge Curator, is in progress. Plan approved (KS-D-43, KS-08 §8.12). Step 1 (build) is done. Next: tests C1 to C4. The Curator does not write Change Orders. For a Curator finding that needs a Brain change, give the Knowledge Health Report to the Managing Editor. Before each Curator run in `maintenance` or `impact-review` mode, run `Link Check.ps1` (in `20.04`) and give its output to the Curator.
 
 For each source, follow `20.04 Knowledge Reference\Orchestrator Rulebook.md` (KS-D-39 to KS-D-42): routing, workflow states, IDs, validation, errors and retry, approval and apply, and the log. Use `Quote Check.ps1` and `Frontmatter Check.ps1` in the same folder.
 
@@ -54,7 +54,7 @@ The Reporter, the Editor, and the Managing Editor can be invoked. The Managing E
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
-- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.3 (KS-D-38). The Knowledge Curator is a copy of the KMO package file, with no changes.
+- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.3 (KS-D-38). The Knowledge Curator is draft v0.2 (KS-D-43).
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
 
 | Agent | First phase |
