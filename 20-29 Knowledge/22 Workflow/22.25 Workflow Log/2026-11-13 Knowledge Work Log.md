@@ -92,6 +92,8 @@
 | 15:10 | justin | Phase 5 exit test: "Pass and apply F3, F4". Recorded as KS-D-42 | KS-07, KS-08 §8.11 | PASSED |
 | 15:15 | orchestrator | F3 and F4 applied: `Quote Check.ps1` v0.2, new `Frontmatter Check.ps1`, Rulebook v0.4 §4.0, area `CLAUDE.md` v0.11. Retests pass | `20.04`, `CLAUDE.md` | OK |
 | 17:00 | orchestrator | Phase 6 plan approved (KS-D-43). Step 1 build: Schema v0.10 (`KHR`, §5.12), templates "0.10", new `TPL Knowledge Health Report.md`, new folder `22.26 Knowledge Health Reports`, new `Link Check.ps1` (real Brain 0 problems; seeded scratchpad copy 4 of 4 found), Curator draft v0.2, area `CLAUDE.md` v0.12, KS-07 KS-D-43, KS-08 §8.12 and new gap KS-G-29. Justin: "Approve all five". No agent run. `21 Brain` not changed | `20.04`, `20.07`, `22.26`, `.claude/agents`, `CLAUDE.md`, `01.23 Handoff` | OK |
+| 17:05 | orchestrator | C1 (test): Link Check 0 problems; Curator invoked, mode `maintenance`, scope `all`, Brain version `CO-20261113-007` | — | OK |
+| 17:10 | orchestrator | Knowledge Health Report checked (quotes found, no invented finding, `git status` no agent write) and saved. 7 findings, 6 need a Change Order | [[KHR-20261113-001 Brain maintenance review]] | `validated` |
 
 ## Errors
 

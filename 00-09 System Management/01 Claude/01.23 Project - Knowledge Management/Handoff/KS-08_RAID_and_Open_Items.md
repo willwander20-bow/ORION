@@ -797,6 +797,24 @@ New gap: KS-G-29. No target period for `last-reviewed`. The Curator reports the 
 
 Open: the Orchestrator Rulebook (status `approved`) does not name `Link Check.ps1` or the Curator steps. Propose a Rulebook edit after the tests.
 
+#### Test result C1 (2026-11-13)
+
+| Item | Result |
+|---|---|
+| Input | Mode `maintenance`, scope `all`, Brain version `CO-20261113-007`. Link Check: 0 problems. |
+| Output | `KHR-20261113-001 Brain maintenance review`, saved in `22.26`, `validated`. Frontmatter Check: 0 problems. |
+| Findings | 7 (H1 to H7). 6 need a Change Order (H1 to H5, H7). H6 is an Orchestrator check (E14 words from a tool summary, against the raw LoC page). |
+| Orchestrator check | Each quotation in H1, H2, H4, H5, H6, H7 found in the Brain or the Brief. H4: the four C3 rows are different, as reported. No invented finding. |
+| No write | `git status` after the run: no agent change. |
+
+Result: PASS, subject to Justin's review. The Curator found real problems, explained why each matters, gave a meaning for each measure, and changed no file.
+
+Findings from C1:
+- G1. `Frontmatter Check.ps1` does not check `22.26` by default. The Orchestrator passed `-Path`. Proposed fix: add `22.26` to the default list.
+- G2. The Curator read only the files on its list and said what it did not check (§8). No change proposed.
+
+Next for the C1 findings: Justin decides if the Managing Editor gets H1 to H5 and H7 (one Change Order), and if the Orchestrator runs the H6 check.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -832,3 +850,4 @@ Open: the Orchestrator Rulebook (status `approved`) does not name `Link Check.ps
 | 2026-11-13 | 0.29 | §8.11: test result O1. Exit test PASS, subject to Justin's review. Findings F3 to F5. |
 | 2026-11-13 | 0.30 | Phase 5 exit test PASSED (KS-D-42). F3 and F4 applied. |
 | 2026-11-13 | 0.31 | New §8.12: Phase 6 plan approved (KS-D-43). KS-C-32, KS-C-38, KS-Q-20, KS-G-12 resolved. Step 1 done. New gap KS-G-29. |
+| 2026-11-13 | 0.32 | §8.12: test result C1 (PASS, subject to Justin's review). Findings G1, G2. |
