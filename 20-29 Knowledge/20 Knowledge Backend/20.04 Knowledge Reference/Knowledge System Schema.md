@@ -193,14 +193,15 @@ Source (the status is also the workflow state):
 
 Status lists for the Reference Brief, Knowledge Assessment, Change Order, Concept, and MOC come with the templates.
 
-### 5.2 Stored source text (KS-D-26)
+### 5.2 Stored source text (KS-D-26, KS-D-29)
 
-1. When the Reporter gets the full content, it saves a companion file next to the Source in `22.21 Sources`.
-2. File name: `SRC-… Short title (text).md`. For a PDF, save the PDF with the same name and its own extension.
-3. Content: the extracted text, or a video transcript with time stamps.
-4. Books, and sources that the Reporter cannot get: no companion file. The Brief uses excerpts and locators only.
-5. Each locator in the Brief points into the companion file, or to a page of a source that Justin has.
-6. The companion file is source data. It is not a record, and it has no core frontmatter.
+1. Justin saves the companion file. An agent does not save a full copy of a copyrighted work.
+2. Justin saves it when he wants the full text kept, for example with Obsidian Web Clipper. Location: next to the Source in `22.21 Sources`.
+3. File name: `SRC-… Short title (text).md`. For a PDF, use the same name with its own extension.
+4. The Reporter links the companion file in the Source field `text-file`, and uses it for locators.
+5. The Reporter can use Justin's own files directly: a PDF that he owns, his notes, or a transcript that he made.
+6. No companion file: the Brief uses short excerpts, summaries, and locators to the live page or to a page of a source that Justin has.
+7. The companion file is source data. It is not a record, and it has no core frontmatter.
 
 ### 5.3 Templates
 
@@ -341,4 +342,4 @@ A MOC is Brain content, so each change needs a Change Order. This includes a cha
 | 2026-11-12 | 0.3 | Added §2.4 folders for each record type (KS-D-22). |
 | 2026-11-12 | 0.4 | Record types cut from 14 to 7 notes. Added §2.5 (KS-D-25). |
 | 2026-11-12 | 0.5 | Added §5.1 status values and §5.2 stored source text (KS-D-26). Added §5.3 to §5.5: templates, Source fields, Reference Brief fields (draft, Justin to review). Added §5.6 to §5.11: Brain version, Assessment, Change Order, Brain Claim, Concept, MOC fields (draft, Justin to review). |
-| 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. Phase 1 exit test: removed a stray table header in §2.2; §4.2 example shows "0.6". |
+| 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. Phase 1 exit test: removed a stray table header in §2.2; §4.2 example shows "0.6". §5.2: Justin saves the companion file (KS-D-29). |

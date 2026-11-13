@@ -339,7 +339,7 @@ Items not in this table have no change.
 
 | ID | Item | Status |
 |---|---|---|
-| KS-C-40 | Stored source text (KS-D-26, Schema §5.2) asks the Reporter to save the full text of a source. Claude does not store a full copy of a copyrighted work. The test Source has no companion file. | OPEN. Decide before Phase 2. Options: Justin saves his own copy (for example, with a web clipper) and the Reporter links it; or the Reporter stores excerpts and locators only. |
+| KS-C-40 | Stored source text (KS-D-26, Schema §5.2) asks the Reporter to save the full text of a source. Claude does not store a full copy of a copyrighted work. The test Source has no companion file. | RESOLVED (KS-D-29). Justin saves the copy. The Reporter links it. Schema §5.2. |
 | KS-G-26 | No locator rule for a web page without a companion file. The test used body paragraph numbers (¶1 to ¶10). | OPEN. Add a locator list to Schema §5.5 in Phase 2. |
 | KS-G-27 | The MOC template takes open questions from `Research Questions.md`. That note does not exist. The test MOC lists its open questions directly. | OPEN. Make the note when the first question must be tracked. |
 | KS-G-28 | The Brief template has no field for the excerpt kind. The test used "Summary:" as a prefix to separate a summary from a quotation. | OPEN. Phase 2, with KS-C-40. |
