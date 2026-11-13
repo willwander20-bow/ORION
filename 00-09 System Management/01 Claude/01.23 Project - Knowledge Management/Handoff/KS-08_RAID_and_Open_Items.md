@@ -644,6 +644,9 @@ Open points:
 - Proposed edits R1 to R5 are not applied. Justin decides.
 - Not tested: `challenge`, `supersede`, `merge`, `retire` (no input had a `contradicts` finding). A proposal on more than one claim is only partly tested (the Brain has one claim).
 - Brain records: the record body has no Caveats section in `TPL Concept.md`. CON-002 keeps its caveats under "Explanation".
+- Possible enhancement: install Python (free, with winget) for bulk edits by script. Not needed now: the edit tool does the work. Justin: "leave Python as a possible enhancement avenue".
+
+Justin's review, 2026-11-13: Phase 4 exit test PASSED (KS-D-37). R1 to R5 stay open.
 
 Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
 
@@ -672,3 +675,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.19 | §8.10: CO-002 decision and M5 result. Test result M4. Proposed edit R4. |
 | 2026-11-13 | 0.20 | §8.10: CO-005 applied. CO-004 re-checked as CO-006. Possible edit R5. |
 | 2026-11-13 | 0.21 | §8.10: CO-006 applied. Phase 4 exit test PASS, subject to Justin's review. |
+| 2026-11-13 | 0.22 | Phase 4 exit test PASSED (KS-D-37). Python recorded as a possible enhancement. |

@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.9, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Managing Editor draft v0.2 (2026-11-13).
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37).
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,13 +46,13 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 3 passed its exit test (KS-D-35). Next: Phase 4, the Managing Editor. Refer to KS-06 §3.
+Phase 4 passed its exit test (KS-D-37). Next: Phase 5, Orchestration. Refer to KS-06 §3. Do not start Phase 5 work until its plan is approved.
 
-Phase 4 is in progress. The plan is approved (KS-D-36, KS-08 §8.10). The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it.
+The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it and the version check passes (Schema §5.6). Open edits R1 to R5 are in KS-08 §8.10.
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
-- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.2 (not reviewed; KS-08 §8.10). The Knowledge Curator is a copy of the KMO package file, with no changes.
+- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.2 (tested in Phase 4, KS-D-37). The Knowledge Curator is a copy of the KMO package file, with no changes.
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
 
 | Agent | First phase |
