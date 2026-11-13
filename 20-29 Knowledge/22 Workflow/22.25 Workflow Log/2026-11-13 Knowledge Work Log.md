@@ -73,6 +73,15 @@
 | 13:15 | orchestrator | F1 and F2 applied: Rulebook draft v0.2, `Quote Check.ps1` saved and run again (same result) | `20.04 Knowledge Reference\Orchestrator Rulebook.md`, `20.04 Knowledge Reference\Quote Check.ps1` | OK |
 | 13:25 | justin | Rulebook new rules: "Yes, approve them" (first said in a forked session). Recorded as KS-D-41 | KS-07, KS-08 §8.11 | `approved` |
 | 13:25 | orchestrator | Rulebook v0.3: "(new)" markers replaced with "(KS-D-41)", status `approved` | `20.04 Knowledge Reference\Orchestrator Rulebook.md` | OK |
+| 13:40 | orchestrator | O1: Source saved (`new`). Duplicate check: no match. Access check: HTTP 200. Not work content. Routed `full-review`, scope "I. Textual Works" | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | `routed` |
+| 13:45 | reporter | O1: Reference Brief returned. 14 Claim Candidates, 11 quotes. WebFetch only (no shell tool) | [[BRF-20261113-006 LoC Recommended Formats, textual works]] | OK |
+| 13:50 | orchestrator | Brief saved as `draft`. `git status`: no file changed by the Reporter | [[BRF-20261113-006 LoC Recommended Formats, textual works]] | `draft` |
+| 14:00 | orchestrator | Validation (Rulebook §4.1). `Quote Check.ps1`: 9 of 11 pass. E9 and E15 checked by hand: exact in the page text; the failures come from a link tag next to punctuation (finding F3). Quotes 11 of 11 exact. 19 of 19 heading locators found. `claim-count` 14 matches §7. All 12 sections present. Reporter final check passes | [[BRF-20261113-006 LoC Recommended Formats, textual works]] | `validated` |
+| 14:00 | orchestrator | Source set to `briefed`, `access-status: full` | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | `briefed` |
+| 14:10 | editor | O1: Knowledge Assessment returned at `CO-20261113-006`. 7 findings (A1 to A7), relevance `medium` | [[KAS-20261113-006 LoC Recommended Formats, textual works]] | `advance` |
+| 14:20 | orchestrator | Validation (Rulebook §4.2): Editor final check passes, `brain-version` current, 4 of 4 Brain links resolve, title copied from the Brief, `git status`: no file changed by the Editor. Column check on the raw page for A2: "Plain text" is in the Acceptable column (confirmed). Note added to the Assessment | [[KAS-20261113-006 LoC Recommended Formats, textual works]] | `validated` |
+| 14:20 | orchestrator | Source set to `assessed` | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | `assessed` |
+| 14:35 | orchestrator | YAML fix (Justin found it): `submission-context` had an unquoted ": ", so Obsidian could not read the frontmatter. Value put in single quotes. Scan of all `22 Workflow` records: no other case | [[SRC-20261113-008 LoC Recommended Formats, textual works]] | OK |
 
 ## Errors
 
