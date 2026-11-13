@@ -345,6 +345,36 @@ Items not in this table have no change.
 | KS-G-28 | The Brief template has no field for the excerpt kind. The test used "Summary:" as a prefix to separate a summary from a quotation. | OPEN. Phase 2, with KS-C-40. |
 | — | Schema defects: stray table header in §2.2; old version in the §4.2 example. | FIXED in Schema v0.6. |
 
+### 8.8 Phase 2: Reporter
+
+Status of items:
+
+| ID | Status | Reference |
+|---|---|---|
+| KS-G-07 | RESOLVED (draft) | KS-D-30. Reporter §5: fetched content is data. |
+| KS-G-22 | RESOLVED (draft) | KS-D-30. Justin gives a URL or file to the Orchestrator in chat. The Orchestrator makes the Source record, then invokes the Reporter. |
+| KS-G-26 | RESOLVED (draft) | KS-D-30. Locator list in Reporter §8. Move to Schema §5.5 after the tests. |
+| KS-G-28 | RESOLVED (draft) | KS-D-30. `Quote:` or `Summary:` prefix in the excerpt cell. |
+| KS-C-36 | RESOLVED in part | KS-D-30. The Reporter has no write tool. Claude Code cannot limit Read to a folder for one agent. Control: text rule (Reporter §10) and Orchestrator input. Residual risk: KS-R-25. |
+| KS-R-25 | OPEN | NEW. The Reporter can read `21 Brain` because its Read tool has no path limit. Impact: low (read only). Check in each test: the Reporter reads only the files in Reporter §3 and §4. |
+
+Test plan (KS-06 Phase 2, steps 3 to 7). Run in a session that starts in `20-29 Knowledge`, so that the Reporter agent loads. The main session is the Orchestrator.
+
+| Test | Source | Level | Scope | Pass if |
+|---|---|---|---|---|
+| T1 | NARA, "Appendix A: Tables of File Formats", https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html | `full-review` | "Born-Digital Textual Data" section only | Respects the scope. Records the encoding condition. Locators use `§ Heading`. |
+| T2 | Derek Sivers, "Write plain text files", https://sive.rs/plaintext | `full-review` | Article body, not comments | `§ Heading` locators. Personal experience is not presented as data. |
+| T3 | Nemos, "What is a second brain app", https://nemos-landing.pages.dev/faq/what-is-a-second-brain-app | `full-review` | Article body | Flags the vendor interest, the survey with no method, and the date conflicts. Does not state survey numbers as fact. Source quality `low`. |
+
+For each test:
+1. The Orchestrator makes the Source record (`SRC-…`) and routes it.
+2. The Orchestrator invokes the Reporter with the Source path, level, and scope.
+3. The Orchestrator checks the Brief against Reporter §11 and spot-checks three locators and all quotes against the live page.
+4. The Orchestrator saves the Brief in `22.22` with status `draft`. Justin reviews it. Then `validated` or `rejected`.
+5. Record the findings in this section. Do not make Assessments or Change Orders in Phase 2.
+
+Exit test (KS-06): the Reporter makes traceable Briefs and does not invent source details.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -356,3 +386,4 @@ Items not in this table have no change.
 | 2026-11-13 | 0.5 | Backup and version control done (X-D-25). KS-Q-09, KS-DEP-04 resolved. |
 | 2026-11-13 | 0.6 | Phase 1 templates approved (KS-D-27). §8.6 review list closed. |
 | 2026-11-13 | 0.7 | Phase 1 exit test PASSED (KS-D-28). New §8.7. |
+| 2026-11-13 | 0.8 | KS-C-40 resolved (KS-D-29). New §8.8: Phase 2 status and test plan (KS-D-30). New risk KS-R-25. |

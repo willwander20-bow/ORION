@@ -56,3 +56,18 @@ Changes:
 
 Decisions by Justin:
 - Ignore `graph.json`, like `workspace.json`.
+
+## Late morning — Phase 2 start
+
+Project: `01.23 Project - Knowledge Management`
+
+Changes:
+- Schema §5.2: Justin saves the companion file (KS-D-29).
+- Rewrote `20-29 Knowledge\.claude\agents\reporter.md` as draft v0.2. The KMO original stays in `20.04 ... Source Package\_claude\agents\`.
+- `20-29 Knowledge\CLAUDE.md` to v0.5: Phase 2, Reporter allowed for the tests.
+- Recorded KS-D-29, KS-D-30 (KS-07 v0.15). KS-08 v0.8: new §8.8 with the test plan, new risk KS-R-25.
+
+Decisions by Justin:
+- KS-C-40: Justin saves full-text copies. The Reporter links them.
+- Approved the Reporter rewrite.
+- Approved the three test sources: NARA format tables, Sivers "Write plain text files", Nemos second-brain FAQ.
