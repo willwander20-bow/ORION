@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.5, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 started (KS-D-30).
+Status: v0.6, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 started (KS-D-30). Quote check rule 9a (KS-D-31).
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -52,7 +52,7 @@ The Reporter can be invoked now, for the Phase 2 tests only. The test plan is in
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
-- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.2 (KS-D-30). The other three are copies of the KMO package files, with no changes.
+- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The other three are copies of the KMO package files, with no changes.
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
 
 | Agent | First phase |
@@ -74,6 +74,7 @@ The Brain has content. The Brain version is the ID of the last applied Change Or
 7. **No invented facts.** Do not invent a source fact, a quotation, a citation, or a locator. If a source cannot be accessed, record the failure and stop.
 8. **No paid tools** or subscriptions (X-D-11).
 9. **Errors.** Record the error and stop when a required stage fails. Do not invoke a later stage when an earlier output is not valid.
+9a. **Quote check.** Before you set a Reference Brief to `validated`, check each `Quote:` against the raw page (for example, `curl` with tags removed) or against the companion file. WebFetch does not return exact text (KS-D-31).
 10. **No new agents** without Justin's approval.
 11. **No Knowledge HQ** before the core workflow works.
 12. Keep Markdown and YAML portable.

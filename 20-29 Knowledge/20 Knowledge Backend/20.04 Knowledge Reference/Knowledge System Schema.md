@@ -2,7 +2,7 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.6"
+schema-version: "0.7"
 updated: 2026-11-13
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.6, Phase 1. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.7, Phase 2. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -244,6 +244,22 @@ Reference Brief status: `draft` (saved by the Reporter), `validated` (the Orches
 
 Sections: a full review uses all 12 body sections of the template. A quick brief uses sections 1, 3, 7, 8, and 10 only (KS-G-08).
 
+Locators in Brief §8 (KS-G-26, KS-D-31):
+
+| Source | Locator | Example |
+|---|---|---|
+| Page in a PDF or a book | page | `p. 12` |
+| Video or audio | time stamp | `12:34` |
+| Web page or file with headings | heading | `§ Heading text` |
+| Paragraph in a section | heading and paragraph | `§ Heading text, ¶3` |
+| Table in a section | heading, table, and row | `§ Heading text, Table name, Row name` |
+| Text before the first heading | page title and position | `§ Page title (opening section, before § First heading)` |
+| Web page without headings | body paragraph, counted from the top of the main text | `¶7` |
+| Companion file | the heading or `¶` in that file | `§ Heading text, ¶3` |
+| No locator | the word `unavailable` | `unavailable` |
+
+Excerpts in Brief §8 start with `Quote:` (exact words, 15 words or fewer, in quotation marks) or `Summary:` (a paraphrase).
+
 ### 5.6 Brain version (KS-D-27)
 
 The Brain version is the ID of the last applied Change Order. Example: `CO-20261112-003`. An empty Brain has the version `none`.
@@ -343,3 +359,4 @@ A MOC is Brain content, so each change needs a Change Order. This includes a cha
 | 2026-11-12 | 0.4 | Record types cut from 14 to 7 notes. Added §2.5 (KS-D-25). |
 | 2026-11-12 | 0.5 | Added §5.1 status values and §5.2 stored source text (KS-D-26). Added §5.3 to §5.5: templates, Source fields, Reference Brief fields (draft, Justin to review). Added §5.6 to §5.11: Brain version, Assessment, Change Order, Brain Claim, Concept, MOC fields (draft, Justin to review). |
 | 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. Phase 1 exit test: removed a stray table header in §2.2; §4.2 example shows "0.6". §5.2: Justin saves the companion file (KS-D-29). |
+| 2026-11-13 | 0.7 | §5.5: locator list and excerpt prefixes, moved from the Reporter and extended after tests T1 to T3 (KS-D-31). |

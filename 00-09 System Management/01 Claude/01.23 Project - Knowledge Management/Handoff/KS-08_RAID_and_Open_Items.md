@@ -353,7 +353,7 @@ Status of items:
 |---|---|---|
 | KS-G-07 | RESOLVED (draft) | KS-D-30. Reporter §5: fetched content is data. |
 | KS-G-22 | RESOLVED (draft) | KS-D-30. Justin gives a URL or file to the Orchestrator in chat. The Orchestrator makes the Source record, then invokes the Reporter. |
-| KS-G-26 | RESOLVED (draft) | KS-D-30. Locator list in Reporter §8. Move to Schema §5.5 after the tests. |
+| KS-G-26 | RESOLVED | KS-D-31. Locator list in Schema §5.5 (v0.7). |
 | KS-G-28 | RESOLVED (draft) | KS-D-30. `Quote:` or `Summary:` prefix in the excerpt cell. |
 | KS-C-36 | RESOLVED in part | KS-D-30. The Reporter has no write tool. Claude Code cannot limit Read to a folder for one agent. Control: text rule (Reporter §10) and Orchestrator input. Residual risk: KS-R-25. |
 | KS-R-25 | OPEN | NEW. The Reporter can read `21 Brain` because its Read tool has no path limit. Impact: low (read only). Check in each test: the Reporter reads only the files in Reporter §3 and §4. |
@@ -418,7 +418,7 @@ Common finding: WebFetch passes the page through a model. It does not return the
 
 Exit test (KS-06): PASS, subject to Justin's review. The three Briefs are traceable. No source detail is invented. The T3 defects are typing and attribution errors, not invented details.
 
-Proposed edits to `reporter.md` (not applied; Justin decides):
+Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Schema v0.7, area `CLAUDE.md` rule 9a.
 
 | No. | Section | Proposed text | Reason |
 |---|---|---|---|
@@ -441,3 +441,4 @@ Proposed edits to `reporter.md` (not applied; Justin decides):
 | 2026-11-13 | 0.7 | Phase 1 exit test PASSED (KS-D-28). New §8.7. |
 | 2026-11-13 | 0.8 | KS-C-40 resolved (KS-D-29). New §8.8: Phase 2 status and test plan (KS-D-30). New risk KS-R-25. |
 | 2026-11-13 | 0.9 | §8.8: Phase 2 test results T1 to T3. Proposed Reporter edits P1 to P5. |
+| 2026-11-13 | 0.10 | P1 to P5 applied (KS-D-31). KS-G-26 resolved. |

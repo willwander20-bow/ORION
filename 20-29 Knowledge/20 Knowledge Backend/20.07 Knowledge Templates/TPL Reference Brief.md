@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: reporter
-schema-version: "0.6"
+schema-version: "0.7"
 source:
 processing-level:
 source-quality:
@@ -50,7 +50,7 @@ claim-count:
 
 ## 8. Evidence and locators
 
-<!-- Excerpt: exact quotation in quotes, or a faithful summary. Locator: real page, time stamp, or heading in the text file. Write "unavailable" if there is none. Directness: direct or indirect. -->
+<!-- Excerpt: start with "Quote:" (exact words, 15 words or fewer) or "Summary:". Locator: a form from Schema §5.5, or "unavailable". Directness: direct or indirect. -->
 
 | Label | Excerpt or summary | Locator | For claim | Supports or challenges | Directness | Limits |
 |---|---|---|---|---|---|---|

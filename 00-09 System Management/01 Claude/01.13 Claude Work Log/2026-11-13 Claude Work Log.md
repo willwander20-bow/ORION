@@ -71,3 +71,15 @@ Decisions by Justin:
 - KS-C-40: Justin saves full-text copies. The Reporter links them.
 - Approved the Reporter rewrite.
 - Approved the three test sources: NARA format tables, Sivers "Write plain text files", Nemos second-brain FAQ.
+
+## Midday — Reporter test results and fixes
+
+Project: `01.23 Project - Knowledge Management`
+
+Changes:
+- Started the session "Phase 2 Reporter tests T1–T3" in `20-29 Knowledge`. It ran T1 to T3 and pushed `cf520bb`. All three pass. Claude checked the commit and the records.
+- Applied P1 to P5: `reporter.md` to draft v0.3. Schema to v0.7 (§5.5 locator list). Templates `schema-version` "0.7". Brief template §8 comment. `20-29 Knowledge\CLAUDE.md` to v0.6 (rule 9a, quote check).
+- Recorded KS-D-31 (KS-07 v0.16). KS-08 v0.10.
+
+Decisions by Justin:
+- Apply all five Reporter edits.
