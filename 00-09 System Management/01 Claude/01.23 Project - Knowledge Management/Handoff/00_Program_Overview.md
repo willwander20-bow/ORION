@@ -327,6 +327,7 @@ Status on 2026-11-12:
 | X-D-22 | 2026-11-12, Phase 0. Justin renamed the Intake project folder to `01 Claude\01.22 Project - Obsidian Intake`. This removes the double use of `01.21`. `01.23` now belongs to Knowledge Management. Where an IN document gives `01.23` for Intake, read `01.22`. | ID collision found in Phase 0 |
 | X-D-23 | 2026-11-12, Phase 0. Justin reviewed the ORION root `CLAUDE.md` (now v0.2). Work log file name: `YYYY-MM-DD Claude Work Log.md`, so that it is not confused with an Obsidian Daily Note. Claude does not delete notes; it moves them to the `.09` archive. Each new area, category, or ID needs Justin's approval. Before Claude uses an ID, it searches the whole vault. The other house rules are sufficient for now. | X-C-04 |
 | X-D-24 | 2026-11-12, Phase 0. ID ranges in each category, for all of ORION: `.00` to `.09` standard zeros; `.11` to `.19` reserved for more defaults; content starts at `.21`. Root `CLAUDE.md` §1.1a. The existing folders already follow this rule. | Vault-wide rule |
+| X-D-25 | 2026-11-13. Backup and version control for all of ORION: Git (installed 2026-11-13, v2.56) with a private GitHub repository as the remote. Free; agrees with X-D-11. Git tracks the `.obsidian` settings and plugins, not `workspace.json`. Line endings stay LF. Commits use the GitHub no-reply email. Claude commits and pushes at the end of each session that changes the vault. No Obsidian Git plugin. Root `CLAUDE.md` §5. | KS-Q-09, KS-Q-10 (Git part), KS-DEP-04, KS-R-11 |
 
 ### 11.2 Status of cross-system items
 
@@ -374,3 +375,4 @@ Status on 2026-11-12:
 | 2026-11-12 | 0.1 | First consolidated draft from 16 source documents. |
 | 2026-11-12 | 0.2 | Applied the review of 2026-11-12: decisions, decided terms, status of cross-system items, VSH added. |
 | 2026-11-12 | 0.3 | Phase 0 started. Added X-D-20 to X-D-22: location, project folder, Intake folder ID. Root `CLAUDE.md` found absent. |
+| 2026-11-13 | 0.4 | Added X-D-25 (Git and GitHub backup). |

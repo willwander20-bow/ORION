@@ -274,11 +274,13 @@ This review made these assumptions to consolidate the documents. Confirm each on
 | KS-Q-03 | RESOLVED | KS-D-10 | |
 | KS-Q-06 | DEFAULT | KS-D-01 | Claude Code (K03 D-10). |
 | KS-Q-08 | PINNED | KS-D-05 | |
-| KS-Q-09 | RESOLVED in part | X-D-11 | No paid option. Obsidian Sync is excluded. |
+| KS-Q-09 | RESOLVED | X-D-11, X-D-25 | Git with a private GitHub remote. Free. |
+| KS-Q-10 | RESOLVED in part | X-D-25 | Git is used for version history. JSON Schema stays open. |
+| KS-R-11 | REDUCED | X-D-25 | Each session pushes to GitHub. |
 | KS-Q-12 | RESOLVED in part | KS-D-10 | |
 | KS-Q-19 | RESOLVED | KS-D-16 | Source files go in `22 Workflow`. |
 | KS-DEP-05 | RESOLVED | KS-D-16, X-D-23 | ORION structure reviewed in Phase 0. The root `CLAUDE.md` exists (v0.4). |
-| KS-DEP-04 | OPEN | | Phase 0 finding: Git is not installed on the PC. |
+| KS-DEP-04 | RESOLVED | X-D-25 | Git installed 2026-11-13. Vault repository with a GitHub remote. |
 | KS-G-11 | OPEN | KS-D-19 | The Orchestrator `CLAUDE.md` states the write scope. No setting enforces it yet. |
 | KS-C-36 | OPEN | KS-D-18 | The agent files are installed with no changes. The Reporter tool list still has no path limit. Fix in Phase 2. |
 
@@ -291,7 +293,7 @@ This review made these assumptions to consolidate the documents. Confirm each on
 | ORION root `CLAUDE.md` | Done. v0.4 (X-D-23, X-D-24). |
 | Orchestrator `CLAUDE.md` and `.claude/agents/` | Done. v0.3 (KS-D-20, KS-D-23). |
 | Confirm the Claude Code version and tools | Done in part. The desktop app loads both `CLAUDE.md` files and lists the four agents. The Claude Code CLI is not installed. |
-| Backup and version control | DEFERRED by Justin. Git not installed (KS-DEP-04). |
+| Backup and version control | Done 2026-11-13 (X-D-25). Git and a private GitHub remote. Root `CLAUDE.md` §5. |
 | Naming rules, ID rules, core frontmatter | Done (KS-D-21). Closes KS-C-08, KS-C-24, KS-Q-11, KS-G-23. |
 | Exit test | PASSED 2026-11-12 (KS-D-23). |
 
@@ -347,3 +349,4 @@ Items not in this table have no change.
 | 2026-11-12 | 0.2 | Added status after the review: new risks and gaps, status of each changed item. |
 | 2026-11-12 | 0.3 | Phase 0: location resolved (KS-D-16). Git and root `CLAUDE.md` findings. |
 | 2026-11-12 | 0.4 | Phase 0: package import, `CLAUDE.md` drafts, Phase 0 checklist (§8.4). |
+| 2026-11-13 | 0.5 | Backup and version control done (X-D-25). KS-Q-09, KS-DEP-04 resolved. |
