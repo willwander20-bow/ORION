@@ -35,8 +35,6 @@ Example: the second Source on 12 November 2026 is `SRC-20261112-002`.
 
 ### 2.2 Prefixes
 
-| Record type | Prefix | `type` value |
-|---|---|---|
 Seven record types are notes (KS-D-25).
 
 | Record type | Prefix | `type` value |
@@ -134,7 +132,7 @@ status: new
 created: 2026-11-12T21:30
 updated: 2026-11-12T21:30
 created-by: orchestrator
-schema-version: "0.5"
+schema-version: "0.6"
 ---
 ```
 
@@ -343,4 +341,4 @@ A MOC is Brain content, so each change needs a Change Order. This includes a cha
 | 2026-11-12 | 0.3 | Added §2.4 folders for each record type (KS-D-22). |
 | 2026-11-12 | 0.4 | Record types cut from 14 to 7 notes. Added §2.5 (KS-D-25). |
 | 2026-11-12 | 0.5 | Added §5.1 status values and §5.2 stored source text (KS-D-26). Added §5.3 to §5.5: templates, Source fields, Reference Brief fields (draft, Justin to review). Added §5.6 to §5.11: Brain version, Assessment, Change Order, Brain Claim, Concept, MOC fields (draft, Justin to review). |
-| 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. |
+| 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. Phase 1 exit test: removed a stray table header in §2.2; §4.2 example shows "0.6". |

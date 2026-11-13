@@ -313,7 +313,8 @@ This review made these assumptions to consolidate the documents. Confirm each on
 | KS-Q-05 | RESOLVED | KS-D-26 |
 | KS-Q-15 | RESOLVED in part | KS-D-26. Values set. Transition rules come with the templates. |
 | KS-Q-18 | RESOLVED in part | KS-D-26. Source status is the workflow state. |
-| Templates | APPROVED | KS-D-27. All seven in `20.07`, Schema v0.6. Next: the Phase 1 exit test, one sample record of each type. |
+| Templates | APPROVED | KS-D-27. All seven in `20.07`, Schema v0.6. |
+| Exit test | RECORDS MADE | KS-D-28. Seven records from "File over app". Justin's read check in Obsidian is open. Findings in §8.7. |
 | KS-G-01 | RESOLVED | KS-D-27. Brain version = ID of the last applied Change Order (Schema §5.6). |
 | KS-G-04 | RESOLVED | KS-D-27. Fields for all seven types. |
 | KS-G-05 | RESOLVED | KS-D-27. Relationship types: `supports`, `contradicts`, `refines`, `extends`, `related`. |
@@ -334,6 +335,16 @@ The review list of 2026-11-12 (six items) is closed by KS-D-27.
 
 Items not in this table have no change.
 
+### 8.7 Items from the Phase 1 exit test
+
+| ID | Item | Status |
+|---|---|---|
+| KS-C-40 | Stored source text (KS-D-26, Schema §5.2) asks the Reporter to save the full text of a source. Claude does not store a full copy of a copyrighted work. The test Source has no companion file. | OPEN. Decide before Phase 2. Options: Justin saves his own copy (for example, with a web clipper) and the Reporter links it; or the Reporter stores excerpts and locators only. |
+| KS-G-26 | No locator rule for a web page without a companion file. The test used body paragraph numbers (¶1 to ¶10). | OPEN. Add a locator list to Schema §5.5 in Phase 2. |
+| KS-G-27 | The MOC template takes open questions from `Research Questions.md`. That note does not exist. The test MOC lists its open questions directly. | OPEN. Make the note when the first question must be tracked. |
+| KS-G-28 | The Brief template has no field for the excerpt kind. The test used "Summary:" as a prefix to separate a summary from a quotation. | OPEN. Phase 2, with KS-C-40. |
+| — | Schema defects: stray table header in §2.2; old version in the §4.2 example. | FIXED in Schema v0.6. |
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -344,3 +355,4 @@ Items not in this table have no change.
 | 2026-11-12 | 0.4 | Phase 0: package import, `CLAUDE.md` drafts, Phase 0 checklist (§8.4). |
 | 2026-11-13 | 0.5 | Backup and version control done (X-D-25). KS-Q-09, KS-DEP-04 resolved. |
 | 2026-11-13 | 0.6 | Phase 1 templates approved (KS-D-27). §8.6 review list closed. |
+| 2026-11-13 | 0.7 | Phase 1 exit test records made (KS-D-28). New §8.7. |

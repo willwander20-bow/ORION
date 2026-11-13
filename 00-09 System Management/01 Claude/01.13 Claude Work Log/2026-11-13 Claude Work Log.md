@@ -29,3 +29,16 @@ Changes:
 Decisions by Justin:
 - `source-type`: remove `pdf`, add `social-post`.
 - Accepted items 2 to 6 of the review list as drafted.
+
+## Morning — Phase 1 exit test
+
+Project: `01.23 Project - Knowledge Management`
+
+Changes:
+- Made seven records from the article "File over app": four in `22 Workflow` (`22.21` to `22.24`), three in `21 Brain`. Audit rows in `22.25 Workflow Log\2026-11-13 Knowledge Work Log.md`.
+- Schema v0.6: two small fixes (§2.2, §4.2).
+- Recorded KS-D-28 (KS-07 v0.13). KS-08 v0.7: new §8.7 with four exit-test items.
+
+Decisions by Justin:
+- Claude selects the test article.
+- `CO-20261113-001`: approved. Keep the records in the Brain.
