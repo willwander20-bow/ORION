@@ -711,7 +711,9 @@ Findings:
 
 F1 and F2 APPLIED 2026-11-13 (KS-D-40): Rulebook draft v0.2, `Quote Check.ps1` in `20.04`. The vault copy of the script gave the same result on BRF-003 (21 of 21) and on the changed copy (1 failed).
 
-Next: Justin confirms the "(new)" rules. Then O1.
+New rules APPROVED 2026-11-13 (KS-D-41). Rulebook v0.3, status `approved`. KS-G-20 resolved (retry rule).
+
+Next: O1, the full workflow on the Library of Congress source.
 
 ## 9. Change log
 
@@ -744,3 +746,4 @@ Next: Justin confirms the "(new)" rules. Then O1.
 | 2026-11-13 | 0.25 | §8.11: plan approved (KS-D-39). KS-G-02 resolved. Orchestrator Rulebook made. |
 | 2026-11-13 | 0.26 | §8.11: test results O2 and O3 (PASS). Findings F1 and F2. |
 | 2026-11-13 | 0.27 | F1 and F2 applied (KS-D-40). |
+| 2026-11-13 | 0.28 | Rulebook new rules approved (KS-D-41). KS-G-20 resolved. |

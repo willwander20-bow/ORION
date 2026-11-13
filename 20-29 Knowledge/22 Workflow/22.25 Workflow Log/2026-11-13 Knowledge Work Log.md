@@ -71,6 +71,8 @@
 | 13:05 | orchestrator | O2 and O3 results and findings F1, F2 written in KS-08 §8.11 | KS-08 §8.11 | PASS |
 | 13:15 | justin | "Apply F1 and F2". Recorded as KS-D-40 | KS-07, KS-08 §8.11 | `approved` |
 | 13:15 | orchestrator | F1 and F2 applied: Rulebook draft v0.2, `Quote Check.ps1` saved and run again (same result) | `20.04 Knowledge Reference\Orchestrator Rulebook.md`, `20.04 Knowledge Reference\Quote Check.ps1` | OK |
+| 13:25 | justin | Rulebook new rules: "Yes, approve them" (first said in a forked session). Recorded as KS-D-41 | KS-07, KS-08 §8.11 | `approved` |
+| 13:25 | orchestrator | Rulebook v0.3: "(new)" markers replaced with "(KS-D-41)", status `approved` | `20.04 Knowledge Reference\Orchestrator Rulebook.md` | OK |
 
 ## Errors
 

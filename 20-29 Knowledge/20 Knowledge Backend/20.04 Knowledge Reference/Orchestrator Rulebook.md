@@ -1,7 +1,7 @@
 ---
 title: Orchestrator Rulebook
 type: reference
-status: draft
+status: approved
 schema-version: "0.9"
 updated: 2026-11-13
 ---
@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: draft v0.2, Phase 5. Justin has not reviewed it. A rule marked **(new)** is not current practice. Justin must confirm it. All other rules come from the documents named in the rule.
+Status: v0.3, Phase 5. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -22,7 +22,7 @@ Routing is the first stage for each source (KS-03 §6.1, KS-D-07). Do these step
 2. **Source type.** Set `source-type` (Schema §5.4).
 3. **Source ID.** Assign the ID (section 3). Save the Source from `TPL Source.md` with status `new`. Each later step then has a record to update (F1, KS-D-40).
 4. **Duplicate check.** Search `22.21 Sources` for the same `url` and for a similar title. If a match exists, set `duplicate-of` and the status `skipped`. Stop. Do not invoke the Reporter (test E4).
-5. **Access check (new).** Get the page (for example, `curl`). If the page does not load, or it gives no source text, set `access-status: none`, record the error in the work log, set the Source to `failed`, and stop. Ask Justin for a file or a different link. Do not invoke the Reporter (KS-03 §6.1, area `CLAUDE.md` rule 7, test O2).
+5. **Access check (KS-D-41).** Get the page (for example, `curl`). If the page does not load, or it gives no source text, set `access-status: none`, record the error in the work log, set the Source to `failed`, and stop. Ask Justin for a file or a different link. Do not invoke the Reporter (KS-03 §6.1, area `CLAUDE.md` rule 7, test O2).
 6. **Work content.** If the source relates to Charter or Spectrum, set the Source to `needs-review` and stop until Justin decides (X-D-12, X-D-13). Note: no criteria exist yet for "relates to" (KS-G-24). If you are not sure, ask Justin.
 7. **Processing level.** Set `processing-level` (section 1.1).
 8. **Routing result.** Set the Source to `routed`. Write one log row: the level and the scope.
@@ -32,7 +32,7 @@ Routing is the first stage for each source (KS-03 §6.1, KS-D-07). Do these step
 | Level | When | Stages |
 |---|---|---|
 | `full-review` | Default. | Reporter, Editor, Managing Editor if `advance`, Justin, apply. |
-| `quick-brief` | Only when Justin asks. | Reporter (Brief sections 1, 3, 7, 8, 10). The workflow ends after the Brief is `validated` (new). |
+| `quick-brief` | Only when Justin asks. | Reporter (Brief sections 1, 3, 7, 8, 10). The workflow ends after the Brief is `validated` (KS-D-41). |
 | `archive-only` | Only when Justin asks. | Source record only. Status `archived`. |
 
 The Orchestrator recommends a level. Justin can change it (KS-C-29).
@@ -49,25 +49,25 @@ The Source `status` is the workflow state (Schema §5.1, KS-D-25). There is no s
 | `new` | `archived` | Orchestrator | `archive-only`. |
 | `new`, `routed` | `failed` | Orchestrator | Access check fails, or the Reporter reports `access-status: none`. |
 | `routed` | `briefed` | Orchestrator | Brief saved and `validated` (section 4.1). |
-| `briefed` | `done` | Orchestrator | `quick-brief` only (new). |
+| `briefed` | `done` | Orchestrator | `quick-brief` only (KS-D-41). |
 | `briefed` | `assessed` | Orchestrator | Assessment saved and `validated` (section 4.2). |
 | `assessed` | `done` | Orchestrator | `recommended-action` is `no-action`, or `investigate` and the row is added to `Research Questions.md`, or the Managing Editor returns No Change. |
 | `assessed` | `change-proposed` | Orchestrator | Change Order saved as `open` (section 4.3). |
-| `change-proposed` | `done` | Orchestrator | Change Order applied, or Justin set `rejected` (new for `rejected`). |
+| `change-proposed` | `done` | Orchestrator | Change Order applied, or Justin set `rejected` (KS-D-41 for `rejected`). |
 | any | `failed` | Orchestrator | A stage fails twice, or it fails and a retry is not safe (section 5). |
 | any | `needs-review` | Orchestrator or Justin | Work content, or Justin asks. |
 | `needs-review`, `failed` | the state Justin names | Justin | Justin records a decision (X-D-13). |
 
 Rules:
 - Do not skip a state. Do not start a stage when the Source is not in the state before it (area `CLAUDE.md` rule 9).
-- `deferred`: the Source stays `change-proposed` (new).
+- `deferred`: the Source stays `change-proposed` (KS-D-41).
 - A Source in `needs-review` gets no work until Justin decides.
 
 ## 3. ID creation
 
 1. Use the prefix and format of Schema §2.1 and §2.2. The date is the date the record is made.
 2. Search the area for the highest `NNN` with the same prefix and date. Add 1 (Schema §2.3).
-3. Search the whole vault for the new ID string. If it exists, use the next number (new).
+3. Search the whole vault for the new ID string. If it exists, use the next number (KS-D-41).
 4. An ID never changes and is never reused, also after the record is archived.
 5. File name: `ID Short title.md` (Schema §3.1). The file name does not change.
 
@@ -82,9 +82,9 @@ Validate each output before the next stage. If a check fails, set the output to 
 3. **Quote check.** Check each `Quote:` against the raw page (`curl` with tags removed) or the companion file. Each quote must match exactly and have 15 words or fewer. WebFetch text is not proof (area `CLAUDE.md` rule 9a, KS-D-31).
    - Web page: run `Quote Check.ps1` in this folder (F2, KS-D-40). Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Quote Check.ps1" -Brief "<Brief path>" -Url "<url>"`. Pass: "Failed: 0".
    - The script does not check a companion file or a PDF. It does not read a quote that contains a `"` character. Check these by hand.
-4. Locators: each heading or `¶` locator exists in the source. Check all of them for a short source. Check a sample of at least 5 for a long source (new).
+4. Locators: each heading or `¶` locator exists in the source. Check all of them for a short source. Check a sample of at least 5 for a long source (KS-D-41).
 5. Sections: `full-review` uses all 12 sections. `quick-brief` uses 1, 3, 7, 8, 10.
-6. `git status` shows no file changed by the Reporter (new).
+6. `git status` shows no file changed by the Reporter (KS-D-41).
 
 Pass: set the Brief to `validated` and the Source to `briefed`.
 
@@ -113,9 +113,9 @@ Pass: save the Change Order with status `open`, set the Source to `change-propos
 ## 5. Errors and retry
 
 1. When a stage fails, write an error record in the log ("Errors" section): the time, the stage, the input, and the error.
-2. **Retry (new).** Retry one time only, and only when the retry is safe: the input is the same, and the failed run wrote no file. Example: a subagent returned no output, or a tool timed out.
+2. **Retry (KS-D-41).** Retry one time only, and only when the retry is safe: the input is the same, and the failed run wrote no file. Example: a subagent returned no output, or a tool timed out.
 3. Do not retry when the output is invalid because of content (for example, a changed quote or an invented locator). Reject the output and tell Justin.
-4. **Second failure (new).** After a second failure, set the Source to `failed` and stop. Justin decides the next step.
+4. **Second failure (KS-D-41).** After a second failure, set the Source to `failed` and stop. Justin decides the next step.
 5. Do not invent content to fill a failed stage (area `CLAUDE.md` rule 7). Do not start a later stage (rule 9).
 
 ## 6. Approval and apply
@@ -132,7 +132,7 @@ The Orchestrator is the actor that applies an approved Change Order (KS-D-39, KS
 6. In the Change Order: set `applied`, `brain-version-after` (its own ID), and status `applied`.
 7. Set the Source to `done`.
 8. Write the log rows: the decision (actor `justin`), and the apply with the Brain version before and after.
-9. `rejected`: do not apply. Set the Source to `done` (new).
+9. `rejected`: do not apply. Set the Source to `done` (KS-D-41).
 
 ## 7. Log
 
@@ -154,3 +154,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 |---|---|---|
 | 2026-11-13 | 0.1 | First draft (KS-D-39). |
 | 2026-11-13 | 0.2 | F1: Source ID and save moved to routing step 3. F2: `Quote Check.ps1` named in §4.1 (KS-D-40). |
+| 2026-11-13 | 0.3 | Justin approved the new rules (KS-D-41). Status `approved`. |
