@@ -92,3 +92,16 @@ Changes:
 
 Decisions by Justin:
 - Validated the three Briefs. Phase 2 PASSED.
+
+## Afternoon — Phase 3 plan
+
+Changes:
+- Rewrote `20-29 Knowledge\.claude\agents\editor.md` as draft v0.2.
+- Schema to v0.8 (§2.5 Research Questions rule). Templates `schema-version` "0.8".
+- `20-29 Knowledge\CLAUDE.md` to v0.8: rule 2 exception, Phase 3 in §4.
+- Recorded KS-D-33 (KS-07 v0.18). KS-08 v0.12: new §8.9 with tests E1 to E5.
+
+Decisions by Justin:
+- The Editor searches `21 Brain` itself.
+- `Research Questions.md` needs no Change Order.
+- Approved the Editor rewrite and tests E1 to E5.

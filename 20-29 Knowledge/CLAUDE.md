@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.7, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31).
+Status: v0.8, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 started (KS-D-33).
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,13 +46,13 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 2 passed its exit test (KS-D-32). Next: Phase 3, the Editor. Refer to KS-06 §3.
+Phase 3: the Editor (KS-D-33). Phase 2 passed its exit test (KS-D-32). Refer to KS-06 §3.
 
-The Reporter can be invoked. Do not invoke the Editor until its Phase 3 plan is approved. Do not make Change Orders by agent before Phase 4.
+The Reporter can be invoked. The Editor can be invoked for the Phase 3 tests only. The test plan is in KS-08 §8.9. Follow it. Do not make Change Orders by agent before Phase 4.
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
-- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The other three are copies of the KMO package files, with no changes.
+- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.2 (KS-D-33). The other two are copies of the KMO package files, with no changes.
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
 
 | Agent | First phase |
@@ -66,7 +66,7 @@ The Brain has content. The Brain version is the ID of the last applied Change Or
 ## 5. Hard rules
 
 1. **Write scope.** Write only inside `20-29 Knowledge`. Do not write in other parts of ORION without Justin's approval. This includes the routing result on Intake notes in `00.01` until X-G-10 is decided.
-2. **Brain changes.** No agent creates, edits, or deletes Brain content without Justin's approval. Each applied change has a Change Order: what changed, why, the evidence, and the approval. Each Brain note links to each Change Order that changed it (KS-D-03).
+2. **Brain changes.** No agent creates, edits, or deletes Brain content without Justin's approval. Each applied change has a Change Order: what changed, why, the evidence, and the approval. Each Brain note links to each Change Order that changed it (KS-D-03). Exception: `21 Brain\Research Questions.md` is not knowledge. The Orchestrator adds rows without a Change Order and logs each change (KS-D-33, Schema §2.5).
 3. **A Change Order is not an approval.** Record the approval separately.
 4. **Needs-review gate.** An item with "needs review" does not move to the next stage until Justin reviews it and records a decision (X-D-13).
 5. **Work content.** If an item relates to Charter or Spectrum, set it to "needs review" (X-D-12).

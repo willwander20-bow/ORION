@@ -2,7 +2,7 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.7"
+schema-version: "0.8"
 updated: 2026-11-13
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.7, Phase 2. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.8, Phase 3. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -81,7 +81,7 @@ Reserved prefix: `RQ` for a Research Question, if one becomes its own note later
 | Audit Event | A row in the daily work log in `22.25`. |
 | Change Order approval | Fields in the Change Order: `decision`, `decided`, `decision-note`. |
 | No Change result | A value of the recommended action in the Knowledge Assessment. No Change Order. |
-| Research Question | A row in `21 Brain\Research Questions.md`. A question becomes its own note (`RQ`) only when it collects links. |
+| Research Question | A row in `21 Brain\Research Questions.md`. A question becomes its own note (`RQ`) only when it collects links. The list is not knowledge, so it needs no Change Order. The Orchestrator makes the note at the first `investigate` result and adds rows. Each row gives the question, the Assessment that raised it, the date, and the status (`open` or `closed`). Each change is a row in the work log. Justin can edit the list (KS-D-33). |
 
 ## 3. File names and links
 
@@ -360,3 +360,4 @@ A MOC is Brain content, so each change needs a Change Order. This includes a cha
 | 2026-11-12 | 0.5 | Added §5.1 status values and §5.2 stored source text (KS-D-26). Added §5.3 to §5.5: templates, Source fields, Reference Brief fields (draft, Justin to review). Added §5.6 to §5.11: Brain version, Assessment, Change Order, Brain Claim, Concept, MOC fields (draft, Justin to review). |
 | 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. Phase 1 exit test: removed a stray table header in §2.2; §4.2 example shows "0.6". §5.2: Justin saves the companion file (KS-D-29). |
 | 2026-11-13 | 0.7 | §5.5: locator list and excerpt prefixes, moved from the Reporter and extended after tests T1 to T3 (KS-D-31). |
+| 2026-11-13 | 0.8 | §2.5: `Research Questions.md` needs no Change Order; the Orchestrator adds rows (KS-D-33). |

@@ -420,6 +420,33 @@ Exit test (KS-06): PASS, subject to Justin's review. The three Briefs are tracea
 
 Justin's review, 2026-11-13: all three Briefs `validated`. Phase 2 exit test PASSED (KS-D-32).
 
+### 8.9 Phase 3: Editor
+
+Status of items:
+
+| ID | Status | Reference |
+|---|---|---|
+| KS-G-27 | RESOLVED | KS-D-33. The Orchestrator makes `Research Questions.md` at the first `investigate` result. No Change Order. |
+| KS-06 step 1 | DONE | The real Brain is the test Brain (1 claim, 1 concept, 1 MOC). No separate test Brain. |
+
+Test plan (KS-06 Phase 3). Run in a session that starts in `20-29 Knowledge`. The main session is the Orchestrator. Brain version at start: `CO-20261113-001`.
+
+| Test | Input | Pass if |
+|---|---|---|
+| E1 Supports | [[BRF-20261113-003 Write plain text files]] | Finds `supports` for [[CLM-20261113-001 Lasting notes belong in open files]], with reasons. Says that self-report evidence adds little strength. |
+| E2 New and qualifies | [[BRF-20261113-002 NARA file format tables]] | Finds `new` claims (preferred text formats) and the encoding condition as `qualifies` or `refines` for CLM-20261113-001. Names the difference. |
+| E3 Challenges | New Source: Artyom Bologov, "Write Hypertext, not Plaintext", https://aartaka.me/hypertext. The Reporter makes the Brief first (`full-review`, article body). Quote check (rule 9a). Justin validates the Brief before the Editor runs. | Separates a real contradiction from a difference in definition (HTML is also an open format). Uses `contradicts` only if the rule in Editor §6 is met. |
+| E4 Duplicate | New submission of https://stephango.com/file-over-app | The Orchestrator finds [[SRC-20261113-001 File over app]] at routing. The new Source gets `duplicate-of` and status `skipped`. No Reporter or Editor run. |
+| E5 Weak and new | [[BRF-20261113-004 What is a second brain app]] | Finds `new` claims, weighs the low source quality, and recommends `investigate` or `no-action`, not `advance`. If `investigate`: the Orchestrator makes `Research Questions.md` and adds the row. |
+
+For each Editor test (E1, E2, E3, E5):
+1. The Orchestrator invokes the Editor with the Brief path and the Brain version.
+2. The Orchestrator checks the Assessment against Editor §10. It checks that §2 lists the Brain records and that each explanation gives a reason, not shared words.
+3. The Orchestrator saves the Assessment in `22.23` as `KAS-…` with status `draft`, and sets the Source status to `assessed`.
+4. Record the findings below. Do not make Change Orders. Do not change Brain Claims, Concepts, or MOCs.
+
+Exit test (KS-06): the Editor identifies useful relationships and explains its reasons.
+
 Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Schema v0.7, area `CLAUDE.md` rule 9a.
 
 | No. | Section | Proposed text | Reason |
@@ -445,3 +472,4 @@ Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Sc
 | 2026-11-13 | 0.9 | §8.8: Phase 2 test results T1 to T3. Proposed Reporter edits P1 to P5. |
 | 2026-11-13 | 0.10 | P1 to P5 applied (KS-D-31). KS-G-26 resolved. |
 | 2026-11-13 | 0.11 | Phase 2 exit test PASSED (KS-D-32). |
+| 2026-11-13 | 0.12 | New §8.9: Phase 3 status and test plan (KS-D-33). KS-G-27 resolved. |
