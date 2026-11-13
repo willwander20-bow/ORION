@@ -2,9 +2,9 @@
 id: SRC-20261113-011
 type: source
 title: "Build a Self Improving Claude Knowledge Base"
-status: assessed
+status: change-proposed
 created: 2026-11-13T17:35
-updated: 2026-11-13T19:10
+updated: 2026-11-13T19:25
 created-by: orchestrator
 schema-version: "0.10"
 url:
