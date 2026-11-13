@@ -64,6 +64,8 @@
 | 12:30 | justin | "apply edits": R1 to R5 approved. Recorded as KS-D-38 | KS-07, KS-08 §8.10 | `approved` |
 | 12:30 | orchestrator | R1 to R5 applied: `managing-editor.md` v0.3, Schema v0.9 §5.8, `TPL Change Order.md` §2, all templates `schema-version` "0.9", area `CLAUDE.md` §4 and §7 | `.claude\agents\managing-editor.md`, `20.04`, `20.07`, `CLAUDE.md` | OK |
 | 12:35 | orchestrator | Phase 5 start (Justin: "Lets go"). Phase 5 plan written in KS-08 §8.11: Orchestrator Rulebook, tests O1 to O3. Plan not approved yet | KS-08 §8.11 | DRAFT |
+| 12:45 | justin | Phase 5 plan: "Approve all three". Recorded as KS-D-39. KS-G-02 resolved: the Orchestrator applies an approved Change Order | KS-07, KS-08 §8.11, §8.3 | `approved` |
+| 12:50 | orchestrator | Orchestrator Rulebook draft v0.1 made. Rules marked "(new)" need Justin's review | `20.04 Knowledge Reference\Orchestrator Rulebook.md` | DRAFT |
 
 ## Errors
 

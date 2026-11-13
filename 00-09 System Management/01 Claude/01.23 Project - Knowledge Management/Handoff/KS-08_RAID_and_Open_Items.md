@@ -257,7 +257,7 @@ This review made these assumptions to consolidate the documents. Confirm each on
 | KS-C-35 | PINNED | KS-D-04 | Refer to KS-R-22. |
 | KS-C-36 | OPEN | | KMO internal. |
 | KS-C-37 | RESOLVED | KS-D-10 | No source-type folders. |
-| KS-G-02 | OPEN | KS-D-03 | Recording rule decided. No agent named to apply changes. |
+| KS-G-02 | RESOLVED | KS-D-03, KS-D-39 | The Orchestrator applies an approved Change Order after the version check. |
 | KS-G-03 | PLANNED | KS-D-13 | |
 | KS-G-06 | RESOLVED in part | KS-D-01 | KVC vocabularies carry forward. Values open. |
 | KS-G-07 | RESOLVED | KS-D-01 | KVC rule carries forward. Add it to the agent files in development. |
@@ -652,7 +652,7 @@ R1 to R5 APPLIED 2026-11-13 (KS-D-38): Managing Editor draft v0.3 (R1, R4, R5), 
 
 ### 8.11 Phase 5: Orchestration
 
-Status: DRAFT, 2026-11-13. Justin has not approved this plan.
+Status: APPROVED, 2026-11-13 (KS-D-39). Justin: "Approve all three".
 
 KS-06 Phase 5: "Define workflow states and validation checks. Add: ID creation, output validation, workflow logs, duplicate checks, error and retry handling, approval records, Brain version checks." Exit test: "one source moves through the full workflow with no silent failure and no unauthorized change."
 
@@ -692,7 +692,9 @@ Time: about 2 to 3 hours with Justin's reviews.
 2. Approve the Orchestrator as the actor that applies Change Orders (KS-G-02).
 3. Approve tests O1 to O3. For O1, accept the proposed source or select another one.
 
-Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
+Justin's decisions, 2026-11-13: all three approved (KS-D-39). KS-G-02 resolved: the Orchestrator applies an approved Change Order.
+
+Next: write the Rulebook (Step 1). Then run O2 and O3, then O1.
 
 ## 9. Change log
 
@@ -722,3 +724,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.22 | Phase 4 exit test PASSED (KS-D-37). Python recorded as a possible enhancement. |
 | 2026-11-13 | 0.23 | R1 to R5 applied (KS-D-38). |
 | 2026-11-13 | 0.24 | New §8.11: Phase 5 plan (draft, Justin to approve). |
+| 2026-11-13 | 0.25 | §8.11: plan approved (KS-D-39). KS-G-02 resolved. Orchestrator Rulebook made. |
