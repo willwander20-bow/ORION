@@ -2,7 +2,7 @@
 id: KAS-20261113-004
 type: knowledge-assessment
 title: What is a second brain app
-status: draft
+status: validated
 created: 2026-11-13T11:23
 updated: 2026-11-13T11:23
 created-by: editor

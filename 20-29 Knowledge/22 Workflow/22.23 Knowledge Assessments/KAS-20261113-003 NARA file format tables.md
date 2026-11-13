@@ -2,7 +2,7 @@
 id: KAS-20261113-003
 type: knowledge-assessment
 title: NARA file format tables
-status: draft
+status: validated
 created: 2026-11-13T11:21
 updated: 2026-11-13T11:21
 created-by: editor

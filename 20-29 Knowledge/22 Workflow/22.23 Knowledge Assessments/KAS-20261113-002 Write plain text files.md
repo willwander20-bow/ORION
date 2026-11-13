@@ -2,7 +2,7 @@
 id: KAS-20261113-002
 type: knowledge-assessment
 title: Write plain text files
-status: draft
+status: validated
 created: 2026-11-13T11:19
 updated: 2026-11-13T11:19
 created-by: editor
