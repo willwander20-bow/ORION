@@ -891,6 +891,8 @@ Open after the tests:
 - Curator findings for a Change Order: KHR-001 H1 to H5 and H7, KHR-002 H2 (H3 duplicates KHR-001). The H6 / H1 check of E14 against the raw LoC page.
 - KS-G-29: no target period for `last-reviewed`.
 
+Justin's review, 2026-11-13: Phase 6 exit test PASSED (KS-D-44). Justin: "Pass Phase 6". The open items above stay open. Phase 6 is complete. Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 ("No Knowledge HQ before the core workflow works") applies. Its plan needs Justin's approval.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -930,3 +932,4 @@ Open after the tests:
 | 2026-11-13 | 0.33 | §8.12: test result C2 (8 of 8, PASS, subject to Justin's review). Finding G3. |
 | 2026-11-13 | 0.34 | §8.12: test result C3 (PASS, subject to Justin's review). Finding G4. |
 | 2026-11-13 | 0.35 | §8.12: test result C4. Phase 6 exit test PASS, subject to Justin's review. Open items listed. |
+| 2026-11-13 | 0.36 | Phase 6 exit test PASSED (KS-D-44). |

@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Version v0.12.
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Version v0.13.
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,11 +46,13 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 6, the Knowledge Curator, is in progress. Plan approved (KS-D-43, KS-08 §8.12). Step 1 (build) is done. Next: tests C1 to C4. The Curator does not write Change Orders. For a Curator finding that needs a Brain change, give the Knowledge Health Report to the Managing Editor. Before each Curator run in `maintenance` or `impact-review` mode, run `Link Check.ps1` (in `20.04`) and give its output to the Curator.
+Phase 6 passed its exit test (KS-D-44). Next: Phase 7. Refer to KS-06 §3 and hard rule 11. Do not start Phase 7 work until its plan is approved. Open items from Phase 6 are in KS-08 §8.12.
+
+The Knowledge Curator can be invoked in three modes: `maintenance`, `impact-review`, `retrieval` (KS-D-43). Save each health report in `22.26 Knowledge Health Reports` with a `KHR` ID (Schema §5.12). The Curator does not write Change Orders. For a Curator finding that needs a Brain change, give the Knowledge Health Report to the Managing Editor. Before each Curator run in `maintenance` or `impact-review` mode, run `Link Check.ps1` (in `20.04`) and give its output to the Curator.
 
 For each source, follow `20.04 Knowledge Reference\Orchestrator Rulebook.md` (KS-D-39 to KS-D-42): routing, workflow states, IDs, validation, errors and retry, approval and apply, and the log. Use `Quote Check.ps1` and `Frontmatter Check.ps1` in the same folder.
 
-The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it and the version check passes (Schema §5.6). The Managing Editor rules in §7 steps 5 and 7 apply now (KS-D-38).
+The Reporter, the Editor, the Managing Editor, and the Knowledge Curator can be invoked. The Managing Editor and the Curator only propose. Apply a Change Order only after Justin approves it and the version check passes (Schema §5.6). The Managing Editor rules in §7 steps 5 and 7 apply now (KS-D-38).
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
