@@ -2,9 +2,9 @@
 id: SRC-20261113-006
 type: source
 title: Write hypertext, not plaintext
-status: briefed
+status: assessed
 created: 2026-11-13T11:23
-updated: 2026-11-13T11:27
+updated: 2026-11-13T11:33
 created-by: orchestrator
 schema-version: "0.8"
 url: https://aartaka.me/hypertext
@@ -32,3 +32,4 @@ brief: "[[BRF-20261113-005 Write hypertext, not plaintext]]"
 - The page is licensed CC-BY 4.0 (footer).
 - Reporter access result: `full`. Brief [[BRF-20261113-005 Write hypertext, not plaintext]] saved as `draft`. Status set to `briefed`.
 - Related: this source answers [[SRC-20261113-003 Write plain text files]].
+- Justin validated the Brief in chat (11:31). Phase 3 test E3: Editor Assessment [[KAS-20261113-005 Write hypertext, not plaintext]] saved as `draft`. Status set to `assessed`.

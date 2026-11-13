@@ -459,7 +459,7 @@ Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Sc
 
 #### Test results (2026-11-13)
 
-The Orchestrator ran E4, E1, E2, E5, and the Reporter step of E3 in one session that started in `20-29 Knowledge`. One test at a time. The Editor is draft v0.2. The Reporter is v0.3. Brain version at start and at end: `CO-20261113-001` (the only Change Order in `22.24`, `applied` 2026-11-13T10:27). All Assessments have status `draft`. No Change Order was made. No Brain Claim, Concept, or MOC was changed. `Research Questions.md` was not made, because no test returned `investigate`.
+The Orchestrator ran E4, E1, E2, E5, and E3 (Reporter step, then Editor step after Justin validated the Brief) in one session that started in `20-29 Knowledge`. One test at a time. The Editor is draft v0.2. The Reporter is v0.3. Brain version at start and at end: `CO-20261113-001` (the only Change Order in `22.24`, `applied` 2026-11-13T10:27). All Assessments have status `draft`. No Change Order was made. No Brain Claim, Concept, or MOC was changed. `Research Questions.md` was not made, because no test returned `investigate`.
 
 Check method: for each Assessment, the Orchestrator checked Editor §10, checked that §2 lists the Brain records, and checked each explanation for a reason. It spot-checked each quote from a Brain note against the note, and three or more Brief details against the Brief.
 
@@ -469,7 +469,7 @@ Check method: for each Assessment, the Orchestrator checked Editor §10, checked
 | E1 | [[BRF-20261113-003 Write plain text files]] | [[KAS-20261113-002 Write plain text files]] | PASS | 6: 2 `supports`, 2 `extends`, 1 `new-process`, 1 `research-gap`. `advance`, relevance `high`. | Not used. Correct. Scope difference named (A1). | 3 of 3 | None |
 | E2 | [[BRF-20261113-002 NARA file format tables]] | [[KAS-20261113-003 NARA file format tables]] | PASS, with 1 deviation | 7: 1 `supports`, 1 `refines`, 1 `extends`, 2 `qualifies`, 1 `new-concept`, 1 `research-gap`. `advance`, relevance `medium`. | Not used. Correct. Scope, condition, and date differences named (A1, A4, A7). | 3 of 3 | None. The Editor changed `title` (Orchestrator reset it). |
 | E5 | [[BRF-20261113-004 What is a second brain app]] | [[KAS-20261113-004 What is a second brain app]] | PASS | 10: 6 `new`, 1 `new-concept`, 1 `new-process`, 1 `supports`, 1 `research-gap`. `no-action`, relevance `low`. | Not used. Correct. A4 names a difference in conditions and records no relationship. | 3 of 3 | None |
-| E3 | New Source [[SRC-20261113-006 Write hypertext, not plaintext]] | [[BRF-20261113-005 Write hypertext, not plaintext]] (`draft`) | Reporter step done. Editor step waits for Justin's validation of the Brief. | — | — | — | Brief: 1 paraphrase error, 1 count error (below). |
+| E3 | New Source [[SRC-20261113-006 Write hypertext, not plaintext]], Brief [[BRF-20261113-005 Write hypertext, not plaintext]] | [[KAS-20261113-005 Write hypertext, not plaintext]] | PASS | 8: 2 `qualifies`, 2 `supports`, 1 `extends`, 1 `new-concept`, 1 `new-process`, 1 `research-gap`. `advance`, relevance `medium`. | Not used. Correct. Headline "not plain text files" named as a definition difference (A5). Conditions (A2) and definition (A3) named. | 3 of 3 | None invented. 1 citation detail in A5 (below). Brief: 1 paraphrase error, 1 count error (below). |
 
 E4 (duplicate):
 - A search of `22.21 Sources` for the `url` found SRC-20261113-001 (status `done`). Exact match.
@@ -501,19 +501,27 @@ E3 (challenges), Reporter step:
 - Count error: Brief §12 says 19 `Quote:` rows. Its list has 20.
 - Paraphrase error: E18 and C11 say "most writing needs". The source says "all the possible needs of a writer". The Brief makes the author's claim weaker. Low impact.
 - The page is CC-BY 4.0. The source answers Sivers (SRC-20261113-003).
-- Next: Justin validates the Brief (or corrects E18 and C11 first). Then the Orchestrator runs the Editor on it.
+- Justin validated the Brief in chat at 11:31, with E18 and C11 not changed. The Orchestrator set `validated`.
+
+E3 (challenges), Editor step:
+- No `contradicts`. A5: the headline "not plain text files" is a definition difference, because the author treats HTML as plain-text storage. So the recommendation fits inside CLM-20261113-001. This meets "Pass if".
+- A2 `qualifies` CLM-20261113-001 on conditions: plain-text storage is necessary but, for the author, not sufficient for notes with links and metadata. A3 `qualifies` on definition: Markdown is open but has platform dialects. The Editor says why both can be true together.
+- Good: A4 notes that an independent author predicts that Obsidian will end, with the same reason as the Concept from Obsidian's CEO, and says that this is one more opinion, not stronger evidence. A7 refuses to count the second-hand Sivers and Nesbit quotes as independent support.
+- Good: the Editor ties A2 and A3 to ORION's own Markdown and YAML rule, through the CLM caveat. The MOC says "Against: none yet". This is the first source that partly disagrees.
+- Citation detail: A5 cites C5 and C10 for "HTML is plain-text storage". C10 is about HTTP. No Brief row states it for HTML. The statement is true on the raw page ("Your data is safe in HTML because it's still plaintext"), but the Brief does not carry it. Low impact.
+- `advance` for A2 and A3. A8 gives a research question, not added (not `investigate`).
 
 Files read by the Editor, from its access log in each test: the Brief, `TPL Knowledge Assessment.md`, the Schema (whole file), and the three Brain notes. No other file. The Editor has no web tool. Limit: the access log is the agent's own report.
 
 Common finding: the Brain has three notes, so each Editor run read the whole Brain. These tests do not show how the Editor searches a large Brain (Editor §4).
 
-Exit test (KS-06): open until E3 is done.
+Exit test (KS-06): PASS, subject to Justin's review. In all four Editor tests, the Editor found the useful relationships and gave a reason for each one. It did not use `contradicts`, and it named each difference in scope, definition, condition, or date. It weighed weak evidence and did not count it as strong. No detail was invented. Open points: the E2 deviation (D2) and the link rule for `new-concept` and `new-process` (D1).
 
 Proposed edits to `editor.md` (not applied):
 
 | No. | Section | Proposed text | Reason |
 |---|---|---|---|
-| D1 | §6, §10 item 2 | §6: "Brain record: a link, or `—` for `new`, `new-concept`, and `new-process` when no Brain record is related. If a related record exists, link it and say how it relates." §10 item 2: "Each finding of type `supports`, `contradicts`, `qualifies`, `refines`, `extends`, `new-relationship`, or `research-gap` links to a Brain record." | Item 2 asks for a link for each finding that is not `new`. In E1 (A5) and E2 (A5), the Editor linked `new-process` and `new-concept` to the nearest record. In E5 (A2, A3), it used `—` and reported a variance. |
+| D1 | §6, §10 item 2 (E1, E2, E3 linked; E5 used `—`) | §6: "Brain record: a link, or `—` for `new`, `new-concept`, and `new-process` when no Brain record is related. If a related record exists, link it and say how it relates." §10 item 2: "Each finding of type `supports`, `contradicts`, `qualifies`, `refines`, `extends`, `new-relationship`, or `research-gap` links to a Brain record." | Item 2 asks for a link for each finding that is not `new`. In E1 (A5) and E2 (A5), the Editor linked `new-process` and `new-concept` to the nearest record. In E5 (A2, A3), it used `—` and reported a variance. |
 | D2 | §6 | Add: "Use `new` when a Claim Candidate can stand as its own Brain Claim. Use `supports`, `extends`, `qualifies`, or `refines` when it adds to an existing Brain Claim. If both apply, write one row for each." | E2 deviation. The test plan and the Editor read "new" differently. |
 | D3 | §5 | Add: "`title`: copy the `title` of the Brief." | E2: the Editor wrote its own title. |
 
@@ -534,3 +542,4 @@ Proposed edits to `editor.md` (not applied):
 | 2026-11-13 | 0.11 | Phase 2 exit test PASSED (KS-D-32). |
 | 2026-11-13 | 0.12 | New §8.9: Phase 3 status and test plan (KS-D-33). KS-G-27 resolved. |
 | 2026-11-13 | 0.13 | §8.9: Phase 3 test results E1, E2, E4, E5, and the E3 Reporter step. Proposed Editor edits D1 to D3. |
+| 2026-11-13 | 0.14 | §8.9: E3 Editor result. Exit test PASS, subject to Justin's review. |

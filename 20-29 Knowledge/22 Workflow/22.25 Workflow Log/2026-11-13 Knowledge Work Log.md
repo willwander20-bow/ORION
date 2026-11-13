@@ -32,6 +32,10 @@
 | 11:27 | reporter | E3: Brief returned. Access `full` | [[SRC-20261113-006 Write hypertext, not plaintext]] | OK |
 | 11:27 | orchestrator | E3: Brief checked (20 of 20 quotes exact, 3 locators correct, 1 count error, 1 paraphrase error) and saved as `draft`. Source set to `briefed`. Waits for Justin | [[BRF-20261113-005 Write hypertext, not plaintext]] | OK |
 | 11:29 | orchestrator | Phase 3 test results and proposed Editor edits D1 to D3 written in KS-08 §8.9 (write outside `20-29` approved) | KS-08 §8.9 | OK |
+| 11:31 | justin | E3: Brief validated in chat (E18 and C11 not changed). Orchestrator set status `validated` | [[BRF-20261113-005 Write hypertext, not plaintext]] | `validated` |
+| 11:33 | editor | E3: Assessment returned. Brain version `CO-20261113-001` | [[BRF-20261113-005 Write hypertext, not plaintext]] | `advance` |
+| 11:33 | orchestrator | E3: Assessment checked and saved as `draft`. Source set to `assessed` | [[KAS-20261113-005 Write hypertext, not plaintext]] | PASS |
+| 11:35 | orchestrator | E3 result and Phase 3 exit test (PASS, subject to Justin's review) written in KS-08 §8.9 | KS-08 §8.9 | OK |
 
 ## Errors
 
@@ -42,5 +46,5 @@
 - Phase 1 exit test (KS-D-28). The PM session in `01.23` did the work. Its session log is in `01.13`.
 - Phase 2 Reporter tests T1 to T3 (KS-D-30). An Orchestrator session in `20-29 Knowledge` did the work. The Reporter subagent (draft v0.2) made the Briefs. The Reporter read no file in `21 Brain` (KS-R-25). No Assessments or Change Orders. `21 Brain` not changed. Justin has not reviewed the Briefs yet.
 - Reporter times are approximate.
-- Phase 3 Editor tests E1, E2, E4, E5, and the E3 Reporter step (KS-D-33, KS-08 §8.9). An Orchestrator session in `20-29 Knowledge` did the work. The Editor subagent (draft v0.2) made the Assessments. The Reporter (v0.3) made the E3 Brief. No Change Orders. `21 Brain` not changed. Brain version stays `CO-20261113-001`.
+- Phase 3 Editor tests E1 to E5 (KS-D-33, KS-08 §8.9). E3 Editor step ran after Justin validated the Brief. An Orchestrator session in `20-29 Knowledge` did the work. The Editor subagent (draft v0.2) made the Assessments. The Reporter (v0.3) made the E3 Brief. No Change Orders. `21 Brain` not changed. Brain version stays `CO-20261113-001`.
 - The Phase 3 rows use the system clock. Some earlier rows have later, approximate times, so the table is not in time order.

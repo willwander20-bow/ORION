@@ -2,9 +2,9 @@
 id: BRF-20261113-005
 type: reference-brief
 title: Write hypertext, not plaintext
-status: draft
+status: validated
 created: 2026-11-13T11:27
-updated: 2026-11-13T11:27
+updated: 2026-11-13T11:31
 created-by: reporter
 schema-version: "0.8"
 source: "[[SRC-20261113-006 Write hypertext, not plaintext]]"
@@ -200,3 +200,4 @@ Overall `source-quality: low`. This rates the source as evidence for factual cla
 - Text directed at an AI: none in the raw text of the body.
 - Files read by the Reporter (from its access log): the Source record, `TPL Reference Brief.md`, the Schema (whole file). Two WebFetch calls to the `url`. No WebSearch. No links opened. No file in `21 Brain` (KS-R-25).
 - Status `draft`. Justin validates the Brief before the Editor runs (KS-08 §8.9, E3).
+- Justin validated the Brief in chat, 2026-11-13T11:31. E18 and C11 were not changed.
