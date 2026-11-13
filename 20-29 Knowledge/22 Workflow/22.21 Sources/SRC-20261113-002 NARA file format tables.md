@@ -2,9 +2,9 @@
 id: SRC-20261113-002
 type: source
 title: "Appendix A: Tables of File Formats"
-status: change-proposed
+status: done
 created: 2026-11-13T10:49
-updated: 2026-11-13T11:50
+updated: 2026-11-13T12:13
 created-by: orchestrator
 schema-version: "0.6"
 url: https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html

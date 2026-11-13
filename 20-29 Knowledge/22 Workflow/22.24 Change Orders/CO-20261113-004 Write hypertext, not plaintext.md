@@ -2,9 +2,9 @@
 id: CO-20261113-004
 type: change-order
 title: Write hypertext, not plaintext
-status: open
+status: withdrawn
 created: 2026-11-13T11:53
-updated: 2026-11-13T11:53
+updated: 2026-11-13T12:18
 created-by: managing-editor
 schema-version: "0.8"
 assessment: "[[KAS-20261113-005 Write hypertext, not plaintext]]"
@@ -79,3 +79,5 @@ For each row, the options are `approved`, `approved-with-changes`, `rejected`, a
 ## 7. Decision record
 
 ## 8. Implementation record
+
+Withdrawn 2026-11-13T12:18 by the Orchestrator. Reason: `brain-version` CO-20261113-001 is stale after CO-20261113-002 and CO-20261113-005 were applied. Replaced by [[CO-20261113-006 Write hypertext, not plaintext]].

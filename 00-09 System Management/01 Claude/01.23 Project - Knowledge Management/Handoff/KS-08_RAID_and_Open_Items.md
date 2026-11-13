@@ -622,6 +622,12 @@ PASS.
 
 Next: Justin decides CO-005. Then the Orchestrator re-checks CO-004 in the same way (R3: one at a time).
 
+CO-005 and second re-check (2026-11-13):
+- Justin: "Approve all rows". CO-005 `approved` and applied at 12:13. Brain version `CO-20261113-005`.
+- Version check on CO-004 failed (`CO-20261113-001`). The agent re-checked it at `CO-20261113-005` and returned [[CO-20261113-006 Write hypertext, not plaintext]]. CO-004 is `withdrawn`.
+- The re-check found a record that did not exist at Assessment time: CON-20261113-002. It added row X4 (Bologov E2 qualifies Step 2, metadata lines), and its Reason column says that the Editor did not review this link. It removed the references to the withdrawn CO-003. It kept "Against: none yet." and used a "Qualifies:" line, in the same style as CO-005.
+- Finding: an Assessment can become stale too. KAS-005 was made at `CO-20261113-001` and does not know CON-002. The agent handled this, but no rule covers it. Possible edit R5 (for Phase 5): when the Brain version changed since the Assessment, the Managing Editor names each record that the Assessment did not see, and the Orchestrator decides if the Editor must re-run.
+
 Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
 
 ## 9. Change log
@@ -647,3 +653,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.17 | New §8.10: Phase 4 status and test plan M0 to M5 (draft, Justin to approve). |
 | 2026-11-13 | 0.18 | §8.10: plan approved (KS-D-36). Test results M0 to M3. Proposed edits R1 to R3. |
 | 2026-11-13 | 0.19 | §8.10: CO-002 decision and M5 result. Test result M4. Proposed edit R4. |
+| 2026-11-13 | 0.20 | §8.10: CO-005 applied. CO-004 re-checked as CO-006. Possible edit R5. |
