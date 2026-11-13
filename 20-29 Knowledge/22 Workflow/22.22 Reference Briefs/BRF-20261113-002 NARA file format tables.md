@@ -2,7 +2,7 @@
 id: BRF-20261113-002
 type: reference-brief
 title: "Appendix A: Tables of File Formats — Born-Digital Textual Data"
-status: draft
+status: validated
 created: 2026-11-13T10:58
 updated: 2026-11-13T10:58
 created-by: reporter

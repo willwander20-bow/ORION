@@ -418,6 +418,8 @@ Common finding: WebFetch passes the page through a model. It does not return the
 
 Exit test (KS-06): PASS, subject to Justin's review. The three Briefs are traceable. No source detail is invented. The T3 defects are typing and attribution errors, not invented details.
 
+Justin's review, 2026-11-13: all three Briefs `validated`. Phase 2 exit test PASSED (KS-D-32).
+
 Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Schema v0.7, area `CLAUDE.md` rule 9a.
 
 | No. | Section | Proposed text | Reason |
@@ -442,3 +444,4 @@ Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Sc
 | 2026-11-13 | 0.8 | KS-C-40 resolved (KS-D-29). New §8.8: Phase 2 status and test plan (KS-D-30). New risk KS-R-25. |
 | 2026-11-13 | 0.9 | §8.8: Phase 2 test results T1 to T3. Proposed Reporter edits P1 to P5. |
 | 2026-11-13 | 0.10 | P1 to P5 applied (KS-D-31). KS-G-26 resolved. |
+| 2026-11-13 | 0.11 | Phase 2 exit test PASSED (KS-D-32). |

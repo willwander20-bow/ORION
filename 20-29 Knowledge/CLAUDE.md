@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.6, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 started (KS-D-30). Quote check rule 9a (KS-D-31).
+Status: v0.7, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31).
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,9 +46,9 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 2: the Reporter (KS-D-30). Phase 1 passed its exit test (KS-D-28). Refer to KS-06 §3.
+Phase 2 passed its exit test (KS-D-32). Next: Phase 3, the Editor. Refer to KS-06 §3.
 
-The Reporter can be invoked now, for the Phase 2 tests only. The test plan is in KS-08 §8.8. Follow it. Do not make Assessments or Change Orders in Phase 2.
+The Reporter can be invoked. Do not invoke the Editor until its Phase 3 plan is approved. Do not make Change Orders by agent before Phase 4.
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 

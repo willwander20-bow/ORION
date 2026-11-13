@@ -2,7 +2,7 @@
 id: BRF-20261113-004
 type: reference-brief
 title: What is a second brain app
-status: draft
+status: validated
 created: 2026-11-13T11:20
 updated: 2026-11-13T11:20
 created-by: reporter

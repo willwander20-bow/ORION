@@ -2,7 +2,7 @@
 id: BRF-20261113-003
 type: reference-brief
 title: Write plain text files
-status: draft
+status: validated
 created: 2026-11-13T11:08
 updated: 2026-11-13T11:08
 created-by: reporter
