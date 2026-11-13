@@ -2,9 +2,9 @@
 id: SRC-20261113-004
 type: source
 title: What is a second brain app
-status: briefed
+status: assessed
 created: 2026-11-13T11:09
-updated: 2026-11-13T11:20
+updated: 2026-11-13T11:23
 created-by: orchestrator
 schema-version: "0.6"
 url: https://nemos-landing.pages.dev/faq/what-is-a-second-brain-app
@@ -31,3 +31,4 @@ brief: "[[BRF-20261113-004 What is a second brain app]]"
 - Canonical URL on the page: https://nemosapp.com/faq/what-is-a-second-brain-app/
 - The site serves a Markdown version to agents. Refer to the Brief, Orchestrator check.
 - Reporter access result: `full`.
+- Phase 3 test E5: Editor Assessment [[KAS-20261113-004 What is a second brain app]] saved as `draft` (`no-action`). Status set to `assessed`.

@@ -2,9 +2,9 @@
 id: SRC-20261113-003
 type: source
 title: Write plain text files
-status: briefed
+status: assessed
 created: 2026-11-13T11:00
-updated: 2026-11-13T11:08
+updated: 2026-11-13T11:19
 created-by: orchestrator
 schema-version: "0.6"
 url: https://sive.rs/plaintext
@@ -29,3 +29,4 @@ brief: "[[BRF-20261113-003 Write plain text files]]"
 - No companion text file.
 - `published` is empty. The page date is 2022-03-02, but a comment by the author is dated 2022-03-01. Not resolved.
 - Reporter access result: `full` for the scope.
+- Phase 3 test E1: Editor Assessment [[KAS-20261113-002 Write plain text files]] saved as `draft`. Status set to `assessed`.

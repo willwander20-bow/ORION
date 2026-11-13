@@ -457,6 +457,66 @@ Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Sc
 | P4 | §4 | Add: "WebFetch does not return exact text. Copy each quote as the tool returns it. Say in §12 that the Orchestrator must check the quotes." Orchestrator side (area `CLAUDE.md` or the routing rulebook): "The Orchestrator checks each `Quote:` against the raw page before it sets `validated`." | Common finding |
 | P5 | §8 Locator table | Add the combined forms that all three tests used: `§ Heading, ¶3` and `§ Heading, table name, row name`. Move the list to Schema §5.5 (KS-G-26). | The tests needed a locator inside a section. |
 
+#### Test results (2026-11-13)
+
+The Orchestrator ran E4, E1, E2, E5, and the Reporter step of E3 in one session that started in `20-29 Knowledge`. One test at a time. The Editor is draft v0.2. The Reporter is v0.3. Brain version at start and at end: `CO-20261113-001` (the only Change Order in `22.24`, `applied` 2026-11-13T10:27). All Assessments have status `draft`. No Change Order was made. No Brain Claim, Concept, or MOC was changed. `Research Questions.md` was not made, because no test returned `investigate`.
+
+Check method: for each Assessment, the Orchestrator checked Editor §10, checked that §2 lists the Brain records, and checked each explanation for a reason. It spot-checked each quote from a Brain note against the note, and three or more Brief details against the Brief.
+
+| Test | Input | Output | Result | Findings and types | `contradicts` | Brain records in §2 | Wrong or invented detail |
+|---|---|---|---|---|---|---|---|
+| E4 | New submission of https://stephango.com/file-over-app | [[SRC-20261113-005 File over app]] | PASS | — | — | — | None |
+| E1 | [[BRF-20261113-003 Write plain text files]] | [[KAS-20261113-002 Write plain text files]] | PASS | 6: 2 `supports`, 2 `extends`, 1 `new-process`, 1 `research-gap`. `advance`, relevance `high`. | Not used. Correct. Scope difference named (A1). | 3 of 3 | None |
+| E2 | [[BRF-20261113-002 NARA file format tables]] | [[KAS-20261113-003 NARA file format tables]] | PASS, with 1 deviation | 7: 1 `supports`, 1 `refines`, 1 `extends`, 2 `qualifies`, 1 `new-concept`, 1 `research-gap`. `advance`, relevance `medium`. | Not used. Correct. Scope, condition, and date differences named (A1, A4, A7). | 3 of 3 | None. The Editor changed `title` (Orchestrator reset it). |
+| E5 | [[BRF-20261113-004 What is a second brain app]] | [[KAS-20261113-004 What is a second brain app]] | PASS | 10: 6 `new`, 1 `new-concept`, 1 `new-process`, 1 `supports`, 1 `research-gap`. `no-action`, relevance `low`. | Not used. Correct. A4 names a difference in conditions and records no relationship. | 3 of 3 | None |
+| E3 | New Source [[SRC-20261113-006 Write hypertext, not plaintext]] | [[BRF-20261113-005 Write hypertext, not plaintext]] (`draft`) | Reporter step done. Editor step waits for Justin's validation of the Brief. | — | — | — | Brief: 1 paraphrase error, 1 count error (below). |
+
+E4 (duplicate):
+- A search of `22.21 Sources` for the `url` found SRC-20261113-001 (status `done`). Exact match.
+- The new Source SRC-20261113-005 has `duplicate-of: "[[SRC-20261113-001 File over app]]"` and status `skipped`. `processing-level` is empty. No fetch, no Reporter, no Editor.
+
+E1 (supports):
+- A1 `supports` CLM-20261113-001 with reasons: both say "keep lasting writing in open files"; Sivers names plain text, and the claim gives plain text as its example.
+- Self-report weight: A1 says the source is "a second voice, not stronger evidence" and "at most, a reason to look at `evidence-strength` again". A4 and A6 call C11 and C3 unchecked self-reports. This meets "Pass if".
+- Good: the Editor names the scope difference (Sivers: "almost everything important", plain text only; the claim: lasting knowledge, not every tool) and says it gives no basis to make the claim wider. It notes that the Brief does not show that Sivers is independent of Ango.
+- Good: A3 says that the offline reason (C8) does not separate plain text from other formats, because of the `indirect` E13 limit.
+
+E2 (new and qualifies):
+- Encoding condition: A2 `refines` CLM-20261113-001. The difference is named: the claim says "plain text" with no encoding; NARA names the encodings and requires that the encoding is identified. This meets "Pass if".
+- Deviation: the preferred text formats are typed `supports` (A1: plain text preferred, Word only acceptable) and `extends` (A3: ODT and PDF/A also preferred), not `new`. The Editor linked them to the existing claim, with reasons, because they relate to it. The test plan expected `new`. In the view of the Orchestrator, the Editor's typing is more exact than the plan. Justin decides if this is a pass.
+- Good: A4 `qualifies` CON-20261113-001: plain PDF is acceptable but PDF/A is preferred, so openness alone does not explain the ranking. The Editor says that this is "a possible qualification", not proof, because the source gives no reasons.
+- Good: the Editor marks "NARA calls these formats open" as its own interpretation, not a source statement.
+- The Editor offered an optional Research Question but kept `advance`. Not added.
+
+E5 (weak and new):
+- `no-action`, with the reason: the new findings rest on vendor opinion, a survey with no method, or figures with no source. This meets "Pass if".
+- Low source quality weighed: Significance 2, Relevance 1. A6 names the publisher's survey. A8 names the vendor ratings. The Editor used the two Brief defects from the Phase 2 check (§8.8 T3) and did not repeat them as facts.
+- Good: A4 rejects a link between "file over app" and "consistency over tool choice" because the conditions differ. Shared words were not taken as a reason.
+
+E3 (challenges), Reporter step:
+- Source SRC-20261113-006 made and routed `full-review`, scope article body. No duplicate.
+- Brief BRF-20261113-005: 18 claims, 30 evidence rows, `source-quality: low`, access `full`.
+- Quote check (rule 9a): `curl`, tags removed. 20 of 20 `Quote:` rows exact, each 15 words or fewer.
+- Locators checked: E10, E27, E29. All correct.
+- Count error: Brief §12 says 19 `Quote:` rows. Its list has 20.
+- Paraphrase error: E18 and C11 say "most writing needs". The source says "all the possible needs of a writer". The Brief makes the author's claim weaker. Low impact.
+- The page is CC-BY 4.0. The source answers Sivers (SRC-20261113-003).
+- Next: Justin validates the Brief (or corrects E18 and C11 first). Then the Orchestrator runs the Editor on it.
+
+Files read by the Editor, from its access log in each test: the Brief, `TPL Knowledge Assessment.md`, the Schema (whole file), and the three Brain notes. No other file. The Editor has no web tool. Limit: the access log is the agent's own report.
+
+Common finding: the Brain has three notes, so each Editor run read the whole Brain. These tests do not show how the Editor searches a large Brain (Editor §4).
+
+Exit test (KS-06): open until E3 is done.
+
+Proposed edits to `editor.md` (not applied):
+
+| No. | Section | Proposed text | Reason |
+|---|---|---|---|
+| D1 | §6, §10 item 2 | §6: "Brain record: a link, or `—` for `new`, `new-concept`, and `new-process` when no Brain record is related. If a related record exists, link it and say how it relates." §10 item 2: "Each finding of type `supports`, `contradicts`, `qualifies`, `refines`, `extends`, `new-relationship`, or `research-gap` links to a Brain record." | Item 2 asks for a link for each finding that is not `new`. In E1 (A5) and E2 (A5), the Editor linked `new-process` and `new-concept` to the nearest record. In E5 (A2, A3), it used `—` and reported a variance. |
+| D2 | §6 | Add: "Use `new` when a Claim Candidate can stand as its own Brain Claim. Use `supports`, `extends`, `qualifies`, or `refines` when it adds to an existing Brain Claim. If both apply, write one row for each." | E2 deviation. The test plan and the Editor read "new" differently. |
+| D3 | §5 | Add: "`title`: copy the `title` of the Brief." | E2: the Editor wrote its own title. |
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -473,3 +533,4 @@ Proposed edits to `reporter.md`. APPLIED 2026-11-13 (KS-D-31): Reporter v0.3, Sc
 | 2026-11-13 | 0.10 | P1 to P5 applied (KS-D-31). KS-G-26 resolved. |
 | 2026-11-13 | 0.11 | Phase 2 exit test PASSED (KS-D-32). |
 | 2026-11-13 | 0.12 | New §8.9: Phase 3 status and test plan (KS-D-33). KS-G-27 resolved. |
+| 2026-11-13 | 0.13 | §8.9: Phase 3 test results E1, E2, E4, E5, and the E3 Reporter step. Proposed Editor edits D1 to D3. |

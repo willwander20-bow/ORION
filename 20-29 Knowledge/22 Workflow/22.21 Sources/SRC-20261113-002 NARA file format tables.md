@@ -2,9 +2,9 @@
 id: SRC-20261113-002
 type: source
 title: "Appendix A: Tables of File Formats"
-status: briefed
+status: assessed
 created: 2026-11-13T10:49
-updated: 2026-11-13T10:58
+updated: 2026-11-13T11:21
 created-by: orchestrator
 schema-version: "0.6"
 url: https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html
@@ -29,3 +29,4 @@ brief: "[[BRF-20261113-002 NARA file format tables]]"
 - No companion text file.
 - `published` is empty. The page shows "Updated August 2025" and "last reviewed on March 11, 2026". No exact publication date.
 - Reporter access result: `full` for the scope.
+- Phase 3 test E2: Editor Assessment [[KAS-20261113-003 NARA file format tables]] saved as `draft`. Status set to `assessed`.
