@@ -694,7 +694,22 @@ Time: about 2 to 3 hours with Justin's reviews.
 
 Justin's decisions, 2026-11-13: all three approved (KS-D-39). KS-G-02 resolved: the Orchestrator applies an approved Change Order.
 
-Next: write the Rulebook (Step 1). Then run O2 and O3, then O1.
+Step 1 done: `Orchestrator Rulebook.md` draft v0.1 in `20.04`. Justin has not reviewed the rules marked "(new)".
+
+#### Test results O2 and O3 (2026-11-13)
+
+| Test | Result | Detail |
+|---|---|---|
+| O2 Source not accessible | PASS | URL: a page that does not exist on `loc.gov`. Duplicate check: no match. Access check: `curl` returned HTTP 404. Source `SRC-20261113-007` saved with `access-status: none` and status `failed`. Error record in the work log. The Reporter was not invoked. No Brief. |
+| O3 Invalid output | PASS | Input: a copy of `BRF-20261113-003` (Sivers) in the scratchpad, not in the vault. Control run on the unchanged copy: 21 of 21 quotes exact. Changed copy (E3: "precious" changed to "valuable"): the check found 1 failed quote, E3. The Orchestrator did not set `validated` and did not invoke the Editor. |
+
+Method for O3: a PowerShell script in the scratchpad. It gets the page with `curl`, removes scripts, styles, and tags, decodes HTML entities, and makes quote marks and spaces the same. Then it checks that each `Quote:` text is in the page text and has 15 words or fewer.
+
+Findings:
+- F1. Rulebook §1: the access check (step 4) comes before the Source ID (step 6). A failed access check then has no record to set to `failed`. In O2 the Orchestrator made the record anyway. Proposed fix: assign the ID and save the Source as `new` at step 3, before the duplicate check and the access check.
+- F2. The quote check script works and is fast. It is now only in the scratchpad. Proposal: save it in the vault as `20.04 Knowledge Reference\Quote Check.ps1` and name it in Rulebook §4.1. Limits: web pages only, not companion files or PDFs. A quote that contains a `"` character is not read.
+
+Next: Justin decides F1, F2, and the "(new)" rules. Then O1.
 
 ## 9. Change log
 
@@ -725,3 +740,4 @@ Next: write the Rulebook (Step 1). Then run O2 and O3, then O1.
 | 2026-11-13 | 0.23 | R1 to R5 applied (KS-D-38). |
 | 2026-11-13 | 0.24 | New §8.11: Phase 5 plan (draft, Justin to approve). |
 | 2026-11-13 | 0.25 | §8.11: plan approved (KS-D-39). KS-G-02 resolved. Orchestrator Rulebook made. |
+| 2026-11-13 | 0.26 | §8.11: test results O2 and O3 (PASS). Findings F1 and F2. |

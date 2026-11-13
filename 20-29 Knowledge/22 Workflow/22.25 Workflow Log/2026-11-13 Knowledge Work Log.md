@@ -66,10 +66,14 @@
 | 12:35 | orchestrator | Phase 5 start (Justin: "Lets go"). Phase 5 plan written in KS-08 §8.11: Orchestrator Rulebook, tests O1 to O3. Plan not approved yet | KS-08 §8.11 | DRAFT |
 | 12:45 | justin | Phase 5 plan: "Approve all three". Recorded as KS-D-39. KS-G-02 resolved: the Orchestrator applies an approved Change Order | KS-07, KS-08 §8.11, §8.3 | `approved` |
 | 12:50 | orchestrator | Orchestrator Rulebook draft v0.1 made. Rules marked "(new)" need Justin's review | `20.04 Knowledge Reference\Orchestrator Rulebook.md` | DRAFT |
+| 13:00 | orchestrator | O2: routing. Duplicate check: no match. Access check: HTTP 404. Source saved, Reporter not invoked | [[SRC-20261113-007 O2 test, page does not exist]] | `failed` |
+| 13:05 | orchestrator | O3: quote check on a scratchpad copy of the Brief. Control 21 of 21 exact. Changed copy: 1 failed quote (E3). Not set to `validated`. Editor not invoked | [[BRF-20261113-003 Write plain text files]] (copy, not changed) | PASS |
+| 13:05 | orchestrator | O2 and O3 results and findings F1, F2 written in KS-08 §8.11 | KS-08 §8.11 | PASS |
 
 ## Errors
 
 - 12:18: a Python script to apply CO-006 did not run (Python is not installed). No Brain file changed. The Orchestrator applied the rows with the edit tool. No effect on the result.
+- 13:00: O2 (test). Access check on `SRC-20261113-007`: `curl` returned HTTP 404 for the `url`. Stage: routing. Retry not useful (the page does not exist). Source set to `failed`. Expected result of the test.
 
 ## Notes
 
