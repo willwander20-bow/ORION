@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: managing-editor
-schema-version: "0.8"
+schema-version: "0.9"
 assessment:
 source:
 brain-version:
@@ -28,11 +28,18 @@ brain-version-after:
 
 ## 2. Proposed changes
 
-<!-- One row per change. Record: a link to an existing Brain record, or "new: <short title>". Evidence: [[BRF-… Title]] · E3. -->
+<!-- Short table: one row per change, the change in one line. Record: a link to an existing Brain record, or "new: <short title>". Then one subsection per row with the detail. No long text in the table (KS-D-38). -->
 
-| Label | Change type | Record | Current state | Proposed state | Evidence | Reason |
-|---|---|---|---|---|---|---|
-| X1 | | | | | | |
+| Label | Change type | Record | Change |
+|---|---|---|---|
+| X1 | | | |
+
+### X1
+
+- Current state:
+- Proposed state:
+- Evidence: [[BRF-… Title]] · E3
+- Reason:
 
 ## 3. Impact
 

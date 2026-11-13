@@ -2,7 +2,7 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.8"
+schema-version: "0.9"
 updated: 2026-11-13
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-11-13
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.8, Phase 3. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.9, Phase 4. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -306,6 +306,7 @@ Rules:
 - Only Justin sets `decision`. An agent never sets it.
 - `challenge` sets a claim to `disputed`. `supersede` and `retire` set the other two end states.
 - "No Change" and "Investigate" are not Change Orders (KS-D-25).
+- A MOC edit uses one of three types (KS-D-38): `relate` for a link change (add, move, or remove a link); `add-evidence` for a change to the "Evidence for and against" list; `refine` for other MOC text (summary, claim notes, gaps, open questions).
 
 ### 5.9 Brain Claim fields
 
@@ -361,3 +362,4 @@ A MOC is Brain content, so each change needs a Change Order. This includes a cha
 | 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. Phase 1 exit test: removed a stray table header in §2.2; §4.2 example shows "0.6". §5.2: Justin saves the companion file (KS-D-29). |
 | 2026-11-13 | 0.7 | §5.5: locator list and excerpt prefixes, moved from the Reporter and extended after tests T1 to T3 (KS-D-31). |
 | 2026-11-13 | 0.8 | §2.5: `Research Questions.md` needs no Change Order; the Orchestrator adds rows (KS-D-33). |
+| 2026-11-13 | 0.9 | §5.8: change types for a MOC edit (KS-D-38). |

@@ -648,6 +648,8 @@ Open points:
 
 Justin's review, 2026-11-13: Phase 4 exit test PASSED (KS-D-37). R1 to R5 stay open.
 
+R1 to R5 APPLIED 2026-11-13 (KS-D-38): Managing Editor draft v0.3 (R1, R4, R5), Schema v0.9 §5.8 (R2), `TPL Change Order.md` §2 (R4), area `CLAUDE.md` §7 steps 5 and 7 (R3, R5). Templates `schema-version` "0.9".
+
 Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrator applies the first approved Change Order and runs the version check on the next one.
 
 ## 9. Change log
@@ -676,3 +678,4 @@ Next: Justin decides CO-002 to CO-004 (and M5, clarity). Then M4: the Orchestrat
 | 2026-11-13 | 0.20 | §8.10: CO-005 applied. CO-004 re-checked as CO-006. Possible edit R5. |
 | 2026-11-13 | 0.21 | §8.10: CO-006 applied. Phase 4 exit test PASS, subject to Justin's review. |
 | 2026-11-13 | 0.22 | Phase 4 exit test PASSED (KS-D-37). Python recorded as a possible enhancement. |
+| 2026-11-13 | 0.23 | R1 to R5 applied (KS-D-38). |

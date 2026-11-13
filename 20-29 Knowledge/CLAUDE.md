@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37).
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38).
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -48,11 +48,11 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 Phase 4 passed its exit test (KS-D-37). Next: Phase 5, Orchestration. Refer to KS-06 §3. Do not start Phase 5 work until its plan is approved.
 
-The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it and the version check passes (Schema §5.6). Open edits R1 to R5 are in KS-08 §8.10.
+The Reporter, the Editor, and the Managing Editor can be invoked. The Managing Editor only proposes. Apply a Change Order only after Justin approves it and the version check passes (Schema §5.6). The Managing Editor rules in §7 steps 5 and 7 apply now (KS-D-38).
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
-- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.2 (tested in Phase 4, KS-D-37). The Knowledge Curator is a copy of the KMO package file, with no changes.
+- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.3 (KS-D-38). The Knowledge Curator is a copy of the KMO package file, with no changes.
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
 
 | Agent | First phase |
@@ -104,9 +104,11 @@ This workflow applies after Phase 5. It comes from KCM. KS-03 is the reference.
 2. Select the processing level (routing). Record the routing result.
 3. Invoke the Reporter. Validate and save the Reference Brief.
 4. Invoke the Editor with the Brief and the relevant Brain context. Validate and save the Knowledge Assessment.
-5. If a Brain change is possibly justified, invoke the Managing Editor. Validate and save the Change Order.
+5. If a Brain change is possibly justified, invoke the Managing Editor. Validate and save the Change Order. Rules (KS-D-38):
+   - When two or more Assessments affect the same Brain records, invoke the Managing Editor for one at a time. Save each Change Order before the next run.
+   - If the Managing Editor lists Brain records that the Assessment did not see, decide with Justin if the Editor must re-run before the Change Order goes to Justin.
 6. Present the proposal to Justin.
-7. Apply the change only after Justin approves it. Record the approval and the Brain version.
+7. Apply the change only after Justin approves it and the version check passes (Schema §5.6). If the check fails, do not apply. Re-invoke the Managing Editor at the current version, save the new Change Order, and set the old one to `withdrawn`. Record the approval and the Brain version.
 8. Ask the Curator to review the affected navigation and relationships.
 
 ## 8. Working with Justin

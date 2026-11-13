@@ -6,7 +6,7 @@ status: new
 created:
 updated:
 created-by:
-schema-version: "0.8"
+schema-version: "0.9"
 url:
 source-type:
 author:
