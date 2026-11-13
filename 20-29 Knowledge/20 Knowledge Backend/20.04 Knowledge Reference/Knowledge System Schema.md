@@ -2,15 +2,15 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.5"
-updated: 2026-11-12
+schema-version: "0.6"
+updated: 2026-11-13
 ---
 
 # Knowledge System Schema
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.5, Phase 1. Justin approved sections 1 to 4 (KS-D-21). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.6, Phase 1. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -215,7 +215,7 @@ Below the core block.
 | Field | Value | Rule |
 |---|---|---|
 | `url` | Text | Empty for a file or a book. |
-| `source-type` | `article`, `video`, `podcast`, `pdf`, `paper`, `book`, `course`, `documentation`, `forum`, `other` | One value. |
+| `source-type` | `article`, `video`, `podcast`, `paper`, `book`, `course`, `documentation`, `forum`, `social-post`, `other` | One value. The kind of source, not the file format. A paper in a PDF is `paper`. `social-post`: a post on a social platform, for example X, LinkedIn, or Bluesky. `forum`: a thread on a discussion site, for example Reddit or Stack Overflow. |
 | `author` | Text | Empty if not known. Do not guess. |
 | `publisher` | Text | Site, channel, or publisher. |
 | `published` | Date | Empty if not known. |
@@ -227,6 +227,8 @@ Below the core block.
 | `submission-context` | Text | Justin's reason for the save, in his words. Keep it separate from the source content. |
 | `duplicate-of` | Link | Only if the source is a duplicate. |
 | `brief` | Link | The Reference Brief. |
+
+The Source has no `content_hash` field (KS-D-27). Evidence rows in the Brief (§8) record directness and limits only. Brief §11 records source quality.
 
 ### 5.5 Reference Brief fields
 
@@ -243,7 +245,7 @@ Reference Brief status: `draft` (saved by the Reporter), `validated` (the Orches
 
 Sections: a full review uses all 12 body sections of the template. A quick brief uses sections 1, 3, 7, 8, and 10 only (KS-G-08).
 
-### 5.6 Brain version (REVIEW)
+### 5.6 Brain version (KS-D-27)
 
 The Brain version is the ID of the last applied Change Order. Example: `CO-20261112-003`. An empty Brain has the version `none`.
 
@@ -251,7 +253,7 @@ The Brain version is the ID of the last applied Change Order. Example: `CO-20261
 - Before the Orchestrator applies a Change Order, it compares the recorded version with the current version. If they differ, it asks for a re-check (KS-R-15).
 - To find the current version, search `22.24 Change Orders` for the newest `applied` time.
 
-This closes KS-G-01 without Git. Git can add a full history later.
+This closes KS-G-01. Git (X-D-25) keeps the file history and the backup. A Git commit is not the Brain version, because one commit can hold many changes.
 
 ### 5.7 Knowledge Assessment fields
 
@@ -330,7 +332,7 @@ Status: the Brain Claim list (§5.1).
 
 Status: `active`, `retired`, `needs-review`.
 
-A MOC is Brain content, so a change needs a Change Order. KS-C-38 can change this rule for navigation-only edits in Phase 6.
+A MOC is Brain content, so each change needs a Change Order. This includes a change to a link only. KS-C-38 can change this rule for navigation-only edits in Phase 6 (KS-D-27).
 
 ## 6. Change log
 
@@ -341,3 +343,4 @@ A MOC is Brain content, so a change needs a Change Order. KS-C-38 can change thi
 | 2026-11-12 | 0.3 | Added §2.4 folders for each record type (KS-D-22). |
 | 2026-11-12 | 0.4 | Record types cut from 14 to 7 notes. Added §2.5 (KS-D-25). |
 | 2026-11-12 | 0.5 | Added §5.1 status values and §5.2 stored source text (KS-D-26). Added §5.3 to §5.5: templates, Source fields, Reference Brief fields (draft, Justin to review). Added §5.6 to §5.11: Brain version, Assessment, Change Order, Brain Claim, Concept, MOC fields (draft, Justin to review). |
+| 2026-11-13 | 0.6 | Justin approved section 5 (KS-D-27). `source-type`: `pdf` removed, `social-post` added. §5.6 Git note. §5.11 rule made clear. |

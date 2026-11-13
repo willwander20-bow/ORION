@@ -16,3 +16,16 @@ Decisions by Justin:
 - Track the `.obsidian` settings and plugins, not `workspace.json`.
 - Commit identity: GitHub no-reply email.
 - Claude commits and pushes at the end of each session. No Obsidian Git plugin.
+
+## Morning — Phase 1 template review
+
+Project: `01.23 Project - Knowledge Management`
+
+Changes:
+- `20.04 Knowledge Reference\Knowledge System Schema.md` to v0.6: §5.4 `source-type` list and note on removed fields, §5.6 Git note, §5.11 MOC rule.
+- `schema-version` to "0.6" in the seven templates in `20.07 Knowledge Templates`.
+- Recorded KS-D-27 (KS-07 v0.12). KS-08 v0.6: §8.6 templates approved, review list closed.
+
+Decisions by Justin:
+- `source-type`: remove `pdf`, add `social-post`.
+- Accepted items 2 to 6 of the review list as drafted.

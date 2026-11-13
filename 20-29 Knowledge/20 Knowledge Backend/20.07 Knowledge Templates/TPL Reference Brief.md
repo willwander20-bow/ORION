@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: reporter
-schema-version: "0.5"
+schema-version: "0.6"
 source:
 processing-level:
 source-quality:

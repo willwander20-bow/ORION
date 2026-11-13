@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: editor
-schema-version: "0.5"
+schema-version: "0.6"
 source:
 brief:
 brain-version:

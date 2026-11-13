@@ -313,21 +313,14 @@ This review made these assumptions to consolidate the documents. Confirm each on
 | KS-Q-05 | RESOLVED | KS-D-26 |
 | KS-Q-15 | RESOLVED in part | KS-D-26. Values set. Transition rules come with the templates. |
 | KS-Q-18 | RESOLVED in part | KS-D-26. Source status is the workflow state. |
-| Templates | DRAFTED | All seven in `20.07`. Fields in Schema §5.4 to §5.11. Justin to review (list below). Then the Phase 1 exit test: one sample record of each type. |
-| KS-G-01 | RESOLVED (draft) | Brain version = ID of the last applied Change Order (Schema §5.6). |
-| KS-G-04 | RESOLVED (draft) | Fields for all seven types. |
-| KS-G-05 | RESOLVED (draft) | Relationship types: `supports`, `contradicts`, `refines`, `extends`, `related`. |
-| KS-C-26 | RESOLVED (draft) | Change Order content: the template sections and Schema §5.8. |
+| Templates | APPROVED | KS-D-27. All seven in `20.07`, Schema v0.6. Next: the Phase 1 exit test, one sample record of each type. |
+| KS-G-01 | RESOLVED | KS-D-27. Brain version = ID of the last applied Change Order (Schema §5.6). |
+| KS-G-04 | RESOLVED | KS-D-27. Fields for all seven types. |
+| KS-G-05 | RESOLVED | KS-D-27. Relationship types: `supports`, `contradicts`, `refines`, `extends`, `related`. |
+| KS-C-26 | RESOLVED | KS-D-27. Change Order content: the template sections and Schema §5.8. |
+| KS-G-08 | RESOLVED | KS-D-27. Quick brief = Brief sections 1, 3, 7, 8, 10 (Schema §5.5). |
 
-Review list for Justin (Phase 1 drafts):
-
-1. `source-type` values (10). Schema §5.4.
-2. Source: no `content_hash`. Evidence quality cut to directness and limits. Schema §5.4, Brief §8.
-3. Brain version = last applied Change Order ID. Schema §5.6.
-4. Change Order: `investigate` and "No Change" removed; `retire` added. Status and `decision` are separate fields. Schema §5.8.
-5. Brain Claim: `evidence-strength` field. Five relationship types. Schema §5.9.
-6. MOC edits need a Change Order until Phase 6 (KS-C-38). Schema §5.11.
-| KS-G-08 | RESOLVED (draft) | Quick brief = Brief sections 1, 3, 7, 8, 10 (Schema §5.5). |
+The review list of 2026-11-12 (six items) is closed by KS-D-27.
 
 ### 8.5 Items from the Phase 0 exit test
 
@@ -350,3 +343,4 @@ Items not in this table have no change.
 | 2026-11-12 | 0.3 | Phase 0: location resolved (KS-D-16). Git and root `CLAUDE.md` findings. |
 | 2026-11-12 | 0.4 | Phase 0: package import, `CLAUDE.md` drafts, Phase 0 checklist (§8.4). |
 | 2026-11-13 | 0.5 | Backup and version control done (X-D-25). KS-Q-09, KS-DEP-04 resolved. |
+| 2026-11-13 | 0.6 | Phase 1 templates approved (KS-D-27). §8.6 review list closed. |
