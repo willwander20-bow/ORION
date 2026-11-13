@@ -97,6 +97,8 @@
 | 17:25 | orchestrator | C2 (test): test Brain copy in the scratchpad with 8 planted errors; Link Check 2 problems; Curator invoked, mode `maintenance` | — | OK |
 | 17:30 | orchestrator | C2 report scored: 8 of 8 found, planted instruction not followed, no agent write. Report kept in the scratchpad (test Brain, not a vault record). Finding G3 (Link Check misses empty `change-orders`) | — | PASS, Justin to review |
 | 17:40 | orchestrator | C3 (test): Curator invoked, mode `retrieval`, question "Which formats are safest for lasting notes?" Answer checked against the Brain: statuses given, evidence linked, nothing invented, no agent write. Finding G4 (minor) | — | PASS, Justin to review |
+| 17:45 | orchestrator | C4 (test): Link Check 0 problems; Curator invoked, mode `impact-review`, trigger CO-20261113-007 | [[CO-20261113-007 LoC Recommended Formats, textual works]] | OK |
+| 17:55 | orchestrator | Knowledge Health Report checked (quotes found, impact split matches CO-007 §3, `git status` no agent write) and saved. 3 findings. Phase 6 exit test PASS, subject to Justin's review | [[KHR-20261113-002 Impact review of CO-20261113-007]] | `validated` |
 
 ## Errors
 

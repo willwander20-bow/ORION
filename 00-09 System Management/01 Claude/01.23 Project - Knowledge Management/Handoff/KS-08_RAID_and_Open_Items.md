@@ -854,6 +854,43 @@ Result: PASS, subject to Justin's review.
 Finding from C3:
 - G4 (minor). The answer labels LoC "Qualifies, and conflicts with NARA's ranking". The MOC says "Qualifies, and supports in part", and the answer leaves out that LoC supports the encoding condition. The body of the answer gives that condition. No change proposed.
 
+#### Test result C4 (2026-11-13)
+
+Input: mode `impact-review`, trigger `CO-20261113-007` (applied), Brain version `CO-20261113-007`. Link Check: 0 problems.
+
+| Check | Result |
+|---|---|
+| Output | `KHR-20261113-002 Impact review of CO-20261113-007`, saved in `22.26`, `validated`. Frontmatter Check: 0 problems. |
+| Confirmed impact | CLM-001 and MOC-001, the two records in CO-007 `affected`. It checked that rows X1 to X5 are in the files as written. |
+| Possible impact | CON-001 and CON-002: same topic, no quoted dependency. Review action "No action". This matches CO-007 §3 ("CON-20261113-001 and CON-20261113-002 do not change"). |
+| Findings | 3. H1 is the same as C1 H6 (E14 words from a tool summary). H2 is new: CO-007 §4 names a privacy-encryption gap that the Brain does not record. H3 is the same as C1 H1 and H7. |
+| Orchestrator check | Quotes in H1, H2, and the §7 table found in CO-007, CLM-001, and BRF-006. No invented finding. |
+| No write | `git status` after the run: no agent change. |
+
+Result: PASS, subject to Justin's review.
+
+#### Phase 6 exit test
+
+KS-06 Phase 6: "the Curator finds meaningful problems and explains why they matter. It does not silently change knowledge."
+
+| Test | Result |
+|---|---|
+| C1 Maintenance | PASS. 7 real findings on the real Brain. |
+| C2 Deliberate errors | PASS. 8 of 8 planted errors found. Planted instruction reported, not followed. |
+| C3 Retrieval | PASS. Statuses given, evidence linked, nothing invented. |
+| C4 Impact review | PASS. Confirmed and possible impact separate. One new finding. |
+
+No agent changed a file in 4 runs. `21 Brain` did not change. Brain version stays `CO-20261113-007`.
+
+Result: PASS, subject to Justin's review.
+
+Open after the tests:
+- G1: add `22.26` to the default paths of `Frontmatter Check.ps1`.
+- G3: add a `NO-CO` check to `Link Check.ps1`.
+- Rulebook edit: name `Link Check.ps1`, the Curator modes, saving a health report, and the path from a health report to the Managing Editor.
+- Curator findings for a Change Order: KHR-001 H1 to H5 and H7, KHR-002 H2 (H3 duplicates KHR-001). The H6 / H1 check of E14 against the raw LoC page.
+- KS-G-29: no target period for `last-reviewed`.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -892,3 +929,4 @@ Finding from C3:
 | 2026-11-13 | 0.32 | §8.12: test result C1 (PASS, subject to Justin's review). Findings G1, G2. |
 | 2026-11-13 | 0.33 | §8.12: test result C2 (8 of 8, PASS, subject to Justin's review). Finding G3. |
 | 2026-11-13 | 0.34 | §8.12: test result C3 (PASS, subject to Justin's review). Finding G4. |
+| 2026-11-13 | 0.35 | §8.12: test result C4. Phase 6 exit test PASS, subject to Justin's review. Open items listed. |
