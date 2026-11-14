@@ -120,6 +120,7 @@
 | 17:59 | orchestrator | Version check (CO-20261113-007 matched), then Change Order applied: CON-003, CON-004, MOC-002 made; MOC-001 changed. Frontmatter Check 0, Link Check 0 | [[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]] | Brain version `CO-20261113-007` to `CO-20261113-008`; SRC-011 `done` |
 | 18:00 | orchestrator | Curator invoked, mode `impact-review`, trigger CO-008 (area `CLAUDE.md` §7 step 8) | — | — |
 | 18:04 | orchestrator | Knowledge Health Report checked (quotes found, no agent write) and saved. 3 findings: H1 MOC-002 misses RQ row 1 (needs a CO); H2 CO-008 `created` time error (same as the time note below); H3 RQ list misses MOC-001 questions | [[KHR-20261113-003 Impact review of CO-20261113-008]] | `validated` |
+| 18:08 | justin | Decision on SRC-009 after the rejected Brief. Justin: "skip it" | [[SRC-20261113-009 31 ways to use Claude in 2027]] | `skipped` |
 
 ## Errors
 
@@ -136,3 +137,4 @@
 - Phase 4 Managing Editor tests M0 to M3 (KS-D-36, KS-08 §8.10). The Managing Editor subagent (draft v0.2) made the Change Orders. No Change Order is decided or applied. `21 Brain` not changed. Brain version stays `CO-20261113-001`. M0 to M2 ran at the same time, so their times are approximate.
 - The Phase 3 rows use the system clock. Some earlier rows have later, approximate times, so the table is not in time order.
 - Time error (Orchestrator, Clippings test): the rows from 18:05 to 19:25 were written with estimated times that ran ahead of the system clock. The real times of that work are from about 17:35 to 17:57. The `created` and `updated` values in SRC-009 to SRC-012, BRF-007 to BRF-010, KAS-007 to KAS-009, and CO-008 have the same error. The rows from 17:57 use the system clock. Order of events is correct.
+- Rulebook §2 lists `new` to `skipped` only. SRC-009 went from `routed` to `skipped` on Justin's decision. The Rulebook has no row for this case. Told Justin.
