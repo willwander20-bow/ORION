@@ -115,7 +115,7 @@ All figures are the presenter's statements. None is cited or checked in the vide
 
 ## 8. Evidence and locators
 
-Locators are caption time stamps in the companion file `[[Build A Claude Knowledge Base That Self-Improves]]`, section "Transcript". A range gives the first and last caption segment.
+Locators are caption time stamps in the companion file `[[SRC-20261113-010 Claude knowledge base that self-improves, Systems Made Better (text)]]`, section "Transcript". A range gives the first and last caption segment.
 
 | Label | Excerpt or summary | Locator | For claim | Supports or challenges | Directness | Limits |
 |---|---|---|---|---|---|---|

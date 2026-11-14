@@ -121,6 +121,7 @@
 | 18:00 | orchestrator | Curator invoked, mode `impact-review`, trigger CO-008 (area `CLAUDE.md` §7 step 8) | — | — |
 | 18:04 | orchestrator | Knowledge Health Report checked (quotes found, no agent write) and saved. 3 findings: H1 MOC-002 misses RQ row 1 (needs a CO); H2 CO-008 `created` time error (same as the time note below); H3 RQ list misses MOC-001 questions | [[KHR-20261113-003 Impact review of CO-20261113-008]] | `validated` |
 | 18:08 | justin | Decision on SRC-009 after the rejected Brief. Justin: "skip it" | [[SRC-20261113-009 31 ways to use Claude in 2027]] | `skipped` |
+| 18:16 | orchestrator | Four companion files moved from the vault folder `Clippings` to `22.21 Sources` as `SRC-… (text).md` (Schema §5.2). `text-file` in SRC-009 to SRC-012 and the locator link in BRF-009 updated. Quote recheck on the moved files: 18/18, 44/44, 44/44. Frontmatter Check 0, Link Check 0. Justin: "Yes" | SRC-009 to SRC-012 | OK |
 
 ## Errors
 
