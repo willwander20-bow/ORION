@@ -893,6 +893,26 @@ Open after the tests:
 
 Justin's review, 2026-11-13: Phase 6 exit test PASSED (KS-D-44). Justin: "Pass Phase 6". The open items above stay open. Phase 6 is complete. Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 ("No Knowledge HQ before the core workflow works") applies. Its plan needs Justin's approval.
 
+#### Clippings test (2026-11-13, after Phase 6)
+
+Justin: "As a test - review the contents of the clippings folder. run these through the full process."
+
+| Source | Result |
+|---|---|
+| SRC-20261113-009 (Saraev video) | BRF-008 rejected (E62 quote has 16 words). Justin: "skip it". `skipped`. |
+| SRC-20261113-010 (Systems Made Better video) | KAS-008 `investigate`. `Research Questions.md` made, row 1. `done`. |
+| SRC-20261113-011 (Lipsky video) | KAS-009 `advance`. Justin approved the new topic. CO-20261113-008 applied (CON-003, CON-004, MOC-002, MOC-001 link). KHR-20261113-003 impact review. `done`. |
+| SRC-20261113-012 (Andrade article) | KAS-007 `no-action`. `done`. |
+
+Brain version `CO-20261113-008`. Companion files moved from `Clippings` to `22.21` (Schema §5.2).
+
+Open items from the test:
+- KHR-003 H1: MOC-002 does not list Research Questions row 1. Needs a Change Order.
+- KHR-003 H3: `Research Questions.md` does not list the two open questions in MOC-001. Justin decides.
+- Time error: work-log rows 18:05 to 19:25 and the `created`/`updated` values of SRC-009 to 012, BRF-007 to 010, KAS-007 to 009, CO-008 are ahead of the clock (real time about 17:35 to 17:57). Log note added. Records not corrected yet.
+- Quote check for companion files: a scratchpad script only. Add it to `Quote Check.ps1` (with G1, G3).
+- The Reporter's final check missed the 16-word quote. Consider a word-count step in the Reporter instructions.
+- Rulebook §2 has no `routed` to `skipped` transition for a Justin decision.
 ## 9. Change log
 
 | Date | Version | Change |
@@ -933,3 +953,4 @@ Justin's review, 2026-11-13: Phase 6 exit test PASSED (KS-D-44). Justin: "Pass P
 | 2026-11-13 | 0.34 | §8.12: test result C3 (PASS, subject to Justin's review). Finding G4. |
 | 2026-11-13 | 0.35 | §8.12: test result C4. Phase 6 exit test PASS, subject to Justin's review. Open items listed. |
 | 2026-11-13 | 0.36 | Phase 6 exit test PASSED (KS-D-44). |
+| 2026-11-13 | 0.37 | §8.12: Clippings test results and open items. |
