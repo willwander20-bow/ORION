@@ -4,7 +4,7 @@ type: moc
 title: Note durability
 status: active
 created: 2026-11-13T10:27
-updated: 2026-11-13T14:55
+updated: 2026-11-13T17:59
 created-by: orchestrator
 schema-version: "0.6"
 last-reviewed: 2026-11-13
@@ -14,6 +14,7 @@ change-orders:
   - "[[CO-20261113-005 NARA file format tables]]"
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
   - "[[CO-20261113-007 LoC Recommended Formats, textual works]]"
+  - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
 ---
 
 ## Topic summary
@@ -43,7 +44,7 @@ How to keep notes readable and usable for many years: file formats, ownership, a
 
 ## Related MOCs
 
--
+- [[MOC-20261113-002 AI-maintained knowledge bases|AI-maintained knowledge bases]]: one method in that topic keeps its wiki as plain Markdown files with Markdown links, for portability. A link, not a dependency.
 
 ## Open research questions
 

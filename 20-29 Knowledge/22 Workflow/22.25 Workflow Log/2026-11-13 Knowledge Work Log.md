@@ -116,6 +116,10 @@
 | 19:15 | managing-editor | Managing Editor invoked, Brain version `CO-20261113-007` | KAS-009 | — |
 | 19:25 | orchestrator | Change Order checked (Brain version current, E labels in BRF-010, decision fields empty, no overlap, `git status` no agent write) and saved | [[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]] | `open`; SRC-011 `change-proposed` |
 | 19:25 | orchestrator | `Research Questions.md` row 2 added from KAS-009 (A6) | [[Research Questions]] | OK |
+| 17:57 | justin | Decision on the Change Order. Justin: "Approve all rows" | [[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]] | `approved` |
+| 17:59 | orchestrator | Version check (CO-20261113-007 matched), then Change Order applied: CON-003, CON-004, MOC-002 made; MOC-001 changed. Frontmatter Check 0, Link Check 0 | [[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]] | Brain version `CO-20261113-007` to `CO-20261113-008`; SRC-011 `done` |
+| 18:00 | orchestrator | Curator invoked, mode `impact-review`, trigger CO-008 (area `CLAUDE.md` §7 step 8) | — | — |
+| 18:04 | orchestrator | Knowledge Health Report checked (quotes found, no agent write) and saved. 3 findings: H1 MOC-002 misses RQ row 1 (needs a CO); H2 CO-008 `created` time error (same as the time note below); H3 RQ list misses MOC-001 questions | [[KHR-20261113-003 Impact review of CO-20261113-008]] | `validated` |
 
 ## Errors
 
@@ -131,3 +135,4 @@
 - Phase 3 Editor tests E1 to E5 (KS-D-33, KS-08 §8.9). E3 Editor step ran after Justin validated the Brief. An Orchestrator session in `20-29 Knowledge` did the work. The Editor subagent (draft v0.2) made the Assessments. The Reporter (v0.3) made the E3 Brief. No Change Orders. `21 Brain` not changed. Brain version stays `CO-20261113-001`.
 - Phase 4 Managing Editor tests M0 to M3 (KS-D-36, KS-08 §8.10). The Managing Editor subagent (draft v0.2) made the Change Orders. No Change Order is decided or applied. `21 Brain` not changed. Brain version stays `CO-20261113-001`. M0 to M2 ran at the same time, so their times are approximate.
 - The Phase 3 rows use the system clock. Some earlier rows have later, approximate times, so the table is not in time order.
+- Time error (Orchestrator, Clippings test): the rows from 18:05 to 19:25 were written with estimated times that ran ahead of the system clock. The real times of that work are from about 17:35 to 17:57. The `created` and `updated` values in SRC-009 to SRC-012, BRF-007 to BRF-010, KAS-007 to KAS-009, and CO-008 have the same error. The rows from 17:57 use the system clock. Order of events is correct.

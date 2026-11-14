@@ -2,9 +2,9 @@
 id: CO-20261113-008
 type: change-order
 title: Build a Self Improving Claude Knowledge Base
-status: open
+status: applied
 created: 2026-11-13T19:25
-updated: 2026-11-13T19:25
+updated: 2026-11-13T17:59
 created-by: managing-editor
 schema-version: "0.10"
 assessment: "[[KAS-20261113-009 Self-improving Claude knowledge base, Lipsky]]"
@@ -16,11 +16,11 @@ change-types:
 affected:
   - "[[MOC-20261113-001 Note durability]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-13T17:57
+decision-note: "Approve all rows"
+applied: 2026-11-13T17:59
+brain-version-after: CO-20261113-008
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -147,4 +147,17 @@ For each row, the options are `approved`, `approved-with-changes`, `rejected`, a
 
 ## 7. Decision record
 
+Justin, 2026-11-13, in the Orchestrator session (`20-29 Knowledge`). The Orchestrator copied his words exactly: "Approve all rows".
+
 ## 8. Implementation record
+
+- Version check: `brain-version` `CO-20261113-007` matched the current version (newest `applied` in `22.24`: CO-20261113-007).
+- Files created:
+  - X1: `21 Brain\CON-20261113-003 AI-maintained wiki over files.md`
+  - X2: `21 Brain\CON-20261113-004 Set up an AI-maintained wiki.md`
+  - X3: `21 Brain\MOC-20261113-002 AI-maintained knowledge bases.md`
+- File changed:
+  - X4: `21 Brain\MOC-20261113-001 Note durability.md` ("Related MOCs" line, `change-orders`, `updated`). No other section changed.
+- Each row was applied with the exact text in §2. "The X1 record", "the X2 record", and "the X3 record" became wikilinks to the new records.
+- No existing Claim or Concept changed.
+- Brain version is now `CO-20261113-008`.

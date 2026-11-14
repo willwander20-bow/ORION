@@ -2,9 +2,9 @@
 id: SRC-20261113-011
 type: source
 title: "Build a Self Improving Claude Knowledge Base"
-status: change-proposed
+status: done
 created: 2026-11-13T17:35
-updated: 2026-11-13T19:25
+updated: 2026-11-13T17:59
 created-by: orchestrator
 schema-version: "0.10"
 url:
@@ -25,3 +25,5 @@ brief: "[[BRF-20261113-010 Self-improving Claude knowledge base, Lipsky]]"
 # Notes
 
 Routing, 2026-11-13: duplicate check on title, no match (SRC-010 is a different video on a similar topic). No `url` in the clipping. Access check: the companion file in `Clippings` has a summary, a fit analysis for ORION, setup prompts, the auto-captions (section "Transcript (auto-captions, unedited)"), and the video description. Not work content. Level `full-review`. Scope: the transcript, the setup prompts, and the video description. The summary and the fit analysis are notes made after the video, not the source.
+
+Workflow result, 2026-11-13: KAS-20261113-009 `advance`. CO-20261113-008 approved and applied (Brain version CO-20261113-008). Status `done`.
