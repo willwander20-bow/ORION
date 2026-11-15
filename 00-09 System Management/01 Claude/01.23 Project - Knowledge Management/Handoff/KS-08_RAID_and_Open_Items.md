@@ -913,6 +913,26 @@ Open items from the test:
 - Quote check for companion files: a scratchpad script only. Add it to `Quote Check.ps1` (with G1, G3).
 - The Reporter's final check missed the 16-word quote. Consider a word-count step in the Reporter instructions.
 - Rulebook §2 has no `routed` to `skipped` transition for a Justin decision.
+
+### 8.13 Phase 6 follow-up (2026-11-15)
+
+Justin: "Fix the scripts first"; "Approve all"; "Update the Handoff folder then complete the Reporter wordcount step" (KS-D-45).
+
+| Item | Status | Result |
+|---|---|---|
+| G1 `Frontmatter Check.ps1` and `22.26` | CLOSED | v0.2. `22.26` is in the default paths. Real vault: 50 files, 0 problems. |
+| G3 `Link Check.ps1` and empty `change-orders` | CLOSED | v0.2. New `NO-CO` line. Real Brain: 0 problems. A seeded copy in the scratchpad gave `NO-CO`. |
+| Quote check for companion files | CLOSED | `Quote Check.ps1` v0.3, option `-File`. BRF-20261113-009 against its companion file: 44 of 44 quotes found, 0 failed. |
+| Rulebook edit for the Curator steps | CLOSED | Rulebook v0.5. §4.4 Knowledge Health Report. §6 step 10. |
+| Rulebook §2: `routed` to `skipped` | CLOSED | New row in Rulebook v0.5. |
+| Reporter word-count step | CLOSED | Reporter draft v0.4. §8 and §11: count the words of each `Quote:` and write the count in the final check. Not tested on a new source yet. The next Reporter run is the test. |
+| KS-G-29 target period for `last-reviewed` | OPEN | Justin decides. |
+| KHR-003 H3 (open questions and `Research Questions.md`) | OPEN | Justin decides. |
+| Change Order for KHR-001 H1 to H5 and H7, KHR-002 H2, KHR-003 H1 | OPEN | Justin decides if the Managing Editor gets these. The H6 / H1 check of E14 against the raw LoC page is also open. |
+| Time errors on SRC-009 to 012, BRF-007 to 010, KAS-007 to 009, CO-008 | OPEN | Records not corrected. |
+
+Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 applies. The plan needs Justin's approval.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -954,3 +974,4 @@ Open items from the test:
 | 2026-11-13 | 0.35 | §8.12: test result C4. Phase 6 exit test PASS, subject to Justin's review. Open items listed. |
 | 2026-11-13 | 0.36 | Phase 6 exit test PASSED (KS-D-44). |
 | 2026-11-13 | 0.37 | §8.12: Clippings test results and open items. |
+| 2026-11-15 | 0.38 | New §8.13: Phase 6 follow-up. G1, G3, the companion-file quote check, the Rulebook edit, `routed` to `skipped`, and the Reporter word-count step closed (KS-D-45). |

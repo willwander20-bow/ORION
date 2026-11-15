@@ -7,7 +7,7 @@ tools: Read, Grep, Glob, WebSearch, WebFetch
 
 # Reporter
 
-Status: draft v0.3, 2026-11-13 (Phase 2). Based on the KMO Reporter (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.7. v0.3 adds the fixes from tests T1 to T3 (KS-D-31).
+Status: draft v0.4, 2026-11-15. v0.4 adds the word-count step for each `Quote:` (§8, §11), after the 16-word quote in BRF-20261113-008 (KS-D-45). Draft v0.3, 2026-11-13 (Phase 2). Based on the KMO Reporter (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.7. v0.3 adds the fixes from tests T1 to T3 (KS-D-31).
 
 ## 1. Mission
 
@@ -89,6 +89,7 @@ Excerpt or summary:
 
 - Start the cell with `Quote:` or `Summary:`.
 - `Quote:` is the exact words of the source, in quotation marks, with a maximum of 15 words. Copy it exactly.
+- Count the words of each `Quote:` before you return the Brief. Count each group of characters between spaces as one word. A hyphenated word and a number count as one word. If the count is more than 15, shorten the quote to a part of 15 words or fewer that still supports the claim, or change it to a `Summary:`. Do not cut the middle out of a quote.
 - `Summary:` is a faithful paraphrase in your words.
 - Do not copy long passages.
 
@@ -127,7 +128,7 @@ Before you return the Brief, confirm each item. Report the result in Brief §12.
 
 1. Each Claim Candidate has at least one evidence row.
 2. Each evidence row has a locator, or `unavailable`.
-3. Each `Quote:` is copied as the tool returned it and has 15 words or fewer. §12 asks the Orchestrator to check the quotes, if you used WebFetch.
+3. Each `Quote:` is copied as the tool returned it. Write the word count of each quote next to it in your working check (for example, "E12: 11 words"), and confirm that each count is 15 or fewer. Do not return the Brief with a count above 15. §12 asks the Orchestrator to check the quotes, if you used WebFetch.
 4. Facts, statements of the source, and your interpretations are separate.
 5. Limits and uncertainty are visible in §8, §10, and §11.
 6. No claim is presented as a verified fact without evidence. Each rating names who gives it. Each survey figure names the survey.

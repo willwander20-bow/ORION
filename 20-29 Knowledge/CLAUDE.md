@@ -56,7 +56,7 @@ The Reporter, the Editor, the Managing Editor, and the Knowledge Curator can be 
 
 The Brain has content. The Brain version is the ID of the last applied Change Order (Schema §5.6).
 
-- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.3 (KS-D-31). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.3 (KS-D-38). The Knowledge Curator is draft v0.2 (KS-D-43).
+- The four agent files in `.claude\agents\` are draft input (KS-D-13). The Reporter is draft v0.4 (KS-D-45). The Editor is draft v0.3 (KS-D-34). The Managing Editor is draft v0.3 (KS-D-38). The Knowledge Curator is draft v0.2 (KS-D-43).
 - Do not invoke an agent before its phase. The agents show as available now, but this rule applies.
 
 | Agent | First phase |
