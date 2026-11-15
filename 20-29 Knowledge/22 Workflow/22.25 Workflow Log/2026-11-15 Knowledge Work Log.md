@@ -31,6 +31,7 @@
 | 17:56 | orchestrator | BRF-20261113-006 corrected from the checked LoC sentence (E14 Limits, C9, §4 line, definition line); `updated` set. Quote Check 11 of 11, 0 failed. Justin: "Correct the Brief" (KHR-20261115-001 H3) | [[BRF-20261113-006 LoC Recommended Formats, textual works]] | OK |
 | 17:56 | orchestrator | Times corrected on SRC-009 to 012 (`updated`), BRF-007 to 010, KAS-007 to 009, CO-008 (`created`), KHR-003. Limits from git commit times: records in git by 17:44, CO-008 by 17:55, KHR-003 by 18:01. Order kept. Approximate | 13 records (22 Workflow) | OK |
 | 17:56 | orchestrator | Review period set to 12 months (KS-G-29, Justin: "12 months"). Knowledge Curator draft v0.3; area `CLAUDE.md` names Curator v0.3 and Managing Editor v0.4 | `.claudegentsknowledge-curator.md`, `CLAUDE.md` | OK |
+| 17:58 | orchestrator | Handoff updated outside the area on Justin's instruction ("Yes, update Handoff"): KS-07 new KS-D-46 and change-log row; KS-08 §8.13 open items closed and change-log row | KS-07, KS-08 (Handoff folder) | OK |
 
 ## Decisions
 
@@ -42,11 +43,11 @@
 - Justin: "Yes, H1 and H2"; "Approve both" (CO-20261115-002, rows X1 and X2).
 - Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
 - Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
+- Justin: "Yes, update Handoff" (KS-07, KS-08).
 
 ## Open
 
 - KHR-20261115-001: H1, H2, H3 resolved (CO-20261115-002, BRF-006 corrected). H4 (optional, "confidence low" in the MOC-001 claim line) not approved.
-- Handoff folder (KS-07, KS-08 §8.13) does not yet show KS-D-46 and the closed items. Write permission for the Handoff folder was refused this session. Justin decides.
 
 ## Notes
 

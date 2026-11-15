@@ -926,10 +926,11 @@ Justin: "Fix the scripts first"; "Approve all"; "Update the Handoff folder then 
 | Rulebook edit for the Curator steps | CLOSED | Rulebook v0.5. §4.4 Knowledge Health Report. §6 step 10. |
 | Rulebook §2: `routed` to `skipped` | CLOSED | New row in Rulebook v0.5. |
 | Reporter word-count step | CLOSED | Reporter draft v0.4. §8 and §11: count the words of each `Quote:` and write the count in the final check. Not tested on a new source yet. The next Reporter run is the test. |
-| KS-G-29 target period for `last-reviewed` | OPEN | Justin decides. |
-| KHR-003 H3 (open questions and `Research Questions.md`) | OPEN | Justin decides. |
-| Change Order for KHR-001 H1 to H5 and H7, KHR-002 H2, KHR-003 H1 | OPEN | Justin decides if the Managing Editor gets these. The H6 / H1 check of E14 against the raw LoC page is also open. |
-| Time errors on SRC-009 to 012, BRF-007 to 010, KAS-007 to 009, CO-008 | OPEN | Records not corrected. |
+| KS-G-29 target period for `last-reviewed` | CLOSED | 12 months (KS-D-46). Curator draft v0.3. |
+| KHR-003 H3 (open questions and `Research Questions.md`) | CLOSED | Justin: add both. Two rows added (KAS-001 A4, A5). |
+| Change Orders for KHR-001 H1 to H7, KHR-002 H1 to H3, KHR-003 H1 | CLOSED | CO-20261115-001, CO-20261115-002, CO-20261115-003 applied. E14 checked against the raw LoC page: LoC words are "that control access to or prevent use of the digital work". Brain version `CO-20261115-003`. KHR-20261115-001 to 003 saved. |
+| BRF-20261113-006 wording (KHR-20261115-001 H3) | CLOSED | Brief corrected (E14 Limits, C9, §4 line, definition). Quote Check 11 of 11, 0 failed. |
+| Time errors on SRC-009 to 012, BRF-007 to 010, KAS-007 to 009, CO-008, KHR-003 | CLOSED | Fields corrected to the git commit limits (17:36 to 17:47, KHR-003 18:00). Approximate. Order kept. The 2026-11-13 log rows keep their old times, with the log note. |
 
 Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 applies. The plan needs Justin's approval.
 
@@ -975,3 +976,4 @@ Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 applies. The plan needs Just
 | 2026-11-13 | 0.36 | Phase 6 exit test PASSED (KS-D-44). |
 | 2026-11-13 | 0.37 | §8.12: Clippings test results and open items. |
 | 2026-11-15 | 0.38 | New §8.13: Phase 6 follow-up. G1, G3, the companion-file quote check, the Rulebook edit, `routed` to `skipped`, and the Reporter word-count step closed (KS-D-45). |
+| 2026-11-15 | 0.39 | §8.13: all open items closed (KS-D-46). Three Change Orders applied, Brain version `CO-20261115-003`. |
