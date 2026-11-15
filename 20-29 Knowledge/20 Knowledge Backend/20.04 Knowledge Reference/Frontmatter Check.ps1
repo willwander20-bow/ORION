@@ -1,13 +1,14 @@
-# Frontmatter Check v0.1 (KS-D-42). Orchestrator Rulebook section 4.0.
+# Frontmatter Check v0.2 (KS-D-42). Orchestrator Rulebook section 4.0.
 # Checks the YAML frontmatter of Knowledge System records for errors that stop Obsidian from reading it.
 # It is a rule check, not a full YAML parser. Output ends with "Problems: N".
 # Usage (from 20-29 Knowledge): & ".\20 Knowledge Backend\20.04 Knowledge Reference\Frontmatter Check.ps1" [-Path "<file or folder>"]
-# With no -Path, it checks 21 Brain and 22.21 to 22.24. The script reads files only. It writes no file.
+# With no -Path, it checks 21 Brain, 22.21 to 22.24, and 22.26. The script reads files only. It writes no file.
 param([string[]]$Path)
 
 if (-not $Path) {
   $Path = @('21 Brain', '22 Workflow\22.21 Sources', '22 Workflow\22.22 Reference Briefs',
-            '22 Workflow\22.23 Knowledge Assessments', '22 Workflow\22.24 Change Orders')
+            '22 Workflow\22.23 Knowledge Assessments', '22 Workflow\22.24 Change Orders',
+            '22 Workflow\22.26 Knowledge Health Reports')
 }
 $files = foreach ($p in $Path) { Get-ChildItem -Path $p -Filter *.md -File }
 $files = $files | Where-Object { $_.Name -notmatch '\(text\)\.md$' }   # companion files have no frontmatter

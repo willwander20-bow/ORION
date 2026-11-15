@@ -1,10 +1,11 @@
-# Link Check v0.1 (KS-D-43). Phase 6, Knowledge Curator input.
+# Link Check v0.2 (KS-D-43). Phase 6, Knowledge Curator input.
 # Checks the links of Brain records. Output ends with "Problems: N".
 #   1. Broken link: a wikilink whose target file is not found under -Root.
 #   2. Orphan: a Brain Claim or Concept that no other Brain record links to. A MOC is an entry point, so it is not checked.
 #   3. Back-link: an applied Change Order lists a record in "affected", but the record's
 #      "change-orders" does not list that Change Order (KS-D-03).
 #   4. Change Order state: a record's "change-orders" lists a Change Order that is not "applied".
+#   5. No Change Order: a Claim, Concept, or MOC with an empty "change-orders" list (KS-D-03).
 # Usage (from 20-29 Knowledge): & ".\20 Knowledge Backend\20.04 Knowledge Reference\Link Check.ps1" [-Brain "<folder>"] [-Root "<folder>", ...] [-ChangeOrders "<folder>"]
 # Defaults: -Brain "21 Brain", -Root "." (the area), -ChangeOrders "22 Workflow\22.24 Change Orders".
 # The script reads files only. It writes no file.
@@ -91,6 +92,7 @@ $recCOs = @{}
 foreach ($r in $records) {
   $front = Get-Front (Get-Content -Encoding UTF8 $r.FullName)
   $recCOs[$r.BaseName] = @(Get-ListField $front 'change-orders' | ForEach-Object { Split-Path $_ -Leaf })
+  if ($recCOs[$r.BaseName].Count -eq 0) { $bad++; "NO-CO     $($r.Name): 'change-orders' is empty. A Brain record must link the Change Order that made it (KS-D-03)" }
   foreach ($co in $recCOs[$r.BaseName]) {
     if ($coState.ContainsKey($co) -and $coState[$co] -ne 'applied') {
       $bad++; "CO-STATE  $($r.Name): lists [[${co}]], status '$($coState[$co])', not 'applied'"

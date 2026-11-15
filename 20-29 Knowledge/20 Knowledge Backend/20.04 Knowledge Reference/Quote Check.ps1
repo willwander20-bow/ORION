@@ -1,21 +1,29 @@
-# Quote Check v0.2 (KS-D-40, KS-D-42). Orchestrator Rulebook section 4.1.
-# Checks each Quote: "..." in a Reference Brief against the raw web page (area CLAUDE.md rule 9a).
+# Quote Check v0.3 (KS-D-40, KS-D-42). Orchestrator Rulebook section 4.1.
+# Checks each Quote: "..." in a Reference Brief against the raw web page (area CLAUDE.md rule 9a),
+# or against a companion text file (Schema 5.2) when -File is given.
 # Pass: each quote is in the page text and has 15 words or fewer. Output ends with "Failed: N".
-# Limits: web pages only (not companion files or PDFs). A quote that contains a " character is not read.
-# Usage: & ".\Quote Check.ps1" -Brief "<Brief path>" -Url "<url>"
+# Limits: web pages and companion text files (not PDFs). A quote that contains a " character is not read.
+# Usage: & ".\Quote Check.ps1" -Brief "<Brief path>" (-Url "<url>" | -File "<companion file path>")
 # The script reads files and the page only. It writes no file.
 param(
   [Parameter(Mandatory = $true)][string]$Brief,
-  [Parameter(Mandatory = $true)][string]$Url
+  [string]$Url,
+  [string]$File
 )
+if ((-not $Url -and -not $File) -or ($Url -and $File)) { 'ERROR: give -Url or -File, not both and not neither.'; exit 1 }
 
 function Norm([string]$s) {
   $s = $s -replace '[‘’]', "'" -replace '[“”]', '"' -replace ' ', ' '
   return ($s -replace '\s+', ' ').Trim()
 }
 
-$raw = (curl.exe -s -L --max-time 30 -A "Mozilla/5.0" $Url) -join "`n"
-if (-not $raw) { "ERROR: no page text from $Url"; exit 1 }
+if ($File) {
+  if (-not (Test-Path -LiteralPath $File)) { "ERROR: file not found: $File"; exit 1 }
+  $raw = (Get-Content -Encoding UTF8 -LiteralPath $File) -join "`n"
+} else {
+  $raw = (curl.exe -s -L --max-time 30 -A "Mozilla/5.0" $Url) -join "`n"
+}
+if (-not $raw) { "ERROR: no text from $Url$File"; exit 1 }
 $raw = [regex]::Replace($raw, '(?is)<(script|style)[^>]*>.*?</\1>', ' ')
 # Inline tags: remove with no space, so "EPUB3</a>-compliant" reads "EPUB3-compliant" (F3, KS-D-42).
 $raw = [regex]::Replace($raw, '(?i)</?(a|span|em|strong|b|i|abbr|code|sup|sub)(\s[^>]*)?>', '')
