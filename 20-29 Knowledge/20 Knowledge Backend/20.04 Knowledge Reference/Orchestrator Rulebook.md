@@ -2,15 +2,15 @@
 title: Orchestrator Rulebook
 type: reference
 status: approved
-schema-version: "0.9"
-updated: 2026-11-13
+schema-version: "0.10"
+updated: 2026-11-15
 ---
 
 # Orchestrator Rulebook
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: v0.4, Phase 5. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. All other rules come from the documents named in the rule.
+Status: v0.5. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -46,6 +46,7 @@ The Source `status` is the workflow state (Schema §5.1, KS-D-25). There is no s
 | — | `new` | Orchestrator | Source saved (routing step 3). |
 | `new` | `routed` | Orchestrator | Routing steps 1 to 8 complete. |
 | `new` | `skipped` | Orchestrator | Duplicate, or Justin says do not process. Reason recorded. |
+| `routed` | `skipped` | Orchestrator | Justin says do not process. Justin's words recorded in the log. |
 | `new` | `archived` | Orchestrator | `archive-only`. |
 | `new`, `routed` | `failed` | Orchestrator | Access check fails, or the Reporter reports `access-status: none`. |
 | `routed` | `briefed` | Orchestrator | Brief saved and `validated` (section 4.1). |
@@ -78,7 +79,7 @@ Validate each output before the next stage. If a check fails, set the output to 
 ### 4.0 All records: valid frontmatter (KS-D-42)
 
 1. When you write a frontmatter value, put it in quotes if it contains `: ` or ` #`, or if it starts with a special character (`@` `` ` `` `&` `*` `!` `|` `>` `%` `{` `[` `#` `,` `?` `-`). Use double quotes. If the value contains `"`, use single quotes.
-2. After you save or change a record, run `Frontmatter Check.ps1` in this folder on it. Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Frontmatter Check.ps1" -Path "<file>"`. With no `-Path`, it checks `21 Brain` and `22.21` to `22.24`. Pass: "Problems: 0".
+2. After you save or change a record, run `Frontmatter Check.ps1` in this folder on it. Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Frontmatter Check.ps1" -Path "<file>"`. With no `-Path`, it checks `21 Brain`, `22.21` to `22.24`, and `22.26`. Pass: "Problems: 0".
 3. Run it with no `-Path` before each commit.
 4. The script is a rule check, not a full YAML parser. Reason: test O1, where invalid frontmatter was found only by Justin in Obsidian (F4).
 
@@ -88,7 +89,8 @@ Validate each output before the next stage. If a check fails, set the output to 
 2. Frontmatter: all fields of `TPL Reference Brief.md` are present. Values are in Schema §5.5. `source` links to the Source. `claim-count` equals the rows in §7.
 3. **Quote check.** Check each `Quote:` against the raw page (`curl` with tags removed) or the companion file. Each quote must match exactly and have 15 words or fewer. WebFetch text is not proof (area `CLAUDE.md` rule 9a, KS-D-31).
    - Web page: run `Quote Check.ps1` in this folder (F2, KS-D-40). Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Quote Check.ps1" -Brief "<Brief path>" -Url "<url>"`. Pass: "Failed: 0".
-   - The script does not check a companion file or a PDF. It does not read a quote that contains a `"` character. Check these by hand.
+   - Companion file: run the same script with `-File "<companion file path>"` in place of `-Url`. Pass: "Failed: 0".
+   - The script does not check a PDF. It does not read a quote that contains a `"` character. Check these by hand.
 4. Locators: each heading or `¶` locator exists in the source. Check all of them for a short source. Check a sample of at least 5 for a long source (KS-D-41).
 5. Sections: `full-review` uses all 12 sections. `quick-brief` uses 1, 3, 7, 8, 10.
 6. `git status` shows no file changed by the Reporter (KS-D-41).
@@ -117,6 +119,20 @@ Pass: set the Assessment to `validated` and the Source to `assessed`.
 
 Pass: save the Change Order with status `open`, set the Source to `change-proposed`, and present it to Justin.
 
+### 4.4 Knowledge Health Report
+
+The Knowledge Curator has three modes: `maintenance`, `impact-review`, and `retrieval` (KS-D-43). The Orchestrator states the mode and the scope when it invokes the Curator.
+
+1. Before a `maintenance` or `impact-review` run, run `Link Check.ps1` in this folder. Command: `& ".\20 Knowledge Backend\20.04 Knowledge Reference\Link Check.ps1"`. Give its output to the Curator.
+2. Save the returned report in `22.26 Knowledge Health Reports` from `TPL Knowledge Health Report.md`. Use a `KHR` ID (section 3). Set the status to `draft`.
+3. Validate the report:
+   - `Frontmatter Check.ps1` shows "Problems: 0".
+   - The Orchestrator finds each quotation of the report in the Brain or the Brief.
+   - `git status` shows no file changed by the Curator. `21 Brain` is not changed.
+4. Pass: set the report to `validated`.
+5. A `retrieval` answer is not a record (Schema §5.12). It stays in the session.
+6. The Curator does not write Change Orders (KS-D-43). For a finding that needs a Brain change, give the report to the Managing Editor. Justin decides which findings go forward.
+
 ## 5. Errors and retry
 
 1. When a stage fails, write an error record in the log ("Errors" section): the time, the stage, the input, and the error.
@@ -140,6 +156,7 @@ The Orchestrator is the actor that applies an approved Change Order (KS-D-39, KS
 7. Set the Source to `done`.
 8. Write the log rows: the decision (actor `justin`), and the apply with the Brain version before and after.
 9. `rejected`: do not apply. Set the Source to `done` (KS-D-41).
+10. After an apply, run `Link Check.ps1`. Then invoke the Curator in `impact-review` mode with the applied Change Order as the trigger (section 4.4, area `CLAUDE.md` §7 step 8).
 
 ## 7. Log
 
@@ -163,3 +180,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | 2026-11-13 | 0.2 | F1: Source ID and save moved to routing step 3. F2: `Quote Check.ps1` named in §4.1 (KS-D-40). |
 | 2026-11-13 | 0.3 | Justin approved the new rules (KS-D-41). Status `approved`. |
 | 2026-11-13 | 0.4 | New §4.0: frontmatter rule and `Frontmatter Check.ps1` (F4). `Quote Check.ps1` v0.2: inline tags removed with no space (F3). KS-D-42. |
+| 2026-11-15 | 0.5 | Justin approved six edits. §2: `routed` to `skipped`. §4.0: `22.26` in the default paths (`Frontmatter Check.ps1` v0.2). §4.1: `-File` for companion files (`Quote Check.ps1` v0.3). New §4.4: Knowledge Health Report. §6 step 10: `Link Check.ps1` and Curator impact review after an apply. Schema version "0.10". |
