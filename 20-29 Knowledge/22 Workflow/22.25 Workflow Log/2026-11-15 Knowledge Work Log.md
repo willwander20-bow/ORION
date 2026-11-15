@@ -45,7 +45,7 @@
 
 ## Open
 
-- KHR-20261115-001: H1 and H2 resolved by CO-20261115-002. H3 (Brief BRF-20261113-006 wording) needs routing by Justin. H4 optional, not approved.
+- KHR-20261115-001: H1, H2, H3 resolved (CO-20261115-002, BRF-006 corrected). H4 (optional, "confidence low" in the MOC-001 claim line) not approved.
 - Handoff folder (KS-07, KS-08 §8.13) does not yet show KS-D-46 and the closed items. Write permission for the Handoff folder was refused this session. Justin decides.
 
 ## Notes
