@@ -4,7 +4,7 @@ type: reference-brief
 title: "LoC Recommended Formats, textual works"
 status: validated
 created: 2026-11-13T13:45
-updated: 2026-11-13T14:00
+updated: 2026-11-15T17:55
 created-by: reporter
 schema-version: "0.9"
 source: "[[SRC-20261113-008 LoC Recommended Formats, textual works]]"
@@ -29,7 +29,7 @@ The Library of Congress states which forms of a textual work it prefers to recei
 - The Library states that it can preserve paper that does not meet the archival standard (C2).
 - Digital text: the Library prefers UTF-8, UTF-16 (with BOM), or US-ASCII encoding, and XML-based markup, EPUB3, TEI/DocBook, PDF/UA, PDF/A, or high-quality PDF (C6, C7).
 - RTF, plain text, and widely used proprietary word-processing formats are on the lower part of the digital list (C8).
-- Digital files must not contain DRM or encryption that restricts access or use (C9).
+- Digital files must not contain DRM or encryption that controls access to or prevents use of the digital work (C9).
 - Electronic serials: content compliant with NISO JATS is preferred (C10).
 - The Library wants complete works, with all components, updates, and supplements (C5, C13).
 
@@ -48,7 +48,7 @@ The Library of Congress states which forms of a textual work it prefers to recei
 ## 6. Concepts and definitions
 
 - Archival quality paper: paper per ISO 11108:1996. The section does not define it further.
-- Technological measures: in this section, measures such as DRM technologies or encryption that restrict access or use.
+- Technological measures: in this section, measures such as DRM technologies or encryption that control access to or prevent use of the digital work.
 - Completeness: the whole work, with all its components, updates, and supplements.
 - The section gives no definition of "preferred" or "acceptable".
 
@@ -64,7 +64,7 @@ The Library of Congress states which forms of a textual work it prefers to recei
 | C6 | For digital textual works, the Library of Congress prefers UTF-8, UTF-16 (with BOM), or US-ASCII character encoding. | normative | explicit | E8 | high |
 | C7 | For digital textual works, the Library of Congress prefers XML-based markup with DTD/schema and stylesheets, EPUB3, other widely used book DTDs (TEI, DocBook), PDF/UA, PDF/A, and highest-quality PDF. | normative | explicit | E9, E10, E11 | medium |
 | C8 | For digital textual works, the Library of Congress places XHTML/HTML, XML document formats, SGML, BITS 2.0, web-optimized PDF, RTF, plain text, and widely used proprietary word-processing formats below its preferred formats. | normative | explicit | E12, E13 | medium |
-| C9 | The Library of Congress states that digital textual files must contain no DRM or encryption that restricts access or use. | procedural | explicit | E14 | high |
+| C9 | The Library of Congress states that digital textual files must contain no measures, such as DRM or encryption, that control access to or prevent use of the digital work. | procedural | explicit | E14 | high |
 | C10 | For electronic serials, the Library of Congress prefers content compliant with NISO JATS (ANSI/NISO Z39.96-2015). | normative | explicit | E15 | high |
 | C11 | For print, the Library of Congress asks for metadata such as title, creator, dates, place, publisher, and ISBN/ISSN, as shown on the item. | procedural | explicit | E16 | medium |
 | C12 | For digital textual works, the Library of Congress asks for standards-based metadata, for example ONIX for Books, XMP, MODS, METS, or MARCXML. | procedural | explicit | E17 | medium |
@@ -88,7 +88,7 @@ The Library of Congress states which forms of a textual work it prefers to recei
 | E11 | Summary: The preferred list has XML-based markup with included or accessible DTD/schema, XSD/XSL stylesheets, and stated character encoding; EPUB3; other widely used book DTDs (TEI, DocBook); PDF/UA; PDF/A; and PDF of the highest quality available. | § ii. Textual Works - Digital, B. Formats | C7 | supports | direct | The tool said that the flattened page text does not clearly separate the "Preferred" and "Acceptable" columns. The split is the tool's reading of the layout. |
 | E12 | Summary: The lower list has XHTML or HTML with DOCTYPE and stylesheets, publicly documented XML document formats (for example DOCX/OOXML, ODF), SGML with DTD, BITS 2.0, web-optimized PDF, RTF, plain text, and widely used proprietary word-processing formats. | § ii. Textual Works - Digital, B. Formats | C8 | supports | direct | Same column problem as E11. The tool also reported a ranked list, "in order of preference", numbered 1 to 8. Which items are in it is not confirmed. |
 | E13 | Quote: "Plain text" | § ii. Textual Works - Digital, B. Formats | C8 | supports | direct | Two-word item. Its position in the list comes from the tool. |
-| E14 | Quote: "Files must contain no measures (such as digital rights management [DRM] technologies or encryption)" | § ii. Textual Works - Digital, F. Technological Measures | C9 | supports | direct | The sentence continues past the quote. The tool summary says that the end of the sentence is about measures that restrict access or use. The same rule is reported for electronic serials. |
+| E14 | Quote: "Files must contain no measures (such as digital rights management [DRM] technologies or encryption)" | § ii. Textual Works - Digital, F. Technological Measures | C9 | supports | direct | The sentence continues past the quote. The Orchestrator checked the full sentence against the raw page on 2026-11-15. It ends "that control access to or prevent use of the digital work." The same sentence appears in the electronic serials section. |
 | E15 | Quote: "Content compliant with the NISO JATS: Journal Article Tag Suite (ANSI/NISO Z39.96-2015)" | § iii. Textual Works - Electronic Serials, B. Formats | C10 | supports | direct | Quote from WebFetch, not checked. |
 | E16 | Summary: The required metadata, as shown on the item, includes title, creator, dates, place, publisher, ISBN/ISSN, and contact information. The optional metadata includes other identifiers, edition, subjects, abstracts, and license or copyright status. | § i. Textual Works - Print (books, etc.), F. Metadata | C11 | supports | direct | From one tool summary only. The list of fields is possibly not complete. |
 | E17 | Summary: The digital metadata must be standards-based (for example ONIX for Books, XMP, MODS, METS, MARCXML). It includes the core print items, plus language and other identifiers. The first item reads "As supported by format". | § ii. Textual Works - Digital, E. Metadata | C12 | supports | direct | From tool summaries. Not checked. |

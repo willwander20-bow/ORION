@@ -3,8 +3,8 @@ id: BRF-20261113-007
 type: reference-brief
 title: I Tried 23 Viral Claude Skills. These Are the Best
 status: validated
-created: 2026-11-13T18:20
-updated: 2026-11-13T18:20
+created: 2026-11-13T17:37
+updated: 2026-11-13T17:37
 created-by: reporter
 schema-version: "0.10"
 source: "[[SRC-20261113-012 23 viral Claude skills]]"

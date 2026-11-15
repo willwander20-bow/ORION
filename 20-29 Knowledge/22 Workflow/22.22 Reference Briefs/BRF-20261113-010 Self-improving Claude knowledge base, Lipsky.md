@@ -3,8 +3,8 @@ id: BRF-20261113-010
 type: reference-brief
 title: Build a Self Improving Claude Knowledge Base
 status: validated
-created: 2026-11-13T18:45
-updated: 2026-11-13T18:45
+created: 2026-11-13T17:41
+updated: 2026-11-13T17:41
 created-by: reporter
 schema-version: "0.10"
 source: "[[SRC-20261113-011 Self-improving Claude knowledge base, Lipsky]]"

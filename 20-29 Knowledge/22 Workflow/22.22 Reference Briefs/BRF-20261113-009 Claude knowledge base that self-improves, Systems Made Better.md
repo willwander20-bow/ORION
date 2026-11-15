@@ -3,8 +3,8 @@ id: BRF-20261113-009
 type: reference-brief
 title: "Build A Claude Knowledge Base That Self-Improves!"
 status: validated
-created: 2026-11-13T18:40
-updated: 2026-11-13T18:40
+created: 2026-11-13T17:40
+updated: 2026-11-13T17:40
 created-by: reporter
 schema-version: "0.10"
 source: "[[SRC-20261113-010 Claude knowledge base that self-improves, Systems Made Better]]"

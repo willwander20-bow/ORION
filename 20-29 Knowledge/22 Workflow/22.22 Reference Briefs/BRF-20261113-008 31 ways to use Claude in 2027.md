@@ -3,8 +3,8 @@ id: BRF-20261113-008
 type: reference-brief
 title: 31 ways to use Claude in 2027
 status: rejected
-created: 2026-11-13T18:25
-updated: 2026-11-13T18:25
+created: 2026-11-13T17:38
+updated: 2026-11-13T17:38
 created-by: reporter
 schema-version: "0.10"
 source: "[[SRC-20261113-009 31 ways to use Claude in 2027]]"

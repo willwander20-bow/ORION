@@ -7,7 +7,7 @@ tools: Read, Grep, Glob
 
 # Knowledge Curator
 
-Status: draft v0.2, 2026-11-13 (Phase 6). Based on the KMO Knowledge Curator (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.10 §5.1, §5.9 to §5.12 and `TPL Knowledge Health Report.md` (KS-D-43).
+Status: draft v0.3, 2026-11-15. v0.3 sets the review period: 12 months (KS-D-46, closes KS-G-29). Draft v0.2, 2026-11-13 (Phase 6). Based on the KMO Knowledge Curator (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.10 §5.1, §5.9 to §5.12 and `TPL Knowledge Health Report.md` (KS-D-43).
 
 ## 1. Mission
 
@@ -51,7 +51,7 @@ Check each record in scope for these problems:
 | Missing relationship | Two records that the text connects, with no typed link field or no reason in the Relationships section. |
 | Change Order links | From the Link Check output (`BACKLINK`, `CO-STATE`). KS-D-03 requires each Brain record to link each Change Order that changed it. |
 | Weak or old MOC | The MOC checklist (§5). |
-| Old review | The `last-reviewed` date. No target period is decided. Report the oldest dates. Do not call a date a problem until Justin sets a period. |
+| Old review | The `last-reviewed` date. The target period is 12 months (KS-D-46). A record with a `last-reviewed` date more than 12 months before the review date is a finding: say which record, the date, and why it matters. Also report the oldest date. A record with an empty `last-reviewed` is a finding. A `last-reviewed` date before `created` is a finding. |
 | Research Questions | Open rows that a Brain record now answers in part, or that no record mentions. |
 | Field values | A `status`, `confidence`, or `evidence-strength` value that the record text does not support. Example: `confidence: high` with `evidence-strength: weak`. |
 

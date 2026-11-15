@@ -4,7 +4,7 @@ type: source
 title: "Build a Self Improving Claude Knowledge Base"
 status: done
 created: 2026-11-13T17:35
-updated: 2026-11-13T18:15
+updated: 2026-11-13T17:36
 created-by: orchestrator
 schema-version: "0.10"
 url:

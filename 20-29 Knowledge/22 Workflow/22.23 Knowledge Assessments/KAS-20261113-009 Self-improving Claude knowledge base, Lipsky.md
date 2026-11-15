@@ -3,8 +3,8 @@ id: KAS-20261113-009
 type: knowledge-assessment
 title: Build a Self Improving Claude Knowledge Base
 status: validated
-created: 2026-11-13T19:10
-updated: 2026-11-13T19:10
+created: 2026-11-13T17:44
+updated: 2026-11-13T17:44
 created-by: editor
 schema-version: "0.10"
 source: "[[SRC-20261113-011 Self-improving Claude knowledge base, Lipsky]]"

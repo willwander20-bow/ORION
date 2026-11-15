@@ -4,7 +4,7 @@ type: source
 title: "31 Life-Changing Ways to Use Claude in 2027"
 status: skipped
 created: 2026-11-13T17:35
-updated: 2026-11-13T18:15
+updated: 2026-11-13T17:36
 created-by: orchestrator
 schema-version: "0.10"
 url: https://www.youtube.com/watch?v=KDyPHt4lW60

@@ -27,6 +27,10 @@
 | 17:49 | justin | Decision on the Change Order: "Approve" | [[CO-20261115-003 Add Research Questions row 1 to MOC-002]] | `approved` |
 | 17:49 | orchestrator | Version check passed. Change Order applied: X1 on MOC-20261113-002 | [[CO-20261115-003 Add Research Questions row 1 to MOC-002]] | Brain version `CO-20261115-002` to `CO-20261115-003` |
 | 17:51 | curator | Impact review of CO-20261115-003. No finding. Orchestrator check: git diff of 21 Brain shows only X1, change-orders and updated; Link Check 0, Frontmatter Check 0; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-003 Impact review of CO-20261115-003]] | PASS |
+| 17:56 | orchestrator | `Research Questions.md`: two rows added for the open questions of MOC-001 (KAS-20261113-001 A4 and A5). No Change Order (Schema §2.5). Justin: "Yes, add both" | [[Research Questions]] | OK |
+| 17:56 | orchestrator | BRF-20261113-006 corrected from the checked LoC sentence (E14 Limits, C9, §4 line, definition line); `updated` set. Quote Check 11 of 11, 0 failed. Justin: "Correct the Brief" (KHR-20261115-001 H3) | [[BRF-20261113-006 LoC Recommended Formats, textual works]] | OK |
+| 17:56 | orchestrator | Times corrected on SRC-009 to 012 (`updated`), BRF-007 to 010, KAS-007 to 009, CO-008 (`created`), KHR-003. Limits from git commit times: records in git by 17:44, CO-008 by 17:55, KHR-003 by 18:01. Order kept. Approximate | 13 records (22 Workflow) | OK |
+| 17:56 | orchestrator | Review period set to 12 months (KS-G-29, Justin: "12 months"). Knowledge Curator draft v0.3; area `CLAUDE.md` names Curator v0.3 and Managing Editor v0.4 | `.claudegentsknowledge-curator.md`, `CLAUDE.md` | OK |
 
 ## Decisions
 
@@ -37,12 +41,12 @@
 - Justin: "Approve all" (CO-20261115-001, rows X1 to X9). The two extra places with the non-LoC wording stay out of this Change Order.
 - Justin: "Yes, H1 and H2"; "Approve both" (CO-20261115-002, rows X1 and X2).
 - Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
+- Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
 
 ## Open
 
-- Time errors on the 2026-11-13 records are not corrected.
 - KHR-20261115-001: H1 and H2 resolved by CO-20261115-002. H3 (Brief BRF-20261113-006 wording) needs routing by Justin. H4 optional, not approved.
-- KHR-003 H3 and KS-G-29 await Justin. KHR-003 H1 closed by CO-20261115-003.
+- Handoff folder (KS-07, KS-08 §8.13) does not yet show KS-D-46 and the closed items. Write permission for the Handoff folder was refused this session. Justin decides.
 
 ## Notes
 

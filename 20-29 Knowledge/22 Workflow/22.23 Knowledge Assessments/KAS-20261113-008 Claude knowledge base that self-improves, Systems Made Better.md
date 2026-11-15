@@ -3,8 +3,8 @@ id: KAS-20261113-008
 type: knowledge-assessment
 title: "Build A Claude Knowledge Base That Self-Improves!"
 status: validated
-created: 2026-11-13T19:05
-updated: 2026-11-13T19:05
+created: 2026-11-13T17:43
+updated: 2026-11-13T17:43
 created-by: editor
 schema-version: "0.10"
 source: "[[SRC-20261113-010 Claude knowledge base that self-improves, Systems Made Better]]"

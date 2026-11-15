@@ -3,7 +3,7 @@ id: CO-20261113-008
 type: change-order
 title: Build a Self Improving Claude Knowledge Base
 status: applied
-created: 2026-11-13T19:25
+created: 2026-11-13T17:47
 updated: 2026-11-13T17:59
 created-by: managing-editor
 schema-version: "0.10"
