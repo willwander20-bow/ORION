@@ -24,6 +24,9 @@
 | 17:47 | curator | Impact review of CO-20261115-002. No new finding. Orchestrator check: git diff of 21 Brain shows only X1, X2, change-orders and updated; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-002 Impact review of CO-20261115-002]] | PASS |
 | 17:49 | managing-editor | Run in health report mode on KHR-20261113-003 H1 only (Change Order B). Orchestrator check: row text matches Research Questions.md word for word; current MOC-002 text found; no file changed by the agent | [[KHR-20261113-003 Impact review of CO-20261113-008]] | PASS |
 | 17:49 | orchestrator | Change Order saved `open`. Brain version CO-20261115-002. Presented to Justin | [[CO-20261115-003 Add Research Questions row 1 to MOC-002]] | `open` |
+| 17:49 | justin | Decision on the Change Order: "Approve" | [[CO-20261115-003 Add Research Questions row 1 to MOC-002]] | `approved` |
+| 17:49 | orchestrator | Version check passed. Change Order applied: X1 on MOC-20261113-002 | [[CO-20261115-003 Add Research Questions row 1 to MOC-002]] | Brain version `CO-20261115-002` to `CO-20261115-003` |
+| 17:51 | curator | Impact review of CO-20261115-003. No finding. Orchestrator check: git diff of 21 Brain shows only X1, change-orders and updated; Link Check 0, Frontmatter Check 0; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-003 Impact review of CO-20261115-003]] | PASS |
 
 ## Decisions
 
@@ -33,12 +36,13 @@
 - Justin: "Change Orders"; "Approve, lower to low" (KHR-001 H3: confidence `low`); "Yes, edit it" (Managing Editor v0.4).
 - Justin: "Approve all" (CO-20261115-001, rows X1 to X9). The two extra places with the non-LoC wording stay out of this Change Order.
 - Justin: "Yes, H1 and H2"; "Approve both" (CO-20261115-002, rows X1 and X2).
+- Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
 
 ## Open
 
 - Time errors on the 2026-11-13 records are not corrected.
 - KHR-20261115-001: H1 and H2 resolved by CO-20261115-002. H3 (Brief BRF-20261113-006 wording) needs routing by Justin. H4 optional, not approved.
-- Change Order B (MOC-002, KHR-003 H1) not started. KHR-003 H3 and KS-G-29 await Justin.
+- KHR-003 H3 and KS-G-29 await Justin. KHR-003 H1 closed by CO-20261115-003.
 
 ## Notes
 

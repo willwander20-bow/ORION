@@ -4,12 +4,13 @@ type: moc
 title: AI-maintained knowledge bases
 status: active
 created: 2026-11-13T17:58
-updated: 2026-11-13T17:58
+updated: 2026-11-15T17:49
 created-by: orchestrator
 schema-version: "0.10"
 last-reviewed: 2026-11-13
 change-orders:
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
+  - "[[CO-20261115-003 Add Research Questions row 1 to MOC-002]]"
 ---
 
 ## Topic summary
@@ -39,6 +40,7 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 
 ## Open research questions
 
+- Does a knowledge base that an AI writes, and that saves AI answers back into itself, become more accurate over time, or do its errors compound, and does a periodic AI audit catch those errors? (Row 1 of [[Research Questions]]; raised by [[KAS-20261113-008 Claude knowledge base that self-improves, Systems Made Better]].)
 - Does an AI-maintained index and linked wiki over a person's files make AI answers faster or better than reading the raw files in each session, and under what conditions? (KAS-20261113-009 A6; the source asserts it with no test.)
 
 ## Disputes and gaps

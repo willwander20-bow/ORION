@@ -2,7 +2,7 @@
 id: CO-20261115-003
 type: change-order
 title: Add Research Questions row 1 to MOC AI-maintained knowledge bases
-status: open
+status: applied
 created: 2026-11-15T17:49
 updated: 2026-11-15T17:49
 created-by: managing-editor
@@ -15,11 +15,11 @@ change-types:
 affected:
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T17:49
+decision-note: "Approve"
+applied: 2026-11-15T17:49
+brain-version-after: CO-20261115-003
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -64,4 +64,10 @@ Justin: approve or reject X1? Add Research Questions row 1, as written in §2, t
 
 ## 7. Decision record
 
+2026-11-15T17:49. Justin: "Approve". Decision: `approved`. Row X1, as written.
+
 ## 8. Implementation record
+
+2026-11-15T17:49. The Orchestrator checked that `brain-version` (CO-20261115-002) matched the current Brain version before the change. Row X1 applied as written. File changed in `21 Brain`: MOC-20261113-002 (X1; `change-orders` and `updated` set).
+
+Brain version after: CO-20261115-003.
