@@ -22,6 +22,8 @@
 | 17:46 | orchestrator | Version check passed. Change Order applied: X1 on CLM-20261113-001, X2 on MOC-20261113-001 | [[CO-20261115-002 Align LoC access-measures wording]] | Brain version `CO-20261115-001` to `CO-20261115-002` |
 | 17:47 | orchestrator | Frontmatter Check 0 problems, Link Check 0 problems, search of 21 Brain for "restrict" finds 0 places. Curator impact review started | [[CO-20261115-002 Align LoC access-measures wording]] | PASS |
 | 17:47 | curator | Impact review of CO-20261115-002. No new finding. Orchestrator check: git diff of 21 Brain shows only X1, X2, change-orders and updated; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-002 Impact review of CO-20261115-002]] | PASS |
+| 17:49 | managing-editor | Run in health report mode on KHR-20261113-003 H1 only (Change Order B). Orchestrator check: row text matches Research Questions.md word for word; current MOC-002 text found; no file changed by the agent | [[KHR-20261113-003 Impact review of CO-20261113-008]] | PASS |
+| 17:49 | orchestrator | Change Order saved `open`. Brain version CO-20261115-002. Presented to Justin | [[CO-20261115-003 Add Research Questions row 1 to MOC-002]] | `open` |
 
 ## Decisions
 
