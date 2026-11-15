@@ -4,7 +4,7 @@ type: moc
 title: Note durability
 status: active
 created: 2026-11-13T10:27
-updated: 2026-11-13T17:59
+updated: 2026-11-15T17:40
 created-by: orchestrator
 schema-version: "0.6"
 last-reviewed: 2026-11-13
@@ -15,6 +15,7 @@ change-orders:
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
   - "[[CO-20261113-007 LoC Recommended Formats, textual works]]"
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
+  - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
 ---
 
 ## Topic summary
@@ -48,10 +49,11 @@ How to keep notes readable and usable for many years: file formats, ownership, a
 
 ## Open research questions
 
-- Do most digital artifacts sit in closed formats or behind logins? (Brief C3; not measured.)
+- Do most digital artifacts sit in closed formats or behind logins? (BRF-20261113-001 C3; not measured.)
 - Does plain text stay readable on future computers as well as it has since the 1960s? Conditions to check: character encoding and storage media. (BRF-20261113-001 C4. BRF-20261113-003 C4 and C15 predict yes, with no evidence. Neither of these two sources discusses encoding. BRF-20261113-002 C1 and C2: NARA requires that the encoding of each text file is identified, and it prefers ASCII 7-bit, UTF-8, and UTF-16. BRF-20261113-006 C6: LoC prefers UTF-8, UTF-16 (with BOM), and US-ASCII. Neither institution gives evidence on future readability, so the question stays open.)
 
 ## Disputes and gaps
 
 - Two opinion sources, no data. Their independence is not shown. Two institutional sources give format lists with no reasons and no data. NARA supports the direction of the claim, but not its reasons. LoC (BRF-20261113-006) supports the encoding condition, but ranks plain text below structured formats. The two institutions do not rank plain text the same way. Look for a source with data or reasons on how long file formats stay readable.
 - No source tests if notes with links and metadata stay usable when only the file survives, or how much Markdown dialects differ between tools. No source compares Markdown with HTML over time.
+- The LoC rule on access measures (BRF-20261113-006 E14) is for the works that LoC receives. An owner can choose encryption for privacy. The Brief gives no information on that case. No source in the Brain says whether the rule applies to personal notes. CLM-20261113-001 applies it to personal notes only as an extension.

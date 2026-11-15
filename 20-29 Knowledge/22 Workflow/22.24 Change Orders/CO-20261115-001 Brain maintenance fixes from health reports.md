@@ -2,8 +2,8 @@
 id: CO-20261115-001
 type: change-order
 title: Brain maintenance fixes from KHR-20261113-001 and KHR-20261113-002
-status: open
-created: 2026-11-15T17:40
+status: applied
+created: 2026-11-15T17:38
 updated: 2026-11-15T17:40
 created-by: managing-editor
 schema-version: "0.10"
@@ -20,11 +20,11 @@ affected:
   - "[[CON-20261113-002 Work with plain-text notes]]"
   - "[[MOC-20261113-001 Note durability]]"
 priority: normal
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T17:39
+decision-note: "Approve all"
+applied: 2026-11-15T17:40
+brain-version-after: CO-20261115-001
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -157,4 +157,15 @@ The Managing Editor found two more places with the same non-LoC wording, outside
 
 ## 7. Decision record
 
+2026-11-15T17:39. Justin: "Approve all". Decision: `approved`. Rows X1 to X9, as written. The two extra places with the non-LoC wording (§6) are not part of this Change Order.
+
 ## 8. Implementation record
+
+2026-11-15T17:40. The Orchestrator checked that `brain-version` (CO-20261113-008) matched the current Brain version before the change. Rows X1 to X9 applied as written. Files changed in `21 Brain`:
+
+- CLM-20261113-001: X1, X5, X6. `confidence: low`. `change-orders` and `updated` set.
+- CON-20261113-001: X3, X4. `change-orders` and `updated` set.
+- CON-20261113-002: X2, X7. `change-orders` and `updated` set.
+- MOC-20261113-001: X8, X9. `change-orders` and `updated` set.
+
+Brain version after: CO-20261115-001.

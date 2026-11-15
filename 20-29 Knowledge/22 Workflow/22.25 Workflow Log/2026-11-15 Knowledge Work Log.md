@@ -12,6 +12,10 @@
 | 17:38 | orchestrator | Managing Editor draft v0.4: new §2a, health report input (Justin approved) | `.claudegentsmanaging-editor.md` | OK |
 | 17:38 | managing-editor | Run in health report mode on KHR-001 H1 to H7 and KHR-002 H1 to H3. Change Order returned. Orchestrator check: 9 rows, Curator statements checked, no file changed by the agent | KHR-20261113-001, KHR-20261113-002 | PASS |
 | 17:38 | orchestrator | Change Order saved `open`. Brain version CO-20261113-008. Presented to Justin | [[CO-20261115-001 Brain maintenance fixes from health reports]] | `open` |
+| 17:39 | justin | Decision on the Change Order: "Approve all" | [[CO-20261115-001 Brain maintenance fixes from health reports]] | `approved` |
+| 17:40 | orchestrator | Version check passed. Change Order applied: rows X1 to X9 on CLM-20261113-001 (confidence `low`), CON-20261113-001, CON-20261113-002, MOC-20261113-001 | [[CO-20261115-001 Brain maintenance fixes from health reports]] | Brain version `CO-20261113-008` to `CO-20261115-001` |
+| 17:41 | orchestrator | Frontmatter Check 0 problems (51 files). Link Check 0 problems. Curator impact review started | [[CO-20261115-001 Brain maintenance fixes from health reports]] | PASS |
+| 17:43 | curator | Impact review of CO-20261115-001. 4 findings (H1 to H4). Orchestrator check: 6 quotations found in the Brain and the Brief; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-001 Impact review of CO-20261115-001]] | PASS |
 
 ## Decisions
 
@@ -19,7 +23,14 @@
 - Justin approved all six Rulebook edits (v0.5).
 - Justin: "Update the Handoff folder then complete the Reporter wordcount step" (KS-D-45).
 - Justin: "Change Orders"; "Approve, lower to low" (KHR-001 H3: confidence `low`); "Yes, edit it" (Managing Editor v0.4).
+- Justin: "Approve all" (CO-20261115-001, rows X1 to X9). The two extra places with the non-LoC wording stay out of this Change Order.
 
 ## Open
 
 - Time errors on the 2026-11-13 records are not corrected.
+- KHR-20261115-001 findings: H1 (CLM-001 lead sentence) and H2 (MOC-001 LoC line) need a Change Order; H3 (Brief wording) needs routing; H4 optional. Justin decides.
+- Change Order B (MOC-002, KHR-003 H1) not started. KHR-003 H3 and KS-G-29 await Justin.
+
+## Notes
+
+- Time correction: the first draft of the CO-20261115-001 decision and apply times (17:45, 17:47) was ahead of the clock. The Orchestrator corrected them to 17:39 and 17:40 before the commit. The `created` time (17:38) is the save time of the Change Order.

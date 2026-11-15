@@ -4,10 +4,10 @@ type: brain-claim
 title: Lasting notes belong in open files
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-13T14:55
+updated: 2026-11-15T17:40
 created-by: orchestrator
 schema-version: "0.6"
-confidence: medium
+confidence: low
 evidence-strength: weak
 supports: []
 contradicts: []
@@ -16,6 +16,7 @@ extends: []
 related: []
 concepts:
   - "[[CON-20261113-001 File over app]]"
+  - "[[CON-20261113-002 Work with plain-text notes]]"
 superseded-by:
 valid-from:
 valid-to:
@@ -26,13 +27,14 @@ change-orders:
   - "[[CO-20261113-005 NARA file format tables]]"
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
   - "[[CO-20261113-007 LoC Recommended Formats, textual works]]"
+  - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
 aliases:
   - Durable notes need open files
 ---
 
 ## Claim
 
-Notes meant to last should be stored as files that the owner controls, in open, readable formats such as plain text. Reason: apps become obsolete, but files can outlast them. A second reason, with weaker support: a file in an open format does not depend on one app, so the owner can still work when that app is not available.
+Notes meant to last should be stored as files that the owner controls, in open, readable formats such as plain text. Reason: apps become obsolete, but files can outlast them. A second reason, with weaker support: a file in an open format does not depend on one app, so the owner can still work when that app is not available. Confidence is `low`. The direct support is opinion essays. The two institutional sources support the claim only in part and give no reasons. No source gives data. Evidence strength is `weak`.
 
 ## Context and conditions
 
@@ -44,7 +46,7 @@ Condition for notes with links and metadata: plain-text storage possibly does no
 
 Limit on 'readable': an open format can still have dialects. One source calls Markdown the de facto standard for notes, blogs, and docs, but says that it has many platform-specific behaviors. So a Markdown note possibly does not read the same in each tool. The source gives no list of the differences.
 
-Condition on access measures: the file contains no measures that restrict access or use. LoC states that digital textual files must contain no measures 'such as digital rights management [DRM] technologies or encryption' that restrict access or use. This rule is for the works that LoC receives. Its use for personal notes is an extension. LoC gives no reason.
+Condition on access measures: the file contains no measures that restrict access or use. LoC states that digital textual files must contain no measures 'such as digital rights management [DRM] technologies or encryption' 'that control access to or prevent use of the digital work'. This rule is for the works that LoC receives. Its use for personal notes is an extension. LoC gives no reason.
 
 ## Evidence
 
@@ -61,7 +63,7 @@ Condition on access measures: the file contains no measures that restrict access
 - [[BRF-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E1 · § Born-Digital Textual Data (prose before the tables) · supports · encoding rule for plain text.
 - [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E8 · § ii. Textual Works - Digital, A. Technical Characteristics · supports (indirect) · encoding list for digital text, nearly the same as NARA's.
 - [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E11, E12, E13 · § ii. Textual Works - Digital, B. Formats · qualifies · structured formats preferred; plain text acceptable only; no reasons.
-- [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E14 · § ii. Textual Works - Digital, F. Technological Measures · qualifies · no DRM or encryption that restricts access or use; no reason given; the end of the sentence comes from a tool summary.
+- [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E14 · § ii. Textual Works - Digital, F. Technological Measures · qualifies · no DRM or encryption that controls access to or prevents use of the digital work; no reason given; the Orchestrator checked the full sentence against the raw LoC page on 2026-11-15.
 - [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E2, E3 · § All You Need is Plaintext · qualifies · metadata and links make a plain-text file non-standard rich text; argument only.
 - [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E7 · § The Plaintext is a Lie · supports · plain text as the storage type is necessary.
 - [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E8, E9 · § Screw .TXT, All My Homies Use Markdown · qualifies · Markdown has platform-specific behaviors; informal, no list.
@@ -69,6 +71,7 @@ Condition on access measures: the file contains no measures that restrict access
 ## Relationships
 
 - Concept [[CON-20261113-001 File over app|file over app]]: this claim applies the principle to notes.
+- Concept [[CON-20261113-002 Work with plain-text notes|work with plain-text notes]]: methods for notes kept as plain text. Both records cite BRF-20261113-005 E2, which qualifies step 2 of the process and the condition of this claim for notes with links and metadata. A link, not a dependency.
 
 ## Disputes and caveats
 

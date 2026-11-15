@@ -4,7 +4,7 @@ type: concept
 title: File over app
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-13T12:18
+updated: 2026-11-15T17:40
 created-by: orchestrator
 schema-version: "0.6"
 kind: concept
@@ -15,6 +15,7 @@ change-orders:
   - "[[CO-20261113-001 Add file over app knowledge]]"
   - "[[CO-20261113-002 Write plain text files]]"
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
+  - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
 aliases:
   - File over app principle
 ---
@@ -25,11 +26,14 @@ A principle for digital work: work meant to last lives in files that the owner c
 
 ## Explanation
 
-Apps change, close, or lose support. A file in an open format, such as plain text, stays readable with many tools. A second source says that plain text can be converted into other formats, and that many standard formats (HTML, Markdown, JSON, LaTeX) are themselves plain text. So in that source, "plain text" includes these formats. The source gives no formal definition and no limits for conversion. Another source separates two layers of 'plain text': the storage type (text stored as a `text/*` type) and the subtype (the markup or display format inside it, for example Markdown, Org, or HTML). It says that Sivers and Nesbit conflate the two layers. The author predicts that the storage type lasts, and that a subtype lasts only as long as the software or people that process it. This is a prediction with no data. In this view, Markdown and HTML are plain text at the storage layer only. A file can be open at the storage layer and still depend on tools at the subtype layer. The principle also asks toolmakers to give users ownership of their data. Steph Ango, the CEO of Obsidian, named it in 2023.
+Apps change, close, or lose support. A file in an open format, such as plain text, stays readable with many tools. This statement has no source of its own here. [[CLM-20261113-001 Lasting notes belong in open files]] gives the conditions (character encoding, Markdown dialects, access measures) and the evidence, which is `weak`. A second source says that plain text can be converted into other formats, and that many standard formats (HTML, Markdown, JSON, LaTeX) are themselves plain text. So in that source, "plain text" includes these formats. The source gives no formal definition and no limits for conversion. Another source separates two layers of 'plain text': the storage type (text stored as a `text/*` type) and the subtype (the markup or display format inside it, for example Markdown, Org, or HTML). It says that Sivers and Nesbit conflate the two layers. The author predicts that the storage type lasts, and that a subtype lasts only as long as the software or people that process it. This is a prediction with no data. In this view, Markdown and HTML are plain text at the storage layer only. A file can be open at the storage layer and still depend on tools at the subtype layer. The principle also asks toolmakers to give users ownership of their data. Steph Ango, the CEO of Obsidian, named it in 2023.
 
 ## Related claims
 
 - [[CLM-20261113-001 Lasting notes belong in open files|Lasting notes belong in open files]]: applies the principle to notes.
+
+## Related concepts
+
 - [[CON-20261113-002 Work with plain-text notes|Work with plain-text notes]]: methods to keep work in plain files.
 
 ## Sources
