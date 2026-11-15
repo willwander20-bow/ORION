@@ -18,6 +18,10 @@
 | 17:43 | curator | Impact review of CO-20261115-001. 4 findings (H1 to H4). Orchestrator check: 6 quotations found in the Brain and the Brief; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-001 Impact review of CO-20261115-001]] | PASS |
 | 17:45 | managing-editor | Run in health report mode on KHR-20261115-001 H1 and H2 (Justin: "Yes, H1 and H2"). Orchestrator check: both current texts found; search of 21 Brain for "restrict" finds only these two places; no file changed by the agent | [[KHR-20261115-001 Impact review of CO-20261115-001]] | PASS |
 | 17:45 | orchestrator | Change Order saved `open`. Brain version CO-20261115-001. Presented to Justin | [[CO-20261115-002 Align LoC access-measures wording]] | `open` |
+| 17:46 | justin | Decision on the Change Order: "Approve both" | [[CO-20261115-002 Align LoC access-measures wording]] | `approved` |
+| 17:46 | orchestrator | Version check passed. Change Order applied: X1 on CLM-20261113-001, X2 on MOC-20261113-001 | [[CO-20261115-002 Align LoC access-measures wording]] | Brain version `CO-20261115-001` to `CO-20261115-002` |
+| 17:47 | orchestrator | Frontmatter Check 0 problems, Link Check 0 problems, search of 21 Brain for "restrict" finds 0 places. Curator impact review started | [[CO-20261115-002 Align LoC access-measures wording]] | PASS |
+| 17:47 | curator | Impact review of CO-20261115-002. No new finding. Orchestrator check: git diff of 21 Brain shows only X1, X2, change-orders and updated; no file changed by the agent. Saved and set `validated` | [[KHR-20261115-002 Impact review of CO-20261115-002]] | PASS |
 
 ## Decisions
 
@@ -26,11 +30,12 @@
 - Justin: "Update the Handoff folder then complete the Reporter wordcount step" (KS-D-45).
 - Justin: "Change Orders"; "Approve, lower to low" (KHR-001 H3: confidence `low`); "Yes, edit it" (Managing Editor v0.4).
 - Justin: "Approve all" (CO-20261115-001, rows X1 to X9). The two extra places with the non-LoC wording stay out of this Change Order.
+- Justin: "Yes, H1 and H2"; "Approve both" (CO-20261115-002, rows X1 and X2).
 
 ## Open
 
 - Time errors on the 2026-11-13 records are not corrected.
-- KHR-20261115-001 findings: H1 (CLM-001 lead sentence) and H2 (MOC-001 LoC line) need a Change Order; H3 (Brief wording) needs routing; H4 optional. Justin decides.
+- KHR-20261115-001: H1 and H2 resolved by CO-20261115-002. H3 (Brief BRF-20261113-006 wording) needs routing by Justin. H4 optional, not approved.
 - Change Order B (MOC-002, KHR-003 H1) not started. KHR-003 H3 and KS-G-29 await Justin.
 
 ## Notes

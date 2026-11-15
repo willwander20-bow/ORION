@@ -2,9 +2,9 @@
 id: CO-20261115-002
 type: change-order
 title: Align LoC access-measures wording in CLM-001 and MOC-001
-status: open
+status: applied
 created: 2026-11-15T17:45
-updated: 2026-11-15T17:45
+updated: 2026-11-15T17:46
 created-by: managing-editor
 schema-version: "0.10"
 assessment:
@@ -16,11 +16,11 @@ affected:
   - "[[CLM-20261113-001 Lasting notes belong in open files]]"
   - "[[MOC-20261113-001 Note durability]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T17:46
+decision-note: "Approve both"
+applied: 2026-11-15T17:46
+brain-version-after: CO-20261115-002
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -84,4 +84,13 @@ Separate question for the Orchestrator and Justin: how to route H3 (the Brief).
 
 ## 7. Decision record
 
+2026-11-15T17:46. Justin: "Approve both". Decision: `approved`. Rows X1 and X2, as written.
+
 ## 8. Implementation record
+
+2026-11-15T17:46. The Orchestrator checked that `brain-version` (CO-20261115-001) matched the current Brain version before the change. Rows X1 and X2 applied as written. Files changed in `21 Brain`:
+
+- CLM-20261113-001: X1. `change-orders` and `updated` set.
+- MOC-20261113-001: X2. `change-orders` and `updated` set.
+
+Brain version after: CO-20261115-002.

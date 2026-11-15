@@ -4,7 +4,7 @@ type: brain-claim
 title: Lasting notes belong in open files
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-15T17:40
+updated: 2026-11-15T17:46
 created-by: orchestrator
 schema-version: "0.6"
 confidence: low
@@ -28,6 +28,7 @@ change-orders:
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
   - "[[CO-20261113-007 LoC Recommended Formats, textual works]]"
   - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
+  - "[[CO-20261115-002 Align LoC access-measures wording]]"
 aliases:
   - Durable notes need open files
 ---
@@ -46,7 +47,7 @@ Condition for notes with links and metadata: plain-text storage possibly does no
 
 Limit on 'readable': an open format can still have dialects. One source calls Markdown the de facto standard for notes, blogs, and docs, but says that it has many platform-specific behaviors. So a Markdown note possibly does not read the same in each tool. The source gives no list of the differences.
 
-Condition on access measures: the file contains no measures that restrict access or use. LoC states that digital textual files must contain no measures 'such as digital rights management [DRM] technologies or encryption' 'that control access to or prevent use of the digital work'. This rule is for the works that LoC receives. Its use for personal notes is an extension. LoC gives no reason.
+Condition on access measures: the file has no measure that controls access to it or prevents its use. LoC states that digital textual files must contain no measures 'such as digital rights management [DRM] technologies or encryption' 'that control access to or prevent use of the digital work'. This rule is for the works that LoC receives. Its use for personal notes is an extension. LoC gives no reason.
 
 ## Evidence
 
