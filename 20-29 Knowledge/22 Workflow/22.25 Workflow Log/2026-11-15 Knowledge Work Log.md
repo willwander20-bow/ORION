@@ -151,6 +151,12 @@
 | 22:46 | orchestrator | **Agent tokens, run 2 (new flow):** SRC-006 82,088 (Reporter 39,267; Managing Editor 42,821); SRC-008 140,622 (40,752; 47,196; Editor 52,674); SRC-007 0 (access failed). Average 111,355 per source; the target is 120,000 and the old flow was about 294,000. Nothing was re-typed. Quote Check: 10 of 11, then 11 of 11 after one capital letter was corrected to the page's exact text | SRC-20261115-006, -007, -008 | measured |
 
 | 22:53 | Run 2 apply | Justin approved all 5 rows of CO-20261115-013 (option A) and all 3 rows of CO-20261115-014, reason: "background knowledge for creating AI agents and systems". New: CON-20261115-003, CLM-20261115-005, CLM-20261115-006, MOC-20261115-002. Edited: MOC-20261113-002 (link). CO-014 rebased to CO-013 (KS-D-54). SRC-006 and SRC-008 `done`; SRC-007 stays `failed` (403). `.staging` empty. Brain version CO-20261115-014. Frontmatter 0, Link 0. Curator Due: DUE (15 of 15). One slip: a close script overwrote CO-013; restored from git HEAD and closed again. |
+| 23:42 | orchestrator | **Overnight batch (Justin: "Go", 6 sources, approve in the morning):** SRC-20261115-009 to -014 created, routed (full-review), access 200 on all six. Sources: Karpathy LLM Wiki gist (009), Anthropic context engineering (010), Claude Code memory docs (011; 301 to code.claude.com), Johnny.Decimal intro (012), arXiv 2603.07670 (013), arXiv 2602.19320 (014). No duplicate by url. |
+| 23:42 | reporter | Six Reporters ran in parallel (~40,000 to 68,000 tokens each). Briefs validated in `.staging`: Quote Check 6 of 6 (012), 4 of 4 (010), 3 of 3 (014), 6 of 6 (009, against the raw gist file), 14 of 14 (011), 15 of 15 (013). 011: one quote had a straight apostrophe for the page's curly one; corrected to the page text. 013: paragraph numbers removed from locators (fetch tool's own count). All six merged into the Source notes (`briefed`); `.staging` empty of Briefs. Flags: 009 says it is meant to be pasted into an LLM (not followed); 011 page carries an AI-aimed note to fetch llms.txt (not followed). |
+| 23:52 | managing-editor | Six Change Orders drafted in merged mode, each saved `open` and each Source set to `change-proposed`. CO-20261115-015 (SRC-012, Johnny.Decimal: 3 rows), -016 (SRC-009, Karpathy LLM wiki: 5 rows, no new record), -017 (SRC-010, context engineering: 5 rows), -018 (SRC-013, Du survey: 3 rows), -019 (SRC-014, Anatomy of agentic memory: 3 rows; depends on -018), -020 (SRC-011, Claude Code memory: 3 rows). Runs one at a time or in pairs on disjoint topics; each later run read the open Change Orders. |
+| 23:52 | editor | Threshold second look on five of six (not CO-016: no new record, no Claim change, 4 records edited). Each merged as section 1b; each compared with 1a in an "Orchestrator comparison" with options for Justin. All five say `advance`, with different amounts of detail. Main finding in CO-020: the Claude Code page says CLAUDE.md is context, not enforcement; the Brain's protocol rules are instructions only. |
+| 23:52 | orchestrator | Checks: Frontmatter Check 0 problems (83 files), Link Check 0 problems. `.staging` holds only the 7 proposed records (JD x2, CE x2, MS x2, CC x1), which wait for approval. `21 Brain` unchanged. New records carry draft titles, not IDs: final IDs are set on apply. CO-017, -018, -019, and -020 edit the same MOC sections (MOC-20261115-002), and -017 and -020 both edit CON-20261115-001, so apply one at a time and rebase (Rulebook §6 step 3). |
+| 23:52 | orchestrator | Curator Due: DUE (15 of 15). Not started; waits for Justin. Applying these Change Orders adds to the count. |
 
 ## Decisions
 
@@ -183,6 +189,13 @@
 
 - KHR-20261115-001 H4 (optional: "confidence low" in the MOC-001 line for CLM-001) was not approved and stays open.
 
+- Overnight batch, for Justin's review: CO-20261115-015 to -020 are `open`. Each has an "Orchestrator comparison" with options A to D. CO-019 depends on CO-018. Decide CO-018 before CO-019.
+- Curator `maintenance` run is DUE (15 of 15). Justin decides when.
+- SRC-20261115-007 (Medium-hosted article) still needs a saved copy or another link.
+
 ## Notes
 
 - Time correction: the first draft of the CO-20261115-001 decision and apply times (17:45, 17:47) was ahead of the clock. The Orchestrator corrected them to 17:39 and 17:40 before the commit. The `created` time (17:38) is the save time of the Change Order.
+
+- Overnight batch, slip: the Orchestrator merged the first Editor draft for SRC-012 with a path that did not expand, then deleted the draft before checking the merge. The draft was lost and could not be recovered from the agent transcript. The Editor ran again on the same input (about 62,000 tokens). From then on, the draft is deleted only after the merge reports success and section 1b exists.
+- Overnight batch, quote notes: on SRC-011 one quote had a straight apostrophe where the page has a curly one. The Orchestrator corrected that one character to the page text. On SRC-013 the paragraph numbers were removed from the locators.

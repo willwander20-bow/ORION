@@ -1,0 +1,61 @@
+---
+id:
+type: concept
+title: Johnny.Decimal folder system
+status: accepted
+created:
+updated:
+created-by: managing-editor
+schema-version: "0.13"
+kind: concept
+related:
+  - "[[CON-20261113-002 Work with plain-text notes]]"
+last-reviewed: 2026-11-15
+change-orders: []
+aliases:
+  - Johnny.Decimal
+  - JD
+---
+
+## Definition
+
+Johnny.Decimal is a system to organise files in numbered folders on three levels: area, category, and ID. The source states fixed limits for each level.
+
+## Explanation
+
+The source's own terms (SRC-012, E1 to E4):
+
+- Area: a top-level folder. The source says there are 10 areas at most.
+- Category: a folder in an area. The source says each area has space for 10 categories.
+- ID: the folder where files are saved. The source says an ID folder holds no more than 100 IDs in a category. The ID gives the exact place of an item (E5).
+- Analogy of the source: a computer is a room, an area is a filing cabinet, a category is a drawer, and an ID is a manila folder (E4).
+
+The source gives four benefits of the ID. All four are the author's assertions, with no data or test:
+
+- Structure: the ID shows where an item is (E5).
+- Easy to communicate: IDs are short, memorable, and can be spoken aloud (E6).
+- Things stay put: numbered folders keep their place. Alphabetical names move when a new folder is created (E7).
+- Limits: a person chooses among at most 10 areas, then reaches a folder with no more than 100 IDs (E3, E8). The source gives no data that this makes search faster.
+
+The structure leaves room to grow. A footnote says that the author does not try to use all 10 areas (E9; paraphrase of a fetch result).
+
+Caveats:
+- One source: the introduction page on the official site of the system. The publisher promotes its own system, and the page lists benefits only. The page shows no author and no date.
+- The page is an introduction. It does not explain why IDs start at `.11`, nor any rule for use beyond the three levels. It promises a later explanation of why the first drawer is not `01` or `10`.
+- The Orchestrator checked the quotes E1, E3, E5, E6, E7, and E8 against the raw page. All 6 matched.
+
+## Steps
+
+None.
+
+## Related claims
+
+None yet. The Brain has no claim on folder structure.
+
+## Related concepts
+
+- [[CON-20261113-002 Work with plain-text notes|Work with plain-text notes]]: step 1 of that method says to use folders for hierarchy. Johnny.Decimal is one named way to number such folders. A link, not a dependency.
+
+## Sources
+
+- [[SRC-20261115-012 Johnny.Decimal introduction|Johnny.Decimal documentation: Introduction (no author, no date)]] · E1, E2, E3, E4, E5, E6, E7, E8, E9 · quotes checked against the page
