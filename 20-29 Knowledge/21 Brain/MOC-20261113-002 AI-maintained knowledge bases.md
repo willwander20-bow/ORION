@@ -4,7 +4,7 @@ type: moc
 title: AI-maintained knowledge bases
 status: active
 created: 2026-11-13T17:58
-updated: 2026-11-15T18:57
+updated: 2026-11-15T19:06
 created-by: orchestrator
 schema-version: "0.10"
 last-reviewed: 2026-11-13
@@ -14,6 +14,7 @@ change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
   - "[[CO-20261115-007 Fix source counts and mark unchecked evidence]]"
+  - "[[CO-20261115-008 Fix partly independent wording in MOC-002]]"
 ---
 
 ## Topic summary
@@ -52,6 +53,6 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 
 ## Disputes and gaps
 
-- One source, one creator, partly sponsored. A second source (Wall, BRF-20261115-002) is partly independent of the first on the map-first idea. It is opinion and partly promotional. A third source (Okhlopkov, BRF-20261115-001) is a first-person account of one vault, with `low` source quality, no date, and no data. The Brain does not show that the authors are independent of each other. No source with data or tests yet. The credit to Karpathy is secondhand.
+- One source, one creator, partly sponsored. A second source (Wall, BRF-20261115-002) describes the same map-first idea. It is opinion and partly promotional. A third source (Okhlopkov, BRF-20261115-001) is a first-person account of one vault, with `low` source quality, no date, and no data. The Brain does not show that the authors are independent of each other. No source with data or tests yet. The credit to Karpathy is secondhand.
 - No source shows how well a model follows the prompt, a nightly run, or a Tidy report.
 - The written approval rule does not cover the nightly wiki writes. No source tests what an AI changes without approval in this setup. One source proposes a write boundary as an option (see CON-004). It gives no test.

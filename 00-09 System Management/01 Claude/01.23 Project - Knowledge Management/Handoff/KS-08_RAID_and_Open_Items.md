@@ -993,6 +993,8 @@ Findings from the test:
 
 Phase 7 exit test: PASS, subject to Justin's review. Open: the MOC-002 "partly independent" wording (KHR-20261115-007 H1, Change Order in progress). Not in v1: the web application (after everything is complete and running), agent profiles, scheduled runs (Phase 8).
 
+Justin's review, 2026-11-15: Phase 7 exit test PASSED (KS-D-49). Justin: "Yes to all". The Curator review threshold stays at 5 records. CO-20261115-008 applied. No Phase 7 item is open. Next: Phase 8 (KS-06 §3). Its plan needs Justin's approval. The web application follows when Justin says that everything is complete and running.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -1038,3 +1040,4 @@ Phase 7 exit test: PASS, subject to Justin's review. Open: the MOC-002 "partly i
 | 2026-11-15 | 0.39 | §8.13: all open items closed (KS-D-46). Three Change Orders applied, Brain version `CO-20261115-003`. |
 | 2026-11-15 | 0.40 | New §8.14: Phase 7 plan approved (KS-D-47). KS-C-15 resolved for v1. |
 | 2026-11-15 | 0.41 | §8.14: Phase 7 test results D1 to D4 (all PASS, subject to Justin's review). Findings listed (KS-D-48). |
+| 2026-11-15 | 0.42 | Phase 7 exit test PASSED (KS-D-49). No Phase 7 item open. |

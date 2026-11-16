@@ -2,9 +2,9 @@
 id: CO-20261115-008
 type: change-order
 title: "Fix the partly independent wording in MOC-002"
-status: open
+status: applied
 created: 2026-11-15T19:02
-updated: 2026-11-15T19:02
+updated: 2026-11-15T19:06
 created-by: managing-editor
 schema-version: "0.11"
 assessment:
@@ -15,11 +15,11 @@ change-types:
 affected:
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T19:03
+decision-note: "Yes to all"
+applied: 2026-11-15T19:06
+brain-version-after: CO-20261115-008
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -62,4 +62,10 @@ Justin: approve X1 (replace the Wall clause in MOC-20261113-002 as shown), or re
 
 ## 7. Decision record
 
+2026-11-15T19:03. Justin: "Yes to all" (approve X1; the threshold stays 5; pass Phase 7). Decision: `approved`. Row X1, as written.
+
 ## 8. Implementation record
+
+2026-11-15T19:06. The Orchestrator checked that `brain-version` (CO-20261115-007) matched the current Brain version before the change. Row X1 applied as written. File changed in `21 Brain`: MOC-20261113-002 (X1; `change-orders` and `updated` set). No Curator review: one record is below the threshold of 5 (Rulebook v0.7, KS-D-48). The Orchestrator checks: `git diff` matches the Change Order; Frontmatter Check and Link Check run.
+
+Brain version after: CO-20261115-008.

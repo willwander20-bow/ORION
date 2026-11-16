@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Version v0.13.
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Phase 7 plan approved (KS-D-47). Curator review threshold (KS-D-48). Phase 7 passed (KS-D-49). Version v0.14.
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -46,7 +46,9 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 ## 4. Current phase
 
-Phase 6 passed its exit test (KS-D-44). Next: Phase 7. Refer to KS-06 §3 and hard rule 11. Do not start Phase 7 work until its plan is approved. Open items from Phase 6 are in KS-08 §8.12.
+Phase 7 passed its exit test (KS-D-49). Knowledge HQ v1 is an Obsidian dashboard on core Bases in `22 Workflow\22.27 Knowledge HQ` (KS-D-47). It is read-only. The web application follows when Justin says that everything is complete and running. Next: Phase 8. Refer to KS-06 §3. Do not start Phase 8 work until its plan is approved. Test results and findings are in KS-08 §8.14.
+
+After an apply, follow Orchestrator Rulebook §6 step 10. A Curator impact review is required only above the threshold (a new record, a change to the text, status, `confidence`, or `evidence-strength` of a Claim, or 5 or more Brain records edited; KS-D-48). Take each time stamp from the system clock. Do not type a time by hand.
 
 The Knowledge Curator can be invoked in three modes: `maintenance`, `impact-review`, `retrieval` (KS-D-43). Save each health report in `22.26 Knowledge Health Reports` with a `KHR` ID (Schema §5.12). The Curator does not write Change Orders. For a Curator finding that needs a Brain change, give the Knowledge Health Report to the Managing Editor. Before each Curator run in `maintenance` or `impact-review` mode, run `Link Check.ps1` (in `20.04`) and give its output to the Curator.
 
@@ -80,7 +82,7 @@ The Brain has content. The Brain version is the ID of the last applied Change Or
 9. **Errors.** Record the error and stop when a required stage fails. Do not invoke a later stage when an earlier output is not valid.
 9a. **Quote check.** Before you set a Reference Brief to `validated`, check each `Quote:` against the raw page (for example, `curl` with tags removed) or against the companion file. WebFetch does not return exact text (KS-D-31).
 10. **No new agents** without Justin's approval.
-11. **No Knowledge HQ** before the core workflow works.
+11. **No Knowledge HQ web application** until Justin says that everything is complete and running (KS-D-47). The Obsidian dashboard (v1) exists.
 12. Keep Markdown and YAML portable.
 
 ## 5a. Work log

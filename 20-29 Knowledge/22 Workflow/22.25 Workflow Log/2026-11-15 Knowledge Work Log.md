@@ -75,6 +75,9 @@
 | 19:02 | orchestrator | Handoff updated outside the area on Justin's instruction ("2 yes"): KS-07 new KS-D-48 and change-log row; KS-08 §8.14 test results D1 to D4 and findings, and change-log row 0.41 | KS-07, KS-08 (Handoff folder) | OK |
 | 19:02 | managing-editor | Run in health report mode on KHR-20261115-007 H1. Orchestrator check: current text found in MOC-002; the only match of "partly independent" in the Brain; no file changed by the agent | [[KHR-20261115-007 Impact review of CO-20261115-007]] | PASS |
 | 19:02 | orchestrator | Change Order saved `open`. Presented to Justin | [[CO-20261115-008 Fix partly independent wording in MOC-002]] | `open` |
+| 19:03 | justin | Decision on the Change Order: "Yes to all" (approve CO-20261115-008; threshold stays 5; pass Phase 7) | [[CO-20261115-008 Fix partly independent wording in MOC-002]] | `approved` |
+| 19:06 | orchestrator | Version check passed. Change Order applied: X1 on MOC-20261113-002. git diff matches the Change Order. Frontmatter Check 0, Link Check 0. No Curator review (1 record, below the threshold of 5) | [[CO-20261115-008 Fix partly independent wording in MOC-002]] | Brain version `CO-20261115-007` to `CO-20261115-008` |
+| 19:06 | justin | Phase 7 exit test decision. Justin: "Yes to all" (KS-D-49). Area `CLAUDE.md` v0.14 (Phase 7 passed; rule 11 covers the web application only; Curator threshold and system-clock rule added). KS-07 KS-D-49 and KS-08 §8.14 updated (Handoff folder, as approved for the Phase 7 record) | `CLAUDE.md`, KS-07, KS-08 | PASS |
 
 ## Decisions
 
@@ -87,6 +90,7 @@
 - Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
 - Justin: "1" three times (CO-20261115-004, -005, -006: approve all rows); "Send it as is" (Editor re-run for CO-005); "Yes, one Change Order" (KHR-004 H1, H2).
 - Justin: "Threshold" (Curator review rule, KS-D-48); "Approve all six" (CO-20261115-007).
+- Justin: "1 yes 2 yes 3 link works"; "Can you also increase the threshold we just set?" (3 to 5 records); "Yes to all" (CO-20261115-008; threshold 5; pass Phase 7, KS-D-49).
 - Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
 - Justin: "Yes, update Handoff" (KS-07, KS-08).
 - Justin: "Yes, plan Phase 7"; "Lets start with the Dashboard and we can create the web app once everything is complete and running"; "Approve plan" (ID 22.27, two Source fields, Handoff record; KS-D-47).
@@ -94,11 +98,10 @@
 
 ## Open
 
-- KHR-20261115-007 H1 (MOC-002 "partly independent" wording): Change Order in progress (Justin: "1 yes").
 
-- Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
+- Phase 7 passed (KS-D-49). No Phase 7 item open. Next: the Phase 8 plan needs Justin's approval. The web application waits until Justin says that everything is complete and running.
 
-- KHR-20261115-001: H1, H2, H3 resolved (CO-20261115-002, BRF-006 corrected). H4 (optional, "confidence low" in the MOC-001 claim line) not approved.
+- KHR-20261115-001 H4 (optional: "confidence low" in the MOC-001 line for CLM-001) was not approved and stays open.
 
 ## Notes
 
