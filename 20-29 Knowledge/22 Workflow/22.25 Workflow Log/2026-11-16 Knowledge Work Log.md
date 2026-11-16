@@ -12,14 +12,16 @@ Earlier events of this session, after midnight (the Curator maintenance run, CO-
 | 00:33 | editor | Second look on 001 and 004 (threshold: new records). **001: the Editor says `investigate`, relevance `low`; the Managing Editor proposes records.** Both views are shown to Justin in the "Orchestrator comparison" of CO-003, with options A to D. 004: both say `advance`; comparison in CO-004 (the Editor wants a caveat on CON-20261113-003 and -004 that the Change Order lacks). | CO-20261116-003, -004 | compared |
 | 00:34 | orchestrator | Research Questions: 2 rows added by the Orchestrator (no Change Order needed, Schema §2.5): goal-based prompting (007), "Use ASD-STE100" in a prompt (006). A third row for the 001 Editor question (investigate). No row for 003 and 005 (weak). | Research Questions | OK |
 | 00:34 | orchestrator | Checks: Frontmatter Check 0 problems (103 files), Link Check 0 problems. `21 Brain` changed only in `Research Questions.md`. `.staging\proposed` holds 3 drafts (UC x2, P4 x1). Dependencies: CO-005 and CO-004 depend on CO-003. | | OK |
+| 05:46 | justin | **Decision:** "Approve as written. Ive read the other COs and they'll add to the new MOC". CO-20261116-003 approved, option A. The remark on the other Change Orders is not read as an approval of CO-004 or CO-005. | CO-20261116-003 | approved |
+| 05:46 | orchestrator | **Apply CO-20261116-003.** Brain version CO-20261116-002 to CO-20261116-003. New: CON-20261116-001 Prompting rules in a Claude beginner guide, MOC-20261116-001 Using Claude. Edited: one line in MOC-20261115-002 (Related MOCs). SRC-20261116-001 set to `done`. Frontmatter Check 0 (105 files), Link Check 0 (27 records). Curator Due: not due (3 of 15). | CO-20261116-003 | applied |
 
 ## Decisions
 
-(none yet in this log; Justin has not decided CO-20261116-003 to -005)
+CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: not decided.
 
 ## Open
 
-- CO-20261116-003 (action differs between the Managing Editor and the Editor), CO-20261116-004, and CO-20261116-005 wait for Justin. Decide CO-003 first: CO-004 and CO-005 depend on its drafts.
+- CO-20261116-004 and CO-20261116-005 wait for Justin. Both depend on CO-003 (applied): after approval each needs a rebase onto CO-20261116-003 and its draft links changed to the real IDs (MOC-20261116-001, CON-20261116-001).
 - The other 8 guides of the TikTok list (SRC not made) wait for Justin.
 - Paid posts: only the free preview was read. A saved copy of the full text from Justin would allow a fuller Brief.
 

@@ -1,14 +1,15 @@
 ---
-id:
+id: MOC-20261116-001
 type: moc
 title: Using Claude
 status: active
-created:
-updated:
+created: 2026-11-16T05:45
+updated: 2026-11-16T05:45
 created-by: managing-editor
 schema-version: "0.13"
 last-reviewed:
-change-orders: []
+change-orders:
+  - "[[CO-20261116-003 Claude for dummies, Hassid]]"
 ---
 
 ## Topic summary
@@ -17,7 +18,7 @@ How a person works with Claude as a tool: how to write prompts and how to manage
 
 ## Key concepts
 
-- [[CON-DRAFT Prompting rules in a Claude beginner guide|Prompting rules in a Claude beginner guide]] (five rules of advice from one newsletter guide; no test)
+- [[CON-20261116-001 Prompting rules in a Claude beginner guide|Prompting rules in a Claude beginner guide]] (five rules of advice from one newsletter guide; no test)
 
 ## Important claims
 

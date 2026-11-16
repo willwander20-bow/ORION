@@ -2,9 +2,9 @@
 id: CO-20261116-003
 type: change-order
 title: Prompting rules in a Claude beginner guide, Hassid
-status: open
+status: applied
 created: 2026-11-16T00:30
-updated: 2026-11-16T00:32
+updated: 2026-11-16T05:46
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
@@ -14,11 +14,11 @@ change-types: [create, relate]
 affected:
   - "[[MOC-20261115-002 Building AI agents]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T05:46
+decision-note: "Approve as written. Ive read the other COs and they will add to the new MOC"
+applied: 2026-11-16T05:46
+brain-version-after: CO-20261116-003
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -150,4 +150,10 @@ Does Justin approve the Concept "Prompting rules in a Claude beginner guide" (X1
 
 ## 7. Decision record
 
+2026-11-16T05:46. Justin: "Approve as written. Ive read the other COs and they'll add to the new MOC". Decision: `approved`, all rows X1 to X3, as written (option A of the Orchestrator comparison). The Editor's view (`investigate`) was shown to Justin in the comparison. Justin's remark about the other Change Orders is not an approval of CO-20261116-004 or CO-20261116-005. They stay `open`.
+
 ## 8. Implementation record
+
+2026-11-16T05:46. `brain-version` (CO-20261116-002) matched the current Brain version. X1: new CON-20261116-001 Prompting rules in a Claude beginner guide. X2: new MOC-20261116-001 Using Claude (its link to the Concept changed from the draft name to the ID). X3: one line under Related MOCs in MOC-20261115-002. `change-orders` and `updated` set on that record. No Claim made.
+
+Brain version after: CO-20261116-003.

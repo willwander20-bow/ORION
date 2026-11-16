@@ -2,9 +2,9 @@
 id: SRC-20261116-001
 type: source
 title: "Claude For Dummies"
-status: change-proposed
+status: done
 created: 2026-11-16T00:25
-updated: 2026-11-16T00:30
+updated: 2026-11-16T05:46
 created-by: orchestrator
 schema-version: "0.13"
 url: https://ruben.substack.com/p/claude-for-dummies

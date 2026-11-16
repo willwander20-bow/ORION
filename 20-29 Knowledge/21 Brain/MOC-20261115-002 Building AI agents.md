@@ -4,7 +4,7 @@ type: moc
 title: Building AI agents
 status: active
 created: 2026-11-15T22:51
-updated: 2026-11-16T00:16
+updated: 2026-11-16T05:45
 created-by: managing-editor
 schema-version: "0.13"
 last-reviewed: 2026-11-15
@@ -16,6 +16,7 @@ change-orders:
   - "[[CO-20261115-019 Anatomy of agentic memory, arXiv]]"
   - "[[CO-20261115-020 Claude Code memory, Anthropic docs]]"
   - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
+  - "[[CO-20261116-003 Claude for dummies, Hassid]]"
 ---
 
 ## Topic summary
@@ -54,6 +55,7 @@ How people design systems in which an LLM uses tools and directs its own steps: 
 ## Related MOCs
 
 - [[MOC-20261113-002 AI-maintained knowledge bases|AI-maintained knowledge bases]]: a wiki that an AI keeps is one use of an agent. A link, not a dependency.
+- [[MOC-20261116-001 Using Claude|Using Claude]]: working with Claude as a tool (prompting, chats). This MOC is about building agents. A link, not a dependency.
 
 ## Open research questions
 

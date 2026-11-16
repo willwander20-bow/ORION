@@ -1,17 +1,18 @@
 ---
-id:
+id: CON-20261116-001
 type: concept
 title: Prompting rules in a Claude beginner guide
 status: accepted
-created:
-updated:
+created: 2026-11-16T05:45
+updated: 2026-11-16T05:45
 created-by: managing-editor
 schema-version: "0.13"
 kind: concept
 related:
   - "[[CON-20261115-005 Context engineering]]"
 last-reviewed:
-change-orders: []
+change-orders:
+  - "[[CO-20261116-003 Claude for dummies, Hassid]]"
 aliases:
   - Five prompting rules for Claude
 ---
