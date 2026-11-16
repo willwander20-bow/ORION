@@ -126,6 +126,9 @@
 | 22:07 | justin | "Lets skip reddit. I approve all proposed changes. Where do you think it belongs?" Decisions: SRC-20261115-003 skipped; CO-20261115-010 and CO-20261115-011 approved (all rows) | SRC-20261115-003, CO-20261115-010, -011 | `approved` |
 | 22:09 | orchestrator | Reddit Source set `skipped` (it was `failed`; Justin names the state, Rulebook §2). CO-010 rows X1 to X3 applied (new CLM-20261115-003 and CON-20261115-002; evidence and a caveat on CLM-20261113-001), with the two caveats from the comparison note (PDF/A against Nava; metadata against Bologov). CO-011 rows X1 to X3 applied after a check that each \"Current\" text was in the records (new CLM-20261115-004; steps 7 to 10, test section and caveats on the process; evidence and a caveat on the format claim). **CO-011 rebased** from Brain version CO-009 to CO-010 by the Orchestrator (drafted knowing the CO-010 drafts): a deviation from Rulebook §6 step 3, recorded in the Change Order. Rows X4 of both (the MOC link) held: Justin asked where the records belong. `affected` corrected. Sources SRC-004 and SRC-005 `done`. Frontmatter Check 0. Link Check: 1 `ORPHAN` (CLM-20261115-004 has no inbound link until the MOC exists) | [[CO-20261115-010 Readable AI content, Nava]], [[CO-20261115-011 Structure documentation for AI and humans, Mintlify]] | Brain version `CO-20261115-009` to `CO-20261115-011` |
 
+| 22:11 | justin | "Yes proveed. And great work": go ahead with the new MOC proposal | CO-20261115-012 | — |
+| 22:11 | orchestrator | Change Order CO-20261115-012 written by the Orchestrator (structural, no source: no merged mode, no Editor second look) and saved `open`: a new MOC "Content for AI readers" (draft in `.staging\proposed`; every link resolves), two relate rows (MOC-001, MOC-002), and a Research Questions row. Replaces the held rows X4 of CO-010 and CO-011. Frontmatter Check 0 | [[CO-20261115-012 Content for AI readers MOC]] | `open` |
+
 
 ## Decisions
 
