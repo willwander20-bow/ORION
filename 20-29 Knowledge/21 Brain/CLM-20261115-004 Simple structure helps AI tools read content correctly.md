@@ -3,9 +3,9 @@ id: CLM-20261115-004
 type: brain-claim
 title: Simple document structure helps AI tools read content correctly
 status: accepted
-created:
-updated:
-created-by:
+created: 2026-11-15T22:08
+updated: 2026-11-15T22:08
+created-by: orchestrator
 schema-version: "0.13"
 confidence: low
 evidence-strength: weak
@@ -19,8 +19,9 @@ concepts:
 superseded-by:
 valid-from:
 valid-to:
-last-reviewed:
-change-orders: []
+last-reviewed: 2026-11-15
+change-orders:
+  - "[[CO-20261115-011 Structure documentation for AI and humans, Mintlify]]"
 aliases:
   - Structure for AI readers
 ---

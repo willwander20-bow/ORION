@@ -2,9 +2,9 @@
 id: CO-20261115-010
 type: change-order
 title: Readable AI content, Nava
-status: open
+status: applied
 created: 2026-11-15T21:56
-updated: 2026-11-15T21:54
+updated: 2026-11-15T22:08
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
@@ -13,13 +13,12 @@ brain-version: CO-20261115-009
 change-types: [create, add-evidence, relate]
 affected:
   - "[[CLM-20261113-001 Lasting notes belong in open files]]"
-  - "[[MOC-20261113-001 Note durability]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T22:07
+decision-note: "I approve all proposed changes"
+applied: 2026-11-15T22:08
+brain-version-after: CO-20261115-010
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -143,4 +142,10 @@ Approve, reject, or change each row: X1, X2, X3, X4. Rows can be decided one by 
 
 ## 7. Decision record
 
+2026-11-15T22:07. Justin: "Lets skip reddit. I approve all proposed changes. Where do you think it belongs?" Decision: `approved`. Rows X1, X2, and X3 were applied as written, with the two caveats from the Orchestrator comparison (the PDF/A against the Nava ranking, added to the X3 caveat on CLM-20261113-001; the metadata against Bologov, added to the new process). Row X4 (the MOC link) was NOT applied: Justin asked where the records belong, and the placement is decided in a separate Change Order (CO-20261115-012, to be proposed).
+
 ## 8. Implementation record
+
+2026-11-15T22:08. The Orchestrator checked that `brain-version` (CO-20261115-009) matched the current Brain version. Files: new `CLM-20261115-003` and `CON-20261115-002` (from the drafts in `.staging\proposed`); `CLM-20261113-001` changed (one evidence line, one caveat bullet; `confidence` and `evidence-strength` unchanged). `change-orders` and `updated` set. Frontmatter Check 0 problems. X4 not applied
+
+Brain version after: CO-20261115-010.

@@ -2,9 +2,9 @@
 id: SRC-20261115-005
 type: source
 title: "Structure documentation for AI and human readers (Mintlify)"
-status: change-proposed
+status: done
 created: 2026-11-15T21:50
-updated: 2026-11-15T21:57
+updated: 2026-11-15T22:08
 created-by: orchestrator
 schema-version: "0.13"
 url: https://www.mintlify.com/library/structure-documentation-AI-human-readers

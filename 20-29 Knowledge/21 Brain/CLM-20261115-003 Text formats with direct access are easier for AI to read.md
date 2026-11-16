@@ -3,9 +3,9 @@ id: CLM-20261115-003
 type: brain-claim
 title: Text formats with direct access are easier for AI to read
 status: accepted
-created:
-updated:
-created-by:
+created: 2026-11-15T22:08
+updated: 2026-11-15T22:08
+created-by: orchestrator
 schema-version: "0.13"
 confidence: low
 evidence-strength: weak
@@ -19,8 +19,10 @@ concepts:
 superseded-by:
 valid-from:
 valid-to:
-last-reviewed:
-change-orders: []
+last-reviewed: 2026-11-15
+change-orders:
+  - "[[CO-20261115-010 Readable AI content, Nava]]"
+  - "[[CO-20261115-011 Structure documentation for AI and humans, Mintlify]]"
 aliases:
   - Formats for AI readers
 ---
@@ -38,6 +40,7 @@ The source writes about content that people publish for AI models, especially la
 - [[SRC-20261115-004 Readable AI content, Nava|Nava toolkit (2025-03-06)]] · E1 · § Tactic 1: selecting the best file format · supports · a scan makes the computer recognize text and infer structure; the quote is the opening sentence only, and the error claim is a WebFetch summary.
 - [[SRC-20261115-004 Readable AI content, Nava|Nava toolkit (2025-03-06)]] · E2 · § Tactic 1: selecting the best file format · supports · quote: "a computer can directly access the text as it was originally written"; the quote was checked against the page.
 - [[SRC-20261115-004 Readable AI content, Nava|Nava toolkit (2025-03-06)]] · E3 · § Tactic 1: selecting the best file format · supports · DOCX is less ideal than the open formats and better than a PDF; a WebFetch summary, not checked against the page; opinion of the source.
+- [[SRC-20261115-005 Structure documentation for AI and humans, Mintlify|Mintlify article (2025-10-06)]] · E5 · § Minimal formatting for reliable extraction · supports (indirect) · plain Markdown or a flat text export such as llms-full.txt is easier for AI to parse than tabs or collapsibles; a WebFetch summary, not checked against the page; the author is a vendor.
 
 ## Relationships
 
@@ -48,3 +51,4 @@ The source writes about content that people publish for AI models, especially la
 - One source, one author with a partnerships and advocacy role (Nava Labs). `source-quality: medium`. The Brief reports no tests, data, or citations for the claim.
 - The Brief says that the page text came through WebFetch. Only the quotes were checked against the page. Section content is a mix of summary and a few quotes.
 - The claim is about reading by AI, not about how long a file lasts. It is a different reason from the one in [[CLM-20261113-001 Lasting notes belong in open files|Lasting notes belong in open files]].
+- A second source (Mintlify, SRC-20261115-005, `source-quality: medium`) supports the direction in part. It compares plain Markdown with tabs and collapsibles. The Brief gives no information on scans, PDF, or DOCX. It gives no data. The author is a vendor. Confidence stays `low` and evidence strength stays `weak`.

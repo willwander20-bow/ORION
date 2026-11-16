@@ -2,9 +2,9 @@
 id: SRC-20261115-004
 type: source
 title: "Readable AI content (Nava PBC toolkit)"
-status: change-proposed
+status: done
 created: 2026-11-15T21:50
-updated: 2026-11-15T21:56
+updated: 2026-11-15T22:08
 created-by: orchestrator
 schema-version: "0.13"
 url: https://www.navapbc.com/toolkits/readable-ai-content

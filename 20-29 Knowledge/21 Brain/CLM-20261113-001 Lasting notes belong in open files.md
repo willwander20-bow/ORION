@@ -4,7 +4,7 @@ type: brain-claim
 title: Lasting notes belong in open files
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-15T20:08
+updated: 2026-11-15T22:08
 created-by: orchestrator
 schema-version: "0.6"
 confidence: low
@@ -32,6 +32,7 @@ change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-010 Readable AI content, Nava]]"
 aliases:
   - Durable notes need open files
 ---
@@ -74,6 +75,7 @@ Condition on access measures: the file has no measure that controls access to it
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E1 · § Obsidian Is Optional: Build an AI Second Brain With Plain Markdown (opening section, before § What a second brain actually needs) · supports · a folder of plain Markdown files can provide the durable memory layer for a second brain; opinion, no data.
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E7 · § The practical answer · supports · "The durable second brain is not the app"; a conclusion, not evidence.
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E2 · § Use a portable note contract, § Prefer standard relative links · qualifies · standard relative links preferred for portability; no test.
+- [[SRC-20261115-004 Readable AI content, Nava|Nava toolkit (2025-03-06)]] · E2, E3 · § Tactic 1: selecting the best file format · supports (indirect) · open text formats (HTML, XML, Markdown) give a computer direct access to text; DOCX is rated below them and above PDF. About reading by AI, not durability. E3 is a WebFetch summary, not checked.
 
 ## Relationships
 
@@ -92,3 +94,4 @@ Condition on access measures: the file has no measure that controls access to it
 - One opinion source (Bologov, SRC-20261113-006, `source-quality: low`) qualifies the conditions of this claim. It does not contradict it. It gives no data. ORION applies this claim through Markdown files with YAML metadata and links, so ORION notes are the kind of note that the qualification is about. No source tests this.
 - ORION applies this claim: root `CLAUDE.md` §4.4 and area rule 12 ("keep Markdown and YAML portable").
 - Third opinion source (Wall, SRC-20261115-001, `source-quality: medium`). It agrees in direction. It does not argue from app obsolescence, and it is about AI second brains. The publisher sells a related product (Brief objectivity 2 of 5), so it is not independent of its own products. It gives no data. Confidence stays `low` and evidence strength stays `weak`.
+- Fourth opinion source (Nava, SRC-20261115-004, `source-quality: medium`). Its reason is that AI reads open formats more easily, not that files outlast apps. Indirect support. It gives no data and does not change confidence or evidence strength. It is not counted in the three opinion sources above. Nava rates PDF lowest for AI reading. NARA and LoC prefer PDF/A for preservation. The rankings serve different purposes.

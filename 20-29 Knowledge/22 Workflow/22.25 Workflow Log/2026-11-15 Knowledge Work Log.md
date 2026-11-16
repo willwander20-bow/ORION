@@ -123,6 +123,9 @@
 
 | 21:57 | orchestrator | Checks on the drafts and the run: Frontmatter Check 0 on the 3 proposed records; the 3 quotes in them are in the Source notes (12, 9, and 5 words); `git status` shows no file outside `.staging`, the Source notes, the Change Orders, and the log. Not run: Brain, Curator, apply. **Agent tokens, new flow, 2 sources:** SRC-004 141,852 (Reporter 34,854, Managing Editor 49,550, Editor 57,448); SRC-005 150,172 (35,050; 57,562; 57,560); SRC-003 0 (access failed). Without the threshold double check: 84,404 and 92,612. Orchestrator re-typing of agent output: none (Merge Draft.ps1 and mv). Old flow: about 294,000 per source | `22.21`, `22.24` | measured |
 
+| 22:07 | justin | "Lets skip reddit. I approve all proposed changes. Where do you think it belongs?" Decisions: SRC-20261115-003 skipped; CO-20261115-010 and CO-20261115-011 approved (all rows) | SRC-20261115-003, CO-20261115-010, -011 | `approved` |
+| 22:09 | orchestrator | Reddit Source set `skipped` (it was `failed`; Justin names the state, Rulebook §2). CO-010 rows X1 to X3 applied (new CLM-20261115-003 and CON-20261115-002; evidence and a caveat on CLM-20261113-001), with the two caveats from the comparison note (PDF/A against Nava; metadata against Bologov). CO-011 rows X1 to X3 applied after a check that each \"Current\" text was in the records (new CLM-20261115-004; steps 7 to 10, test section and caveats on the process; evidence and a caveat on the format claim). **CO-011 rebased** from Brain version CO-009 to CO-010 by the Orchestrator (drafted knowing the CO-010 drafts): a deviation from Rulebook §6 step 3, recorded in the Change Order. Rows X4 of both (the MOC link) held: Justin asked where the records belong. `affected` corrected. Sources SRC-004 and SRC-005 `done`. Frontmatter Check 0. Link Check: 1 `ORPHAN` (CLM-20261115-004 has no inbound link until the MOC exists) | [[CO-20261115-010 Readable AI content, Nava]], [[CO-20261115-011 Structure documentation for AI and humans, Mintlify]] | Brain version `CO-20261115-009` to `CO-20261115-011` |
+
 
 ## Decisions
 
@@ -143,7 +146,7 @@
 
 ## Open
 
-- Test run of 3 sources (Justin: "Lets run these sources"): CO-20261115-010 (Nava) and CO-20261115-011 (Mintlify) wait for Justin. SRC-20261115-003 (Reddit) failed: needs a saved copy or another link. Three proposed Brain records wait in `.stagingproposed` (CLM-20261115-003, CLM-20261115-004, CON-20261115-002).
+- Placement of the 3 new records (CLM-20261115-003, CLM-20261115-004, CON-20261115-002): Justin asked where they belong; rows X4 of CO-010 and CO-011 are held. Link Check shows 1 ORPHAN (CLM-20261115-004) until the MOC exists. Reddit source skipped.
 
 - Lean workflow (KS-D-50), merged records (KS-D-51), and the migration (KS-D-52): the new flow is untested with a new source. Knowledge HQ "Briefs and Assessments" view is empty. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
 - Intake: Justin is still developing the intake process.
