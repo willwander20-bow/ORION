@@ -26,14 +26,16 @@ Earlier events of this session, after midnight (the Curator maintenance run, CO-
 | 06:07 | orchestrator | **Apply CO-20261116-006, then -007, then -008.** Brain version CO-20261116-005 to -006 to -007 to -008. New: CON-20261116-003 Connect Claude to apps with connectors, CON-20261116-004 Vibecoding with Claude Code, CON-20261116-005 Habits to reduce token use in Claude (moved from `.staging\proposed`). Edited: MOC-20261116-001 (3 lines under Processes and methods, 3 evidence lines, 3 `change-orders` entries). -007 and -008 were rebased by the Orchestrator onto the Change Order before (they were drafted in parallel, so the strict KS-D-54 exception does not hold; the comparison had told Justin of the rebase, and the MOC lines only add). Sources 013, 014, 015 set to `done`. | CO-20261116-006 to -008 | applied |
 | 06:09 | managing-editor | Follow-up draft for Justin's option B (007 and 008): 4 rows (caveats on CON-20261116-002 and CON-20261116-001; links on CON-20261116-004 and -005). Saved as CO-20261116-009 (`open`, brain-version CO-20261116-008, below the threshold, no Editor). Added to `change-orders` of SRC-014 and SRC-015 (both stay `done`). | CO-20261116-009 | open |
 | 06:10 | orchestrator | Checks: Frontmatter Check 0 problems (121 files), Link Check 0 problems (31 records). Curator Due: not due (8 of 15). `.staging` is empty. | | OK |
+| 06:12 | justin | **Decision:** "Approved as written". CO-20261116-009 approved, all four rows. | CO-20261116-009 | approved |
+| 06:12 | orchestrator | **Apply CO-20261116-009.** Version check passed. Brain version CO-20261116-008 to CO-20261116-009. Edited: CON-20261116-002 (3 caveats), CON-20261116-001 (1 caveat, 1 link line), CON-20261116-004 (2 link lines), CON-20261116-005 (1 link line). Frontmatter Check 0 (121 files), Link Check 0 (31 records). Curator Due: not due (9 of 15). | CO-20261116-009 | applied |
 
 ## Decisions
 
-CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: approved (see above). CO-20261116-006: approved, option A. CO-20261116-007 and CO-20261116-008: approved, option B (see above).
+CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: approved (see above). CO-20261116-006: approved, option A. CO-20261116-007 and CO-20261116-008: approved, option B (see above). CO-20261116-009: approved as written (see above).
 
 ## Open
 
-- Open: CO-20261116-009 (caveats and links for the Hassid Claude Concepts, from option B of -007 and -008). Justin decides.
+- No Change Order of this TikTok batch is open.
 - The TikTok list is complete: all 15 guides have a Source note.
 - Paid posts: only the free preview was read. A saved copy of the full text from Justin would allow a fuller Brief.
 

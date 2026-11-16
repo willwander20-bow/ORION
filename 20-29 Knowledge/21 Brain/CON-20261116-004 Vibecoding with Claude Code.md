@@ -4,7 +4,7 @@ type: concept
 title: Vibecoding with Claude Code
 status: accepted
 created: 2026-11-16T06:07
-updated: 2026-11-16T06:07
+updated: 2026-11-16T06:11
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -14,6 +14,7 @@ related:
 last-reviewed:
 change-orders:
   - "[[CO-20261116-007 Vibecoding with Claude Code, Hassid]]"
+  - "[[CO-20261116-009 Follow-up caveats and links for the Hassid Claude Concepts]]"
 aliases:
   - Vibecoding
 ---
@@ -59,6 +60,8 @@ See Explanation. The Brief did not capture the detail under each setup step.
 
 - [[CON-20261115-007 Claude Code instructions and memory|Claude Code instructions and memory]]: the vendor's documentation of CLAUDE.md and auto memory in the same product. The Brief gives no information on whether the author uses them. A link, not a dependency.
 - [[CON-20261115-005 Context engineering|Context engineering]]: the "fresh chat" and "reference files" habits concern what enters the context. A link, not a dependency.
+- [[CON-20261116-001 Prompting rules in a Claude beginner guide|Prompting rules in a Claude beginner guide]]: step 5 (fresh chats per task, refer to files) refines rule 5 there (paste in the key context). The same author. A link, not a dependency.
+- [[CON-20261116-002 Set up Claude Cowork with Skills and Projects|Set up Claude Cowork with Skills and Projects]]: the Cowork advice is against folder setups. Step 1 here is one clean folder for Claude Code. Different tools. The interview-first prompt (step 2) differs from the Cowork onboarding rule (different tasks). Not a contradiction. A link, not a dependency.
 
 ## Sources
 

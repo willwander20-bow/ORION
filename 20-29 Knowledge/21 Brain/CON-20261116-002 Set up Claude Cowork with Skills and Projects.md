@@ -4,7 +4,7 @@ type: concept
 title: Set up Claude Cowork with Skills and Projects
 status: accepted
 created: 2026-11-16T05:48
-updated: 2026-11-16T05:48
+updated: 2026-11-16T06:11
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -14,6 +14,7 @@ related:
 last-reviewed:
 change-orders:
   - "[[CO-20261116-004 I was wrong about Claude Cowork, Hassid]]"
+  - "[[CO-20261116-009 Follow-up caveats and links for the Hassid Claude Concepts]]"
 aliases:
   - Cowork setup, Skills and Projects
 ---
@@ -51,6 +52,9 @@ Caveats:
 - The page gives no test, no control, and no vendor documentation for the advice.
 - The Brief gives no information on the "skill or project" test, the full onboarding prompt, or the file limit of Projects.
 - Plans, prices, usage windows, and peak hours in the source are not kept here. They change fast and the Brief gives them as unchecked summaries.
+- Folders (checked 2026-11-16): [[CON-20261116-004 Vibecoding with Claude Code]] advises one clean folder for Claude Code. Step 2 here advises against folder setups in Cowork. The two apply to different tools. They do not contradict. The same author gives both.
+- Questions first (checked 2026-11-16): the interview-first prompt in [[CON-20261116-004 Vibecoding with Claude Code]] makes Claude ask questions before it builds. The onboarding rule here says "Never ask me a question before giving me a potential answer." The tasks differ (building an app, onboarding). The Brief gives no information on a test of either.
+- About Me size (checked 2026-11-16): [[CON-20261116-005 Habits to reduce token use in Claude]] advises About Me files under 2,000 words (2026-04-12). Step 3 here turns an About Me file into a skill (2026-07-01). This is dated advice for different setups. It is not a contradiction. The author is promotional (objectivity 2 of 5), and the same author gives all of it.
 - The Brain makes no Claim from this advice. It is opinion from one source, dated 2026-07-01.
 
 ## Related claims

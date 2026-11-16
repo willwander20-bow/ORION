@@ -4,7 +4,7 @@ type: concept
 title: Habits to reduce token use in Claude
 status: accepted
 created: 2026-11-16T06:07
-updated: 2026-11-16T06:07
+updated: 2026-11-16T06:11
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -15,6 +15,7 @@ related:
 last-reviewed:
 change-orders:
   - "[[CO-20261116-008 Stop hitting Claude usage limits, Hassid]]"
+  - "[[CO-20261116-009 Follow-up caveats and links for the Hassid Claude Concepts]]"
 aliases:
   - Avoiding Claude usage limits
 ---
@@ -64,6 +65,7 @@ None. The Brief lists habits, not a fixed order.
 - [[CON-20261115-005 Context engineering|Context engineering]]: that source treats context as a finite resource to keep small. This article gives user habits with a cost view. A link, not a dependency.
 - [[CON-20261116-002 Set up Claude Cowork with Skills and Projects|Set up Claude Cowork with Skills and Projects]]: the same author also says that long threads cost more tokens, and he advises Skills and Projects. The two sources do not conflict. A link, not a dependency.
 - [[CON-20261115-007 Claude Code instructions and memory|Claude Code instructions and memory]]: the vendor documentation describes how CLAUDE.md loads into context. This article only advises using CLAUDE.md for permanent context. A link, not a dependency.
+- [[CON-20261116-001 Prompting rules in a Claude beginner guide|Prompting rules in a Claude beginner guide]]: rule 5 there (fresh chat when Claude is confused) gets a second reason (cost) and a trigger (15 to 20 messages) here. The same author, so not independent. A link, not a dependency.
 
 ## Sources
 

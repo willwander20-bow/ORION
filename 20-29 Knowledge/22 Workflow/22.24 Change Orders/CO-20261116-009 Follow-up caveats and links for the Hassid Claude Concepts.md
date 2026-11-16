@@ -2,10 +2,10 @@
 id: CO-20261116-009
 type: change-order
 title: Follow-up caveats and links for the Hassid Claude Concepts
-status: open
+status: applied
 created: 2026-11-16T06:09
 created-by: managing-editor
-updated: 2026-11-16T06:09
+updated: 2026-11-16T06:12
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261116-014 Vibecoding with Claude Code, Hassid]]"
@@ -17,11 +17,11 @@ affected:
   - "[[CON-20261116-004 Vibecoding with Claude Code]]"
   - "[[CON-20261116-005 Habits to reduce token use in Claude]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T06:12
+decision-note: "Approved as written"
+applied: 2026-11-16T06:12
+brain-version-after: CO-20261116-009
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -117,4 +117,8 @@ Approve, change, or reject this Change Order. Justin can decide X1 to X4 one by 
 
 ## 7. Decision record
 
+2026-11-16T06:12. Justin: "Approved as written". Decision: `approved`, all four rows, as written.
+
 ## 8. Implementation record
+
+2026-11-16T06:12. Version check passed (brain-version CO-20261116-008 equals the current Brain version). X1: three caveats added to CON-20261116-002. X2: one caveat and one link line added to CON-20261116-001. X3: two link lines added to CON-20261116-004. X4: one link line added to CON-20261116-005. `change-orders` and `updated` set on the four records. Brain version before: CO-20261116-008. After: CO-20261116-009.
