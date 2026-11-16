@@ -2,9 +2,9 @@
 id: SRC-20261116-014
 type: source
 title: "Vibecoding"
-status: change-proposed
+status: done
 created: 2026-11-16T05:56
-updated: 2026-11-16T06:00
+updated: 2026-11-16T06:09
 created-by: orchestrator
 schema-version: "0.13"
 url: https://ruben.substack.com/p/the-claude-code-bible
@@ -23,6 +23,7 @@ brief:
 assessment:
 change-orders:
   - "[[CO-20261116-007 Vibecoding with Claude Code, Hassid]]"
+  - "[[CO-20261116-009 Follow-up caveats and links for the Hassid Claude Concepts]]"
 source-quality: medium
 extraction-completeness: partial
 extraction-confidence: medium

@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261116-004
 type: concept
 title: Vibecoding with Claude Code
 status: accepted
-created:
-updated:
+created: 2026-11-16T06:07
+updated: 2026-11-16T06:07
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -12,7 +12,8 @@ related:
   - "[[CON-20261115-007 Claude Code instructions and memory]]"
   - "[[CON-20261115-005 Context engineering]]"
 last-reviewed:
-change-orders: []
+change-orders:
+  - "[[CO-20261116-007 Vibecoding with Claude Code, Hassid]]"
 aliases:
   - Vibecoding
 ---

@@ -2,23 +2,23 @@
 id: CO-20261116-008
 type: change-order
 title: Stop hitting Claude usage limits, Hassid
-status: open
+status: applied
 created: 2026-11-16T06:00
-updated: 2026-11-16T06:02
+updated: 2026-11-16T06:07
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261116-015 Stop hitting Claude usage limits, Hassid]]"
-brain-version: CO-20261116-005
+brain-version: CO-20261116-007
 change-types: [create, relate]
 affected:
   - "[[MOC-20261116-001 Using Claude]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T06:07
+decision-note: "006 A 007 B  008 B"
+applied: 2026-11-16T06:07
+brain-version-after: CO-20261116-008
 ---
 
 ## 1. Summary
@@ -144,4 +144,8 @@ Approve, change, or reject each row? X1 can be decided apart from X2 and X3. X2 
 
 ## 7. Decision record
 
+2026-11-16T06:08. Justin: "006 A 007 B  008 B". Decision: `approved`, all rows, as written (option B of the Orchestrator comparison: approve X1 to X3 and ask for a caveat on CON-20261116-002 (Editor A8) and a link to CON-20261116-001. Those rows are not part of this Change Order; they go in a new Change Order for Justin's decision).
+
 ## 8. Implementation record
+
+2026-11-16T06:08. X1 to X3 done. Rebased from CO-20261116-005 to CO-20261116-007 (same reason and checks as CO-20261116-007). New record CON-20261116-005 Habits to reduce token use in Claude (moved from `.staging\proposed`). `change-orders` and `updated` set on MOC-20261116-001. Brain version before: CO-20261116-007. After: CO-20261116-008.

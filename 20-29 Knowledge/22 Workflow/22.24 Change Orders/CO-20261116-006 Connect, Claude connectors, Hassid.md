@@ -2,9 +2,9 @@
 id: CO-20261116-006
 type: change-order
 title: Connect, Claude connectors, Hassid
-status: open
+status: applied
 created: 2026-11-16T06:00
-updated: 2026-11-16T06:01
+updated: 2026-11-16T06:07
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
@@ -14,11 +14,11 @@ change-types: [create, relate]
 affected:
   - "[[MOC-20261116-001 Using Claude]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T06:07
+decision-note: "006 A 007 B  008 B"
+applied: 2026-11-16T06:07
+brain-version-after: CO-20261116-006
 ---
 
 ## 1. Summary
@@ -128,4 +128,8 @@ Approve X1 and X2? Each row can be decided alone, but X2 needs X1. Alternative: 
 
 ## 7. Decision record
 
+2026-11-16T06:08. Justin: "006 A 007 B  008 B". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison).
+
 ## 8. Implementation record
+
+2026-11-16T06:08. X1 and X2 done. Version check passed (Brain version equals brain-version). New record CON-20261116-003 Connect Claude to apps with connectors (moved from `.staging\proposed`). `change-orders` and `updated` set on MOC-20261116-001. Brain version before: CO-20261116-005. After: CO-20261116-006.

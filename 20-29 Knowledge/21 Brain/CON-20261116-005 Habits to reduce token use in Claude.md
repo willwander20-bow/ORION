@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261116-005
 type: concept
 title: Habits to reduce token use in Claude
 status: accepted
-created:
-updated:
+created: 2026-11-16T06:07
+updated: 2026-11-16T06:07
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -13,7 +13,8 @@ related:
   - "[[CON-20261116-002 Set up Claude Cowork with Skills and Projects]]"
   - "[[CON-20261115-007 Claude Code instructions and memory]]"
 last-reviewed:
-change-orders: []
+change-orders:
+  - "[[CO-20261116-008 Stop hitting Claude usage limits, Hassid]]"
 aliases:
   - Avoiding Claude usage limits
 ---

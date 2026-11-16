@@ -2,9 +2,9 @@
 id: SRC-20261116-013
 type: source
 title: "Connect"
-status: change-proposed
+status: done
 created: 2026-11-16T05:56
-updated: 2026-11-16T06:00
+updated: 2026-11-16T06:08
 created-by: orchestrator
 schema-version: "0.13"
 url: https://ruben.substack.com/p/claude-connectors

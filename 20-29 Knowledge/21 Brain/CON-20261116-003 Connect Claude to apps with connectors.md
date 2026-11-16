@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261116-003
 type: concept
 title: Connect Claude to apps with connectors
 status: accepted
-created:
-updated:
+created: 2026-11-16T06:07
+updated: 2026-11-16T06:07
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -12,7 +12,8 @@ related:
   - "[[CON-20261116-002 Set up Claude Cowork with Skills and Projects]]"
   - "[[CON-20261115-005 Context engineering]]"
 last-reviewed:
-change-orders: []
+change-orders:
+  - "[[CO-20261116-006 Connect, Claude connectors, Hassid]]"
 aliases:
   - Claude connectors
 ---

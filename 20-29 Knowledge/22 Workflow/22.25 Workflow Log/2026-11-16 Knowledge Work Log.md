@@ -22,14 +22,18 @@ Earlier events of this session, after midnight (the Curator maintenance run, CO-
 | 06:01 | editor | Second look on 013, 014, 015 (threshold: new records). All three: `advance`, relevance `medium`. Merged as section 1b. Comparison in each Change Order, with options for Justin. Differences: 014 (Editor wants caveats on CON-20261116-002 and CON-20261116-001) and 015 (a caveat on CON-20261116-002 and a link to CON-20261116-001); 013 differs in small links only. | CO-20261116-006 to -008 | compared |
 | 06:02 | orchestrator | Research Questions: 3 rows added by the Orchestrator (no Change Order needed, Schema §2.5): AI-text tells and detectors (011), assumption lists before building (010), connector token cost (013). Concept drafts of the three Change Orders: quotes checked against the raw pages (all found); the stale "not checked" wording in the drafts and in CO-20261116-006 and -008 was updated. | Research Questions | OK |
 | 06:02 | orchestrator | Checks: Frontmatter Check 0 problems (117 files), Link Check 0 problems (28 records), Curator Due: not due (5 of 15). `21 Brain` changed only in `Research Questions.md`. `.staging\proposed` holds 3 drafts (CON x3). | | OK |
+| 06:07 | justin | **Decision:** "006 A 007 B  008 B". CO-20261116-006 approved, option A. CO-20261116-007 and CO-20261116-008 approved as written, option B (the extra caveat rows go in a new Change Order). | CO-20261116-006 to -008 | approved |
+| 06:07 | orchestrator | **Apply CO-20261116-006, then -007, then -008.** Brain version CO-20261116-005 to -006 to -007 to -008. New: CON-20261116-003 Connect Claude to apps with connectors, CON-20261116-004 Vibecoding with Claude Code, CON-20261116-005 Habits to reduce token use in Claude (moved from `.staging\proposed`). Edited: MOC-20261116-001 (3 lines under Processes and methods, 3 evidence lines, 3 `change-orders` entries). -007 and -008 were rebased by the Orchestrator onto the Change Order before (they were drafted in parallel, so the strict KS-D-54 exception does not hold; the comparison had told Justin of the rebase, and the MOC lines only add). Sources 013, 014, 015 set to `done`. | CO-20261116-006 to -008 | applied |
+| 06:09 | managing-editor | Follow-up draft for Justin's option B (007 and 008): 4 rows (caveats on CON-20261116-002 and CON-20261116-001; links on CON-20261116-004 and -005). Saved as CO-20261116-009 (`open`, brain-version CO-20261116-008, below the threshold, no Editor). Added to `change-orders` of SRC-014 and SRC-015 (both stay `done`). | CO-20261116-009 | open |
+| 06:10 | orchestrator | Checks: Frontmatter Check 0 problems (121 files), Link Check 0 problems (31 records). Curator Due: not due (8 of 15). `.staging` is empty. | | OK |
 
 ## Decisions
 
-CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: approved (see above).
+CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: approved (see above). CO-20261116-006: approved, option A. CO-20261116-007 and CO-20261116-008: approved, option B (see above).
 
 ## Open
 
-- Open Change Orders (guides 8 to 15): CO-20261116-006, CO-20261116-007, CO-20261116-008. Justin decides. They share MOC-20261116-001 lines, so the Orchestrator rebases the later ones after the first is applied.
+- Open: CO-20261116-009 (caveats and links for the Hassid Claude Concepts, from option B of -007 and -008). Justin decides.
 - The TikTok list is complete: all 15 guides have a Source note.
 - Paid posts: only the free preview was read. A saved copy of the full text from Justin would allow a fuller Brief.
 

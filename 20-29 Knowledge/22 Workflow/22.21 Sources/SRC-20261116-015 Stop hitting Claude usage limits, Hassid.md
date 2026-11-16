@@ -2,9 +2,9 @@
 id: SRC-20261116-015
 type: source
 title: "How to stop hitting Claude usage limits"
-status: change-proposed
+status: done
 created: 2026-11-16T05:56
-updated: 2026-11-16T06:00
+updated: 2026-11-16T06:09
 created-by: orchestrator
 schema-version: "0.13"
 url: https://ruben.substack.com/p/how-to-stop-hitting-claude-usage
@@ -23,6 +23,7 @@ brief:
 assessment:
 change-orders:
   - "[[CO-20261116-008 Stop hitting Claude usage limits, Hassid]]"
+  - "[[CO-20261116-009 Follow-up caveats and links for the Hassid Claude Concepts]]"
 source-quality: medium
 extraction-completeness: partial
 extraction-confidence: medium
