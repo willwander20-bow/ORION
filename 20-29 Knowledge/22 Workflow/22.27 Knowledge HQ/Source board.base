@@ -13,10 +13,10 @@ properties:
     displayName: Type
   access-status:
     displayName: Access
-  brief:
-    displayName: Brief
-  assessment:
-    displayName: Assessment
+  source-quality:
+    displayName: Source quality
+  claim-count:
+    displayName: Claims
   change-orders:
     displayName: Change Orders
 views:
@@ -33,8 +33,8 @@ views:
       - status
       - processing-level
       - source-type
-      - brief
-      - assessment
+      - source-quality
+      - claim-count
       - change-orders
       - updated
     sort:
@@ -62,8 +62,8 @@ views:
       - processing-level
       - source-type
       - captured
-      - brief
-      - assessment
+      - source-quality
+      - claim-count
       - change-orders
     sort:
       - property: captured

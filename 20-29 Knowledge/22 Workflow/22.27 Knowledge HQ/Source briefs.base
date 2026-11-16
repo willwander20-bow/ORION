@@ -1,0 +1,57 @@
+filters:
+  and:
+    - file.inFolder("20-29 Knowledge/22 Workflow/22.21 Sources")
+    - '!file.name.contains("(text)")'
+properties:
+  file.name:
+    displayName: Source
+  status:
+    displayName: Status
+  source-quality:
+    displayName: Source quality
+  extraction-completeness:
+    displayName: Extraction
+  extraction-confidence:
+    displayName: Confidence
+  claim-count:
+    displayName: Claims
+  access-status:
+    displayName: Access
+views:
+  - type: table
+    name: Briefs in Source notes
+    filters:
+      or:
+        - 'status == "briefed"'
+        - 'status == "assessed"'
+        - 'status == "change-proposed"'
+        - 'status == "done"'
+    order:
+      - file.name
+      - status
+      - source-quality
+      - extraction-completeness
+      - extraction-confidence
+      - claim-count
+      - updated
+    sort:
+      - property: updated
+        direction: DESC
+  - type: table
+    name: Sources without a Brief
+    filters:
+      or:
+        - 'status == "new"'
+        - 'status == "routed"'
+        - 'status == "needs-review"'
+        - 'status == "failed"'
+        - 'status == "skipped"'
+        - 'status == "archived"'
+    order:
+      - file.name
+      - status
+      - access-status
+      - updated
+    sort:
+      - property: updated
+        direction: DESC

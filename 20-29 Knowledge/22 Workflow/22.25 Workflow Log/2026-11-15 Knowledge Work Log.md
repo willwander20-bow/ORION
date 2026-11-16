@@ -98,6 +98,9 @@
 | 20:08 | orchestrator | Version check passed (CO-20261115-008). Change Order applied: `Repoint Citations.ps1 -Apply`, 78 replacements in 11 files (74 in 10 Brain records, 4 in Research Questions). No BRF or KAS ID left in the Brain; 78 SRC citations. `change-orders` and `updated` set on the 10 Brain records. Precise check: each Brain file equals its committed version after normalizing IDs and link names (11 of 11). Frontmatter Check 0, Link Check 0. No Curator review (threshold: Curator Due says not due: 10 Change Orders and 2 days since the last maintenance report) | [[CO-20261115-009 Repoint Brain citations to Source notes]] | Brain version `CO-20261115-008` to `CO-20261115-009` |
 | 20:08 | orchestrator | Handoff updated (same approval as the earlier records for this work): KS-07 KS-D-52 and row 0.37; KS-08 §8.17 and row 0.45. Rulebook §4.1, §4.2, §4.5 item 6, and §2 wording updated (no legacy notes); area `CLAUDE.md` v0.17 | KS-07, KS-08, `20.04`, `CLAUDE.md` | OK |
 
+| 20:11 | justin | "Update it" (the Knowledge HQ for the merged records) | `22.27 Knowledge HQ` | — |
+| 20:11 | orchestrator | Knowledge HQ updated: `Source board.base` shows `source-quality` and `claim-count` in place of the empty `brief` and `assessment` columns; new `Source briefs.base` (views "Briefs in Source notes" and "Sources without a Brief", no filter on a hyphenated field); the empty `Briefs and Assessments.base` moved to `20.09 Knowledge Archive`; `Knowledge HQ.md` sections 5 and 8 reworded. Not yet seen in Obsidian: Obsidian may re-save the files | `22.27 Knowledge HQ` | OK, unseen |
+
 
 ## Decisions
 

@@ -1063,7 +1063,7 @@ Status: DONE (KS-D-52). Justin: "Yes i want to do a migration"; "Yes approved".
 
 Records now: 14 Source notes (11 with a Brief and an Assessment, 3 without), Change Orders (9 in `22.24` for 2026-11-15, 8 for 2026-11-13), health reports, and 11 Brain notes. The workflow folders `22.22` and `22.23` are empty.
 
-Open: the Knowledge HQ "Briefs and Assessments" view is empty; the Source board does not show the merged fields; the new flow (KS-D-50, KS-D-51) has not run with a new source.
+Knowledge HQ updated (Justin: "Update it"): the Source board shows `source-quality` and `claim-count`; the new view `Source briefs.base` shows the Briefs in the Source notes and the Sources without a Brief; the empty "Briefs and Assessments" view is in `20.09 Knowledge Archive`. Open: the new flow (KS-D-50, KS-D-51) has not run with a new source, and the Knowledge HQ views are not yet seen in Obsidian.
 
 ## 9. Change log
 

@@ -27,15 +27,15 @@ Brain version: see the newest Change Order with the status `applied` in the list
 
 ![[Source board.base#Needs review or failed]]
 
-## 5. Outputs
+## 5. Briefs
 
-### Reference Briefs
+The Brief of a source is a section of its Source note (KS-D-51). The Assessment is section 1a of the Change Order, and section 1b when the Editor made a second look. Older Assessments are a section of the Source note.
 
-![[Briefs and Assessments.base#Reference Briefs]]
+![[Source briefs.base#Briefs in Source notes]]
 
-### Knowledge Assessments
+### Sources without a Brief
 
-![[Briefs and Assessments.base#Knowledge Assessments]]
+![[Source briefs.base#Sources without a Brief]]
 
 ## 6. Knowledge health
 
@@ -58,7 +58,7 @@ Give the source to the Orchestrator. Do this in a Claude Code session in `20-29 
 1. Give the link or the file.
 2. Give your reason in your own words. The Orchestrator copies it to `submission-context`.
 3. The Orchestrator makes the Source record (status `new`), routes it, and sets the status `routed`. The Source then shows in section 3.
-4. Each stage of the workflow changes the Source status. The Orchestrator also sets `brief`, `assessment`, and `change-orders` on the Source. Open the links from the Source row.
+4. Each stage of the workflow changes the Source status. The Brief becomes a section of the Source note, and the Orchestrator sets `change-orders` on the Source. Open the Change Order from the Source row.
 5. When a Change Order is ready, it shows in section 1. Your decision moves it out of section 1 (Rulebook §6).
 
 New capture channels (phone, browser, Inbox) are for the Intake System (X-D-04). Until then, you submit by hand (KS-D-06).
