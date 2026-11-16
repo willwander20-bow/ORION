@@ -39,7 +39,7 @@ The author draws this from benchmark results of other works (E11). The Brief giv
 
 - [[SRC-20261115-013 Memory for autonomous LLM agents, Du|Memory for Autonomous LLM Agents (Du, arXiv, 2026-03-08)]] · E11 · § 5.5 Cross-cutting lessons from the benchmarks · supports · quote: "Long context is not memory."; checked against the page; the comparison with purpose-built systems is the Reporter's summary.
 - [[SRC-20261115-013 Memory for autonomous LLM agents, Du|Memory for Autonomous LLM Agents (Du, arXiv, 2026-03-08)]] · E18 · § 4.1 Context-resident memory and compression · supports · quote: "Each compression pass silently discards low-frequency details."; checked against the page; the statement that larger windows only delay the problem is a summary.
-- [[SRC-20261115-014 Anatomy of agentic memory, arXiv|Anatomy of Agentic Memory (Jiang et al., arXiv, 2026-05-20)]] Â· E2, E9 Â· qualifies Â· quote: "inconsistent across benchmarks" (checked against the page); the saturation ratings are a summary, unchecked.
+- [[SRC-20261115-014 Anatomy of agentic memory, arXiv|Anatomy of Agentic Memory (Jiang et al., arXiv, 2026-05-20)]] · E2, E9 · qualifies · quote: "inconsistent across benchmarks" (checked against the page); the saturation ratings are a summary, unchecked.
 
 ## Relationships
 

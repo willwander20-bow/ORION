@@ -49,4 +49,4 @@ Caveats:
 
 - [[SRC-20261113-011 Self-improving Claude knowledge base, Lipsky|Build a Self Improving Claude Knowledge Base (Lipsky, 2026)]] · E1, E2, E3, E9, E10 · definition and credit · E4, E5, E6, E8, E15, E16 · stated reason and tools, not tested
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E6 · § Give the agent a memory protocol · a map-first rule; opinion, no test
-- [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]] Â· E2, E7 Â· Â§ The core idea Â· E8 Â· Â§ Architecture Â· E9 Â· Â§ Operations Â· E11 Â· Â§ Indexing and logging Â· primary description; a proposal, no test
+- [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]] · E2, E7 · § The core idea · E8 · § Architecture · E9 · § Operations · E11 · § Indexing and logging · primary description; a proposal, no test

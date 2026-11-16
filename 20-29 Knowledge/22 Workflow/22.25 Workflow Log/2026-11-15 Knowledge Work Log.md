@@ -161,6 +161,8 @@
 | 23:58 | orchestrator | **Apply, six Change Orders in order 015, 016, 017, 018, 019, 020.** Brain version CO-20261115-014 to CO-20261115-020. 7 new Brain records with IDs: CON-20261115-004 Johnny.Decimal folder system, MOC-20261115-003 Organising files with numbered folders, CON-20261115-005 Context engineering, CLM-20261115-007 Longer context can lower model performance, CON-20261115-006 Agent memory, CLM-20261115-008 Long context is not agent memory, CON-20261115-007 Claude Code instructions and memory. 8 existing records edited by additions, and two sentences replaced (CON-20261113-003, MOC-20261113-002). Draft IDs in CO-017 (CON-20261115-004 for the Concept) were moved to CON-20261115-005, because CO-015 took -004. | CO-20261115-015 to -020 | applied |
 | 23:58 | orchestrator | **Deviation from Rulebook §6 step 3:** CO-016, -017, -018, -020 are not dependent Change Orders, but each had `brain-version` CO-014 when the Brain was already at a later version. The Orchestrator rebased each after checking that earlier Change Orders of the batch changed none of its records, or only added to the same sections, and that each "Current" text was found. Justin approved all six in one decision. Recorded in §8 of each Change Order. Justin may want a rule for independent Change Orders in a batch. | CO-20261115-016, -017, -018, -020 | noted |
 | 23:58 | orchestrator | Sources SRC-20261115-009 to -014 set to `done`. Frontmatter Check 0 (90 files). Link Check 0 (25 records). Curator Due: DUE (21 of 15). Two write attempts to MOC-20261115-002 hit a file lock once; the script retried and the first partial line was removed before the rerun. | | OK |
+| 00:04 | orchestrator | **Curator maintenance run** (trigger: 21 of 15 Change Orders). `Link Check.ps1` run first (0 problems) and given to the Curator. First test of the Curator's write path to `.staging`: it wrote one file there and no other (git status). About 132,000 tokens. Report validated: Frontmatter Check 0, quotations found in the Brain or the agent file, Brain not changed by the Curator. Saved as [[KHR-20261116-001 Brain maintenance review]], status `validated`, 13 findings (H1 to H13). Curator Due: not due. | KHR-20261116-001 | validated |
+| 00:04 | orchestrator | **Error found by the Curator (H3), caused by the Orchestrator:** the apply scripts had no `use utf8`, so the characters "·" and "§" in the new text were double-encoded (5 Brain records and CO-016). Fixed by removing the extra character; 6 files, 6 lines, no other change. The other findings (H1, H2, H4 and more) wait for Justin's decision. | CLM-20261115-001, -008; CON-20261113-003, -004; CON-20261115-006; CO-20261115-016 | fixed |
 
 ## Decisions
 
@@ -194,7 +196,7 @@
 - KHR-20261115-001 H4 (optional: "confidence low" in the MOC-001 line for CLM-001) was not approved and stays open.
 
 - CO-20261115-015 to -020: applied (Justin approved all).
-- Curator `maintenance` run is DUE (15 of 15). Justin decides when.
+- Curator maintenance ran (KHR-20261116-001). 13 findings wait for Justin: which go to the Managing Editor.
 - SRC-20261115-007 (Medium-hosted article) still needs a saved copy or another link.
 
 ## Notes

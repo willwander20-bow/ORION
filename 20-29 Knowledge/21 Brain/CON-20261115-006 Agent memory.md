@@ -65,4 +65,4 @@ None.
 ## Sources
 
 - [[SRC-20261115-013 Memory for autonomous LLM agents, Du|Memory for Autonomous LLM Agents (Du, arXiv, 2026-03-08)]] · E1, E2, E3, E5, E6, E7, E8, E12, E14, E18 · quotes checked against the page · E4, E15 · summary or unsupported by a count
-- [[SRC-20261115-014 Anatomy of agentic memory, arXiv|Anatomy of Agentic Memory (Jiang et al., arXiv, 2026-05-20)]] Â· E1, E4, E5 Â· quotes checked Â· E2, E3, E6, E7, E8 Â· summaries, unchecked
+- [[SRC-20261115-014 Anatomy of agentic memory, arXiv|Anatomy of Agentic Memory (Jiang et al., arXiv, 2026-05-20)]] · E1, E4, E5 · quotes checked · E2, E3, E6, E7, E8 · summaries, unchecked

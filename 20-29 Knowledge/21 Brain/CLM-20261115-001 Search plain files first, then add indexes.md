@@ -40,7 +40,7 @@ One source, an opinion and design article. It gives no benchmarks and no vault s
 
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E3 · § Search first, index later · supports · Quote: "If an index is corrupted, stale, or tied to a vendor, you rebuild it." A design opinion. No performance data.
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E4 · § Search first, index later · supports · start with `rg` and frontmatter queries; add indexes only if retrieval is slow or imprecise. E4 is a WebFetch summary that was not checked against the page.
-- [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]] Â· E11 Â· Â§ Indexing and logging Â· qualifies Â· An `index.md` catalog that the LLM reads first works at about 100 sources without embedding-based RAG. No measurement. His index is a page that the LLM keeps, not a derived index.
+- [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]] · E11 · § Indexing and logging · qualifies · An `index.md` catalog that the LLM reads first works at about 100 sources without embedding-based RAG. No measurement. His index is a page that the LLM keeps, not a derived index.
 
 ## Relationships
 
