@@ -4,7 +4,7 @@ type: brain-claim
 title: Git history alone is not a full backup
 status: accepted
 created: 2026-11-15T18:39
-updated: 2026-11-15T18:39
+updated: 2026-11-15T20:08
 created-by: orchestrator
 schema-version: "0.11"
 confidence: low
@@ -22,6 +22,7 @@ valid-to:
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
 aliases:
   - Git is not a backup
 ---
@@ -36,7 +37,7 @@ One short statement from one opinion source. The article cites Obsidian's guidan
 
 ## Evidence
 
-- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E5 · § Use Git history, but still make backups · supports · Quote: "Git is not automatically a complete backup." Short statement; reasons not checked.
+- [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E5 · § Use Git history, but still make backups · supports · Quote: "Git is not automatically a complete backup." Short statement; reasons not checked.
 
 ## Relationships
 

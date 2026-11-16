@@ -4,7 +4,7 @@ type: brain-claim
 title: Search plain files first, then add indexes
 status: accepted
 created: 2026-11-15T18:39
-updated: 2026-11-15T18:39
+updated: 2026-11-15T20:08
 created-by: orchestrator
 schema-version: "0.11"
 confidence: low
@@ -22,6 +22,7 @@ valid-to:
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
 aliases:
   - Search first, index later
 ---
@@ -36,8 +37,8 @@ One source, an opinion and design article. It gives no benchmarks and no vault s
 
 ## Evidence
 
-- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E3 · § Search first, index later · supports · Quote: "If an index is corrupted, stale, or tied to a vendor, you rebuild it." A design opinion. No performance data.
-- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E4 · § Search first, index later · supports · start with `rg` and frontmatter queries; add indexes only if retrieval is slow or imprecise. E4 is a WebFetch summary that was not checked against the page.
+- [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E3 · § Search first, index later · supports · Quote: "If an index is corrupted, stale, or tied to a vendor, you rebuild it." A design opinion. No performance data.
+- [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E4 · § Search first, index later · supports · start with `rg` and frontmatter queries; add indexes only if retrieval is slow or imprecise. E4 is a WebFetch summary that was not checked against the page.
 
 ## Relationships
 

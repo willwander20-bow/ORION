@@ -4,7 +4,7 @@ type: brain-claim
 title: Lasting notes belong in open files
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-15T18:55
+updated: 2026-11-15T20:08
 created-by: orchestrator
 schema-version: "0.6"
 confidence: low
@@ -31,6 +31,7 @@ change-orders:
   - "[[CO-20261115-002 Align LoC access-measures wording]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
+  - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
 aliases:
   - Durable notes need open files
 ---
@@ -53,41 +54,41 @@ Condition on access measures: the file has no measure that controls access to it
 
 ## Evidence
 
-- [[BRF-20261113-001 File over app|File over app (Ango, 2023)]] · E1 · ¶1 · supports · definition of the principle.
-- [[BRF-20261113-001 File over app|File over app (Ango, 2023)]] · E2 · ¶3 · supports · apps fade; files can last.
-- [[BRF-20261113-001 File over app|File over app (Ango, 2023)]] · E6 · ¶10 · supports · the author's own practice.
-- [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E26 · § CONCLUSION · supports · the author's summary of reasons for plain text.
-- [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E4 · § Write plain text files (opening section, before § PORTABLE) · supports · the author's own practice: plain text only.
-- [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E5 · § PORTABLE · supports · files kept across operating systems since 1990 (self-report, not checked).
-- [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E14, E15 · § NO DEPENDENCIES · supports · no dependency on one app; reasoning and opinion only.
-- [[BRF-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E2 · § Born-Digital Textual Data, Preferred Formats table, rows ASCII Text and Unicode Text · supports (indirect) · NARA prefers plain text for textual records.
-- [[BRF-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E6 · § Born-Digital Textual Data, Acceptable Formats table, row Microsoft Word (DOCX) Office Open XML · supports (indirect) · DOCX is acceptable only, not preferred.
-- [[BRF-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E7 · § Born-Digital Textual Data, Acceptable Formats table, row DOC · supports (indirect) · DOC is acceptable only, not preferred.
-- [[BRF-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E1 · § Born-Digital Textual Data (prose before the tables) · supports · encoding rule for plain text.
-- [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E8 · § ii. Textual Works - Digital, A. Technical Characteristics · supports (indirect) · encoding list for digital text, nearly the same as NARA's.
-- [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E11, E12, E13 · § ii. Textual Works - Digital, B. Formats · qualifies · structured formats preferred; plain text acceptable only; no reasons.
-- [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E14 · § ii. Textual Works - Digital, F. Technological Measures · qualifies · no DRM or encryption that controls access to or prevents use of the digital work; no reason given; the Orchestrator checked the full sentence against the raw LoC page on 2026-11-15.
-- [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E2, E3 · § All You Need is Plaintext · qualifies · metadata and links make a plain-text file non-standard rich text; argument only.
-- [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E7 · § The Plaintext is a Lie · supports · plain text as the storage type is necessary.
-- [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E8, E9 · § Screw .TXT, All My Homies Use Markdown · qualifies · Markdown has platform-specific behaviors; informal, no list.
-- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E1 · § Obsidian Is Optional: Build an AI Second Brain With Plain Markdown (opening section, before § What a second brain actually needs) · supports · a folder of plain Markdown files can provide the durable memory layer for a second brain; opinion, no data.
-- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E7 · § The practical answer · supports · "The durable second brain is not the app"; a conclusion, not evidence.
-- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E2 · § Use a portable note contract, § Prefer standard relative links · qualifies · standard relative links preferred for portability; no test.
+- [[SRC-20261113-001 File over app|File over app (Ango, 2023)]] · E1 · ¶1 · supports · definition of the principle.
+- [[SRC-20261113-001 File over app|File over app (Ango, 2023)]] · E2 · ¶3 · supports · apps fade; files can last.
+- [[SRC-20261113-001 File over app|File over app (Ango, 2023)]] · E6 · ¶10 · supports · the author's own practice.
+- [[SRC-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E26 · § CONCLUSION · supports · the author's summary of reasons for plain text.
+- [[SRC-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E4 · § Write plain text files (opening section, before § PORTABLE) · supports · the author's own practice: plain text only.
+- [[SRC-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E5 · § PORTABLE · supports · files kept across operating systems since 1990 (self-report, not checked).
+- [[SRC-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E14, E15 · § NO DEPENDENCIES · supports · no dependency on one app; reasoning and opinion only.
+- [[SRC-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E2 · § Born-Digital Textual Data, Preferred Formats table, rows ASCII Text and Unicode Text · supports (indirect) · NARA prefers plain text for textual records.
+- [[SRC-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E6 · § Born-Digital Textual Data, Acceptable Formats table, row Microsoft Word (DOCX) Office Open XML · supports (indirect) · DOCX is acceptable only, not preferred.
+- [[SRC-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E7 · § Born-Digital Textual Data, Acceptable Formats table, row DOC · supports (indirect) · DOC is acceptable only, not preferred.
+- [[SRC-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]] · E1 · § Born-Digital Textual Data (prose before the tables) · supports · encoding rule for plain text.
+- [[SRC-20261113-008 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E8 · § ii. Textual Works - Digital, A. Technical Characteristics · supports (indirect) · encoding list for digital text, nearly the same as NARA's.
+- [[SRC-20261113-008 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E11, E12, E13 · § ii. Textual Works - Digital, B. Formats · qualifies · structured formats preferred; plain text acceptable only; no reasons.
+- [[SRC-20261113-008 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]] · E14 · § ii. Textual Works - Digital, F. Technological Measures · qualifies · no DRM or encryption that controls access to or prevents use of the digital work; no reason given; the Orchestrator checked the full sentence against the raw LoC page on 2026-11-15.
+- [[SRC-20261113-006 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E2, E3 · § All You Need is Plaintext · qualifies · metadata and links make a plain-text file non-standard rich text; argument only.
+- [[SRC-20261113-006 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E7 · § The Plaintext is a Lie · supports · plain text as the storage type is necessary.
+- [[SRC-20261113-006 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E8, E9 · § Screw .TXT, All My Homies Use Markdown · qualifies · Markdown has platform-specific behaviors; informal, no list.
+- [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E1 · § Obsidian Is Optional: Build an AI Second Brain With Plain Markdown (opening section, before § What a second brain actually needs) · supports · a folder of plain Markdown files can provide the durable memory layer for a second brain; opinion, no data.
+- [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E7 · § The practical answer · supports · "The durable second brain is not the app"; a conclusion, not evidence.
+- [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E2 · § Use a portable note contract, § Prefer standard relative links · qualifies · standard relative links preferred for portability; no test.
 
 ## Relationships
 
 - Concept [[CON-20261113-001 File over app|file over app]]: this claim applies the principle to notes.
-- Concept [[CON-20261113-002 Work with plain-text notes|work with plain-text notes]]: methods for notes kept as plain text. Both records cite BRF-20261113-005 E2, which qualifies step 2 of the process and the condition of this claim for notes with links and metadata. A link, not a dependency.
+- Concept [[CON-20261113-002 Work with plain-text notes|work with plain-text notes]]: methods for notes kept as plain text. Both records cite SRC-20261113-006 E2, which qualifies step 2 of the process and the condition of this claim for notes with links and metadata. A link, not a dependency.
 
 ## Disputes and caveats
 
-- Three opinion sources support the claim: Ango (BRF-20261113-001), Sivers (BRF-20261113-003), and Wall (BRF-20261115-002). One more opinion source, Bologov (BRF-20261113-005), qualifies its conditions (see below). Ango leads Obsidian, so the principle supports his product (BRF-20261113-001 states this conflict of interest). The publisher of Wall sells a related product (see the Wall bullet below). The Brain does not show that these authors are independent of each other.
-- First institutional source: NARA (BRF-20261113-002). It is independent of Obsidian, but its support is indirect. It ranks plain text above both Word formats for the transfer of federal records. It gives no reasons, so it does not support either reason in this claim. Its scope is federal records, not personal notes. The part of the page that the Brief read does not define 'preferred' and 'acceptable'.
+- Three opinion sources support the claim: Ango (SRC-20261113-001), Sivers (SRC-20261113-003), and Wall (SRC-20261115-001). One more opinion source, Bologov (SRC-20261113-006), qualifies its conditions (see below). Ango leads Obsidian, so the principle supports his product (SRC-20261113-001 states this conflict of interest). The publisher of Wall sells a related product (see the Wall bullet below). The Brain does not show that these authors are independent of each other.
+- First institutional source: NARA (SRC-20261113-002). It is independent of Obsidian, but its support is indirect. It ranks plain text above both Word formats for the transfer of federal records. It gives no reasons, so it does not support either reason in this claim. Its scope is federal records, not personal notes. The part of the page that the Brief read does not define 'preferred' and 'acceptable'.
 - NARA also prefers ODT and PDF/A-1 and PDF/A-2, and lists general PDF 1.0–1.7 as acceptable only. NARA does not call these formats open. Openness alone possibly does not explain its ranking.
-- Second institutional source: the Library of Congress (LoC, BRF-20261113-006). It does not rank plain text first. For digital textual works, it prefers structured formats with a schema or a standard: XML-based markup with a DTD or schema, EPUB3, other book DTDs (TEI, DocBook), PDF/UA, PDF/A, and PDF of the highest quality. It lists plain text as acceptable only, under "Other formats", with RTF and proprietary word-processing formats. LoC gives no reasons, and not every LoC preference is a durability judgment. Its scope is the textual works that it receives for its collection, not personal notes. So NARA's rank for plain text is not a shared institutional view. LoC does not say that plain text fails to last. This is a difference in scope and conditions, not a contradiction.
+- Second institutional source: the Library of Congress (LoC, SRC-20261113-008). It does not rank plain text first. For digital textual works, it prefers structured formats with a schema or a standard: XML-based markup with a DTD or schema, EPUB3, other book DTDs (TEI, DocBook), PDF/UA, PDF/A, and PDF of the highest quality. It lists plain text as acceptable only, under "Other formats", with RTF and proprietary word-processing formats. LoC gives no reasons, and not every LoC preference is a durability judgment. Its scope is the textual works that it receives for its collection, not personal notes. So NARA's rank for plain text is not a shared institutional view. LoC does not say that plain text fails to last. This is a difference in scope and conditions, not a contradiction.
 - Currency: the NARA page was last reviewed on 2026-03-11, but its DOCX row names Word 2007–2010 only. The lists can be older than the current versions of the formats. A format that is not listed is not shown to be rejected.
-- No source gives data. NARA is from digital preservation work, but it gives a list with no reasons. LoC (BRF-20261113-006) also gives preferences with no reasons and no durability data. Evidence strength stays `weak` until a source with data or reasons supports it.
+- No source gives data. NARA is from digital preservation work, but it gives a list with no reasons. LoC (SRC-20261113-008) also gives preferences with no reasons and no durability data. Evidence strength stays `weak` until a source with data or reasons supports it.
 - Scope: Sivers is broader and more absolute. He keeps almost everything important in plain text only. This claim stays limited to notes meant to last.
-- One opinion source (Bologov, BRF-20261113-005, `source-quality: low`) qualifies the conditions of this claim. It does not contradict it. It gives no data. ORION applies this claim through Markdown files with YAML metadata and links, so ORION notes are the kind of note that the qualification is about. No source tests this.
+- One opinion source (Bologov, SRC-20261113-006, `source-quality: low`) qualifies the conditions of this claim. It does not contradict it. It gives no data. ORION applies this claim through Markdown files with YAML metadata and links, so ORION notes are the kind of note that the qualification is about. No source tests this.
 - ORION applies this claim: root `CLAUDE.md` §4.4 and area rule 12 ("keep Markdown and YAML portable").
-- Third opinion source (Wall, BRF-20261115-002, `source-quality: medium`). It agrees in direction. It does not argue from app obsolescence, and it is about AI second brains. The publisher sells a related product (Brief objectivity 2 of 5), so it is not independent of its own products. It gives no data. Confidence stays `low` and evidence strength stays `weak`.
+- Third opinion source (Wall, SRC-20261115-001, `source-quality: medium`). It agrees in direction. It does not argue from app obsolescence, and it is about AI second brains. The publisher sells a related product (Brief objectivity 2 of 5), so it is not independent of its own products. It gives no data. Confidence stays `low` and evidence strength stays `weak`.

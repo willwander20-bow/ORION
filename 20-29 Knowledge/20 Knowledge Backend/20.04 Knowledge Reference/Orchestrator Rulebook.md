@@ -51,7 +51,7 @@ The Source `status` is the workflow state (Schema §5.1, KS-D-25). There is no s
 | `new`, `routed` | `failed` | Orchestrator | Access check fails, or the Reporter reports `access-status: none`. |
 | `routed` | `briefed` | Orchestrator | The Brief draft is `validated` and merged into the Source note (section 4.1, KS-D-51). Legacy Sources: Brief saved and `validated`. |
 | `briefed` | `done` | Orchestrator | `quick-brief` only (KS-D-41). |
-| `briefed` | `assessed` | Orchestrator | Legacy Sources only. A new Source has no `assessed` state (KS-D-51). |
+| `briefed` | `assessed` | Orchestrator | Legacy Sources only (migrated, KS-D-52). A new Source has no `assessed` state (KS-D-51). |
 | `briefed` | `change-proposed` | Orchestrator | Change Order saved `open` (sections 4.3 and 4.5). |
 | `briefed` | `done` | Orchestrator | Merged mode: the Managing Editor returns No Change. |
 | `assessed` | `done` | Orchestrator | `recommended-action` is `no-action`, or `investigate` and the row is added to `Research Questions.md`, or the Managing Editor returns No Change. |
@@ -87,7 +87,7 @@ Validate each output before the next stage. An agent draft is validated in `.sta
 
 ### 4.1 Reference Brief
 
-**New source (KS-D-51).** The Brief is a draft in `.staging` (`BRF-draft <Source ID>.md`). Validate it there, with the checks below. On a pass: run `Merge Draft.ps1 -Mode Brief -Draft "<draft>" -Target "<Source note>"`, which puts the Brief into the Source note, set the Source to `briefed`, and remove the draft. No `BRF` note is made. A `Quote Check.ps1` run on the Source note reads the same `Quote:` lines. **Legacy:** the older Briefs are saved notes. The checks are the same.
+**New source (KS-D-51).** The Brief is a draft in `.staging` (`BRF-draft <Source ID>.md`). Validate it there, with the checks below. On a pass: run `Merge Draft.ps1 -Mode Brief -Draft "<draft>" -Target "<Source note>"`, which puts the Brief into the Source note, set the Source to `briefed`, and remove the draft. No `BRF` note is made. A `Quote Check.ps1` run on the Source note reads the same `Quote:` lines. **Legacy:** the older Briefs were migrated into their Source notes (KS-D-52). The checks are the same.
 
 1. The Reporter's final check (reporter §11) is in Brief §12, and each item passes.
 2. Frontmatter: all fields of `TPL Reference Brief.md` are present. Values are in Schema §5.5. `source` links to the Source. `claim-count` equals the rows in §7.
@@ -103,7 +103,7 @@ Pass: set the Brief to `validated` and the Source to `briefed`.
 
 ### 4.2 Knowledge Assessment
 
-**New source (KS-D-51).** No Assessment note is made. At the threshold, the Editor's Assessment is a draft in `.staging` (`KAS-draft <Source ID>.md`). Validate it there, with the checks below. On a pass: run `Merge Draft.ps1 -Mode Assessment -Draft "<draft>" -Target "<Change Order>"`, which adds it to the Change Order as section 1b, and remove the draft. **Legacy:** the older Assessments are saved notes.
+**New source (KS-D-51).** No Assessment note is made. At the threshold, the Editor's Assessment is a draft in `.staging` (`KAS-draft <Source ID>.md`). Validate it there, with the checks below. On a pass: run `Merge Draft.ps1 -Mode Assessment -Draft "<draft>" -Target "<Change Order>"`, which adds it to the Change Order as section 1b, and remove the draft. **Legacy:** the older Assessments were migrated into their Source notes as "# Assessment (migrated)" (KS-D-52).
 
 1. The Editor's final check (editor §10) is in Assessment §6, and each item passes.
 2. Frontmatter: fields of Schema §5.7. `brain-version` equals the current Brain version (Schema §5.6).
@@ -148,7 +148,7 @@ The Knowledge Curator has three modes: `maintenance`, `impact-review`, and `retr
 3. **Double check at the threshold.** The threshold is: the Change Order makes a record, or changes the text, status, `confidence`, or `evidence-strength` of a Claim, or edits 5 or more Brain records. At the threshold, invoke the Editor on the same Brief (the Source note). Validate the Assessment draft and merge it into the Change Order as section 1b (section 4.2). Compare 1b with 1a: each Editor finding has a row or a stated reason. If the two disagree, tell Justin before you present the Change Order.
 4. **New records.** Each new record is a draft in `.staging\proposed\`. Give it its ID and move it into `21 Brain` only when Justin approves its row (section 6, step 4).
 5. **Curator trigger.** After each apply, run `Curator Due.ps1` in this folder. If it says DUE, invoke the Curator in `maintenance` mode (section 4.4). It is due when 15 Change Orders were applied, or 15 days passed, since the last maintenance report, whichever comes first. This replaces the per-apply impact review of v0.7 (KS-D-48). Justin can ask for an `impact-review` at any time.
-6. **Citations (KS-D-51).** Evidence in a new Brain record cites the Source note: `[[SRC-… Title|short name]] · E3`. The `E` labels are those of the Brief section in the Source note. Do not link a legacy `BRF` note from a new record, unless the record cites that legacy Brief.
+6. **Citations (KS-D-51).** Evidence in a new Brain record cites the Source note: `[[SRC-… Title|short name]] · E3`. The `E` labels are those of the Brief section in the Source note.
 
 ## 5. Errors and retry
 
@@ -202,3 +202,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | 2026-11-15 | 0.7 | Phase 7 test run (KS-D-48): §6 step 10 sets a threshold for the Curator impact review after an apply: a new record, a change to the text, status, `confidence`, or `evidence-strength` of a Claim, or 5 or more Brain records edited. Justin first set 3 records, then raised it to 5. |
 | 2026-11-15 | 0.8 | KS-D-50: new §4.5 (staging, merged mode, double check at the threshold, Curator trigger of 15 Change Orders or 15 days). §2: two merged-mode states. §4.3 item 7: delta rule. §6 step 4 and step 10. Not yet tested on a real source. |
 | 2026-11-15 | 0.9 | KS-D-51: a new Source holds its Brief, and a new Change Order holds the Editor second look (§2 states, §4.1, §4.2, §4.5 items 2, 3, and 6). `Merge Draft.ps1`. Legacy BRF and KAS notes stay as they are. Not yet tested on a real source. |
+| 2026-11-15 | 0.9 | KS-D-52: the legacy Briefs and Assessments were migrated into Source notes, and the Brain cites the Source notes (CO-20261115-009). Wording of §4.1, §4.2, §4.5 item 6, and §2 updated. |

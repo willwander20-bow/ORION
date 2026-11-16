@@ -2,9 +2,9 @@
 id: CO-20261115-009
 type: change-order
 title: "Repoint Brain citations from archived Briefs and Assessments to Source notes"
-status: open
+status: applied
 created: 2026-11-15T20:01
-updated: 2026-11-15T20:01
+updated: 2026-11-15T20:08
 created-by: orchestrator
 schema-version: "0.13"
 assessment:
@@ -24,11 +24,11 @@ affected:
   - "[[MOC-20261113-001 Note durability]]"
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T20:04
+decision-note: "Yes approved"
+applied: 2026-11-15T20:08
+brain-version-after: CO-20261115-009
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. Drafted by the Orchestrator, not by the Managing Editor: the change is mechanical and adds no knowledge. -->
@@ -122,4 +122,10 @@ Justin: approve X1, X2, and X3 as written? The rows go together: if the links ch
 
 ## 7. Decision record
 
+2026-11-15T20:04. Justin: "Yes approved". Decision: `approved`. Rows X1, X2, and X3, as written.
+
 ## 8. Implementation record
+
+2026-11-15T20:08. The Orchestrator checked that `brain-version` (CO-20261115-008) matched the current Brain version before the change. `Repoint Citations.ps1 -Path "21 Brain" -Apply` made 78 replacements in 11 files (74 in 10 Brain records, 4 in `Research Questions.md`). After the change the Brain holds no `BRF` or `KAS` ID, and 78 `SRC` citations. `change-orders` and `updated` were set on the 10 Brain records. No claim text, status, `confidence`, or `evidence-strength` changed.
+
+Brain version after: CO-20261115-009.

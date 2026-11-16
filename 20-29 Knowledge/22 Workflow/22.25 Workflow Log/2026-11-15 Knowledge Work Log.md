@@ -94,6 +94,10 @@
 | 20:01 | orchestrator | Migration stage 1 (workflow records): `Merge Draft.ps1` v0.2 (new mode `LegacyAssessment`, option `-OriginNote`; modes tested on copies). 11 Briefs merged into their Source notes under `# Reference Brief` and 11 Assessments under `# Assessment (migrated)`. Check: each Brief and Assessment text found intact in its Source note (22 of 22). Source fields `brief` and `assessment` cleared. 23 notes (11 BRF, 11 KAS, and the rejected BRF-20261113-008, which has no Source) moved to `20.09 Knowledge Archive` with `git mv`. Frontmatter Check 0, Link Check 0 (the old names still resolve). The Brain is not changed | 22 Source notes, `20.09` | OK |
 | 20:01 | orchestrator | New script `Repoint Citations.ps1` v0.1 (dry run by default). Dry run on the Brain: 78 replacements in 11 files (74 in 10 Brain records, 4 in Research Questions), no unmapped ID. Change Order CO-20261115-009 written (drafted by the Orchestrator, `open`). Brain not changed until Justin decides | [[CO-20261115-009 Repoint Brain citations to Source notes]] | `open` |
 
+| 20:04 | justin | Decision on the Change Order: "Yes approved" | [[CO-20261115-009 Repoint Brain citations to Source notes]] | `approved` |
+| 20:08 | orchestrator | Version check passed (CO-20261115-008). Change Order applied: `Repoint Citations.ps1 -Apply`, 78 replacements in 11 files (74 in 10 Brain records, 4 in Research Questions). No BRF or KAS ID left in the Brain; 78 SRC citations. `change-orders` and `updated` set on the 10 Brain records. Precise check: each Brain file equals its committed version after normalizing IDs and link names (11 of 11). Frontmatter Check 0, Link Check 0. No Curator review (threshold: Curator Due says not due: 10 Change Orders and 2 days since the last maintenance report) | [[CO-20261115-009 Repoint Brain citations to Source notes]] | Brain version `CO-20261115-008` to `CO-20261115-009` |
+| 20:08 | orchestrator | Handoff updated (same approval as the earlier records for this work): KS-07 KS-D-52 and row 0.37; KS-08 §8.17 and row 0.45. Rulebook §4.1, §4.2, §4.5 item 6, and §2 wording updated (no legacy notes); area `CLAUDE.md` v0.17 | KS-07, KS-08, `20.04`, `CLAUDE.md` | OK |
+
 
 ## Decisions
 
@@ -114,7 +118,7 @@
 
 ## Open
 
-- Lean workflow (KS-D-50) and merged records (KS-D-51) are untested. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
+- Lean workflow (KS-D-50), merged records (KS-D-51), and the migration (KS-D-52): the new flow is untested with a new source. Knowledge HQ "Briefs and Assessments" view is empty. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
 - Intake: Justin is still developing the intake process.
 
 

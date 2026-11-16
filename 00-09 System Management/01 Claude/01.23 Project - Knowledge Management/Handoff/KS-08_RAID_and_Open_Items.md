@@ -1049,6 +1049,22 @@ Known gaps to check on the first real source: the Curator and Editor agent files
 
 Rollback: git tags `pre-lean-workflow` (before staging, delta, merged mode) and `pre-merge-types` (before the merge of record types).
 
+### 8.17 Migration of the legacy Briefs and Assessments (2026-11-15)
+
+Status: DONE (KS-D-52). Justin: "Yes i want to do a migration"; "Yes approved".
+
+| Step | Result |
+|---|---|
+| Rollback tags | `pre-lean-workflow`, `pre-merge-types`, `pre-migration` (all pushed) |
+| Merge into Source notes | 11 Briefs and 11 Assessments. Text intact 22 of 22. Source `brief` and `assessment` fields cleared. |
+| Archive | 23 notes to `20.09 Knowledge Archive` (11 BRF, 11 KAS, BRF-20261113-008 rejected, no Source) |
+| Brain citations | CO-20261115-009: 74 citations in 10 Brain records, 4 in `Research Questions.md`. No `BRF` or `KAS` ID left in the Brain. |
+| Proof of no other change | Each Brain file compared with its committed version after normalizing IDs and link names: 11 of 11 the same (apart from `updated` and the back-link). |
+
+Records now: 14 Source notes (11 with a Brief and an Assessment, 3 without), Change Orders (9 in `22.24` for 2026-11-15, 8 for 2026-11-13), health reports, and 11 Brain notes. The workflow folders `22.22` and `22.23` are empty.
+
+Open: the Knowledge HQ "Briefs and Assessments" view is empty; the Source board does not show the merged fields; the new flow (KS-D-50, KS-D-51) has not run with a new source.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -1097,3 +1113,4 @@ Rollback: git tags `pre-lean-workflow` (before staging, delta, merged mode) and 
 | 2026-11-15 | 0.42 | Phase 7 exit test PASSED (KS-D-49). No Phase 7 item open. |
 | 2026-11-15 | 0.43 | New §8.15: cost and duplication review, lean workflow (KS-D-50). |
 | 2026-11-15 | 0.44 | New §8.16: merged records (KS-D-51). |
+| 2026-11-15 | 0.45 | New §8.17: migration of the legacy Briefs and Assessments (KS-D-52). |

@@ -4,7 +4,7 @@ type: concept
 title: File over app
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-15T17:40
+updated: 2026-11-15T20:08
 created-by: orchestrator
 schema-version: "0.6"
 kind: concept
@@ -16,6 +16,7 @@ change-orders:
   - "[[CO-20261113-002 Write plain text files]]"
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
   - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
+  - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
 aliases:
   - File over app principle
 ---
@@ -38,7 +39,7 @@ Apps change, close, or lose support. A file in an open format, such as plain tex
 
 ## Sources
 
-- [[BRF-20261113-001 File over app|File over app (Ango, 2023)]] · E1
-- [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E8, E9, E11 · § UN-COMMERCIAL
-- [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E16, E17 · § EASIEST TO CONVERT
-- [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E4, E5, E6 · § The Plaintext is a Lie
+- [[SRC-20261113-001 File over app|File over app (Ango, 2023)]] · E1
+- [[SRC-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E8, E9, E11 · § UN-COMMERCIAL
+- [[SRC-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]] · E16, E17 · § EASIEST TO CONVERT
+- [[SRC-20261113-006 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]] · E4, E5, E6 · § The Plaintext is a Lie
