@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: curator
-schema-version: "0.12"
+schema-version: "0.13"
 mode:
 brain-version:
 scope:

@@ -10,7 +10,7 @@ updated: 2026-11-15
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: v0.8 (KS-D-50, not yet tested on a real source). Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5, v0.6, v0.7, and v0.8 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
+Status: v0.9 (KS-D-50 and KS-D-51, not yet tested on a real source). Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5 to v0.9 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -49,10 +49,10 @@ The Source `status` is the workflow state (Schema §5.1, KS-D-25). There is no s
 | `routed` | `skipped` | Orchestrator | Justin says do not process. Justin's words recorded in the log. |
 | `new` | `archived` | Orchestrator | `archive-only`. |
 | `new`, `routed` | `failed` | Orchestrator | Access check fails, or the Reporter reports `access-status: none`. |
-| `routed` | `briefed` | Orchestrator | Brief saved and `validated` (section 4.1). |
+| `routed` | `briefed` | Orchestrator | The Brief draft is `validated` and merged into the Source note (section 4.1, KS-D-51). Legacy Sources: Brief saved and `validated`. |
 | `briefed` | `done` | Orchestrator | `quick-brief` only (KS-D-41). |
-| `briefed` | `assessed` | Orchestrator | Assessment saved and `validated` (section 4.2). |
-| `briefed` | `change-proposed` | Orchestrator | Merged mode (section 4.5): Change Order saved `open`. |
+| `briefed` | `assessed` | Orchestrator | Legacy Sources only. A new Source has no `assessed` state (KS-D-51). |
+| `briefed` | `change-proposed` | Orchestrator | Change Order saved `open` (sections 4.3 and 4.5). |
 | `briefed` | `done` | Orchestrator | Merged mode: the Managing Editor returns No Change. |
 | `assessed` | `done` | Orchestrator | `recommended-action` is `no-action`, or `investigate` and the row is added to `Research Questions.md`, or the Managing Editor returns No Change. |
 | `assessed` | `change-proposed` | Orchestrator | Change Order saved as `open` (section 4.3). |
@@ -87,6 +87,8 @@ Validate each output before the next stage. An agent draft is validated in `.sta
 
 ### 4.1 Reference Brief
 
+**New source (KS-D-51).** The Brief is a draft in `.staging` (`BRF-draft <Source ID>.md`). Validate it there, with the checks below. On a pass: run `Merge Draft.ps1 -Mode Brief -Draft "<draft>" -Target "<Source note>"`, which puts the Brief into the Source note, set the Source to `briefed`, and remove the draft. No `BRF` note is made. A `Quote Check.ps1` run on the Source note reads the same `Quote:` lines. **Legacy:** the older Briefs are saved notes. The checks are the same.
+
 1. The Reporter's final check (reporter §11) is in Brief §12, and each item passes.
 2. Frontmatter: all fields of `TPL Reference Brief.md` are present. Values are in Schema §5.5. `source` links to the Source. `claim-count` equals the rows in §7.
 3. **Quote check.** Check each `Quote:` against the raw page (`curl` with tags removed) or the companion file. Each quote must match exactly and have 15 words or fewer. WebFetch text is not proof (area `CLAUDE.md` rule 9a, KS-D-31).
@@ -100,6 +102,8 @@ Validate each output before the next stage. An agent draft is validated in `.sta
 Pass: set the Brief to `validated` and the Source to `briefed`.
 
 ### 4.2 Knowledge Assessment
+
+**New source (KS-D-51).** No Assessment note is made. At the threshold, the Editor's Assessment is a draft in `.staging` (`KAS-draft <Source ID>.md`). Validate it there, with the checks below. On a pass: run `Merge Draft.ps1 -Mode Assessment -Draft "<draft>" -Target "<Change Order>"`, which adds it to the Change Order as section 1b, and remove the draft. **Legacy:** the older Assessments are saved notes.
 
 1. The Editor's final check (editor §10) is in Assessment §6, and each item passes.
 2. Frontmatter: fields of Schema §5.7. `brain-version` equals the current Brain version (Schema §5.6).
@@ -140,10 +144,11 @@ The Knowledge Curator has three modes: `maintenance`, `impact-review`, and `retr
 ### 4.5 Staging, merged mode, and the Curator trigger (KS-D-50)
 
 1. **Staging.** The Reporter, the Editor, the Managing Editor, and the Curator write a draft to `20-29 Knowledge\.staging` (Schema §2.6). Run `git status` before and after the run. The only new files are the drafts. If an agent wrote another file, reject the run (section 5, step 3). Validate the draft where it lies. After a pass, set `id`, `created`, `updated`, and `status` from the system clock. Name the file `ID Short title.md` and move it to its folder in `22`. After the move, `.staging` is empty. A rejected draft is a file in `.staging`, not a note: remove it.
-2. **Merged mode.** When the change is expected to be small (the Orchestrator or Justin decides at routing), invoke the Managing Editor with the validated Brief (agent file §2b). No Assessment is saved. When the Change Order passes section 4.3 and is saved `open`, set the Source to `change-proposed`. If the Managing Editor returns No Change, set the Source to `done` and add any Research Questions row.
-3. **Double check at the threshold.** The threshold is: the Change Order makes a record, or changes the text, status, `confidence`, or `evidence-strength` of a Claim, or edits 5 or more Brain records. At the threshold, invoke the Editor on the same Brief. Validate the Assessment (section 4.2) and save it. Set `assessment` on the Source. Compare it with §1a of the Change Order: each Editor finding has a row or a stated reason. If the two disagree, tell Justin before you present the Change Order.
+2. **Merged mode (the only mode for a new source, KS-D-51).** After the Brief is merged into the Source note, invoke the Managing Editor with the path of the Source note (agent file §2b). It writes section 1a ("Brief against the Brain") in the Change Order. No Assessment note is made. When the Change Order passes section 4.3 and is saved `open`, set the Source to `change-proposed` and add the Change Order to `change-orders` on the Source. If the Managing Editor returns No Change, set the Source to `done` and add any Research Questions row.
+3. **Double check at the threshold.** The threshold is: the Change Order makes a record, or changes the text, status, `confidence`, or `evidence-strength` of a Claim, or edits 5 or more Brain records. At the threshold, invoke the Editor on the same Brief (the Source note). Validate the Assessment draft and merge it into the Change Order as section 1b (section 4.2). Compare 1b with 1a: each Editor finding has a row or a stated reason. If the two disagree, tell Justin before you present the Change Order.
 4. **New records.** Each new record is a draft in `.staging\proposed\`. Give it its ID and move it into `21 Brain` only when Justin approves its row (section 6, step 4).
 5. **Curator trigger.** After each apply, run `Curator Due.ps1` in this folder. If it says DUE, invoke the Curator in `maintenance` mode (section 4.4). It is due when 15 Change Orders were applied, or 15 days passed, since the last maintenance report, whichever comes first. This replaces the per-apply impact review of v0.7 (KS-D-48). Justin can ask for an `impact-review` at any time.
+6. **Citations (KS-D-51).** Evidence in a new Brain record cites the Source note: `[[SRC-… Title|short name]] · E3`. The `E` labels are those of the Brief section in the Source note. Do not link a legacy `BRF` note from a new record, unless the record cites that legacy Brief.
 
 ## 5. Errors and retry
 
@@ -196,3 +201,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | 2026-11-15 | 0.6 | Phase 7 (KS-D-47): §4.2 sets `assessment` on the Source. §4.3 adds the Change Order to `change-orders` on the Source. |
 | 2026-11-15 | 0.7 | Phase 7 test run (KS-D-48): §6 step 10 sets a threshold for the Curator impact review after an apply: a new record, a change to the text, status, `confidence`, or `evidence-strength` of a Claim, or 5 or more Brain records edited. Justin first set 3 records, then raised it to 5. |
 | 2026-11-15 | 0.8 | KS-D-50: new §4.5 (staging, merged mode, double check at the threshold, Curator trigger of 15 Change Orders or 15 days). §2: two merged-mode states. §4.3 item 7: delta rule. §6 step 4 and step 10. Not yet tested on a real source. |
+| 2026-11-15 | 0.9 | KS-D-51: a new Source holds its Brief, and a new Change Order holds the Editor second look (§2 states, §4.1, §4.2, §4.5 items 2, 3, and 6). `Merge Draft.ps1`. Legacy BRF and KAS notes stay as they are. Not yet tested on a real source. |

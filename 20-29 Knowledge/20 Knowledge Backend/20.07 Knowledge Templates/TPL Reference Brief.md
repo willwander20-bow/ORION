@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: reporter
-schema-version: "0.12"
+schema-version: "0.13"
 source:
 processing-level:
 source-quality:
@@ -15,6 +15,7 @@ extraction-confidence:
 claim-count:
 ---
 
+<!-- Staging draft (KS-D-51): for a new source the Orchestrator merges this draft into the Source note with Merge Draft.ps1. No BRF note is made. -->
 <!-- Quick brief: sections 1, 3, 7, 8, 10 only. Full review: all sections. Schema §5.5. -->
 <!-- Report what the source says. Do not decide what the Brain contains. Never invent a quotation, page, time stamp, or URL. -->
 

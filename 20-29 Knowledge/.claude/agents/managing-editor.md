@@ -47,12 +47,12 @@ Rules for this mode:
 
 ## 2b. Merged mode: assess and propose (v0.5)
 
-For a small change, the Orchestrator can give you a validated Reference Brief in place of an Assessment (KS-D-50). Inputs: the Brief (status `validated`) and the current Brain version.
+The Orchestrator gives you the Source note that holds the validated Reference Brief (under `# Reference Brief`), in place of an Assessment (KS-D-50, KS-D-51). For a legacy source it gives the Brief note. Inputs: that note and the current Brain version. This is the normal mode for a new source.
 
 - Do the Editor work in short form. Read the Brief and the Brain records that relate to it (§4). Put the result in the Change Order, in a section "1a. Brief against the Brain": one table with the columns Label, Claim Candidate, Type (`supports`, `qualifies`, `refines`, `extends`, `contradicts`, `new`, `research-gap`), Brain record, and one sentence. Use the Editor rules for the types. Do not write a separate Assessment.
-- Leave `assessment` empty. Put the Brief in `source` through the Source link, and name the Brief in §1.
+- Leave `assessment` empty. Put the Source in `source`, and name the Source note in §1. Cite evidence as `[[SRC-… Title|short name]] · E3` (KS-D-51).
 - If no change is justified, write no Change Order. Return "No Change" and the reason in your short report (§7).
-- At the end of §1a, say if the Change Order reaches the threshold: it makes a record, it changes the text, status, `confidence`, or `evidence-strength` of a Claim, or it edits 5 or more Brain records. If it does, the Orchestrator runs the Editor on the same Brief and compares the two results before it presents the Change Order to Justin.
+- At the end of §1a, say if the Change Order reaches the threshold: it makes a record, it changes the text, status, `confidence`, or `evidence-strength` of a Claim, or it edits 5 or more Brain records. If it does, the Orchestrator runs the Editor on the same Brief and merges the Editor's second look into the Change Order as section 1b. It compares 1a and 1b before it presents the Change Order to Justin.
 
 ## 3. Files to read
 

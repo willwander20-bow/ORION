@@ -84,6 +84,11 @@
 | 19:39 | orchestrator | Bug found in my own script while testing: a PowerShell variable (`$days`) overwrote the `-Days` parameter. Fixed (`$sinceDays`) | `Curator Due.ps1` | OK |
 
 | 19:44 | orchestrator | Handoff updated on Justin's approval ("Yes"): KS-07 new KS-D-50 and change-log row 0.35; KS-08 new §8.15 (measures, decisions, record types) and change-log row 0.43. States that Source and Brief are not merged and that item 5 is not approved | KS-07, KS-08 (Handoff folder) | OK |
+| 19:52 | justin | "Merge the source and brief and the assessment and change order. Commit to git so we can roll it back if we need. Do this impact the new process?" | `20-29 Knowledge` | — |
+| 19:52 | orchestrator | Rollback point: git tag `pre-merge-types` (pushed) before the changes | repository | OK |
+| 19:52 | orchestrator | Merged records (KS-D-51), not yet tested on a real source. New script `Merge Draft.ps1` v0.1 (tested on copies: Brief merge, Assessment merge, second merge refused, Quote Check 3 of 3, Frontmatter Check 0). Schema v0.13 (§2.7, §5.4); all templates v0.13; `TPL Source.md` has the four Brief fields; Rulebook v0.9 (§2 states, §4.1, §4.2, §4.5 items 2, 3, 6); Reporter, Editor, Managing Editor files updated; area `CLAUDE.md` v0.16. Legacy BRF and KAS notes not migrated | `20.04`, `20.07`, `.claude\agents`, `CLAUDE.md` | OK, untested |
+| 19:52 | orchestrator | Handoff updated: KS-07 KS-D-51 and change-log row 0.36; KS-08 §8.16 and row 0.44 (Handoff folder; same approval as the earlier Handoff records for this work) | KS-07, KS-08 (Handoff folder) | OK |
+
 
 ## Decisions
 
@@ -104,7 +109,7 @@
 
 ## Open
 
-- Lean workflow (KS-D-50) is untested. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
+- Lean workflow (KS-D-50) and merged records (KS-D-51) are untested. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
 - Intake: Justin is still developing the intake process.
 
 

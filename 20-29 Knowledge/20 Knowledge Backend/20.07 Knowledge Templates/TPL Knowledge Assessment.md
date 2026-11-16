@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: editor
-schema-version: "0.12"
+schema-version: "0.13"
 source:
 brief:
 brain-version:
@@ -14,6 +14,7 @@ relevance:
 recommended-action:
 ---
 
+<!-- Staging draft (KS-D-51): used for the second look at the threshold. The Orchestrator merges it into the Change Order as section 1b with Merge Draft.ps1. No KAS note is made. -->
 <!-- Compare the Brief with the Brain. Do not change the Brain. Explain each connection; shared keywords are not enough. Schema §5.7. -->
 
 ## 1. Summary of relevance

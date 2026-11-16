@@ -1028,6 +1028,27 @@ Risks: the four agents can now write. The only limit is the instruction to write
 
 Rollback: git tag `pre-lean-workflow`.
 
+### 8.16 Merged records (2026-11-15)
+
+Status: APPROVED, not yet tested on a real source (KS-D-51). Justin: "Merge the source and brief and the assessment and change order."
+
+| Before | Now (new sources) |
+|---|---|
+| Source note, Reference Brief note, Knowledge Assessment note, Change Order note (4 notes) | Source note (with the Brief) and Change Order note (with the Assessment as 1a, and 1b at the threshold) (2 notes) |
+
+How: `Merge Draft.ps1` (v0.1) merges a staged Brief draft into the Source note (`-Mode Brief`) and a staged Assessment draft into the Change Order (`-Mode Assessment`). Tested on copies in the scratchpad: Brief merge, Assessment merge, refusal of a second merge, `Quote Check.ps1` and `Frontmatter Check.ps1` on the merged notes (3 of 3 quotes, 0 problems).
+
+Effects on the process:
+- Brain evidence cites the Source note (`[[SRC-… Title|short]] · E3`). Legacy Brain records still cite `BRF` notes.
+- A Source note is larger (the Brief is inside it). The Source status is the only state: `briefed` means the Brief is merged; `assessed` is legacy only.
+- The Source board in Knowledge HQ works as before. The "Briefs and Assessments" view shows legacy notes only.
+- Existing `BRF` (12) and `KAS` (11) notes are not migrated. IDs stay in use.
+- The Editor still runs at the threshold (double check, KS-D-50).
+
+Known gaps to check on the first real source: the Curator and Editor agent files still name Briefs in some lists; the Knowledge HQ views do not show the merged fields; the Source note size.
+
+Rollback: git tags `pre-lean-workflow` (before staging, delta, merged mode) and `pre-merge-types` (before the merge of record types).
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -1075,3 +1096,4 @@ Rollback: git tag `pre-lean-workflow`.
 | 2026-11-15 | 0.41 | §8.14: Phase 7 test results D1 to D4 (all PASS, subject to Justin's review). Findings listed (KS-D-48). |
 | 2026-11-15 | 0.42 | Phase 7 exit test PASSED (KS-D-49). No Phase 7 item open. |
 | 2026-11-15 | 0.43 | New §8.15: cost and duplication review, lean workflow (KS-D-50). |
+| 2026-11-15 | 0.44 | New §8.16: merged records (KS-D-51). |

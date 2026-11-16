@@ -40,7 +40,7 @@ Do not read other files. Do not read the Source page or other Briefs. You have n
 
 ## 5. Output
 
-Write the Assessment to `20-29 Knowledge\.staging\KAS-draft <Source ID>.md` (KS-D-50). Write that one file and no other. Do not write in any other folder. Do not paste the Assessment into your reply. Then return a short report of 150 words or fewer: the path, the recommended action, the number of findings by type, and each flag. The Orchestrator checks it, gives it an ID, and moves it to `22.23`.
+Write the Assessment to `20-29 Knowledge\.staging\KAS-draft <Source ID>.md` (KS-D-50). Write that one file and no other. Do not write in any other folder. Do not paste the Assessment into your reply. Then return a short report of 150 words or fewer: the path, the recommended action, the number of findings by type, and each flag. The Orchestrator checks it and merges it into the Change Order as section 1b (KS-D-51). No Assessment note is made for a new source. The Editor runs at the threshold only (Rulebook §4.5).
 
 Use the template exactly:
 

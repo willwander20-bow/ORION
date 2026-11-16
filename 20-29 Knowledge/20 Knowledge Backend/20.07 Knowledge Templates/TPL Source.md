@@ -6,7 +6,7 @@ status: new
 created:
 updated:
 created-by:
-schema-version: "0.12"
+schema-version: "0.13"
 url:
 source-type:
 author:
@@ -22,6 +22,10 @@ duplicate-of:
 brief:
 assessment:
 change-orders: []
+source-quality:
+extraction-completeness:
+extraction-confidence:
+claim-count:
 ---
 
 # Notes

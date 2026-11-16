@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: managing-editor
-schema-version: "0.12"
+schema-version: "0.13"
 assessment:
 source:
 brain-version:

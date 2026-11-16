@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Phase 7 plan approved (KS-D-47). Curator review threshold (KS-D-48). Phase 7 passed (KS-D-49). Lean workflow: staging, delta, merged mode, Curator trigger (KS-D-50, not yet tested). Version v0.15.
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Phase 7 plan approved (KS-D-47). Curator review threshold (KS-D-48). Phase 7 passed (KS-D-49). Lean workflow: staging, delta, merged mode, Curator trigger (KS-D-50, not yet tested). Merged records: Source with Brief, Change Order with Assessment (KS-D-51, not yet tested). Version v0.16.
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -109,7 +109,7 @@ This workflow applies after Phase 5. It comes from KCM. KS-03 is the reference.
 1. Make or confirm the Source record. Give it a Source ID.
 2. Select the processing level (routing). Record the routing result.
 3. Invoke the Reporter. Validate and save the Reference Brief.
-4. Invoke the Editor with the Brief and the relevant Brain context. Validate and save the Knowledge Assessment. For a small change, use the merged mode instead: the Managing Editor takes the validated Brief and no Assessment is saved. At the threshold, the Editor also assesses the Brief (Rulebook §4.5, KS-D-50).
+4. For a new source, the Brief is part of the Source note and no Assessment note is made (KS-D-51). The Managing Editor takes the Source note and writes the Change Order with section 1a. At the threshold, the Editor also assesses the Brief, and the Orchestrator merges the second look into the Change Order as section 1b (Rulebook §4.5). For a legacy source, invoke the Editor with the Brief and the relevant Brain context, and validate and save the Knowledge Assessment.
 5. If a Brain change is possibly justified, invoke the Managing Editor. Validate and save the Change Order. Rules (KS-D-38):
    - When two or more Assessments affect the same Brain records, invoke the Managing Editor for one at a time. Save each Change Order before the next run.
    - If the Managing Editor lists Brain records that the Assessment did not see, decide with Justin if the Editor must re-run before the Change Order goes to Justin.

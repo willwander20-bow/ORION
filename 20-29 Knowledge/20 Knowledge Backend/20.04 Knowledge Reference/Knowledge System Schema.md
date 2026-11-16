@@ -2,7 +2,7 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.12"
+schema-version: "0.13"
 updated: 2026-11-15
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-11-15
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.12, Phase 7 follow-up (KS-D-50). Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.13, merged records (KS-D-51, not yet tested). Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -102,6 +102,20 @@ Reserved prefix: `RQ` for a Research Question, if one becomes its own note later
 **Delta rule.** A Change Order row shows only what changes: the old text and the new text, not the paragraph. A new Brain record has one text, in its draft file. The Orchestrator moves that file into `21 Brain` when Justin approves. The Change Order does not copy it. After an apply, the Change Order keeps its deltas and the git commit. Git holds the full text.
 
 **Merged mode.** For a small change, the Managing Editor takes a validated Brief and writes the Change Order with a short section "1a. Brief against the Brain". No separate Assessment is made. The Source then has an empty `assessment` and a `change-orders` link. When a Change Order reaches the threshold (a new record; a change to the text, status, `confidence`, or `evidence-strength` of a Claim; 5 or more Brain records edited), the Editor also assesses the same Brief, and the Orchestrator compares both results before it presents the Change Order.
+
+### 2.7 Merged records (KS-D-51)
+
+For a new source, two pairs of notes are one note each.
+
+| Before | Now |
+|---|---|
+| Source note and Reference Brief note | One Source note. The Reporter's Brief is merged into it under `# Reference Brief` (sections 1 to 12), and its four fields (`source-quality`, `extraction-completeness`, `extraction-confidence`, `claim-count`) are in the Source frontmatter. No `BRF` ID is made. |
+| Knowledge Assessment note and Change Order note | One Change Order note. The Managing Editor writes "1a. Brief against the Brain". At the threshold (Rulebook §4.5), the Editor's second look is merged in as "1b". No `KAS` ID is made. |
+
+- `Merge Draft.ps1` (in `20.04`) does each merge. The Orchestrator does not re-type a draft.
+- Evidence in a Brain record cites the Source note: `[[SRC-… Title|short name]] · E3`. The `E` labels are those of the Brief section in the Source note.
+- Existing `BRF` and `KAS` notes stay as they are (legacy). Their IDs stay in use, and links to them stay valid. They are not migrated, because each link would change (root rule 1.2).
+- The Reporter and the Editor still write their drafts from `TPL Reference Brief.md` and `TPL Knowledge Assessment.md`, in `.staging` only.
 
 ## 3. File names and links
 
@@ -245,7 +259,8 @@ Below the core block.
 | `processing-level` | `archive-only`, `quick-brief`, `full-review` | Set at routing. |
 | `submission-context` | Text | Justin's reason for the save, in his words. Keep it separate from the source content. |
 | `duplicate-of` | Link | Only if the source is a duplicate. |
-| `brief` | Link | The Reference Brief. |
+| `brief` | Link | The Reference Brief. Legacy Sources only. A new Source holds its Brief (§2.7), so this field stays empty. |
+| `source-quality`, `extraction-completeness`, `extraction-confidence`, `claim-count` | As in §5.5 | Set by `Merge Draft.ps1` from the Brief draft (§2.7). Empty before the Brief. |
 | `assessment` | Link | The Knowledge Assessment. The Orchestrator sets it when the Assessment is `validated` (KS-D-47). Empty before, and empty when the merged mode was used (§2.6). |
 | `change-orders` | List of links | Each Change Order that came from this Source. The Orchestrator adds a link when it saves the Change Order (KS-D-47). Empty if none. A Change Order that came from a health report has no Source. |
 
@@ -409,3 +424,4 @@ Rules:
 | 2026-11-13 | 0.10 | Phase 6 (KS-D-43): `KHR` prefix (§2.2), folder `22.26` (§2.4), §5.12 Knowledge Health Report fields. §5.11: MOC rule kept. |
 | 2026-11-15 | 0.11 | Phase 7 (KS-D-47): folder `22.27 Knowledge HQ` (§2.4). §5.4: Source fields `assessment` and `change-orders`. |
 | 2026-11-15 | 0.12 | KS-D-50: §2.4 and new §2.6 (staging, delta rule, merged mode). §5.4 and §5.8: `assessment` can be empty. |
+| 2026-11-15 | 0.13 | KS-D-51: new §2.7 (merged records). §5.4: four Brief fields in the Source; `brief` is legacy. |
