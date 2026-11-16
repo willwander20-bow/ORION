@@ -2,24 +2,24 @@
 id: CO-20261115-020
 type: change-order
 title: Claude Code memory, Anthropic docs
-status: open
+status: applied
 created: 2026-11-15T23:50
-updated: 2026-11-15T23:52
+updated: 2026-11-15T23:58
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261115-011 Claude Code memory, Anthropic docs]]"
-brain-version: CO-20261115-014
+brain-version: CO-20261115-019
 change-types: [create, relate]
 affected:
   - "[[MOC-20261115-002 Building AI agents]]"
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T23:58
+decision-note: "Approve all changes. Run maintainence"
+applied: 2026-11-15T23:58
+brain-version-after: CO-20261115-020
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -161,3 +161,13 @@ Approve the Change Order, approve rows one by one, or reject it?
 
 - X2 and X3 depend on X1. X3 can be decided alone only if X1 is approved.
 - Question: do you want a Concept on how Claude Code loads instructions and memory, marked as version-dependent vendor documentation, with no Claim?
+
+## 7. Decision record
+
+2026-11-15T23:58. Justin: "Approve all changes. Run maintainence". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists).
+
+## 8. Implementation record
+
+2026-11-15T23:58. Rebased from CO-20261115-014 to CO-20261115-019. X2 edits MOC-20261115-002 and X3 edits CON-20261115-001, as do earlier Change Orders of this batch. The edits are additive. The Orchestrator checked that the sections were present. Rows applied: X1: new CON-20261115-007 Claude Code instructions and memory. X2: one Key concepts bullet, one For line, and one gap line in MOC-20261115-002. X3: one Related concepts bullet and one `related` entry in CON-20261115-001. The links written as draft titles were changed to the ID. `change-orders` and `updated` set on each changed record.
+
+Brain version after: CO-20261115-020.

@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261115-005
 type: concept
 title: Context engineering
 status: accepted
-created:
-updated:
+created: 2026-11-15T23:55
+updated: 2026-11-15T23:55
 created-by: managing-editor
 schema-version: "0.13"
 kind: definition
@@ -12,7 +12,8 @@ related:
   - "[[CON-20261115-003 Workflows and agents]]"
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
 last-reviewed: 2026-11-15
-change-orders: []
+change-orders:
+  - "[[CO-20261115-017 Effective context engineering for AI agents, Anthropic]]"
 aliases:
   - Context management for agents
 ---
@@ -56,7 +57,7 @@ None.
 
 ## Related claims
 
-- [[CLM-20261115-007 Longer context can lower model performance|Longer context can lower model performance]]: the context rot statement. A link, not a dependency. Link written with the draft title.
+- [[CLM-20261115-007 Longer context can lower model performance|Longer context can lower model performance]]: the context rot statement. A link, not a dependency.
 
 ## Related concepts
 

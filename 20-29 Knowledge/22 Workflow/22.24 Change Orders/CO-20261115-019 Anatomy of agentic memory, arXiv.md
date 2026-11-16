@@ -2,23 +2,25 @@
 id: CO-20261115-019
 type: change-order
 title: Anatomy of agentic memory, arXiv
-status: open
+status: applied
 created: 2026-11-15T23:49
 created-by: managing-editor
-updated: 2026-11-15T23:50
+updated: 2026-11-15T23:58
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261115-014 Anatomy of agentic memory, arXiv]]"
-brain-version: CO-20261115-014
+brain-version: CO-20261115-018
 change-types: [qualify, extend, relate]
 affected:
+  - "[[CLM-20261115-008 Long context is not agent memory]]"
+  - "[[CON-20261115-006 Agent memory]]"
   - "[[MOC-20261115-002 Building AI agents]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T23:58
+decision-note: "Approve all changes. Run maintainence"
+applied: 2026-11-15T23:58
+brain-version-after: CO-20261115-019
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -175,4 +177,10 @@ Approve the Change Order, approve rows one by one, or reject it?
 
 ## 7. Decision record
 
+2026-11-15T23:58. Justin: "Approve all changes. Run maintainence". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists).
+
 ## 8. Implementation record
+
+2026-11-15T23:58. Rebased from CO-20261115-014 to CO-20261115-018. This Change Order depends on CO-018: X1 and X2 edit the records that CO-018 X1 and X2 made. The Orchestrator checked each "Current" text in the new records (all found). `affected` lists the records after CO-018 made them. Rows applied: X1: one sentence expanded and one Evidence line added in CLM-20261115-008 (`low`, `weak` unchanged). X2: three Explanation bullets, one sentence added to the Evaluation bullet, one caveat bullet, and one Sources line in CON-20261115-006. X3: one For line, one question, and one gap line in MOC-20261115-002. `change-orders` and `updated` set on each changed record.
+
+Brain version after: CO-20261115-019.

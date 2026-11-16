@@ -157,6 +157,10 @@
 | 23:52 | editor | Threshold second look on five of six (not CO-016: no new record, no Claim change, 4 records edited). Each merged as section 1b; each compared with 1a in an "Orchestrator comparison" with options for Justin. All five say `advance`, with different amounts of detail. Main finding in CO-020: the Claude Code page says CLAUDE.md is context, not enforcement; the Brain's protocol rules are instructions only. |
 | 23:52 | orchestrator | Checks: Frontmatter Check 0 problems (83 files), Link Check 0 problems. `.staging` holds only the 7 proposed records (JD x2, CE x2, MS x2, CC x1), which wait for approval. `21 Brain` unchanged. New records carry draft titles, not IDs: final IDs are set on apply. CO-017, -018, -019, and -020 edit the same MOC sections (MOC-20261115-002), and -017 and -020 both edit CON-20261115-001, so apply one at a time and rebase (Rulebook §6 step 3). |
 | 23:52 | orchestrator | Curator Due: DUE (15 of 15). Not started; waits for Justin. Applying these Change Orders adds to the count. |
+| 23:58 | justin | **Decision:** "Approve all changes. Run maintainence". All rows of CO-20261115-015 to -020 approved as written (option A where a comparison exists). Curator maintenance run requested. | CO-20261115-015 to -020 | approved |
+| 23:58 | orchestrator | **Apply, six Change Orders in order 015, 016, 017, 018, 019, 020.** Brain version CO-20261115-014 to CO-20261115-020. 7 new Brain records with IDs: CON-20261115-004 Johnny.Decimal folder system, MOC-20261115-003 Organising files with numbered folders, CON-20261115-005 Context engineering, CLM-20261115-007 Longer context can lower model performance, CON-20261115-006 Agent memory, CLM-20261115-008 Long context is not agent memory, CON-20261115-007 Claude Code instructions and memory. 8 existing records edited by additions, and two sentences replaced (CON-20261113-003, MOC-20261113-002). Draft IDs in CO-017 (CON-20261115-004 for the Concept) were moved to CON-20261115-005, because CO-015 took -004. | CO-20261115-015 to -020 | applied |
+| 23:58 | orchestrator | **Deviation from Rulebook §6 step 3:** CO-016, -017, -018, -020 are not dependent Change Orders, but each had `brain-version` CO-014 when the Brain was already at a later version. The Orchestrator rebased each after checking that earlier Change Orders of the batch changed none of its records, or only added to the same sections, and that each "Current" text was found. Justin approved all six in one decision. Recorded in §8 of each Change Order. Justin may want a rule for independent Change Orders in a batch. | CO-20261115-016, -017, -018, -020 | noted |
+| 23:58 | orchestrator | Sources SRC-20261115-009 to -014 set to `done`. Frontmatter Check 0 (90 files). Link Check 0 (25 records). Curator Due: DUE (21 of 15). Two write attempts to MOC-20261115-002 hit a file lock once; the script retried and the first partial line was removed before the rerun. | | OK |
 
 ## Decisions
 
@@ -189,7 +193,7 @@
 
 - KHR-20261115-001 H4 (optional: "confidence low" in the MOC-001 line for CLM-001) was not approved and stays open.
 
-- Overnight batch, for Justin's review: CO-20261115-015 to -020 are `open`. Each has an "Orchestrator comparison" with options A to D. CO-019 depends on CO-018. Decide CO-018 before CO-019.
+- CO-20261115-015 to -020: applied (Justin approved all).
 - Curator `maintenance` run is DUE (15 of 15). Justin decides when.
 - SRC-20261115-007 (Medium-hosted article) still needs a saved copy or another link.
 

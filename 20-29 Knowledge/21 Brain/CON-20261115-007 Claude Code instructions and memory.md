@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261115-007
 type: concept
 title: Claude Code instructions and memory
 status: accepted
-created:
-updated:
+created: 2026-11-15T23:55
+updated: 2026-11-15T23:55
 created-by: managing-editor
 schema-version: "0.13"
 kind: definition
@@ -12,7 +12,8 @@ related:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
   - "[[CON-20261115-003 Workflows and agents]]"
 last-reviewed: 2026-11-15
-change-orders: []
+change-orders:
+  - "[[CO-20261115-020 Claude Code memory, Anthropic docs]]"
 aliases:
   - CLAUDE.md and auto memory
 ---

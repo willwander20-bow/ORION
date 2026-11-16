@@ -2,25 +2,25 @@
 id: CO-20261115-017
 type: change-order
 title: Effective context engineering for AI agents, Anthropic
-status: open
+status: applied
 created: 2026-11-15T23:46
-updated: 2026-11-15T23:47
+updated: 2026-11-15T23:58
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261115-010 Effective context engineering for AI agents, Anthropic]]"
-brain-version: CO-20261115-014
+brain-version: CO-20261115-016
 change-types: [create, relate]
 affected:
   - "[[MOC-20261115-002 Building AI agents]]"
   - "[[CON-20261115-003 Workflows and agents]]"
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T23:58
+decision-note: "Approve all changes. Run maintainence"
+applied: 2026-11-15T23:58
+brain-version-after: CO-20261115-017
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -173,3 +173,13 @@ Approve the Change Order, approve rows one by one, or reject it?
 
 - X1 and X2 belong together with X3 (new records need the MOC link). X4 and X5 are small links and can be decided alone. X2 can be dropped alone: the Concept then keeps the context rot statement in its Explanation without a Claim, but its link to X2 must be removed.
 - Question: do you want a Claim on context rot with `weak` evidence, or only the Concept until a source gives data?
+
+## 7. Decision record
+
+2026-11-15T23:58. Justin: "Approve all changes. Run maintainence". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists).
+
+## 8. Implementation record
+
+2026-11-15T23:58. Rebased from CO-20261115-014 to CO-20261115-016, as for CO-016. CO-015 and CO-016 changed none of the records of this Change Order. Each section that the rows edit was present. Rows applied: X1: new CON-20261115-005 Context engineering (its draft link to the Concept changed from the draft ID CON-20261115-004, which CO-015 took). X2: new CLM-20261115-007 Longer context can lower model performance (`low`, `weak`). X3: five edits in MOC-20261115-002 (Key concepts, Important claims, For line, Open research questions, Disputes and gaps). X4: one link and one `related` entry in CON-20261115-003. X5: one link and one `related` entry in CON-20261115-001. `change-orders` and `updated` set on each changed record.
+
+Brain version after: CO-20261115-017.

@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261115-006
 type: concept
 title: Agent memory
 status: accepted
-created:
-updated:
+created: 2026-11-15T23:55
+updated: 2026-11-15T23:57
 created-by: managing-editor
 schema-version: "0.13"
 kind: definition
@@ -12,7 +12,9 @@ related:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
   - "[[CON-20261115-003 Workflows and agents]]"
 last-reviewed: 2026-11-15
-change-orders: []
+change-orders:
+  - "[[CO-20261115-018 Memory for autonomous LLM agents, Du]]"
+  - "[[CO-20261115-019 Anatomy of agentic memory, arXiv]]"
 aliases:
   - Memory for LLM agents
 ---
@@ -34,7 +36,10 @@ The terms below are the author's own proposals (SRC-20261115-013, a survey). The
   - Hierarchical: "The Achilles' heel of hierarchical memory is orchestration" (E6)
   - Policy-learned: "Learned forgetting could delete safety-critical information" (E7; stated as an open concern, not an observed result)
   - Parametric: "hard to audit (where exactly in the weights is the user's birthday stored?)" (E8)
-- Evaluation: the paper proposes four metric layers: task effectiveness, memory quality, efficiency, and governance (E15; summary). It says that no reviewed benchmark reports efficiency with effectiveness (E14; quote checked) and that "Nobody evaluates forgetting well." (E12).
+- Evaluation: the paper proposes four metric layers: task effectiveness, memory quality, efficiency, and governance (E15; summary). It says that no reviewed benchmark reports efficiency with effectiveness (E14; quote checked) and that "Nobody evaluates forgetting well." (E12). In its own test of six systems, a second paper reports latency and build cost next to F1 (E7, E8); table cells unchecked.
+- Second taxonomy (SRC-20261115-014, E1): four families by memory structure: lightweight semantic, entity-centric and personalized, episodic and reflective, structured and hierarchical. The authors' own scheme. It uses different axes than the three dimensions above. The Brief does not map one to the other.
+- Evaluation, second paper (E3, E4, E2): F1 and an LLM judge rank six tested systems differently. Judge ranks stay stable across three prompts (one judge model). Some benchmarks are small enough for a full-context baseline to match memory systems. Both are the authors' own tests; the table figures are unchecked.
+- Weak backbone (E5): format errors in memory writes rose on Qwen-2.5-3B against gpt-4o-mini for two systems (SimpleMem 1.20% to 4.82%, Nemori 17.91% to 30.38%). The authors say append-only systems are more robust. The Brief marks that statement as going beyond the two systems shown (E6).
 
 Caveats:
 
@@ -42,6 +47,7 @@ Caveats:
 - The Brief covers the Abstract and sections 1, 2.4, 3, 4, 5, and 10. It does not cover applications, engineering, or open challenges.
 - The Brief gives no information on how the six mechanism families compare in cost or accuracy.
 - The paper is dated 2026-03-08 and the field changes fast.
+- The second paper (SRC-20261115-014) is a preprint (arXiv v2) with a small empirical study (six systems, two backbones). The Brief did not read its appendices.
 
 ## Steps
 
@@ -49,7 +55,7 @@ None.
 
 ## Related claims
 
-- [[Long context is not agent memory]]: the survey's statement on long context and memory. A link, not a dependency. Link written with the draft title.
+- [[CLM-20261115-008 Long context is not agent memory|Long context is not agent memory]]: the survey's statement on long context and memory. A link, not a dependency.
 
 ## Related concepts
 
@@ -59,3 +65,4 @@ None.
 ## Sources
 
 - [[SRC-20261115-013 Memory for autonomous LLM agents, Du|Memory for Autonomous LLM Agents (Du, arXiv, 2026-03-08)]] · E1, E2, E3, E5, E6, E7, E8, E12, E14, E18 · quotes checked against the page · E4, E15 · summary or unsupported by a count
+- [[SRC-20261115-014 Anatomy of agentic memory, arXiv|Anatomy of Agentic Memory (Jiang et al., arXiv, 2026-05-20)]] Â· E1, E4, E5 Â· quotes checked Â· E2, E3, E6, E7, E8 Â· summaries, unchecked

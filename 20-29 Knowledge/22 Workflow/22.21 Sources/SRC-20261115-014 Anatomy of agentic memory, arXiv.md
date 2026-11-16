@@ -2,9 +2,9 @@
 id: SRC-20261115-014
 type: source
 title: "Anatomy of Agentic Memory: Taxonomy and Empirical Analysis of Evaluation and System Limitations"
-status: change-proposed
+status: done
 created: 2026-11-15T23:39
-updated: 2026-11-15T23:49
+updated: 2026-11-15T23:58
 created-by: orchestrator
 schema-version: "0.13"
 url: https://arxiv.org/html/2602.19320

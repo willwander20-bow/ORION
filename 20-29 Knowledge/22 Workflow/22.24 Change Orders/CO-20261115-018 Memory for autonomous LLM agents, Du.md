@@ -2,23 +2,23 @@
 id: CO-20261115-018
 type: change-order
 title: Memory for autonomous LLM agents, Du
-status: open
+status: applied
 created: 2026-11-15T23:48
-updated: 2026-11-15T23:48
+updated: 2026-11-15T23:58
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261115-013 Memory for autonomous LLM agents, Du]]"
-brain-version: CO-20261115-014
+brain-version: CO-20261115-017
 change-types: [create, relate]
 affected:
   - "[[MOC-20261115-002 Building AI agents]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T23:58
+decision-note: "Approve all changes. Run maintainence"
+applied: 2026-11-15T23:58
+brain-version-after: CO-20261115-018
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -164,4 +164,10 @@ Approve the Change Order, approve rows one by one, or reject it?
 
 ## 7. Decision record
 
+2026-11-15T23:58. Justin: "Approve all changes. Run maintainence". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists).
+
 ## 8. Implementation record
+
+2026-11-15T23:58. Rebased from CO-20261115-014 to CO-20261115-017. X3 edits the same MOC sections as CO-017 X3. The edits are additive and do not conflict. The Orchestrator checked that the sections and the line "Against: none yet" were present. Rows applied: X1: new CON-20261115-006 Agent memory. X2: new CLM-20261115-008 Long context is not agent memory (`low`, `weak`). X3: five edits in MOC-20261115-002, added after the edits of CO-017. The draft links of the two new records, written as titles, were changed to IDs. `change-orders` and `updated` set on each changed record.
+
+Brain version after: CO-20261115-018.

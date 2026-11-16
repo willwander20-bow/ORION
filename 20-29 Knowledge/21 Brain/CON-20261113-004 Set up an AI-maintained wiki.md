@@ -4,7 +4,7 @@ type: concept
 title: Set up an AI-maintained wiki
 status: accepted
 created: 2026-11-13T17:58
-updated: 2026-11-15T20:08
+updated: 2026-11-15T23:56
 created-by: orchestrator
 schema-version: "0.10"
 kind: process
@@ -20,6 +20,7 @@ change-orders:
   - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
   - "[[CO-20261115-007 Fix source counts and mark unchecked evidence]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-016 LLM Wiki, Karpathy]]"
 aliases:
   - Knowledge Base Prompt
   - Ingest Answer Tidy loop
@@ -37,6 +38,7 @@ The steps come from the prompt text in the source. Caveats:
 - Another source (Wall, SRC-20261115-001) proposes a different write boundary for an agent. It allows direct writes to an inbox and to working notes. It requires review for decisions and personal records. It requires inspection of broad rewrites, and it forbids silent rewrites of decisions, sources, or personal facts. This is a design opinion with no test. It shows an option for the gap above. It is no evidence of how a setup behaves, and it is not a step of this process.
 - A third source (Okhlopkov, SRC-20261115-002) is a first-person account of one vault that Claude Code reads and writes. Its `source-quality` is `low`. It has no date and no data. The author describes practices that match step 2 and step 4: a central rules file (`AGENTS.md`) that sets where raw input goes and which files are the source of truth (from a WebFetch summary, not checked against the page), and a rule that an AI does not rewrite raw human notes. The author also says that the rules file must state where credentials must never be stored (from the same WebFetch summary, not checked against the page). The setup prompt in this process has no credential rule. The source gives no test. It shows that a second author describes the same practice. It does not show that the practice works. The Brain does not show that the two authors are independent of each other.
 - Layout option: this setup keeps the AI's pages in a separate `wiki` folder, apart from `sources`. Another source (Okhlopkov, SRC-20261115-002) says that AI output is stored beside the raw notes, in an `ai-docs/` folder inside each project (from WebFetch summaries, not checked against the page). Both layouts keep raw input unedited. Only the place of the AI output differs. The Brief saw no folder tree and gives no test of either layout. Step 2 does not change.
+- A fourth source (the Karpathy gist, SRC-20261115-009) describes the same structure: raw sources that the LLM never edits, an LLM-kept wiki, a schema file (for example CLAUDE.md), the operations ingest, query, and lint, an `index.md`, and an append-only `log.md` (E8, E9, E11). Two differences. The gist files good query answers back into the wiki. Step 5 (Answer) does not. The author prefers to ingest one source at a time with close involvement, and says batch ingest is possible (E10). Step 6 is a nightly batch. The Brief gives no information on review or approval of the LLM's edits, so the approval-gate limit above stays open. The gist is a proposal and shows no result.
 - The pages use normal Markdown links. The prompt specifies no frontmatter.
 - The prompt comes from a clipped copy. The link to the creator's Google Doc is truncated, so the copy cannot be checked against the creator's current document.
 - The setup uses Claude Cowork (folder access, scheduled tasks) as of 2026-06-25. These tools can have changed.
@@ -64,3 +66,4 @@ Ground rules (for all steps): work only inside the folder. Show a plan and get a
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E6 · § Give the agent a memory protocol · write-boundary option; no test
 - [[SRC-20261115-002 Obsidian second brain with Claude Code|Obsidian Second Brain with Claude Code (Okhlopkov, undated)]] · E4 · locator unavailable · rules-file contents; a WebFetch summary, not checked against the page · E6 · locator unavailable · raw input kept unedited; the quote was checked against the page
 - [[SRC-20261115-002 Obsidian second brain with Claude Code|Obsidian Second Brain with Claude Code (Okhlopkov, undated)]] · E3, E7 · locator unavailable · layout option; WebFetch summaries, not checked against the page
+- [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]] Â· E8 Â· Â§ Architecture Â· E9 Â· Â§ Operations Â· E10 Â· Â§ Operations, Ingest Â· E12 Â· Â§ Why this works Â· same structure; no test

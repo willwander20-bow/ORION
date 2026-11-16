@@ -4,7 +4,7 @@ type: moc
 title: AI-maintained knowledge bases
 status: active
 created: 2026-11-13T17:58
-updated: 2026-11-15T22:51
+updated: 2026-11-15T23:56
 created-by: orchestrator
 schema-version: "0.10"
 last-reviewed: 2026-11-13
@@ -18,6 +18,7 @@ change-orders:
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
   - "[[CO-20261115-012 Content for AI readers MOC]]"
   - "[[CO-20261115-013 Building effective agents, Anthropic]]"
+  - "[[CO-20261115-016 LLM Wiki, Karpathy]]"
 ---
 
 ## Topic summary
@@ -43,6 +44,7 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 - Describes: [[SRC-20261113-011 Self-improving Claude knowledge base, Lipsky|Build a Self Improving Claude Knowledge Base (Lipsky, 2026)]]. YouTube tutorial with the full prompt text, partly sponsored by Zapier, `source-quality: medium`. Reliable for what the prompt specifies. Weak for the effects that the creator claims: self-reports with no data.
 - Describes: [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]]. Opinion and design article with a nine-rule agent memory protocol, `source-quality: medium`, objectivity 2 of 5. It proposes a map file, search first, and a write boundary for agents. The wording comes from WebFetch summaries. No test or data.
 - Describes: [[SRC-20261115-002 Obsidian second brain with Claude Code|Obsidian Second Brain with Claude Code: My Agent-Readable Vault Setup (Okhlopkov, undated)]]. First-person account of one vault that Claude Code reads and writes, `source-quality: low`, no date, no data. It describes a central rules file (`AGENTS.md`), raw human notes that the AI does not edit, and AI output stored beside them. Three quotes were checked against the page. The other wording comes from WebFetch summaries.
+- Describes: [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]]. A pattern description, `source-quality: medium`: three layers, three operations, `index.md`, `log.md`. It is a proposal with no test and no data. The Brief gives no information on errors, drift, or review of the LLM's edits. The Brief did not read the comments on the gist.
 - Against: none yet.
 
 ## Related MOCs
@@ -58,6 +60,6 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 
 ## Disputes and gaps
 
-- One source, one creator, partly sponsored. A second source (Wall, SRC-20261115-001) describes the same map-first idea. It is opinion and partly promotional. A third source (Okhlopkov, SRC-20261115-002) is a first-person account of one vault, with `low` source quality, no date, and no data. The Brain does not show that the authors are independent of each other. No source with data or tests yet. The credit to Karpathy is secondhand.
+- One source, one creator, partly sponsored. A second source (Wall, SRC-20261115-001) describes the same map-first idea. It is opinion and partly promotional. A third source (Okhlopkov, SRC-20261115-002) is a first-person account of one vault, with `low` source quality, no date, and no data. The Brain does not show that the authors are independent of each other. No source with data or tests yet. A primary text exists (SRC-20261115-009, the Karpathy gist). It is one proposal with no data, so it does not close the gap on evidence.
 - No source shows how well a model follows the prompt, a nightly run, or a Tidy report.
 - The written approval rule does not cover the nightly wiki writes. No source tests what an AI changes without approval in this setup. One source proposes a write boundary as an option (see CON-004). It gives no test.

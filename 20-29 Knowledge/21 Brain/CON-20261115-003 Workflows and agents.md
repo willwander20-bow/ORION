@@ -4,16 +4,18 @@ type: concept
 title: Workflows and agents
 status: accepted
 created: 2026-11-15T22:51
-updated: 2026-11-15T22:51
+updated: 2026-11-15T23:57
 created-by: managing-editor
 schema-version: "0.13"
 kind: definition
 related:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
+  - "[[CON-20261115-005 Context engineering]]"
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-013 Building effective agents, Anthropic]]"
   - "[[CO-20261115-014 How to build an AI agent, Udacity]]"
+  - "[[CO-20261115-017 Effective context engineering for AI agents, Anthropic]]"
 aliases:
   - Agentic systems
 ---
@@ -50,6 +52,7 @@ None.
 ## Related concepts
 
 - [[CON-20261115-001 Agent memory protocol for file-based memory|Agent memory protocol for file-based memory]]: rules for an agent that reads and writes a file-based memory. The augmented LLM here includes memory. A link, not a dependency.
+- [[CON-20261115-005 Context engineering|Context engineering]]: strategies for what enters the context of such a system, including retrieval and memory. A link, not a dependency.
 
 ## Sources
 

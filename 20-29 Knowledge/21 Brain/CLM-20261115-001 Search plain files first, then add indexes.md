@@ -4,7 +4,7 @@ type: brain-claim
 title: Search plain files first, then add indexes
 status: accepted
 created: 2026-11-15T18:39
-updated: 2026-11-15T20:08
+updated: 2026-11-15T23:56
 created-by: orchestrator
 schema-version: "0.11"
 confidence: low
@@ -23,6 +23,7 @@ last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-016 LLM Wiki, Karpathy]]"
 aliases:
   - Search first, index later
 ---
@@ -39,11 +40,13 @@ One source, an opinion and design article. It gives no benchmarks and no vault s
 
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E3 · § Search first, index later · supports · Quote: "If an index is corrupted, stale, or tied to a vendor, you rebuild it." A design opinion. No performance data.
 - [[SRC-20261115-001 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E4 · § Search first, index later · supports · start with `rg` and frontmatter queries; add indexes only if retrieval is slow or imprecise. E4 is a WebFetch summary that was not checked against the page.
+- [[SRC-20261115-009 LLM Wiki, Karpathy|LLM Wiki (karpathy, GitHub gist, 2026-04-04)]] Â· E11 Â· Â§ Indexing and logging Â· qualifies Â· An `index.md` catalog that the LLM reads first works at about 100 sources without embedding-based RAG. No measurement. His index is a page that the LLM keeps, not a derived index.
 
 ## Relationships
 
 - Concept [[CON-20261113-003 AI-maintained wiki over files|AI-maintained wiki over files]]: that method builds an index (a map) over plain files. This claim says when an index is needed at all. A link, not a dependency.
 - Row 2 of [[Research Questions]] asks if an AI-maintained index makes answers faster or better than reading the raw files. This claim gives a view ("slow or imprecise" as the test) and no test. It does not answer the question.
+- The Karpathy gist (SRC-20261115-009) starts from an LLM-kept `index.md`, not from plain-text search. It says an index file is enough at about 100 sources without embeddings (E11) and names qmd (local search with BM25 and vector search) as an optional tool (E13). This partly agrees that heavy indexes are not needed at moderate scale. It differs on the starting point. It gives no measurement, so `confidence` (low) and `evidence-strength` (weak) stay the same.
 
 ## Disputes and caveats
 

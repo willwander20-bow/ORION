@@ -4,19 +4,23 @@ type: concept
 title: Agent memory protocol for file-based memory
 status: accepted
 created: 2026-11-15T18:39
-updated: 2026-11-15T20:08
+updated: 2026-11-15T23:57
 created-by: orchestrator
 schema-version: "0.11"
 kind: process
 related:
   - "[[CON-20261113-003 AI-maintained wiki over files]]"
   - "[[CON-20261113-004 Set up an AI-maintained wiki]]"
+  - "[[CON-20261115-005 Context engineering]]"
+  - "[[CON-20261115-007 Claude Code instructions and memory]]"
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
   - "[[CO-20261115-007 Fix source counts and mark unchecked evidence]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-017 Effective context engineering for AI agents, Anthropic]]"
+  - "[[CO-20261115-020 Claude Code memory, Anthropic docs]]"
 aliases:
   - Memory protocol
 ---
@@ -49,6 +53,8 @@ The nine rules come from one source (Wall), as the Brief reports them. Caveats:
 
 - [[CON-20261113-003 AI-maintained wiki over files|AI-maintained wiki over files]]: also an AI that reads a map first. Here the map is part of a written protocol.
 - [[CON-20261113-004 Set up an AI-maintained wiki|Set up an AI-maintained wiki]]: a setup prompt for one such method. This protocol is a set of rules for the agent's reading and writing, not a setup.
+- [[CON-20261115-005 Context engineering|Context engineering]]: one vendor describes structured note-taking, where an agent writes notes outside the context window and reloads them later. This protocol is a set of rules for such files. The Brief gives no information on whether the two are the same. A link, not a dependency.
+- [[CON-20261115-007 Claude Code instructions and memory|Claude Code instructions and memory]]: one product's way to load user-written instructions (CLAUDE.md) and Claude-written notes (auto memory, with an index file). The Brief gives no information on whether its index file is the same as this protocol's memory map file. A link, not a dependency.
 
 ## Sources
 

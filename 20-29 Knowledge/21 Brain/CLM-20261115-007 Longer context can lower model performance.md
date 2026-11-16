@@ -1,10 +1,10 @@
 ---
-id:
+id: CLM-20261115-007
 type: brain-claim
 title: Longer context can lower model performance
 status: accepted
-created:
-updated:
+created: 2026-11-15T23:55
+updated: 2026-11-15T23:55
 created-by: managing-editor
 schema-version: "0.13"
 confidence: low
@@ -16,12 +16,13 @@ extends: []
 related:
   - "[[CLM-20261115-006 Agent autonomy raises cost and error risk]]"
 concepts:
-  - "[[CON-20261115-004 Context engineering]]"
+  - "[[CON-20261115-005 Context engineering]]"
 superseded-by:
 valid-from:
 valid-to:
 last-reviewed: 2026-11-15
-change-orders: []
+change-orders:
+  - "[[CO-20261115-017 Effective context engineering for AI agents, Anthropic]]"
 aliases:
   - Context rot
 ---
@@ -41,7 +42,7 @@ The source states this as a reason to treat context as a finite resource (E2, E3
 
 ## Relationships
 
-- [[CON-20261115-004 Context engineering|Context engineering]] (concepts): the term and the techniques that the source builds on this statement. A link, not a dependency. Link written with the draft title.
+- [[CON-20261115-005 Context engineering|Context engineering]] (concepts): the term and the techniques that the source builds on this statement. A link, not a dependency.
 - [[CLM-20261115-006 Agent autonomy raises cost and error risk|Agent autonomy raises cost and error risk]] (related): another one-source caution on agent design. A link, not a dependency.
 
 ## Disputes and caveats

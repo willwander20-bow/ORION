@@ -1,14 +1,15 @@
 ---
-id:
+id: MOC-20261115-003
 type: moc
 title: Organising files with numbered folders
 status: active
-created:
-updated:
+created: 2026-11-15T23:55
+updated: 2026-11-15T23:55
 created-by: managing-editor
 schema-version: "0.13"
 last-reviewed: 2026-11-15
-change-orders: []
+change-orders:
+  - "[[CO-20261115-015 Johnny.Decimal introduction]]"
 ---
 
 ## Topic summary
@@ -17,7 +18,7 @@ How people arrange files in folders so that they find them again: numbered folde
 
 ## Key concepts
 
-- [[CON-JD Johnny.Decimal folder system|Johnny.Decimal folder system]] (three levels and fixed limits, from one page on the official site)
+- [[CON-20261115-004 Johnny.Decimal folder system|Johnny.Decimal folder system]] (three levels and fixed limits, from one page on the official site)
 
 ## Important claims
 

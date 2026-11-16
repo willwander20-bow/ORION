@@ -2,9 +2,9 @@
 id: SRC-20261115-013
 type: source
 title: "Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers"
-status: change-proposed
+status: done
 created: 2026-11-15T23:39
-updated: 2026-11-15T23:48
+updated: 2026-11-15T23:58
 created-by: orchestrator
 schema-version: "0.13"
 url: https://arxiv.org/html/2603.07670

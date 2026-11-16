@@ -2,14 +2,14 @@
 id: CO-20261115-016
 type: change-order
 title: LLM Wiki, Karpathy
-status: open
+status: applied
 created: 2026-11-15T23:45
-updated: 2026-11-15T23:45
+updated: 2026-11-15T23:58
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261115-009 LLM Wiki, Karpathy]]"
-brain-version: CO-20261115-014
+brain-version: CO-20261115-015
 change-types: [refine, add-evidence, qualify, relate]
 affected:
   - "[[CON-20261113-003 AI-maintained wiki over files]]"
@@ -17,11 +17,11 @@ affected:
   - "[[CLM-20261115-001 Search plain files first, then add indexes]]"
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T23:58
+decision-note: "Approve all changes. Run maintainence"
+applied: 2026-11-15T23:58
+brain-version-after: CO-20261115-016
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -138,4 +138,10 @@ Approve, reject, or change each row. The rows can be decided one by one. X1 and 
 
 ## 7. Decision record
 
+2026-11-15T23:58. Justin: "Approve all changes. Run maintainence". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists).
+
 ## 8. Implementation record
+
+2026-11-15T23:58. Rebased from CO-20261115-014 to CO-20261115-015. This Change Order is not dependent on CO-015 (the Rulebook Â§6 step 3 exception names dependent Change Orders). The Orchestrator applied the same check: CO-015 changed none of the records of this Change Order, and each "Current" text was found. This is a deviation from Â§6 step 3. Justin approved all six Change Orders in one decision. Rows applied: X1: one paragraph in CON-20261113-003 replaced (the old text was found exactly once). X2: one Explanation bullet and one Sources line in CON-20261113-003. X3: one Explanation bullet and one Sources line in CON-20261113-004. X4: one Evidence line and one Relationships bullet in CLM-20261115-001; `confidence` (low) and `evidence-strength` (weak) unchanged. X5: one sentence in MOC-20261113-002 replaced, one Evidence line added. `change-orders` and `updated` set on each changed record.
+
+Brain version after: CO-20261115-016.

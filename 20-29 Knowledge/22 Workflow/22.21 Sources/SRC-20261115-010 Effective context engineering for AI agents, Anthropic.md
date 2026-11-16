@@ -2,9 +2,9 @@
 id: SRC-20261115-010
 type: source
 title: "Effective context engineering for AI agents"
-status: change-proposed
+status: done
 created: 2026-11-15T23:39
-updated: 2026-11-15T23:46
+updated: 2026-11-15T23:58
 created-by: orchestrator
 schema-version: "0.13"
 url: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents

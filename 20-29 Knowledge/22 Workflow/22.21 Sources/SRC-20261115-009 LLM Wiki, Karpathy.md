@@ -2,9 +2,9 @@
 id: SRC-20261115-009
 type: source
 title: "LLM Wiki"
-status: change-proposed
+status: done
 created: 2026-11-15T23:39
-updated: 2026-11-15T23:45
+updated: 2026-11-15T23:58
 created-by: orchestrator
 schema-version: "0.13"
 url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f

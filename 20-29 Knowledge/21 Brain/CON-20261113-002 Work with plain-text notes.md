@@ -4,18 +4,20 @@ type: concept
 title: Work with plain-text notes
 status: accepted
 created: 2026-11-13T12:05
-updated: 2026-11-15T20:08
+updated: 2026-11-15T23:56
 created-by: orchestrator
 schema-version: "0.8"
 kind: process
 related:
   - "[[CON-20261113-001 File over app]]"
+  - "[[CON-20261115-004 Johnny.Decimal folder system]]"
 last-reviewed: 2026-11-13
 change-orders:
   - "[[CO-20261113-002 Write plain text files]]"
   - "[[CO-20261113-006 Write hypertext, not plaintext]]"
   - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-015 Johnny.Decimal introduction]]"
 aliases:
   - Plain-text note methods
 ---
@@ -47,6 +49,7 @@ Caveats:
 ## Related concepts
 
 - [[CON-20261113-001 File over app|File over app]]: these methods help keep work in plain files.
+- [[CON-20261115-004 Johnny.Decimal folder system|Johnny.Decimal folder system]]: a named way to number the folders of step 1. A link, not a dependency.
 
 ## Sources
 
