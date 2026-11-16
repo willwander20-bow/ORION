@@ -149,3 +149,5 @@ Approve, reject, or change each row: X1, X2, X3, X4. Rows can be decided one by 
 2026-11-15T22:08. The Orchestrator checked that `brain-version` (CO-20261115-009) matched the current Brain version. Files: new `CLM-20261115-003` and `CON-20261115-002` (from the drafts in `.staging\proposed`); `CLM-20261113-001` changed (one evidence line, one caveat bullet; `confidence` and `evidence-strength` unchanged). `change-orders` and `updated` set. Frontmatter Check 0 problems. X4 not applied
 
 Brain version after: CO-20261115-010.
+
+Row X4 (the MOC link) was replaced by CO-20261115-012 (applied 2026-11-15T22:12): a new MOC, "Content for AI readers".

@@ -129,6 +129,9 @@
 | 22:11 | justin | "Yes proveed. And great work": go ahead with the new MOC proposal | CO-20261115-012 | — |
 | 22:11 | orchestrator | Change Order CO-20261115-012 written by the Orchestrator (structural, no source: no merged mode, no Editor second look) and saved `open`: a new MOC "Content for AI readers" (draft in `.staging\proposed`; every link resolves), two relate rows (MOC-001, MOC-002), and a Research Questions row. Replaces the held rows X4 of CO-010 and CO-011. Frontmatter Check 0 | [[CO-20261115-012 Content for AI readers MOC]] | `open` |
 
+| 22:14 | justin | Decision on the Change Order: "Yes approved" (CO-20261115-012, rows X1 to X4) | [[CO-20261115-012 Content for AI readers MOC]] | `approved` |
+| 22:12 | orchestrator | Version check passed (CO-20261115-011). Change Order applied: new MOC-20261115-001 (draft moved from `.staging`), one bullet each in MOC-001 and MOC-002, one Research Questions row. Frontmatter Check 0, Link Check 0 (the ORPHAN is resolved). `git diff`: only additions in the existing MOCs. `.staging` is empty. Curator Due: not due (13 of 15 Change Orders). Handoff updated (same approval as the earlier records for this work): KS-07 KS-D-53 and row 0.38; KS-08 §8.18 and row 0.46 | [[CO-20261115-012 Content for AI readers MOC]] | Brain version `CO-20261115-011` to `CO-20261115-012` |
+
 
 ## Decisions
 
@@ -149,7 +152,7 @@
 
 ## Open
 
-- Placement of the 3 new records (CLM-20261115-003, CLM-20261115-004, CON-20261115-002): Justin asked where they belong; rows X4 of CO-010 and CO-011 are held. Link Check shows 1 ORPHAN (CLM-20261115-004) until the MOC exists. Reddit source skipped.
+- Open for Justin: Rulebook rules for (1) a Change Order that builds on another one (rebase), and (2) an Editor second look that disagrees with the Managing Editor. Curator maintenance is due after 2 more Change Orders or on 2026-11-28.
 
 - Lean workflow (KS-D-50), merged records (KS-D-51), and the migration (KS-D-52): the new flow is untested with a new source. Knowledge HQ "Briefs and Assessments" view is empty. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
 - Intake: Justin is still developing the intake process.

@@ -4,7 +4,7 @@ type: moc
 title: Note durability
 status: active
 created: 2026-11-13T10:27
-updated: 2026-11-15T20:08
+updated: 2026-11-15T22:12
 created-by: orchestrator
 schema-version: "0.6"
 last-reviewed: 2026-11-13
@@ -20,6 +20,7 @@ change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-012 Content for AI readers MOC]]"
 ---
 
 ## Topic summary
@@ -52,6 +53,7 @@ How to keep notes readable and usable for many years: file formats, ownership, a
 ## Related MOCs
 
 - [[MOC-20261113-002 AI-maintained knowledge bases|AI-maintained knowledge bases]]: one method in that topic keeps its wiki as plain Markdown files with Markdown links, for portability. A link, not a dependency.
+- [[MOC-20261115-001 Content for AI readers|Content for AI readers]]: both topics rank open file formats, for different reasons. There the reason is how long files last. Here it is reading by AI. A link, not a dependency.
 
 ## Open research questions
 

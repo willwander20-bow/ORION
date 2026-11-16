@@ -3,12 +3,13 @@ id: MOC-20261115-001
 type: moc
 title: Content for AI readers
 status: active
-created:
-updated:
-created-by:
+created: 2026-11-15T22:12
+updated: 2026-11-15T22:12
+created-by: orchestrator
 schema-version: "0.13"
-last-reviewed:
-change-orders: []
+last-reviewed: 2026-11-15
+change-orders:
+  - "[[CO-20261115-012 Content for AI readers MOC]]"
 ---
 
 ## Topic summary

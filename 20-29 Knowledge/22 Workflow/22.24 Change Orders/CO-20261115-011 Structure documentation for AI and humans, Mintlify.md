@@ -187,3 +187,5 @@ Question: do you want the claim in MOC-001 (Note durability) or in MOC-002 (AI-m
 2026-11-15T22:08. Rebased by the Orchestrator: `brain-version` changed from CO-20261115-009 to CO-20261115-010, because this Change Order was drafted knowing the proposed records of CO-20261115-010, and CO-010 was applied first. Before the apply, the Orchestrator checked that each "Current" text of X2 and X3 was in the records (all found). Files: new `CLM-20261115-004`; `CON-20261115-002` (steps 7 to 10, test section, source count, two caveats, source line); `CLM-20261115-003` (evidence line, caveat). `change-orders` and `updated` set. X4 not applied
 
 Brain version after: CO-20261115-011.
+
+Row X4 (the MOC link) was replaced by CO-20261115-012 (applied 2026-11-15T22:12): a new MOC, "Content for AI readers".

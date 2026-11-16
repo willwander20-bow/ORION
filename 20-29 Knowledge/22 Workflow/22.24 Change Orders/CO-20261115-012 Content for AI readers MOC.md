@@ -2,9 +2,9 @@
 id: CO-20261115-012
 type: change-order
 title: "New MOC: Content for AI readers"
-status: open
+status: applied
 created: 2026-11-15T22:11
-updated: 2026-11-15T22:11
+updated: 2026-11-15T22:12
 created-by: orchestrator
 schema-version: "0.13"
 assessment:
@@ -17,11 +17,11 @@ affected:
   - "[[MOC-20261113-001 Note durability]]"
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T22:14
+decision-note: "Yes approved"
+applied: 2026-11-15T22:12
+brain-version-after: CO-20261115-012
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. Drafted by the Orchestrator: the change is structural and adds no source. There is no Brief, so the merged mode and the Editor second look do not apply. -->
@@ -87,4 +87,10 @@ Justin: approve X1, X2, X3, and X4 as written? The rows can be decided one by on
 
 ## 7. Decision record
 
+2026-11-15T22:14. Justin: "Yes approved". Decision: `approved`. Rows X1, X2, X3, and X4, as written.
+
 ## 8. Implementation record
+
+2026-11-15T22:12. The Orchestrator checked that `brain-version` (CO-20261115-011) matched the current Brain version. X1: new `MOC-20261115-001` (the draft moved from `.staging\proposed`). X2 and X3: one bullet each in MOC-20261113-001 and MOC-20261113-002. X4: one row added to `Research Questions.md`. `change-orders` and `updated` set. Link Check: the ORPHAN of CLM-20261115-004 is resolved. Rows X4 of CO-20261115-010 and CO-20261115-011 are replaced by this Change Order.
+
+Brain version after: CO-20261115-012.

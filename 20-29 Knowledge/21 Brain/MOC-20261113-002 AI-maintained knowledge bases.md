@@ -4,7 +4,7 @@ type: moc
 title: AI-maintained knowledge bases
 status: active
 created: 2026-11-13T17:58
-updated: 2026-11-15T20:08
+updated: 2026-11-15T22:12
 created-by: orchestrator
 schema-version: "0.10"
 last-reviewed: 2026-11-13
@@ -16,6 +16,7 @@ change-orders:
   - "[[CO-20261115-007 Fix source counts and mark unchecked evidence]]"
   - "[[CO-20261115-008 Fix partly independent wording in MOC-002]]"
   - "[[CO-20261115-009 Repoint Brain citations to Source notes]]"
+  - "[[CO-20261115-012 Content for AI readers MOC]]"
 ---
 
 ## Topic summary
@@ -46,6 +47,7 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 ## Related MOCs
 
 - [[MOC-20261113-001 Note durability|Note durability]]: the method in this topic stores its wiki as plain Markdown files with Markdown links. Note durability covers if such files stay readable and usable. A link, not a dependency.
+- [[MOC-20261115-001 Content for AI readers|Content for AI readers]]: an AI that keeps a wiki over plain files also reads those files. That topic covers how to write for that reader. A link, not a dependency.
 
 ## Open research questions
 

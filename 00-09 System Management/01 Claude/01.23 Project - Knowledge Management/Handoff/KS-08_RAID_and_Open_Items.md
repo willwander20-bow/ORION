@@ -1065,6 +1065,50 @@ Records now: 14 Source notes (11 with a Brief and an Assessment, 3 without), Cha
 
 Knowledge HQ updated (Justin: "Update it"): the Source board shows `source-quality` and `claim-count`; the new view `Source briefs.base` shows the Briefs in the Source notes and the Sources without a Brief; the empty "Briefs and Assessments" view is in `20.09 Knowledge Archive`. Open: the new flow (KS-D-50, KS-D-51) has not run with a new source, and the Knowledge HQ views are not yet seen in Obsidian.
 
+### 8.18 First run of the new flow, three sources (2026-11-15)
+
+Status: DONE (KS-D-53). Justin: "Lets run these sources"; "Lets skip reddit. I approve all proposed changes. Where do you think it belongs?"; "Yes proveed. And great work"; "Yes approved".
+
+Sources: SRC-20261115-003 (Reddit post), SRC-20261115-004 (Nava toolkit), SRC-20261115-005 (Mintlify article).
+
+#### Success test (set in the log before the run) and result
+
+| Test | Result |
+|---|---|
+| At most 120,000 agent tokens per source | Nava 141,852; Mintlify 150,172; Reddit 0 (access failed). Over the target only because of the threshold double check (about 57,500 per Editor run). Without it: 84,404 and 92,612. Old flow: about 294,000 per source. |
+| At most 15 minutes of Justin's time per source | Not measured. |
+| A Brain change Justin would use | Justin approved all rows. |
+| Agents write only to `.staging` | Held. `git status` showed no other file. |
+| The Orchestrator re-types no agent draft | Held. `Merge Draft.ps1`, `mv`, and `sed` only. |
+
+#### What ran
+
+| Step | Result |
+|---|---|
+| Reddit | Access `none` (403; the fetch tool refuses reddit.com). Source `failed`, no Reporter (Rulebook §1 step 5). Justin: skip. Source `skipped`. |
+| Reporters (2, in parallel) | Each wrote its Brief to `.staging` and returned a 150-word report. About 35,000 tokens, 45 to 63 seconds. Merged into the Source notes with `Merge Draft.ps1`. Quote checks 5 of 5 and 3 of 3. |
+| Managing Editor, merged mode | CO-20261115-010 (4 rows, about 1,100 words) and CO-20261115-011 (4 rows). Delta format. Each new record has one text, its draft. |
+| Editor second look (threshold) | Both reached the threshold (new records). Nava: 7 of 9 points agree, two caveats added. Mintlify: **the Editor said `investigate`, the Managing Editor proposed four rows.** Justin approved the rows. |
+| Apply | Rows X1 to X3 of both applied. CO-011 was rebased from Brain version CO-009 to CO-010 by the Orchestrator (deviation from Rulebook §6 step 3, recorded in the Change Order). Rows X4 held for the MOC placement. |
+| Placement | CO-20261115-012: new MOC "Content for AI readers" (MOC-20261115-001), two related-MOC links, one Research Questions row. Applied. |
+
+Brain version after: `CO-20261115-012`. New records: CLM-20261115-003, CLM-20261115-004, CON-20261115-002, MOC-20261115-001. Link Check 0, Frontmatter Check 0.
+
+#### Findings
+
+- `Quote Check.ps1` v0.3 failed a valid quote (a curly apostrophe garbled by the PowerShell code page). Fixed in v0.4.
+- Two Change Orders drafted at the same Brain version, one depending on the other, break the version check. The Orchestrator rebased by hand. Proposed rule for Justin: a Change Order that builds on another Change Order's proposed records is rebased after a check of each row's "Current" text.
+- An Editor second look that disagrees with the Managing Editor needs a stated rule. This run: show both to Justin.
+- `.staging` keeps the proposed Brain records until Justin approves their rows.
+- Shell heredocs failed twice on long text. The Orchestrator wrote long documents with the file tool.
+- Curator trigger: 13 Change Orders applied since the last maintenance report (limit 15).
+
+#### Open
+
+- Rulebook rule for a dependent Change Order (rebase) and for a second look that disagrees. Justin decides.
+- Curator `maintenance` run is due after 2 more Change Orders, or on 2026-11-28.
+- Justin's time per source, for the success test.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -1114,3 +1158,4 @@ Knowledge HQ updated (Justin: "Update it"): the Source board shows `source-quali
 | 2026-11-15 | 0.43 | New §8.15: cost and duplication review, lean workflow (KS-D-50). |
 | 2026-11-15 | 0.44 | New §8.16: merged records (KS-D-51). |
 | 2026-11-15 | 0.45 | New §8.17: migration of the legacy Briefs and Assessments (KS-D-52). |
+| 2026-11-15 | 0.46 | New §8.18: first run of the new flow, three sources (KS-D-53). |
