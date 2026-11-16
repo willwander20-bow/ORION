@@ -1,4 +1,4 @@
-# Frontmatter Check v0.2 (KS-D-42). Orchestrator Rulebook section 4.0.
+# Frontmatter Check v0.3 (KS-D-42). v0.3 (2026-11-16, Justin: "Fix both") adds two value rules: `kind` and the Brain `title`. Orchestrator Rulebook section 4.0.
 # Checks the YAML frontmatter of Knowledge System records for errors that stop Obsidian from reading it.
 # It is a rule check, not a full YAML parser. Output ends with "Problems: N".
 # Usage (from 20-29 Knowledge): & ".\20 Knowledge Backend\20.04 Knowledge Reference\Frontmatter Check.ps1" [-Path "<file or folder>"]
@@ -22,6 +22,14 @@ foreach ($f in $files) {
   for ($i = 1; $i -lt $end; $i++) {
     $x = $l[$i]
     if ($x -match '^\s*$') { continue }
+    # v0.3 value rules: `kind` is concept or process (Schema §5.10); in 21 Brain, `title` equals the file name after the ID.
+    if ($x -match '^([a-z0-9-]+):\s+(.*)$') {
+      $key = $Matches[1]; $val = $Matches[2].Trim().Trim('"')
+      if ($key -eq 'kind' -and $val -notin @('concept', 'process')) { $bad++; "$($f.Name) line $($i+1): kind must be concept or process: $x" }
+      if ($key -eq 'title' -and $f.DirectoryName -match '21 Brain' -and $f.BaseName -match '^[A-Z]{3}-\d{8}-\d{3} (.+)$') {
+        if ($Matches[1] -ne $val) { $bad++; "$($f.Name) line $($i+1): title does not equal the file name after the ID: $x" }
+      }
+    }
     if ($x -match '^\s+-\s+(.*)$') { $v = $Matches[1] }                       # list item
     elseif ($x -match '^[a-z0-9-]+:\s*$') { continue }                        # empty value or list start
     elseif ($x -match '^[a-z0-9-]+:\s+(.*)$') { $v = $Matches[1] }            # key: value
