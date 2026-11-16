@@ -61,6 +61,11 @@
 | 18:51 | curator | Impact review of CO-20261115-005. 2 findings: H1 ("One source" beside "second source" in CON-20261115-001, CON-004 line 31, MOC-002 line 34) and H2 (unchecked evidence not marked in caveat bullets). Orchestrator check: git diff shows only rows X1 to X5; both findings confirmed in the files; no file changed by the agent. Saved `validated` | [[KHR-20261115-005 Impact review of CO-20261115-005]] | PASS |
 | 18:51 | managing-editor | Run in health report mode on KHR-20261115-004 H1 and H2, Brain version CO-20261115-005. Orchestrator check: current text found in CLM-001, MOC-001, CON-003, CON-004; Ango conflict of interest confirmed in BRF-20261113-001 line 75 (the agent found a wrong clause in CLM-001); no file changed by the agent | [[KHR-20261115-004 Impact review of CO-20261115-004]] | PASS |
 | 18:51 | orchestrator | Change Order saved `open`. Presented to Justin. KHR-20261115-005 H1 and H2 are left for a later Change Order (they touch CON-004, CON-20261115-001, MOC-002) | [[CO-20261115-006 Fix opinion-source count and add back-links]] | `open` |
+| 18:54 | justin | Decision on the Change Order: "1" (approve all four rows) | [[CO-20261115-006 Fix opinion-source count and add back-links]] | `approved` |
+| 18:55 | orchestrator | Version check passed. Change Order applied: X1 to X4 on CLM-001, MOC-001, CON-003, CON-004. git diff of 21 Brain matches the Change Order. Frontmatter Check 0, Link Check 0. Curator impact review and the Managing Editor run for KHR-20261115-005 started | [[CO-20261115-006 Fix opinion-source count and add back-links]] | Brain version `CO-20261115-005` to `CO-20261115-006` |
+| 18:56 | curator | Impact review of CO-20261115-006. No findings. Orchestrator check: git diff of 21 Brain matches rows X1 to X4; no file changed by the agent. Saved `validated` | [[KHR-20261115-006 Impact review of CO-20261115-006]] | PASS |
+| 18:57 | managing-editor | Run in health report mode on KHR-20261115-005 H1 and H2, Brain version CO-20261115-006. Orchestrator check: the 7 current-state texts found in CON-004, CON-20261115-001, MOC-002; no file changed by the agent | [[KHR-20261115-005 Impact review of CO-20261115-005]] | PASS |
+| 18:57 | orchestrator | Change Order saved `open`. Presented to Justin together with the question whether the Curator review rule (Rulebook §6 step 10) needs a threshold | [[CO-20261115-007 Fix source counts and mark unchecked evidence]] | `open` |
 
 ## Decisions
 
@@ -71,6 +76,7 @@
 - Justin: "Approve all" (CO-20261115-001, rows X1 to X9). The two extra places with the non-LoC wording stay out of this Change Order.
 - Justin: "Yes, H1 and H2"; "Approve both" (CO-20261115-002, rows X1 and X2).
 - Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
+- Justin: "1" three times (CO-20261115-004, -005, -006: approve all rows); "Send it as is" (Editor re-run for CO-005); "Yes, one Change Order" (KHR-004 H1, H2).
 - Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
 - Justin: "Yes, update Handoff" (KS-07, KS-08).
 - Justin: "Yes, plan Phase 7"; "Lets start with the Dashboard and we can create the web app once everything is complete and running"; "Approve plan" (ID 22.27, two Source fields, Handoff record; KS-D-47).
@@ -78,7 +84,7 @@
 
 ## Open
 
-- KHR-20261115-004 H1 and H2: CO-20261115-006 is open for Justin. KHR-20261115-005 H1 and H2 need a later Change Order.
+- CO-20261115-007 (KHR-005 H1, H2) is open for Justin. Question for Justin: a threshold for the Curator review after an apply (Rulebook §6 step 10).
 
 - Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
 

@@ -4,16 +4,18 @@ type: concept
 title: AI-maintained wiki over files
 status: accepted
 created: 2026-11-13T17:58
-updated: 2026-11-15T18:40
+updated: 2026-11-15T18:55
 created-by: orchestrator
 schema-version: "0.10"
 kind: concept
 related:
   - "[[CON-20261113-004 Set up an AI-maintained wiki]]"
+  - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
 last-reviewed: 2026-11-13
 change-orders:
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
 aliases:
   - LLM wiki
   - Map for your AI
@@ -37,6 +39,8 @@ Caveats:
 ## Related claims
 
 - [[CON-20261113-004 Set up an AI-maintained wiki|Set up an AI-maintained wiki]]: the setup steps for this method.
+- [[CLM-20261115-001 Search plain files first, then add indexes|Search plain files first, then add indexes]]: this method builds an index (a map) over plain files. That claim says when an index is needed at all. A link, not a dependency.
+- [[CON-20261115-001 Agent memory protocol for file-based memory|Agent memory protocol for file-based memory]]: also an agent that reads a map first. There the map is part of a written protocol. A link, not a dependency.
 
 ## Sources
 

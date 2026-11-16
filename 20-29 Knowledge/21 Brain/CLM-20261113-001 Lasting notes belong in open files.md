@@ -4,7 +4,7 @@ type: brain-claim
 title: Lasting notes belong in open files
 status: accepted
 created: 2026-11-13T10:27
-updated: 2026-11-15T18:39
+updated: 2026-11-15T18:55
 created-by: orchestrator
 schema-version: "0.6"
 confidence: low
@@ -30,6 +30,7 @@ change-orders:
   - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
   - "[[CO-20261115-002 Align LoC access-measures wording]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
 aliases:
   - Durable notes need open files
 ---
@@ -80,7 +81,7 @@ Condition on access measures: the file has no measure that controls access to it
 
 ## Disputes and caveats
 
-- Two opinion sources. Ango leads Obsidian, so the principle supports his product. The Brief gives no information on the author's interests, so it does not show that the two authors are independent.
+- Three opinion sources support the claim: Ango (BRF-20261113-001), Sivers (BRF-20261113-003), and Wall (BRF-20261115-002). One more opinion source, Bologov (BRF-20261113-005), qualifies its conditions (see below). Ango leads Obsidian, so the principle supports his product (BRF-20261113-001 states this conflict of interest). The publisher of Wall sells a related product (see the Wall bullet below). The Brain does not show that these authors are independent of each other.
 - First institutional source: NARA (BRF-20261113-002). It is independent of Obsidian, but its support is indirect. It ranks plain text above both Word formats for the transfer of federal records. It gives no reasons, so it does not support either reason in this claim. Its scope is federal records, not personal notes. The part of the page that the Brief read does not define 'preferred' and 'acceptable'.
 - NARA also prefers ODT and PDF/A-1 and PDF/A-2, and lists general PDF 1.0–1.7 as acceptable only. NARA does not call these formats open. Openness alone possibly does not explain its ranking.
 - Second institutional source: the Library of Congress (LoC, BRF-20261113-006). It does not rank plain text first. For digital textual works, it prefers structured formats with a schema or a standard: XML-based markup with a DTD or schema, EPUB3, other book DTDs (TEI, DocBook), PDF/UA, PDF/A, and PDF of the highest quality. It lists plain text as acceptable only, under "Other formats", with RTF and proprietary word-processing formats. LoC gives no reasons, and not every LoC preference is a durability judgment. Its scope is the textual works that it receives for its collection, not personal notes. So NARA's rank for plain text is not a shared institutional view. LoC does not say that plain text fails to last. This is a difference in scope and conditions, not a contradiction.

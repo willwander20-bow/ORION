@@ -2,9 +2,9 @@
 id: CO-20261115-006
 type: change-order
 title: "Fix the opinion-source count and add back-links (KHR-20261115-004 H1, H2)"
-status: open
+status: applied
 created: 2026-11-15T18:51
-updated: 2026-11-15T18:51
+updated: 2026-11-15T18:55
 created-by: managing-editor
 schema-version: "0.11"
 assessment:
@@ -19,11 +19,11 @@ affected:
   - "[[CON-20261113-003 AI-maintained wiki over files]]"
   - "[[CON-20261113-004 Set up an AI-maintained wiki]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T18:54
+decision-note: "1"
+applied: 2026-11-15T18:55
+brain-version-after: CO-20261115-006
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -109,4 +109,16 @@ Justin: approve, change, or reject each row. The rows can be decided one by one.
 
 ## 7. Decision record
 
+2026-11-15T18:54. Justin chose option 1 of 4: "1" (approve all four rows). Decision: `approved`. Rows X1 to X4, as written.
+
 ## 8. Implementation record
+
+2026-11-15T18:55. The Orchestrator checked that `brain-version` (CO-20261115-005) matched the current Brain version before the change. Rows X1 to X4 applied as written. Files changed in `21 Brain`:
+
+- CLM-20261113-001: X1 (first "Disputes and caveats" bullet).
+- MOC-20261113-001: X2 (first two sentences of the first "Disputes and gaps" bullet).
+- CON-20261113-003: X3 (`related` and two "Related claims" bullets).
+- CON-20261113-004: X4 (`related` and one "Related claims" bullet).
+- `change-orders` and `updated` set on all four records.
+
+Brain version after: CO-20261115-006.

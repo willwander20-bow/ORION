@@ -4,7 +4,7 @@ type: moc
 title: Note durability
 status: active
 created: 2026-11-13T10:27
-updated: 2026-11-15T18:40
+updated: 2026-11-15T18:55
 created-by: orchestrator
 schema-version: "0.6"
 last-reviewed: 2026-11-13
@@ -18,6 +18,7 @@ change-orders:
   - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
   - "[[CO-20261115-002 Align LoC access-measures wording]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
 ---
 
 ## Topic summary
@@ -58,6 +59,6 @@ How to keep notes readable and usable for many years: file formats, ownership, a
 
 ## Disputes and gaps
 
-- Two opinion sources, no data. Their independence is not shown. Two institutional sources give format lists with no reasons and no data. NARA supports the direction of the claim, but not its reasons. LoC (BRF-20261113-006) supports the encoding condition, but ranks plain text below structured formats. The two institutions do not rank plain text the same way. Look for a source with data or reasons on how long file formats stay readable.
+- Three opinion sources support the claim, with no data: Ango, Sivers, and Wall. Ango leads Obsidian, and the publisher of Wall sells a related product. The Brain does not show that the authors are independent of each other. One more opinion source, Bologov, qualifies the conditions of the claim (see the next bullet). Two institutional sources give format lists with no reasons and no data. NARA supports the direction of the claim, but not its reasons. LoC (BRF-20261113-006) supports the encoding condition, but ranks plain text below structured formats. The two institutions do not rank plain text the same way. Look for a source with data or reasons on how long file formats stay readable.
 - No source tests if notes with links and metadata stay usable when only the file survives, or how much Markdown dialects differ between tools. No source compares Markdown with HTML over time.
 - The LoC rule on access measures (BRF-20261113-006 E14) is for the works that LoC receives. An owner can choose encryption for privacy. The Brief gives no information on that case. No source in the Brain says whether the rule applies to personal notes. CLM-20261113-001 applies it to personal notes only as an extension.

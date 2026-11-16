@@ -4,18 +4,20 @@ type: concept
 title: Set up an AI-maintained wiki
 status: accepted
 created: 2026-11-13T17:58
-updated: 2026-11-15T18:49
+updated: 2026-11-15T18:55
 created-by: orchestrator
 schema-version: "0.10"
 kind: process
 related:
   - "[[CON-20261113-003 AI-maintained wiki over files]]"
   - "[[CON-20261113-002 Work with plain-text notes]]"
+  - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
 last-reviewed: 2026-11-13
 change-orders:
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
+  - "[[CO-20261115-006 Fix opinion-source count and add back-links]]"
 aliases:
   - Knowledge Base Prompt
   - Ingest Answer Tidy loop
@@ -52,6 +54,7 @@ Ground rules (for all steps): work only inside the folder. Show a plan and get a
 
 - [[CON-20261113-003 AI-maintained wiki over files|AI-maintained wiki over files]]: the method that these steps set up.
 - [[CON-20261113-002 Work with plain-text notes|Work with plain-text notes]]: also a method to organize notes in plain files with folders. There, one person does the steps by hand. Here, an AI does the organizing and the upkeep, and the pages have no frontmatter. A related method, not an extension.
+- [[CON-20261115-001 Agent memory protocol for file-based memory|Agent memory protocol for file-based memory]]: a set of rules for how an agent reads and writes a file-based memory, from the same Wall source. It includes the write boundary named in the Explanation. This setup is a prompt, not a protocol. A link, not a dependency.
 
 ## Sources
 
