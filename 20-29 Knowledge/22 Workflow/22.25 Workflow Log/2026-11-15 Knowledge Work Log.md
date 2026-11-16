@@ -89,6 +89,11 @@
 | 19:52 | orchestrator | Merged records (KS-D-51), not yet tested on a real source. New script `Merge Draft.ps1` v0.1 (tested on copies: Brief merge, Assessment merge, second merge refused, Quote Check 3 of 3, Frontmatter Check 0). Schema v0.13 (§2.7, §5.4); all templates v0.13; `TPL Source.md` has the four Brief fields; Rulebook v0.9 (§2 states, §4.1, §4.2, §4.5 items 2, 3, 6); Reporter, Editor, Managing Editor files updated; area `CLAUDE.md` v0.16. Legacy BRF and KAS notes not migrated | `20.04`, `20.07`, `.claude\agents`, `CLAUDE.md` | OK, untested |
 | 19:52 | orchestrator | Handoff updated: KS-07 KS-D-51 and change-log row 0.36; KS-08 §8.16 and row 0.44 (Handoff folder; same approval as the earlier Handoff records for this work) | KS-07, KS-08 (Handoff folder) | OK |
 
+| 20:01 | justin | "Yes i want to do a migration" (of the legacy Briefs and Assessments into the Source notes and Change Orders) | `20-29 Knowledge` | — |
+| 20:01 | orchestrator | Rollback point: git tag `pre-migration` (pushed) | repository | OK |
+| 20:01 | orchestrator | Migration stage 1 (workflow records): `Merge Draft.ps1` v0.2 (new mode `LegacyAssessment`, option `-OriginNote`; modes tested on copies). 11 Briefs merged into their Source notes under `# Reference Brief` and 11 Assessments under `# Assessment (migrated)`. Check: each Brief and Assessment text found intact in its Source note (22 of 22). Source fields `brief` and `assessment` cleared. 23 notes (11 BRF, 11 KAS, and the rejected BRF-20261113-008, which has no Source) moved to `20.09 Knowledge Archive` with `git mv`. Frontmatter Check 0, Link Check 0 (the old names still resolve). The Brain is not changed | 22 Source notes, `20.09` | OK |
+| 20:01 | orchestrator | New script `Repoint Citations.ps1` v0.1 (dry run by default). Dry run on the Brain: 78 replacements in 11 files (74 in 10 Brain records, 4 in Research Questions), no unmapped ID. Change Order CO-20261115-009 written (drafted by the Orchestrator, `open`). Brain not changed until Justin decides | [[CO-20261115-009 Repoint Brain citations to Source notes]] | `open` |
+
 
 ## Decisions
 

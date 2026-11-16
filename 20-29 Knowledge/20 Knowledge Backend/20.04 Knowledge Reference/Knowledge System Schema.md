@@ -114,7 +114,7 @@ For a new source, two pairs of notes are one note each.
 
 - `Merge Draft.ps1` (in `20.04`) does each merge. The Orchestrator does not re-type a draft.
 - Evidence in a Brain record cites the Source note: `[[SRC-… Title|short name]] · E3`. The `E` labels are those of the Brief section in the Source note.
-- Existing `BRF` and `KAS` notes stay as they are (legacy). Their IDs stay in use, and links to them stay valid. They are not migrated, because each link would change (root rule 1.2).
+- Existing `BRF` and `KAS` notes were migrated into their Source notes (KS-D-52). The Brief is under `# Reference Brief`, and the Assessment is under `# Assessment (migrated)`. The old notes are in `20.09 Knowledge Archive`. Their IDs stay retired, and a link to an old name still resolves through the archive. A Brain citation points to the Source note once Justin approves the Change Order for it (CO-20261115-009).
 - The Reporter and the Editor still write their drafts from `TPL Reference Brief.md` and `TPL Knowledge Assessment.md`, in `.staging` only.
 
 ## 3. File names and links
@@ -425,3 +425,4 @@ Rules:
 | 2026-11-15 | 0.11 | Phase 7 (KS-D-47): folder `22.27 Knowledge HQ` (§2.4). §5.4: Source fields `assessment` and `change-orders`. |
 | 2026-11-15 | 0.12 | KS-D-50: §2.4 and new §2.6 (staging, delta rule, merged mode). §5.4 and §5.8: `assessment` can be empty. |
 | 2026-11-15 | 0.13 | KS-D-51: new §2.7 (merged records). §5.4: four Brief fields in the Source; `brief` is legacy. |
+| 2026-11-15 | 0.13 | §2.7: the legacy Briefs and Assessments were migrated into Source notes (KS-D-52). |

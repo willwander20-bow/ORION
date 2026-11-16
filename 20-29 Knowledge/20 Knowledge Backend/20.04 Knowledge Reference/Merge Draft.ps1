@@ -1,15 +1,18 @@
-# Merge Draft v0.1 (KS-D-51). Orchestrator Rulebook section 4.5.
+# Merge Draft v0.2 (KS-D-51, KS-D-52). Orchestrator Rulebook section 4.5.
 # Merges an agent draft from .staging into the note that keeps it, so the Orchestrator does not re-type it.
 #   -Mode Brief       a Reference Brief draft goes into a Source note. It copies source-quality, extraction-completeness,
 #                     extraction-confidence, and claim-count to the Source frontmatter, and adds the Brief sections under "# Reference Brief".
 #   -Mode Assessment  a Knowledge Assessment draft goes into a Change Order as "## 1b. Editor second look"
 #                     (the findings table, the recommended action, and the relevance values). Used at the threshold.
+#   -Mode LegacyAssessment  (migration, KS-D-52) a saved Knowledge Assessment note goes into its Source note as "# Assessment (migrated)".
+#   -OriginNote       optional text that the script puts under the new heading, for example "Migrated from BRF-20261113-001."
 # The script sets "updated" from the system clock. It does not set status, ID, or file name. It stops if the section already exists.
 # Usage (from 20-29 Knowledge): & ".\20 Knowledge Backend\20.04 Knowledge Reference\Merge Draft.ps1" -Mode Brief -Draft "<draft>" -Target "<Source note>"
 param(
-  [Parameter(Mandatory = $true)][ValidateSet('Brief', 'Assessment')][string]$Mode,
+  [Parameter(Mandatory = $true)][ValidateSet('Brief', 'Assessment', 'LegacyAssessment')][string]$Mode,
   [Parameter(Mandatory = $true)][string]$Draft,
-  [Parameter(Mandatory = $true)][string]$Target
+  [Parameter(Mandatory = $true)][string]$Target,
+  [string]$OriginNote = ''
 )
 $enc = New-Object System.Text.UTF8Encoding $false
 function Read-Note([string]$p) { return ([IO.File]::ReadAllText((Resolve-Path -LiteralPath $p).Path, $enc) -replace "`r`n", "`n") }
@@ -38,10 +41,23 @@ if ($Mode -eq 'Brief') {
     $t.Front = Set-Field $t.Front $n (Get-Field $d.Front $n)
   }
   $t.Front = Set-Field $t.Front 'updated' $now
-  $body = $t.Body.TrimEnd() + "`n`n# Reference Brief`n`n" + $d.Body.Trim() + "`n"
+  $lead = if ($OriginNote) { $OriginNote.Trim() + "`n`n" } else { '' }
+  $body = $t.Body.TrimEnd() + "`n`n# Reference Brief`n`n" + $lead + $d.Body.Trim() + "`n"
   $out = "---`n" + $t.Front + "`n---`n" + $body
   [IO.File]::WriteAllText((Resolve-Path -LiteralPath $Target).Path, $out, $enc)
   "Merged the Brief into the Source note. claim-count: $(Get-Field $d.Front 'claim-count'). Now run Frontmatter Check and Quote Check on the Source note."
+}
+elseif ($Mode -eq 'LegacyAssessment') {
+  if ((Get-Field $d.Front 'type') -ne 'knowledge-assessment') { throw 'The draft is not a knowledge-assessment.' }
+  if ((Get-Field $t.Front 'type') -ne 'source') { throw 'The target is not a source.' }
+  if ($t.Body -match '(?m)^# Assessment \(migrated\)') { throw 'The Source note already has a migrated Assessment.' }
+  $head = "Relevance: $(Get-Field $d.Front 'relevance'). Recommended action: $(Get-Field $d.Front 'recommended-action'). Brain version when it was made: $(Get-Field $d.Front 'brain-version')."
+  if ($OriginNote) { $head = $OriginNote.Trim() + ' ' + $head }
+  $t.Front = Set-Field $t.Front 'updated' $now
+  $body = $t.Body.TrimEnd() + "`n`n# Assessment (migrated)`n`n" + $head + "`n`n" + $d.Body.Trim() + "`n"
+  $out = "---`n" + $t.Front + "`n---`n" + $body
+  [IO.File]::WriteAllText((Resolve-Path -LiteralPath $Target).Path, $out, $enc)
+  "Merged the legacy Assessment into the Source note."
 }
 else {
   if ((Get-Field $d.Front 'type') -ne 'knowledge-assessment') { throw 'The draft is not a knowledge-assessment.' }
