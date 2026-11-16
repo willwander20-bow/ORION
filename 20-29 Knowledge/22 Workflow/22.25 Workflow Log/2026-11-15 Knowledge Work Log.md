@@ -83,6 +83,7 @@
 | 19:39 | orchestrator | Lean workflow (KS-D-50), not yet tested on a real source. Schema v0.12 (§2.6 staging, delta rule, merged mode); all templates v0.12; `TPL Change Order.md` (delta rows, §1a); Rulebook v0.8 (§4.5; §2 two states; §4.3 item 7; §6 steps 4 and 10); agent files: Reporter v0.5, Editor v0.4, Managing Editor v0.5 (merged mode, delta), Curator v0.4 (all write one draft to `.staging`; the Curator trigger); new script `Curator Due.ps1` v0.1 (tested: not due at 9 Change Orders and 2 days; DUE when a limit is lowered); area `CLAUDE.md` v0.15; folder `.staging` made | `20.04`, `20.07`, `.claude\agents`, `CLAUDE.md` | OK, untested |
 | 19:39 | orchestrator | Bug found in my own script while testing: a PowerShell variable (`$days`) overwrote the `-Days` parameter. Fixed (`$sinceDays`) | `Curator Due.ps1` | OK |
 
+| 19:44 | orchestrator | Handoff updated on Justin's approval ("Yes"): KS-07 new KS-D-50 and change-log row 0.35; KS-08 new §8.15 (measures, decisions, record types) and change-log row 0.43. States that Source and Brief are not merged and that item 5 is not approved | KS-07, KS-08 (Handoff folder) | OK |
 
 ## Decisions
 
@@ -104,7 +105,6 @@
 ## Open
 
 - Lean workflow (KS-D-50) is untested. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
-- Handoff folder (KS-07 KS-D-50, KS-08 §8.15) not updated: needs Justin's approval.
 - Intake: Justin is still developing the intake process.
 
 

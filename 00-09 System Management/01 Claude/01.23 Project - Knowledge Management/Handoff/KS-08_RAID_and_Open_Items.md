@@ -995,6 +995,39 @@ Phase 7 exit test: PASS, subject to Justin's review. Open: the MOC-002 "partly i
 
 Justin's review, 2026-11-15: Phase 7 exit test PASSED (KS-D-49). Justin: "Yes to all". The Curator review threshold stays at 5 records. CO-20261115-008 applied. No Phase 7 item is open. Next: Phase 8 (KS-06 §3). Its plan needs Justin's approval. The web application follows when Justin says that everything is complete and running.
 
+### 8.15 Cost and duplication review, lean workflow (2026-11-15)
+
+Status: APPROVED, not yet tested on a real source (KS-D-50). Justin asked for a critique ("good, bad and ugly"), then chose duplication and cost.
+
+#### Measures
+
+| Measure | Value |
+|---|---|
+| Brain text | about 7,100 words in 11 notes |
+| Workflow records | about 141,000 words: Briefs 43k, Change Orders 31k, Sources 25k, Assessments 19k, health reports 15k, work log 8k |
+| Text also found word for word elsewhere (8-word phrases) | Brain 80%, Change Orders 35%, Assessments 10%, health reports 9%, Briefs 3%, work log 1%; all records 17% |
+| Agent runs for two sources (13 runs) | 588,000 tokens, about 294,000 per source |
+| Split of those tokens | core pipeline 50%, first Curator review 9%, follow-up loop 41% |
+| Agent output re-typed by the Orchestrator today | 31,000 words, about 44,000 tokens |
+
+The Orchestrator's own tokens (reading, checking, editing) are not in these figures.
+
+#### Decisions (KS-D-50)
+
+| # | Change | Where |
+|---|---|---|
+| 1 | Change Order rows are deltas. A new record has one text, its draft. | Schema §2.6, `TPL Change Order.md`, Managing Editor v0.5 |
+| 2 | Four agents write one draft each to `.staging`. | Schema §2.6, Rulebook §4.5, agent files, area `CLAUDE.md` rule 1 |
+| 3 | Merged mode, with the Editor double check at the threshold. | Managing Editor §2b, Rulebook §4.5 |
+| 4 | Curator `maintenance` after 15 applied Change Orders or 15 days. | `Curator Due.ps1`, Rulebook §4.5 |
+| 5 | Drop the four full-text source copies. | NOT approved. Not done. |
+
+Record types after this change: Source, Brief, Assessment (large changes only), Change Order, Health report. Not merged: Source and Brief. Possible next step: merge Source and Brief (Justin decides).
+
+Risks: the four agents can now write. The only limit is the instruction to write one file in `.staging`; the Orchestrator checks `git status` before and after each run. The agent definitions load at session start, so the first real source is the test. Expected result, an estimate and not a measure: 100,000 to 130,000 agent tokens per source, against 294,000.
+
+Rollback: git tag `pre-lean-workflow`.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -1041,3 +1074,4 @@ Justin's review, 2026-11-15: Phase 7 exit test PASSED (KS-D-49). Justin: "Yes to
 | 2026-11-15 | 0.40 | New §8.14: Phase 7 plan approved (KS-D-47). KS-C-15 resolved for v1. |
 | 2026-11-15 | 0.41 | §8.14: Phase 7 test results D1 to D4 (all PASS, subject to Justin's review). Findings listed (KS-D-48). |
 | 2026-11-15 | 0.42 | Phase 7 exit test PASSED (KS-D-49). No Phase 7 item open. |
+| 2026-11-15 | 0.43 | New §8.15: cost and duplication review, lean workflow (KS-D-50). |
