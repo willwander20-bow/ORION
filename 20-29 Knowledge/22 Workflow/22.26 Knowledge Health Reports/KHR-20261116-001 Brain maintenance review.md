@@ -4,7 +4,7 @@ type: knowledge-health-report
 title: Brain maintenance review
 status: validated
 created: 2026-11-16T00:03
-updated: 2026-11-16T00:03
+updated: 2026-11-16T00:13
 created-by: curator
 schema-version: "0.13"
 mode: maintenance
@@ -12,7 +12,8 @@ brain-version: CO-20261115-020
 scope: all
 trigger: "Curator Due.ps1: 21 of 15 Change Orders applied since KHR-20261113-001"
 link-check: "Records checked: 25. Files checked: 26. Problems: 0."
-change-orders: []
+change-orders:
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 ---
 
 <!-- Review the Brain. Do not change the Brain. Each finding needs evidence and a reason why it matters. A count with no context is not permitted. Schema §5.12. -->
@@ -214,3 +215,7 @@ Not applicable.
 - The request said 7 Claims. I count 9 (CLM-20261113-001 and CLM-20261115-001 to -008).
 - No finding changes `status`, `confidence`, or `evidence-strength`. Those fields look right for the evidence read: `low` and `weak` match one-source or opinion evidence. No field value is unsupported.
 - Point 2 of the request (vendor-only evidence) is H6. Point 1 (size and shape) is in §1 and H6, H7. Point 3 is H9. Point 4 is H1. Point 5 is H8. Point 6 is H5 and H13.
+
+## 9. Decision (Orchestrator note, 2026-11-16T00:10)
+
+Justin: "Yes I agree with those fixes. Keep the MOC for now. It will get built out." Approved for a Change Order: H1, H2, H4, H7, H8 (and H3, which the Orchestrator had already fixed as an encoding error of its own apply). H9: keep MOC-20261115-003, no change. H5, H6, H10, H11, H12, H13: not approved now; they stay as report items.
