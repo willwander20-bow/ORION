@@ -10,7 +10,7 @@ updated: 2026-11-15
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: v0.7. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5, v0.6, and v0.7 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
+Status: v0.8 (KS-D-50, not yet tested on a real source). Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5, v0.6, v0.7, and v0.8 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -52,6 +52,8 @@ The Source `status` is the workflow state (Schema §5.1, KS-D-25). There is no s
 | `routed` | `briefed` | Orchestrator | Brief saved and `validated` (section 4.1). |
 | `briefed` | `done` | Orchestrator | `quick-brief` only (KS-D-41). |
 | `briefed` | `assessed` | Orchestrator | Assessment saved and `validated` (section 4.2). |
+| `briefed` | `change-proposed` | Orchestrator | Merged mode (section 4.5): Change Order saved `open`. |
+| `briefed` | `done` | Orchestrator | Merged mode: the Managing Editor returns No Change. |
 | `assessed` | `done` | Orchestrator | `recommended-action` is `no-action`, or `investigate` and the row is added to `Research Questions.md`, or the Managing Editor returns No Change. |
 | `assessed` | `change-proposed` | Orchestrator | Change Order saved as `open` (section 4.3). |
 | `change-proposed` | `done` | Orchestrator | Change Order applied, or Justin set `rejected` (KS-D-41 for `rejected`). |
@@ -74,7 +76,7 @@ Rules:
 
 ## 4. Validation
 
-Validate each output before the next stage. If a check fails, set the output to `rejected`, write the reason in the log, and go to section 5.
+Validate each output before the next stage. An agent draft is validated in `.staging` and then moved (section 4.5). If a check fails, set the output to `rejected`, write the reason in the log, and go to section 5.
 
 ### 4.0 All records: valid frontmatter (KS-D-42)
 
@@ -117,6 +119,8 @@ Pass: set the Assessment to `validated` and the Source to `assessed`. Set `asses
 5. Open Change Orders on the same records: one Managing Editor run at a time. Save each Change Order before the next run.
 6. `git status` shows no file changed by the Managing Editor. `21 Brain` is not changed.
 
+7. Each row gives the delta (the old text and the new text), not the paragraph. A new record has its text only in its draft file (Schema §2.6, KS-D-50).
+
 Pass: save the Change Order with status `open`, set the Source to `change-proposed`, add the Change Order to `change-orders` on the Source (Schema §5.4, KS-D-47), and present it to Justin.
 
 ### 4.4 Knowledge Health Report
@@ -132,6 +136,14 @@ The Knowledge Curator has three modes: `maintenance`, `impact-review`, and `retr
 4. Pass: set the report to `validated`.
 5. A `retrieval` answer is not a record (Schema §5.12). It stays in the session.
 6. The Curator does not write Change Orders (KS-D-43). For a finding that needs a Brain change, give the report to the Managing Editor. Justin decides which findings go forward.
+
+### 4.5 Staging, merged mode, and the Curator trigger (KS-D-50)
+
+1. **Staging.** The Reporter, the Editor, the Managing Editor, and the Curator write a draft to `20-29 Knowledge\.staging` (Schema §2.6). Run `git status` before and after the run. The only new files are the drafts. If an agent wrote another file, reject the run (section 5, step 3). Validate the draft where it lies. After a pass, set `id`, `created`, `updated`, and `status` from the system clock. Name the file `ID Short title.md` and move it to its folder in `22`. After the move, `.staging` is empty. A rejected draft is a file in `.staging`, not a note: remove it.
+2. **Merged mode.** When the change is expected to be small (the Orchestrator or Justin decides at routing), invoke the Managing Editor with the validated Brief (agent file §2b). No Assessment is saved. When the Change Order passes section 4.3 and is saved `open`, set the Source to `change-proposed`. If the Managing Editor returns No Change, set the Source to `done` and add any Research Questions row.
+3. **Double check at the threshold.** The threshold is: the Change Order makes a record, or changes the text, status, `confidence`, or `evidence-strength` of a Claim, or edits 5 or more Brain records. At the threshold, invoke the Editor on the same Brief. Validate the Assessment (section 4.2) and save it. Set `assessment` on the Source. Compare it with §1a of the Change Order: each Editor finding has a row or a stated reason. If the two disagree, tell Justin before you present the Change Order.
+4. **New records.** Each new record is a draft in `.staging\proposed\`. Give it its ID and move it into `21 Brain` only when Justin approves its row (section 6, step 4).
+5. **Curator trigger.** After each apply, run `Curator Due.ps1` in this folder. If it says DUE, invoke the Curator in `maintenance` mode (section 4.4). It is due when 15 Change Orders were applied, or 15 days passed, since the last maintenance report, whichever comes first. This replaces the per-apply impact review of v0.7 (KS-D-48). Justin can ask for an `impact-review` at any time.
 
 ## 5. Errors and retry
 
@@ -150,13 +162,13 @@ The Orchestrator is the actor that applies an approved Change Order (KS-D-39, KS
 3. **Version check.** Compare the Change Order `brain-version` with the current Brain version (Schema §5.6).
    - Same: go to step 4.
    - Different: do not apply. Re-invoke the Managing Editor at the current version. Save the new Change Order. Set the old one to `withdrawn` (area `CLAUDE.md` §7 step 7).
-4. Apply only the rows that Justin approved. For `approved-with-changes`, apply Justin's changes as he wrote them.
+4. Apply only the rows that Justin approved. For `approved-with-changes`, apply Justin's changes as he wrote them. For a new record, give it its ID and move its draft from `.staging\proposed` into `21 Brain` (section 4.5).
 5. For each Brain record that changed: add the Change Order to `change-orders` and set `updated`.
 6. In the Change Order: set `applied`, `brain-version-after` (its own ID), and status `applied`.
 7. Set the Source to `done`.
 8. Write the log rows: the decision (actor `justin`), and the apply with the Brain version before and after.
 9. `rejected`: do not apply. Set the Source to `done` (KS-D-41).
-10. After an apply, run `Link Check.ps1` and `Frontmatter Check.ps1`, and compare the changed files with the Change Order (`git diff`). Then invoke the Curator in `impact-review` mode with the applied Change Order as the trigger (section 4.4, area `CLAUDE.md` §7 step 8) when the Change Order made a record, changed the text, status, `confidence`, or `evidence-strength` of a Claim, or edited 5 or more Brain records (KS-D-48). For any other Change Order, the checks in this step are enough. Justin can ask for a Curator review at any time.
+10. After an apply, run `Link Check.ps1` and `Frontmatter Check.ps1`, compare the changed files with the Change Order (`git diff`), and run `Curator Due.ps1` (section 4.5, step 5).
 
 ## 7. Log
 
@@ -183,3 +195,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | 2026-11-15 | 0.5 | Justin approved six edits. §2: `routed` to `skipped`. §4.0: `22.26` in the default paths (`Frontmatter Check.ps1` v0.2). §4.1: `-File` for companion files (`Quote Check.ps1` v0.3). New §4.4: Knowledge Health Report. §6 step 10: `Link Check.ps1` and Curator impact review after an apply. Schema version "0.10". |
 | 2026-11-15 | 0.6 | Phase 7 (KS-D-47): §4.2 sets `assessment` on the Source. §4.3 adds the Change Order to `change-orders` on the Source. |
 | 2026-11-15 | 0.7 | Phase 7 test run (KS-D-48): §6 step 10 sets a threshold for the Curator impact review after an apply: a new record, a change to the text, status, `confidence`, or `evidence-strength` of a Claim, or 5 or more Brain records edited. Justin first set 3 records, then raised it to 5. |
+| 2026-11-15 | 0.8 | KS-D-50: new §4.5 (staging, merged mode, double check at the threshold, Curator trigger of 15 Change Orders or 15 days). §2: two merged-mode states. §4.3 item 7: delta rule. §6 step 4 and step 10. Not yet tested on a real source. |

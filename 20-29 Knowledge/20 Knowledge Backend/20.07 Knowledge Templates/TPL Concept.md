@@ -6,7 +6,7 @@ status: accepted
 created:
 updated:
 created-by:
-schema-version: "0.11"
+schema-version: "0.12"
 kind: concept
 related: []
 last-reviewed:

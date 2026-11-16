@@ -1,6 +1,6 @@
 # Knowledge System — Orchestrator Instructions
 
-Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Phase 7 plan approved (KS-D-47). Curator review threshold (KS-D-48). Phase 7 passed (KS-D-49). Version v0.14.
+Status: v0.10, 2026-11-13. Reviewed by Justin (KS-D-20). Exit-test fixes (KS-D-23). Work log location (KS-D-24). Phase 1 passed (KS-D-28). Phase 2 passed (KS-D-32). Quote check rule 9a (KS-D-31). Phase 3 passed (KS-D-35). Phase 4 passed (KS-D-37). Managing Editor rules (KS-D-38). Phase 5 passed, Orchestrator Rulebook (KS-D-42). Phase 6 plan approved (KS-D-43). Phase 6 passed (KS-D-44). Phase 7 plan approved (KS-D-47). Curator review threshold (KS-D-48). Phase 7 passed (KS-D-49). Lean workflow: staging, delta, merged mode, Curator trigger (KS-D-50, not yet tested). Version v0.15.
 
 Claude Code starts in this folder (`20-29 Knowledge`) for Knowledge System work. The ORION root `CLAUDE.md` also loads. Its house rules apply here.
 
@@ -48,7 +48,7 @@ This area has no inbox. New material comes from Justin by hand (KS-D-06), and la
 
 Phase 7 passed its exit test (KS-D-49). Knowledge HQ v1 is an Obsidian dashboard on core Bases in `22 Workflow\22.27 Knowledge HQ` (KS-D-47). It is read-only. The web application follows when Justin says that everything is complete and running. Next: Phase 8. Refer to KS-06 §3. Do not start Phase 8 work until its plan is approved. Test results and findings are in KS-08 §8.14.
 
-After an apply, follow Orchestrator Rulebook §6 step 10. A Curator impact review is required only above the threshold (a new record, a change to the text, status, `confidence`, or `evidence-strength` of a Claim, or 5 or more Brain records edited; KS-D-48). Take each time stamp from the system clock. Do not type a time by hand.
+After an apply, follow Orchestrator Rulebook §6 step 10 and §4.5 (KS-D-50). Run the scripts and compare the changed files with the Change Order. Then run `Curator Due.ps1`. A Curator `maintenance` run starts when it says DUE. A Change Order shows a delta, not the whole paragraph. Agents write their drafts to `.staging`. Take each time stamp from the system clock. Do not type a time by hand.
 
 The Knowledge Curator can be invoked in three modes: `maintenance`, `impact-review`, `retrieval` (KS-D-43). Save each health report in `22.26 Knowledge Health Reports` with a `KHR` ID (Schema §5.12). The Curator does not write Change Orders. For a Curator finding that needs a Brain change, give the Knowledge Health Report to the Managing Editor. Before each Curator run in `maintenance` or `impact-review` mode, run `Link Check.ps1` (in `20.04`) and give its output to the Curator.
 
@@ -71,7 +71,7 @@ The Brain has content. The Brain version is the ID of the last applied Change Or
 
 ## 5. Hard rules
 
-1. **Write scope.** Write only inside `20-29 Knowledge`. Do not write in other parts of ORION without Justin's approval. This includes the routing result on Intake notes in `00.01` until X-G-10 is decided.
+1. **Write scope.** Write only inside `20-29 Knowledge`. Do not write in other parts of ORION without Justin's approval. This includes the routing result on Intake notes in `00.01` until X-G-10 is decided. Exception (KS-D-50): the Reporter, the Editor, the Managing Editor, and the Knowledge Curator each write their draft file in `20-29 Knowledge\.staging`, and nowhere else. The Orchestrator checks and moves each draft (Rulebook §4.5).
 2. **Brain changes.** No agent creates, edits, or deletes Brain content without Justin's approval. Each applied change has a Change Order: what changed, why, the evidence, and the approval. Each Brain note links to each Change Order that changed it (KS-D-03). Exception: `21 Brain\Research Questions.md` is not knowledge. The Orchestrator adds rows without a Change Order and logs each change (KS-D-33, Schema §2.5).
 3. **A Change Order is not an approval.** Record the approval separately.
 4. **Needs-review gate.** An item with "needs review" does not move to the next stage until Justin reviews it and records a decision (X-D-13).
@@ -109,13 +109,13 @@ This workflow applies after Phase 5. It comes from KCM. KS-03 is the reference.
 1. Make or confirm the Source record. Give it a Source ID.
 2. Select the processing level (routing). Record the routing result.
 3. Invoke the Reporter. Validate and save the Reference Brief.
-4. Invoke the Editor with the Brief and the relevant Brain context. Validate and save the Knowledge Assessment.
+4. Invoke the Editor with the Brief and the relevant Brain context. Validate and save the Knowledge Assessment. For a small change, use the merged mode instead: the Managing Editor takes the validated Brief and no Assessment is saved. At the threshold, the Editor also assesses the Brief (Rulebook §4.5, KS-D-50).
 5. If a Brain change is possibly justified, invoke the Managing Editor. Validate and save the Change Order. Rules (KS-D-38):
    - When two or more Assessments affect the same Brain records, invoke the Managing Editor for one at a time. Save each Change Order before the next run.
    - If the Managing Editor lists Brain records that the Assessment did not see, decide with Justin if the Editor must re-run before the Change Order goes to Justin.
 6. Present the proposal to Justin.
 7. Apply the change only after Justin approves it and the version check passes (Schema §5.6). If the check fails, do not apply. Re-invoke the Managing Editor at the current version, save the new Change Order, and set the old one to `withdrawn`. Record the approval and the Brain version.
-8. Ask the Curator to review the affected navigation and relationships.
+8. Run `Curator Due.ps1`. When it says DUE (15 applied Change Orders or 15 days since the last maintenance report, whichever comes first), invoke the Curator in `maintenance` mode (KS-D-50).
 
 ## 8. Working with Justin
 

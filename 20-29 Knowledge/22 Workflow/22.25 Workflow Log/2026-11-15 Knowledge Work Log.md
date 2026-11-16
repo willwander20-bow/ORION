@@ -78,6 +78,11 @@
 | 19:03 | justin | Decision on the Change Order: "Yes to all" (approve CO-20261115-008; threshold stays 5; pass Phase 7) | [[CO-20261115-008 Fix partly independent wording in MOC-002]] | `approved` |
 | 19:06 | orchestrator | Version check passed. Change Order applied: X1 on MOC-20261113-002. git diff matches the Change Order. Frontmatter Check 0, Link Check 0. No Curator review (1 record, below the threshold of 5) | [[CO-20261115-008 Fix partly independent wording in MOC-002]] | Brain version `CO-20261115-007` to `CO-20261115-008` |
 | 19:06 | justin | Phase 7 exit test decision. Justin: "Yes to all" (KS-D-49). Area `CLAUDE.md` v0.14 (Phase 7 passed; rule 11 covers the web application only; Curator threshold and system-clock rule added). KS-07 KS-D-49 and KS-08 §8.14 updated (Handoff folder, as approved for the Phase 7 record) | `CLAUDE.md`, KS-07, KS-08 | PASS |
+| 19:39 | justin | Review of the cost and duplication measures. Justin: "1 yes 2 Yes 3 yes but I want it to still double check at the threshold 4 curator runs after 15 changes or after 15 days. Whichever comes first". Item 5 (the four full-text source copies) not approved: left as it is | `20-29 Knowledge` | — |
+| 19:39 | orchestrator | Rollback point: git tag `pre-lean-workflow` (pushed) before the changes | repository | OK |
+| 19:39 | orchestrator | Lean workflow (KS-D-50), not yet tested on a real source. Schema v0.12 (§2.6 staging, delta rule, merged mode); all templates v0.12; `TPL Change Order.md` (delta rows, §1a); Rulebook v0.8 (§4.5; §2 two states; §4.3 item 7; §6 steps 4 and 10); agent files: Reporter v0.5, Editor v0.4, Managing Editor v0.5 (merged mode, delta), Curator v0.4 (all write one draft to `.staging`; the Curator trigger); new script `Curator Due.ps1` v0.1 (tested: not due at 9 Change Orders and 2 days; DUE when a limit is lowered); area `CLAUDE.md` v0.15; folder `.staging` made | `20.04`, `20.07`, `.claude\agents`, `CLAUDE.md` | OK, untested |
+| 19:39 | orchestrator | Bug found in my own script while testing: a PowerShell variable (`$days`) overwrote the `-Days` parameter. Fixed (`$sinceDays`) | `Curator Due.ps1` | OK |
+
 
 ## Decisions
 
@@ -97,6 +102,10 @@
 - Justin: "Views work" (Knowledge HQ v1 renders in Obsidian).
 
 ## Open
+
+- Lean workflow (KS-D-50) is untested. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
+- Handoff folder (KS-07 KS-D-50, KS-08 §8.15) not updated: needs Justin's approval.
+- Intake: Justin is still developing the intake process.
 
 
 - Phase 7 passed (KS-D-49). No Phase 7 item open. Next: the Phase 8 plan needs Justin's approval. The web application waits until Justin says that everything is complete and running.

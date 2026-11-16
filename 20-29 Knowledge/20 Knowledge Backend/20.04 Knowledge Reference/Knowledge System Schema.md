@@ -2,7 +2,7 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.11"
+schema-version: "0.12"
 updated: 2026-11-15
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-11-15
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.11, Phase 7. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.12, Phase 7 follow-up (KS-D-50). Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -71,6 +71,7 @@ Reserved prefix: `RQ` for a Research Question, if one becomes its own note later
 | `Research Questions.md` (one list note, no record ID) | `21 Brain` |
 | Routing rulebook | `20.04 Knowledge Reference` |
 | Knowledge HQ: the dashboard note and its `.base` views (no record ID, KS-D-47) | `22.27 Knowledge HQ` |
+| Draft files that an agent writes before the Orchestrator checks them (§2.6) | `.staging` in `20-29 Knowledge` (a hidden folder, no ID, not kept) |
 
 ### 2.5 Content that is not a note (KS-D-25)
 
@@ -85,6 +86,22 @@ Reserved prefix: `RQ` for a Research Question, if one becomes its own note later
 | Change Order approval | Fields in the Change Order: `decision`, `decided`, `decision-note`. |
 | No Change result | A value of the recommended action in the Knowledge Assessment. No Change Order. |
 | Research Question | A row in `21 Brain\Research Questions.md`. A question becomes its own note (`RQ`) only when it collects links. The list is not knowledge, so it needs no Change Order. The Orchestrator makes the note at the first `investigate` result and adds rows. Each row gives the question, the Assessment that raised it, the date, and the status (`open` or `closed`). Each change is a row in the work log. Justin can edit the list (KS-D-33). |
+
+### 2.6 Staging and the delta rule (KS-D-50)
+
+**Staging.** The Reporter, the Editor, the Managing Editor, and the Knowledge Curator each write their draft to `20-29 Knowledge\.staging`. The Obsidian vault does not show a folder that starts with a dot. The Orchestrator checks the draft in `.staging`, sets `id`, `created`, `updated`, and `status` from the system clock, and moves the file to its folder in `22`. After each run, `.staging` is empty. An agent writes nowhere else.
+
+| Draft | File in `.staging` |
+|---|---|
+| Reference Brief | `BRF-draft <Source ID>.md` |
+| Knowledge Assessment | `KAS-draft <Source ID>.md` |
+| Change Order | `CO-draft <Source ID or trigger>.md` |
+| New Brain record in a Change Order | `proposed\<TYPE> <short title>.md` |
+| Knowledge Health Report | `KHR-draft <mode> <date>.md` |
+
+**Delta rule.** A Change Order row shows only what changes: the old text and the new text, not the paragraph. A new Brain record has one text, in its draft file. The Orchestrator moves that file into `21 Brain` when Justin approves. The Change Order does not copy it. After an apply, the Change Order keeps its deltas and the git commit. Git holds the full text.
+
+**Merged mode.** For a small change, the Managing Editor takes a validated Brief and writes the Change Order with a short section "1a. Brief against the Brain". No separate Assessment is made. The Source then has an empty `assessment` and a `change-orders` link. When a Change Order reaches the threshold (a new record; a change to the text, status, `confidence`, or `evidence-strength` of a Claim; 5 or more Brain records edited), the Editor also assesses the same Brief, and the Orchestrator compares both results before it presents the Change Order.
 
 ## 3. File names and links
 
@@ -229,7 +246,7 @@ Below the core block.
 | `submission-context` | Text | Justin's reason for the save, in his words. Keep it separate from the source content. |
 | `duplicate-of` | Link | Only if the source is a duplicate. |
 | `brief` | Link | The Reference Brief. |
-| `assessment` | Link | The Knowledge Assessment. The Orchestrator sets it when the Assessment is `validated` (KS-D-47). Empty before. |
+| `assessment` | Link | The Knowledge Assessment. The Orchestrator sets it when the Assessment is `validated` (KS-D-47). Empty before, and empty when the merged mode was used (§2.6). |
 | `change-orders` | List of links | Each Change Order that came from this Source. The Orchestrator adds a link when it saves the Change Order (KS-D-47). Empty if none. A Change Order that came from a health report has no Source. |
 
 The Source has no `content_hash` field (KS-D-27). Evidence rows in the Brief (§8) record directness and limits only. Brief §11 records source quality.
@@ -293,7 +310,7 @@ Contribution types for findings: `new`, `supports`, `contradicts`, `qualifies`, 
 
 | Field | Value | Rule |
 |---|---|---|
-| `assessment` | Link | The Assessment that started it. Empty for a Curator proposal. |
+| `assessment` | Link | The Assessment that started it. Empty for a Curator proposal and for a merged proposal (§2.6). |
 | `source` | Link | |
 | `brain-version` | Change Order ID or `none` | The version at review (§5.6). |
 | `change-types` | List: `create`, `add-evidence`, `refine`, `qualify`, `extend`, `relate`, `challenge`, `supersede`, `merge`, `retire` | One or more. |
@@ -391,3 +408,4 @@ Rules:
 | 2026-11-13 | 0.9 | §5.8: change types for a MOC edit (KS-D-38). |
 | 2026-11-13 | 0.10 | Phase 6 (KS-D-43): `KHR` prefix (§2.2), folder `22.26` (§2.4), §5.12 Knowledge Health Report fields. §5.11: MOC rule kept. |
 | 2026-11-15 | 0.11 | Phase 7 (KS-D-47): folder `22.27 Knowledge HQ` (§2.4). §5.4: Source fields `assessment` and `change-orders`. |
+| 2026-11-15 | 0.12 | KS-D-50: §2.4 and new §2.6 (staging, delta rule, merged mode). §5.4 and §5.8: `assessment` can be empty. |

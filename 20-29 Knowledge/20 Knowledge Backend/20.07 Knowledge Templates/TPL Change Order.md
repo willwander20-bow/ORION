@@ -6,7 +6,7 @@ status: draft
 created:
 updated:
 created-by: managing-editor
-schema-version: "0.11"
+schema-version: "0.12"
 assessment:
 source:
 brain-version:
@@ -26,9 +26,17 @@ brain-version-after:
 
 <!-- Plain words, 2 to 4 sentences: what changes in the Brain, and why. Justin reads this first. -->
 
+## 1a. Brief against the Brain
+
+<!-- Merged mode only (Schema §2.6). Delete this section when an Assessment exists. One table: Label, Claim Candidate, Type, Brain record, one sentence. End with one line: "Threshold: yes" or "Threshold: no". -->
+
+| Label | Claim Candidate | Type | Brain record | One sentence |
+|---|---|---|---|---|
+| A1 | | | | |
+
 ## 2. Proposed changes
 
-<!-- Short table: one row per change, the change in one line. Record: a link to an existing Brain record, or "new: <short title>". Then one subsection per row with the detail. No long text in the table (KS-D-38). -->
+<!-- Short table: one row per change, the change in one line. Record: a link to an existing Brain record, or "new: <short title>". Then one subsection per row with the delta (KS-D-50): the old text and the new text only, not the paragraph. A new record has one text only, in its draft file in .staging\proposed. No long text in the table (KS-D-38). -->
 
 | Label | Change type | Record | Change |
 |---|---|---|---|
@@ -36,8 +44,8 @@ brain-version-after:
 
 ### X1
 
-- Current state:
-- Proposed state:
+- Current: <!-- the old sentence or field value only. "none" for a new record. -->
+- Proposed: <!-- the new sentence or field value only. New record: "Draft: .staging\proposed\<file>" and one line with title, status, confidence, evidence-strength. -->
 - Evidence: [[BRF-… Title]] · E3
 - Reason:
 
