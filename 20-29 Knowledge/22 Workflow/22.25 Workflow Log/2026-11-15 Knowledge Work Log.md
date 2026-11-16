@@ -101,6 +101,9 @@
 | 20:11 | justin | "Update it" (the Knowledge HQ for the merged records) | `22.27 Knowledge HQ` | — |
 | 20:11 | orchestrator | Knowledge HQ updated: `Source board.base` shows `source-quality` and `claim-count` in place of the empty `brief` and `assessment` columns; new `Source briefs.base` (views "Briefs in Source notes" and "Sources without a Brief", no filter on a hyphenated field); the empty `Briefs and Assessments.base` moved to `20.09 Knowledge Archive`; `Knowledge HQ.md` sections 5 and 8 reworded. Not yet seen in Obsidian: Obsidian may re-save the files | `22.27 Knowledge HQ` | OK, unseen |
 
+| 20:46 | justin | Plugin discussion. Justin: "Write the rules to a note. I have the ability to override any rules. Lets also make a short list off plug ins to consider. Give me 10". Finding: `dataview` is installed and enabled; no note uses Dataview syntax | `.obsidian\plugins` (read only) | — |
+| 20:46 | orchestrator | `Obsidian Plugin Policy.md` v0.1 (draft) written in `20.04 Knowledge Reference`: base rule, six rules, a check list, the four installed plugins, ten plugins to consider (status not checked), a do-not-install list. States that Justin can override any rule. Nothing in `.obsidian` changed | `20.04 Obsidian Plugin Policy` | OK, draft |
+
 
 ## Decisions
 
