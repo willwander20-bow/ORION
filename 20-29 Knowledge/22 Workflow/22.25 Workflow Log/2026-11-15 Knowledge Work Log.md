@@ -54,6 +54,8 @@
 | 18:42 | curator | Impact review of CO-20261115-004. 3 findings: H1 (stale "Two opinion sources" in CLM-001 and MOC-001) and H2 (no link from CON-003 and CON-004 to the new records) need a Change Order; H3 minor. Orchestrator check: git diff of 21 Brain shows the expected changes; H1 confirmed in the files; no file changed by the agent. One deviation noted: MOC-002 "None yet." became "None yet on the benefits." in X8. Saved `validated` | [[KHR-20261115-004 Impact review of CO-20261115-004]] | PASS |
 | 18:43 | managing-editor | Invoked on KAS-20261115-001, Brain version CO-20261115-004 (the Assessment has CO-20261115-003). The agent listed the records that the Assessment did not see (made or changed by CO-20261115-004) and marked each row that touches one | [[KAS-20261115-001 Obsidian second brain with Claude Code]] | — |
 | 18:43 | orchestrator | Change Order checked: Brain version current, change types valid, each row has exact text and a Brief E label, no new record, current-state text found in CON-004, decision fields empty, no agent write. Saved `draft`, not `open`: Justin decides first if the Editor must re-run (Rulebook §4.3 step 4). Source stays `assessed` | [[CO-20261115-005 Obsidian second brain with Claude Code]] | `draft` |
+| 18:45 | justin | Decision on the Editor re-run: "Send it as is". Decision on KHR-20261115-004 H1 and H2: "Yes, one Change Order" (run after CO-005 is decided; same record CON-004) | [[CO-20261115-005 Obsidian second brain with Claude Code]] | — |
+| 18:45 | orchestrator | Change Order set `open`. Source set `change-proposed`, `change-orders` set. Presented to Justin | [[CO-20261115-005 Obsidian second brain with Claude Code]] | `open` |
 
 ## Decisions
 
@@ -70,6 +72,8 @@
 - Justin: "Views work" (Knowledge HQ v1 renders in Obsidian).
 
 ## Open
+
+- KHR-20261115-004 H1 and H2: Change Order after CO-20261115-005 is decided (Justin: "Yes, one Change Order").
 
 - Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
 

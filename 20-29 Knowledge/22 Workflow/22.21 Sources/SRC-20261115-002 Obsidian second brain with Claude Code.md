@@ -2,9 +2,9 @@
 id: SRC-20261115-002
 type: source
 title: "Obsidian Second Brain with Claude Code: My Agent-Readable Vault Setup"
-status: assessed
+status: change-proposed
 created: 2026-11-15T18:25
-updated: 2026-11-15T18:30
+updated: 2026-11-15T18:45
 created-by: orchestrator
 schema-version: "0.11"
 url: https://okhlopkov.com/second-brain-obsidian-claude-code/
@@ -21,7 +21,8 @@ submission-context: "find a source related to second brains, obsidian, or Claude
 duplicate-of:
 brief: "[[BRF-20261115-001 Obsidian second brain with Claude Code]]"
 assessment: "[[KAS-20261115-001 Obsidian second brain with Claude Code]]"
-change-orders: []
+change-orders:
+  - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
 ---
 
 # Notes

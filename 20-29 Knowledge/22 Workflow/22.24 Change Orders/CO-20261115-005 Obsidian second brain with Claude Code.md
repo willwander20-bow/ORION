@@ -2,9 +2,9 @@
 id: CO-20261115-005
 type: change-order
 title: "Obsidian Second Brain with Claude Code: agent-readable vault setup (Okhlopkov)"
-status: draft
+status: open
 created: 2026-11-15T18:43
-updated: 2026-11-15T18:43
+updated: 2026-11-15T18:45
 created-by: managing-editor
 schema-version: "0.11"
 assessment: "[[KAS-20261115-001 Obsidian second brain with Claude Code]]"
