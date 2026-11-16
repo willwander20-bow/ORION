@@ -135,6 +135,21 @@
 | 22:16 | justin | "Yes and they both passed for time": add the two Rulebook rules; the time test passed for both sources | `20.04 Orchestrator Rulebook` | `approved` |
 | 22:16 | orchestrator | Rulebook v0.10 (KS-D-54): §6 step 3 exception for a dependent Change Order (rebase after a check of each "Current" text); §4.5 item 3 (a second look that differs on the action goes to Justin with both views). Handoff: KS-07 KS-D-54 and row 0.39; KS-08 §8.18 updated (time test passed) and row 0.47. Stale "not yet tested" wording removed from the Reporter, Editor, Managing Editor, Schema, and area `CLAUDE.md` (now v0.18). Left as "not yet tested": the Curator write path (the Curator did not run in this test) | `20.04`, `.claude\agents`, `CLAUDE.md`, KS-07, KS-08 | OK |
 
+| 22:40 | justin | "Run on these": three URLs (a Udacity article with advertising tracking parameters, a Medium-hosted article, and an Anthropic research post). No reason given for any. "We'll revisit that" (the go-live question) | SRC-20261115-006 to 008 | — |
+| 22:40 | orchestrator | Tracking parameters (utm, gclid, gbraid, campaign IDs) removed from the first URL; the clean URL is stored and fetched. Duplicate check: no same `url`. Access check: Udacity `curl` 403 but the fetch tool reads it (`Summary:` rows only, no quotes: the raw page cannot be checked); Medium-hosted article 403 on both tools (no bypass); Anthropic `curl` 200 with the text in script data, the fetch tool reads it. Sources made: SRC-006 (Udacity, `routed`), SRC-007 (gitconnected, `failed`, no Reporter), SRC-008 (Anthropic, `routed`) | SRC-20261115-006, -007, -008 | OK |
+
+| 22:41 | reporter | The Reporter for SRC-006 (Udacity) wrote its Brief to `.staging` and returned a short report (access full via the fetch tool; 12 claims; 11 `Summary:` rows, no `Quote:` rows by design; vendor page named in §2, §10, §11). `git status`: no other file written | SRC-20261115-006 | OK |
+| 22:41 | orchestrator | Brief checked in `.staging`: 12 claims equal `claim-count`; 0 `Quote:` rows (Quote Check not possible: curl gets 403). Merged with `Merge Draft.ps1`; draft removed. Source `briefed`. Author "Udacity Team" and the date "Last Updated on August 18, 2026" come from the fetch tool only and were not checked on the raw page; `published` stays empty (no original date) | [[SRC-20261115-006 How to build an AI agent, Udacity]] | PASS, `briefed` |
+
+| 22:42 | reporter | The Reporter for SRC-008 (Anthropic) wrote its Brief to `.staging` and returned a short report (access partial: trimmed quotes; 11 claims, 11 quotes) | SRC-20261115-008 | OK |
+| 22:42 | orchestrator | Brief SRC-008 checked in `.staging`: Quote Check found 10 of 11 quotes; the 11th (E4) failed because the Reporter had written "They" and the page says "they" ("However, they often create…"). The Orchestrator corrected that one capital letter to the page's exact text, re-ran: 11 of 11. Date 2024-12-19 confirmed (page data); authors "Erik S. and Barry Zhang" are in the acknowledgements (the page's structured data names Anthropic as the author). Merged with `Merge Draft.ps1`; draft removed. Source `briefed`. Agent tokens: Reporter 006 39,267; Reporter 008 40,752 | [[SRC-20261115-008 Building effective agents, Anthropic]] | PASS, `briefed` |
+
+| 22:46 | managing-editor | Merged mode on SRC-008 (Anthropic): Change Order and 4 new record drafts to `.staging` (47,196 agent tokens). Threshold: yes. Options for the topic: no existing MOC fits (MOC-002 is wiki setup); a new MOC justified by 3 records | SRC-20261115-008 | OK |
+| 22:46 | editor | Independent second look on SRC-008 (52,674 agent tokens): 8 findings, `advance` (narrow), relevance low. Merged as 1b with `Merge Draft.ps1` | SRC-20261115-008 | OK |
+| 22:46 | managing-editor | Merged mode on SRC-006 (Udacity), told about the pending SRC-008 drafts (42,821 agent tokens). No new record: 3 rows that add to the proposed SRC-008 records (all targets are not yet in the Brain). Threshold: no (no record, no claim change, 0 existing records edited), so no Editor second look | SRC-20261115-006 | OK |
+| 22:46 | orchestrator | IDs assigned before the runs: CON-20261115-003, CLM-20261115-005, CLM-20261115-006, MOC-20261115-002 (drafts in `.staging\proposed`, not in the Brain); links verified. **The Managing Editor and the Editor differ** on SRC-008 (four records plus a MOC against a narrow set, and a scope question): comparison note written with options A, B, C. Saved `open`: CO-20261115-013 (SRC-008) and CO-20261115-014 (SRC-006, depends on 013). Sources `change-proposed`. Frontmatter Check 0, Link Check 0 | [[CO-20261115-013 Building effective agents, Anthropic]], [[CO-20261115-014 How to build an AI agent, Udacity]] | `open` |
+| 22:46 | orchestrator | **Agent tokens, run 2 (new flow):** SRC-006 82,088 (Reporter 39,267; Managing Editor 42,821); SRC-008 140,622 (40,752; 47,196; Editor 52,674); SRC-007 0 (access failed). Average 111,355 per source; the target is 120,000 and the old flow was about 294,000. Nothing was re-typed. Quote Check: 10 of 11, then 11 of 11 after one capital letter was corrected to the page's exact text | SRC-20261115-006, -007, -008 | measured |
+
 
 ## Decisions
 
@@ -154,6 +169,8 @@
 - Justin: "Views work" (Knowledge HQ v1 renders in Obsidian).
 
 ## Open
+
+- Run 2 (Justin: "Run on these"): CO-20261115-013 (Anthropic, options A, B, C) and CO-20261115-014 (Udacity, depends on 013) wait for Justin. SRC-20261115-007 (Medium-hosted article) failed: needs a saved copy or another link. Four proposed records wait in `.stagingproposed`. Justin: "We'll revisit that" (go-live).
 
 - Curator maintenance is due after 2 more Change Orders or on 2026-11-28. Its write path to `.staging` is untested. Success test of the new flow: all passed or held except the agent-token target (over with the double check).
 
