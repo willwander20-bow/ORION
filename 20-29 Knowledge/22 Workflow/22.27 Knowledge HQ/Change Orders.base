@@ -21,8 +21,8 @@ views:
     name: Waiting for Justin
     filters:
       or:
-        - 'status == "open"'
-        - 'status == "needs-review"'
+        - status == "open"
+        - status == "needs-review"
     order:
       - file.name
       - priority
@@ -37,7 +37,7 @@ views:
     name: Decided, not applied
     filters:
       and:
-        - 'status == "decided"'
+        - status == "decided"
     order:
       - file.name
       - decision

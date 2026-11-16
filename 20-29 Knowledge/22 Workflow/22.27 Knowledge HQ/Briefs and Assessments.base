@@ -22,7 +22,7 @@ views:
     name: Reference Briefs
     filters:
       and:
-        - 'type == "reference-brief"'
+        - type == "reference-brief"
     order:
       - file.name
       - status
@@ -37,7 +37,7 @@ views:
     name: Knowledge Assessments
     filters:
       and:
-        - 'type == "knowledge-assessment"'
+        - type == "knowledge-assessment"
     order:
       - file.name
       - status

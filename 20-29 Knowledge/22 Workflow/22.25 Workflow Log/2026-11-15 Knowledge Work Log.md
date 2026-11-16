@@ -36,6 +36,7 @@
 | 18:08 | orchestrator | Schema v0.11: folder `22.27` (§2.4); Source fields `assessment` and `change-orders` (§5.4). Templates set to `schema-version` 0.11; `TPL Source.md` has the two fields. Rulebook v0.6: §4.2 and §4.3 set the fields | `20.04 Knowledge Reference`, `20.07 Knowledge Templates` | OK |
 | 18:08 | orchestrator | Backfill of `assessment` and `change-orders` on the 12 Sources (from the `source` field of each Assessment and Change Order; withdrawn Change Orders included). `updated` set. Frontmatter Check 0 problems | SRC-20261113-001 to 012 | OK |
 | 18:08 | orchestrator | Knowledge HQ v1 made: four `.base` views (Source board, Change Orders, Briefs and Assessments, Brain and health) and the note `Knowledge HQ.md`. Not yet opened in Obsidian. Tests D1 to D4 not run | `22.27 Knowledge HQ` | OK, untested |
+| 18:11 | justin | Opened `Knowledge HQ.md` in Obsidian. Justin: "Views work". Obsidian re-saved three `.base` files (filters without quotes). Tests D1 to D4 still to run | `22.27 Knowledge HQ` | PASS (views render) |
 
 ## Decisions
 
@@ -49,10 +50,11 @@
 - Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
 - Justin: "Yes, update Handoff" (KS-07, KS-08).
 - Justin: "Yes, plan Phase 7"; "Lets start with the Dashboard and we can create the web app once everything is complete and running"; "Approve plan" (ID 22.27, two Source fields, Handoff record; KS-D-47).
+- Justin: "Views work" (Knowledge HQ v1 renders in Obsidian).
 
 ## Open
 
-- Phase 7: Knowledge HQ v1 is built but not opened in Obsidian. Justin opens `Knowledge HQ.md` and checks the views. Tests D1 to D4 need a real new source (D1) and run next.
+- Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
 
 - KHR-20261115-001: H1, H2, H3 resolved (CO-20261115-002, BRF-006 corrected). H4 (optional, "confidence low" in the MOC-001 claim line) not approved.
 
