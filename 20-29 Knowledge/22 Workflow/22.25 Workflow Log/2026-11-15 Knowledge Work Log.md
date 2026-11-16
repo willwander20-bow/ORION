@@ -65,7 +65,11 @@
 | 18:55 | orchestrator | Version check passed. Change Order applied: X1 to X4 on CLM-001, MOC-001, CON-003, CON-004. git diff of 21 Brain matches the Change Order. Frontmatter Check 0, Link Check 0. Curator impact review and the Managing Editor run for KHR-20261115-005 started | [[CO-20261115-006 Fix opinion-source count and add back-links]] | Brain version `CO-20261115-005` to `CO-20261115-006` |
 | 18:56 | curator | Impact review of CO-20261115-006. No findings. Orchestrator check: git diff of 21 Brain matches rows X1 to X4; no file changed by the agent. Saved `validated` | [[KHR-20261115-006 Impact review of CO-20261115-006]] | PASS |
 | 18:57 | managing-editor | Run in health report mode on KHR-20261115-005 H1 and H2, Brain version CO-20261115-006. Orchestrator check: the 7 current-state texts found in CON-004, CON-20261115-001, MOC-002; no file changed by the agent | [[KHR-20261115-005 Impact review of CO-20261115-005]] | PASS |
+| 18:58 | justin | Decision on the Change Order: "Approve all six". Decision on the Curator review rule: "Threshold" | [[CO-20261115-007 Fix source counts and mark unchecked evidence]] | `approved` |
 | 18:57 | orchestrator | Change Order saved `open`. Presented to Justin together with the question whether the Curator review rule (Rulebook §6 step 10) needs a threshold | [[CO-20261115-007 Fix source counts and mark unchecked evidence]] | `open` |
+| 18:58 | orchestrator | Version check passed. Change Order applied: X1 to X6 on CON-004, CON-20261115-001, MOC-002. git diff matches the Change Order. Frontmatter Check 0, Link Check 0 | [[CO-20261115-007 Fix source counts and mark unchecked evidence]] | Brain version `CO-20261115-006` to `CO-20261115-007` |
+| 18:58 | orchestrator | Orchestrator Rulebook v0.7: §6 step 10 threshold for the Curator review (made a record; changed a Claim's text, status, confidence or evidence strength; edited 3 or more records). KS-D-48 recorded here only: the Handoff folder is not yet updated | `20.04 Orchestrator Rulebook` | OK |
+| 18:59 | curator | Impact review of CO-20261115-007 (3 records, so inside the new threshold). 1 finding: H1, MOC-002 "partly independent" (wording from CO-004 X12) conflicts with "independence not shown". Confirmed in the file. No file changed by the agent. Saved `validated` | [[KHR-20261115-007 Impact review of CO-20261115-007]] | PASS |
 
 ## Decisions
 
@@ -77,6 +81,7 @@
 - Justin: "Yes, H1 and H2"; "Approve both" (CO-20261115-002, rows X1 and X2).
 - Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
 - Justin: "1" three times (CO-20261115-004, -005, -006: approve all rows); "Send it as is" (Editor re-run for CO-005); "Yes, one Change Order" (KHR-004 H1, H2).
+- Justin: "Threshold" (Curator review rule, KS-D-48); "Approve all six" (CO-20261115-007).
 - Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
 - Justin: "Yes, update Handoff" (KS-07, KS-08).
 - Justin: "Yes, plan Phase 7"; "Lets start with the Dashboard and we can create the web app once everything is complete and running"; "Approve plan" (ID 22.27, two Source fields, Handoff record; KS-D-47).
@@ -84,7 +89,7 @@
 
 ## Open
 
-- CO-20261115-007 (KHR-005 H1, H2) is open for Justin. Question for Justin: a threshold for the Curator review after an apply (Rulebook §6 step 10).
+- KHR-20261115-007 H1 (MOC-002 "partly independent" wording): Change Order needs Justin's go-ahead. Handoff folder (KS-07 KS-D-48, KS-08 §8.14 test results) not updated: needs Justin's approval.
 
 - Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
 

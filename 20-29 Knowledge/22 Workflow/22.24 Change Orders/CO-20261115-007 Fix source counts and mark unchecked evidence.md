@@ -2,9 +2,9 @@
 id: CO-20261115-007
 type: change-order
 title: "Fix source counts and mark unchecked evidence (KHR-20261115-005 H1, H2)"
-status: open
+status: applied
 created: 2026-11-15T18:57
-updated: 2026-11-15T18:57
+updated: 2026-11-15T18:58
 created-by: managing-editor
 schema-version: "0.11"
 assessment:
@@ -17,11 +17,11 @@ affected:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T18:57
+decision-note: "Approve all six"
+applied: 2026-11-15T18:58
+brain-version-after: CO-20261115-007
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -118,4 +118,15 @@ Justin: approve, change, or reject each row. The rows can be decided one by one.
 
 ## 7. Decision record
 
+2026-11-15T18:57. Justin: "Approve all six". Decision: `approved`. Rows X1 to X6, as written.
+
 ## 8. Implementation record
+
+2026-11-15T18:58. The Orchestrator checked that `brain-version` (CO-20261115-006) matched the current Brain version before the change. Rows X1 to X6 applied as written. Files changed in `21 Brain`:
+
+- CON-20261113-004: X1, X2, X3.
+- CON-20261115-001: X4, X5.
+- MOC-20261113-002: X6.
+- `change-orders` and `updated` set on all three records.
+
+Brain version after: CO-20261115-007.

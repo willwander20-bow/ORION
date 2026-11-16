@@ -4,7 +4,7 @@ type: moc
 title: AI-maintained knowledge bases
 status: active
 created: 2026-11-13T17:58
-updated: 2026-11-15T18:49
+updated: 2026-11-15T18:57
 created-by: orchestrator
 schema-version: "0.10"
 last-reviewed: 2026-11-13
@@ -13,6 +13,7 @@ change-orders:
   - "[[CO-20261115-003 Add Research Questions row 1 to MOC-002]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
   - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
+  - "[[CO-20261115-007 Fix source counts and mark unchecked evidence]]"
 ---
 
 ## Topic summary
@@ -31,7 +32,7 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 ## Processes and methods
 
 - [[CON-20261113-004 Set up an AI-maintained wiki|Set up an AI-maintained wiki]] (prompt text from one source; no nightly run shown)
-- [[CON-20261115-001 Agent memory protocol for file-based memory|Agent memory protocol for file-based memory]] (rules from one source; no test)
+- [[CON-20261115-001 Agent memory protocol for file-based memory|Agent memory protocol for file-based memory]] (the nine rules come from one source, Wall; a second source gives a matching raw-input rule and a credentials rule; no test)
 
 ## Evidence for and against
 
