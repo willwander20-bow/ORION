@@ -2,22 +2,25 @@
 id: CO-20261115-014
 type: change-order
 title: How to build an AI agent, Udacity
-status: open
+status: applied
 created: 2026-11-15T22:45
-updated: 2026-11-15T22:45
+updated: 2026-11-15T22:53
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261115-006 How to build an AI agent, Udacity]]"
-brain-version: CO-20261115-012
+brain-version: CO-20261115-013
 change-types: [extend, add-evidence, relate]
-affected: []
+affected:
+  - "[[CON-20261115-003 Workflows and agents]]"
+  - "[[CLM-20261115-005 Start with the simplest agent design]]"
+  - "[[MOC-20261115-002 Building AI agents]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T22:52
+decision-note: "Approve 2"
+applied: 2026-11-15T22:53
+brain-version-after: CO-20261115-014
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -121,4 +124,10 @@ Does Justin approve X1 to X3, after the Change Order for SRC-20261115-008 is app
 
 ## 7. Decision record
 
+2026-11-15T22:52. Justin: "Approve all 5 rows approve 2 and Im entering these for background knowledge for creating A I agents and systems". Decision: `approved`. All three rows, X1 to X3, as written.
+
 ## 8. Implementation record
+
+2026-11-15T22:53. Rebased by the Orchestrator (Rulebook §6 step 3, KS-D-54): `brain-version` changed from CO-20261115-012 to CO-20261115-013, because this Change Order was drafted knowing the proposed records of CO-20261115-013, and CO-013 was applied first. Check before the apply: each "Current" text of X1, X2, and X3 was found in the records (all found). Files: CON-20261115-003 (two definitions, a caveat, a source line), CLM-20261115-005 (two evidence lines, a caveat), MOC-20261115-002 (a For line, a gaps line). `change-orders` and `updated` set
+
+Brain version after: CO-20261115-014.

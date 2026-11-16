@@ -2,9 +2,9 @@
 id: SRC-20261115-006
 type: source
 title: "How to Build an AI Agent: Step-by-Step with Python"
-status: change-proposed
+status: done
 created: 2026-11-15T22:40
-updated: 2026-11-15T22:45
+updated: 2026-11-15T22:51
 created-by: orchestrator
 schema-version: "0.13"
 url: https://www.udacity.com/blog/how-to-build-an-ai-agent-step-by-step-with-python/
@@ -17,7 +17,7 @@ language: en
 access-status: full
 text-file:
 processing-level: full-review
-submission-context:
+submission-context: "background knowledge for creating AI agents and systems"
 duplicate-of:
 brief:
 assessment:

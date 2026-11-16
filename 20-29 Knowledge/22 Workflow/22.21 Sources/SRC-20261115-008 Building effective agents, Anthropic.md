@@ -2,9 +2,9 @@
 id: SRC-20261115-008
 type: source
 title: "Building effective AI agents"
-status: change-proposed
+status: done
 created: 2026-11-15T22:40
-updated: 2026-11-15T22:45
+updated: 2026-11-15T22:51
 created-by: orchestrator
 schema-version: "0.13"
 url: https://www.anthropic.com/research/building-effective-agents
@@ -17,7 +17,7 @@ language: en
 access-status: partial
 text-file:
 processing-level: full-review
-submission-context:
+submission-context: "background knowledge for creating AI agents and systems"
 duplicate-of:
 brief:
 assessment:

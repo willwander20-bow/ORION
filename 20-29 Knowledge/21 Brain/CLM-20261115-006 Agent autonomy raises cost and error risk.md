@@ -3,8 +3,8 @@ id: CLM-20261115-006
 type: brain-claim
 title: Agent autonomy raises cost and error risk
 status: accepted
-created:
-updated:
+created: 2026-11-15T22:51
+updated: 2026-11-15T22:51
 created-by: managing-editor
 schema-version: "0.13"
 confidence: low
@@ -19,8 +19,9 @@ concepts:
 superseded-by:
 valid-from:
 valid-to:
-last-reviewed:
-change-orders: []
+last-reviewed: 2026-11-15
+change-orders:
+  - "[[CO-20261115-013 Building effective agents, Anthropic]]"
 aliases:
   - Cost of agent autonomy
 ---

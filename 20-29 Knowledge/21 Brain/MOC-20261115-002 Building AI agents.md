@@ -3,12 +3,14 @@ id: MOC-20261115-002
 type: moc
 title: Building AI agents
 status: active
-created:
-updated:
+created: 2026-11-15T22:51
+updated: 2026-11-15T22:51
 created-by: managing-editor
 schema-version: "0.13"
-last-reviewed:
-change-orders: []
+last-reviewed: 2026-11-15
+change-orders:
+  - "[[CO-20261115-013 Building effective agents, Anthropic]]"
+  - "[[CO-20261115-014 How to build an AI agent, Udacity]]"
 ---
 
 ## Topic summary
@@ -31,6 +33,7 @@ How people design systems in which an LLM uses tools and directs its own steps: 
 ## Evidence for and against
 
 - For: [[SRC-20261115-008 Building effective agents, Anthropic|Building effective agents (Anthropic, 2024-12-19)]]. Engineering article by the vendor of the models, `source-quality: medium`, currency 2 of 5 (the page says that tooling has changed). Design guidance from the authors' work with customers. No data. Extraction `partial`: the Brief covers the outline and about a dozen short passages.
+- For: [[SRC-20261115-006 How to build an AI agent, Udacity|How to build an AI agent (Udacity Team, updated 2026-08-18)]]. Teaching article by a course vendor, `source-quality: medium`. Gives a three-layer definition of an agent and advice for a single agent by default. No data, no named cases, no original date. The Brief has summaries only.
 - Against: none yet.
 
 ## Related MOCs
@@ -43,6 +46,6 @@ How people design systems in which an LLM uses tools and directs its own steps: 
 
 ## Disputes and gaps
 
-- One source, from a vendor of models and tools. No data. No source on the other side.
+- Two sources, both from vendors. The Brain does not show that they are independent. No data in either. No source on the other side.
 - The source is dated 2024-12-19 and says that tooling has changed. The Brain has no newer source on this topic.
 - The Brief does not cover the detail inside each pattern, the two appendices, or the named frameworks.

@@ -4,7 +4,7 @@ type: source
 title: "Building an AI Agent from Scratch: No Magic, Just a Deterministic Loop"
 status: failed
 created: 2026-11-15T22:40
-updated: 2026-11-15T22:40
+updated: 2026-11-15T22:51
 created-by: orchestrator
 schema-version: "0.13"
 url: https://levelup.gitconnected.com/building-an-ai-agent-from-scratch-no-magic-just-a-deterministic-loop-a916161705fb
@@ -17,7 +17,7 @@ language: en
 access-status: none
 text-file:
 processing-level:
-submission-context:
+submission-context: "background knowledge for creating AI agents and systems"
 duplicate-of:
 brief:
 assessment:

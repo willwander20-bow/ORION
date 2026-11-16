@@ -2,9 +2,9 @@
 id: CO-20261115-013
 type: change-order
 title: Building effective agents, Anthropic
-status: open
+status: applied
 created: 2026-11-15T22:45
-updated: 2026-11-15T22:45
+updated: 2026-11-15T22:52
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
@@ -14,11 +14,11 @@ change-types: [create, relate]
 affected:
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T22:52
+decision-note: "Approve all 5 rows (option A). Reason for the source: background knowledge for creating AI agents and systems."
+applied: 2026-11-15T22:52
+brain-version-after: CO-20261115-013
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -158,3 +158,13 @@ Possible:
 ## 6. Decision required
 
 Does Justin approve X1 to X5? The rows can be decided one by one. X4 is needed if X1 to X3 are approved. X5 depends on X4. A cheaper option: approve only X1 and X4, and hold X2 and X3 until the second source adds evidence.
+
+## 7. Decision record
+
+2026-11-15T22:52. Justin: "Approve all 5 rows approve 2 and Im entering these for background knowledge for creating A I agents and systems". Decision: `approved` (option A of the comparison: all rows X1 to X5, as written). Scope: agent design belongs in the Brain.
+
+## 8. Implementation record
+
+2026-11-15T22:52. The Orchestrator checked that `brain-version` (CO-20261115-012) matched the current Brain version. X1 to X3: new CON-20261115-003, CLM-20261115-005, CLM-20261115-006 (drafts moved from `.staging\proposed`). X4: new MOC-20261115-002. X5: one bullet in MOC-20261113-002. `change-orders` and `updated` set on each record.
+
+Brain version after: CO-20261115-013.
