@@ -4,10 +4,10 @@ type: concept
 title: Workflows and agents
 status: accepted
 created: 2026-11-15T22:51
-updated: 2026-11-15T23:57
+updated: 2026-11-16T00:16
 created-by: managing-editor
 schema-version: "0.13"
-kind: definition
+kind: concept
 related:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
   - "[[CON-20261115-005 Context engineering]]"
@@ -16,6 +16,7 @@ change-orders:
   - "[[CO-20261115-013 Building effective agents, Anthropic]]"
   - "[[CO-20261115-014 How to build an AI agent, Udacity]]"
   - "[[CO-20261115-017 Effective context engineering for AI agents, Anthropic]]"
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 aliases:
   - Agentic systems
 ---
@@ -46,8 +47,8 @@ None.
 
 ## Related claims
 
-- [[CLM-20261115-005 Start with the simplest agent design|Start with the simplest agent design]]: draft title. The Orchestrator sets the final name.
-- [[CLM-20261115-006 Agent autonomy raises cost and error risk|Agent autonomy raises cost and error risk]]: draft title. The Orchestrator sets the final name.
+- [[CLM-20261115-005 Start with the simplest agent design|Start with the simplest agent design]]: the source's advice to add complexity only when needed. A link, not a dependency.
+- [[CLM-20261115-006 Agent autonomy raises cost and error risk|Agent autonomy raises cost and error risk]]: the source's statement that autonomy means higher costs and compounding errors. A link, not a dependency.
 
 ## Related concepts
 

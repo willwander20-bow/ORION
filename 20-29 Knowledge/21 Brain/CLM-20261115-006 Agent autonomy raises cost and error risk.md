@@ -4,7 +4,7 @@ type: brain-claim
 title: Agent autonomy raises cost and error risk
 status: accepted
 created: 2026-11-15T22:51
-updated: 2026-11-15T22:51
+updated: 2026-11-16T00:16
 created-by: managing-editor
 schema-version: "0.13"
 confidence: low
@@ -13,7 +13,8 @@ supports: []
 contradicts: []
 refines: []
 extends: []
-related: []
+related:
+  - "[[CLM-20261115-005 Start with the simplest agent design]]"
 concepts:
   - "[[CON-20261115-003 Workflows and agents]]"
 superseded-by:
@@ -22,6 +23,7 @@ valid-to:
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-013 Building effective agents, Anthropic]]"
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 aliases:
   - Cost of agent autonomy
 ---
@@ -41,7 +43,7 @@ The source says this about agents as it defines them: LLMs that direct their own
 ## Relationships
 
 - [[CON-20261115-003 Workflows and agents|Workflows and agents]] (concepts): the definition of "agent" that this claim uses. A link, not a dependency.
-- [[CLM-20261115-005 Start with the simplest agent design|Start with the simplest agent design]] (related): the source's advice to add complexity only when needed. A link, not a dependency. Link written with the draft title.
+- [[CLM-20261115-005 Start with the simplest agent design|Start with the simplest agent design]] (related): the source's advice to add complexity only when needed. A link, not a dependency.
 
 ## Disputes and caveats
 

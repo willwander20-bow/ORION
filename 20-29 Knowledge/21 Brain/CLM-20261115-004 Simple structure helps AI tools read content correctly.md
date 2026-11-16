@@ -4,7 +4,7 @@ type: brain-claim
 title: Simple document structure helps AI tools read content correctly
 status: accepted
 created: 2026-11-15T22:08
-updated: 2026-11-15T22:08
+updated: 2026-11-16T00:16
 created-by: orchestrator
 schema-version: "0.13"
 confidence: low
@@ -16,12 +16,14 @@ extends: []
 related: []
 concepts:
   - "[[CON-20261113-002 Work with plain-text notes]]"
+  - "[[CON-20261115-002 Design content for AI readers]]"
 superseded-by:
 valid-from:
 valid-to:
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-011 Structure documentation for AI and humans, Mintlify]]"
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 aliases:
   - Structure for AI readers
 ---
@@ -46,8 +48,8 @@ The source writes about documentation that must serve both AI systems and human 
 ## Relationships
 
 - [[CON-20261113-002 Work with plain-text notes|Work with plain-text notes]] (concepts): plain Markdown is the kind of file that the source prefers. This is a link, not a dependency.
-- [[CLM-20261115-003 Text formats with direct access are easier for AI to read|Text formats with direct access are easier for AI to read]] (related): that claim is about file formats (scan, PDF, DOCX, open text). This claim is about structure inside a document. Link written with the draft title. The Orchestrator sets the final name.
-- [[CON-20261115-002 Design content for AI readers|Design content for AI readers]] (related): the steps that apply this claim. Link written with the draft title. The Orchestrator sets the final name.
+- [[CLM-20261115-003 Text formats with direct access are easier for AI to read|Text formats with direct access are easier for AI to read]] (related): that claim is about file formats (scan, PDF, DOCX, open text). This claim is about structure inside a document.
+- [[CON-20261115-002 Design content for AI readers|Design content for AI readers]] (related): the steps that apply this claim.
 
 ## Disputes and caveats
 

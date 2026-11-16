@@ -2,9 +2,9 @@
 id: CO-20261116-001
 type: change-order
 title: Brain maintenance fixes, KHR-20261116-001
-status: open
+status: applied
 created: 2026-11-16T00:13
-updated: 2026-11-16T00:13
+updated: 2026-11-16T00:16
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
@@ -23,11 +23,11 @@ affected:
   - "[[CON-20261115-006 Agent memory]]"
   - "[[CON-20261115-007 Claude Code instructions and memory]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T00:16
+decision-note: "Yes approved"
+applied: 2026-11-16T00:16
+brain-version-after: CO-20261116-001
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -207,4 +207,10 @@ Approve this Change Order, or approve only some rows? The rows can be decided on
 
 ## 7. Decision record
 
+2026-11-16T00:16. Justin: "Yes approved". Decision: `approved`, all 16 rows, as written. Earlier, on the findings (KHR-20261116-001 §9): "Yes I agree with those fixes. Keep the MOC for now. It will get built out."
+
 ## 8. Implementation record
+
+2026-11-16T00:16. The Orchestrator checked that `brain-version` (CO-20261115-020) matched the current Brain version, and that each "Current" text was found before it changed any file (the script wrote nothing unless all rows matched). X1 to X4: MOC-20261115-002 (summary sentence, one Key concepts bullet, the label of the SRC-20261115-014 line and the "Against" line, the 7 gap bullets replaced). X5 to X9: stale draft-title text removed in CLM-20261115-004, -005, -006, CON-20261115-002, and CON-20261115-003. X10: `kind: concept` in CON-20261115-003, -005, -006, -007. X11 to X14: step 9 sentence and one link in CON-20261115-002, `concepts` in CLM-20261115-004, `related` in CLM-20261115-005 and -006. X15, X16: two edits in CON-20261115-004. `change-orders` and `updated` set on the 10 records. No Claim text, status, confidence, or evidence-strength changed.
+
+Brain version after: CO-20261116-001.

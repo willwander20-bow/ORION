@@ -4,16 +4,17 @@ type: concept
 title: Claude Code instructions and memory
 status: accepted
 created: 2026-11-15T23:55
-updated: 2026-11-15T23:55
+updated: 2026-11-16T00:16
 created-by: managing-editor
 schema-version: "0.13"
-kind: definition
+kind: concept
 related:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
   - "[[CON-20261115-003 Workflows and agents]]"
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-020 Claude Code memory, Anthropic docs]]"
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 aliases:
   - CLAUDE.md and auto memory
 ---

@@ -165,6 +165,8 @@
 | 00:04 | orchestrator | **Error found by the Curator (H3), caused by the Orchestrator:** the apply scripts had no `use utf8`, so the characters "·" and "§" in the new text were double-encoded (5 Brain records and CO-016). Fixed by removing the extra character; 6 files, 6 lines, no other change. The other findings (H1, H2, H4 and more) wait for Justin's decision. | CLM-20261115-001, -008; CON-20261113-003, -004; CON-20261115-006; CO-20261115-016 | fixed |
 | 00:13 | justin | **Decision on KHR-20261116-001:** "Yes I agree with those fixes. Keep the MOC for now. It will get built out." Approved for a Change Order: H1, H2, H4, H7, H8. H9: keep MOC-20261115-003. | KHR-20261116-001 | approved (findings) |
 | 00:13 | managing-editor | Health report mode: [[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]] drafted, 16 rows on 10 records, no new record, no change to any Claim text, status, confidence, or evidence-strength. Saved `open`. About 73,000 tokens. The Editor second look is not run: it takes a Brief, and this Change Order comes from a health report, not a source. The Curator report is the independent review of these findings. Orchestrator decision, for Justin to confirm. | CO-20261116-001 | open |
+| 00:17 | justin | **Decision:** "Yes approved". All 16 rows of CO-20261116-001 approved as written. | CO-20261116-001 | approved |
+| 00:17 | orchestrator | **Apply CO-20261116-001.** Brain version CO-20261115-020 to CO-20261116-001. 10 records edited: MOC-20261115-002, CLM-20261115-004, -005, -006, CON-20261115-002, -003, -004, -005, -006, -007. The script wrote nothing unless every "Current" text matched. Diff review: every removed line is named in a row. Frontmatter Check 0, Link Check 0, no "draft title" text left, `kind` values now `concept` (7) and `process` (4), no encoding artefacts. Curator Due: not due (1 of 15). Finding for the checker: `Frontmatter Check.ps1` does not test the `kind` value (found by the Curator as H4); not changed, for Justin to decide. | CO-20261116-001 | applied |
 
 ## Decisions
 
@@ -198,7 +200,7 @@
 - KHR-20261115-001 H4 (optional: "confidence low" in the MOC-001 line for CLM-001) was not approved and stays open.
 
 - CO-20261115-015 to -020: applied (Justin approved all).
-- Curator maintenance ran (KHR-20261116-001). 13 findings wait for Justin: which go to the Managing Editor.
+- Curator maintenance ran (KHR-20261116-001). H1, H2, H3, H4, H7, H8 fixed (CO-20261116-001). H9: MOC kept (Justin). H5, H6, H10, H11, H12, H13 open as report items.
 - SRC-20261115-007 (Medium-hosted article) still needs a saved copy or another link.
 
 ## Notes

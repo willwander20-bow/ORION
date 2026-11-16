@@ -4,7 +4,7 @@ type: concept
 title: Design content for AI readers
 status: accepted
 created: 2026-11-15T22:08
-updated: 2026-11-15T22:08
+updated: 2026-11-16T00:16
 created-by: orchestrator
 schema-version: "0.13"
 kind: process
@@ -14,6 +14,7 @@ last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-010 Readable AI content, Nava]]"
   - "[[CO-20261115-011 Structure documentation for AI and humans, Mintlify]]"
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 aliases:
   - AI-readable content design
 ---
@@ -44,7 +45,7 @@ Caveats:
 6. For structured data, supply CSV, JSON, or XML.
 7. Keep paragraphs short.
 8. Put code in fenced blocks, separate from prose.
-9. Do not put content that AI must read in hidden or interactive parts, such as tabs and collapsibles. The source says that plain Markdown or a flat text export is easier to parse.
+9. Do not put content that AI must read in hidden or interactive parts, such as tabs and collapsibles.
 10. Use active voice, descriptive link text and alt text, the same term for the same concept, and fewer vague pronouns.
 
 ## Test (one source, untested)
@@ -53,7 +54,8 @@ The Mintlify source proposes this plan: (1) check raw-text readability; (2) get 
 
 ## Related claims
 
-- [[CLM-20261115-003 Text formats with direct access are easier for AI to read|Text formats with direct access are easier for AI to read]]: the same source's first tactic (file format). Link written with the draft title. The Orchestrator sets the final name.
+- [[CLM-20261115-003 Text formats with direct access are easier for AI to read|Text formats with direct access are easier for AI to read]]: the same source's first tactic (file format).
+- [[CLM-20261115-004 Simple structure helps AI tools read content correctly|Simple structure helps AI tools read content correctly]]: the source's view behind steps 7 and 9. The Concept holds the steps. The Claim holds the view and its limits. A link, not a dependency.
 
 ## Sources
 

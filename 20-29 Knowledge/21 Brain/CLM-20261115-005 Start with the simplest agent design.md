@@ -4,7 +4,7 @@ type: brain-claim
 title: Start with the simplest agent design
 status: accepted
 created: 2026-11-15T22:51
-updated: 2026-11-15T22:51
+updated: 2026-11-16T00:16
 created-by: managing-editor
 schema-version: "0.13"
 confidence: low
@@ -13,7 +13,8 @@ supports: []
 contradicts: []
 refines: []
 extends: []
-related: []
+related:
+  - "[[CLM-20261115-006 Agent autonomy raises cost and error risk]]"
 concepts:
   - "[[CON-20261115-003 Workflows and agents]]"
 superseded-by:
@@ -23,6 +24,7 @@ last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-013 Building effective agents, Anthropic]]"
   - "[[CO-20261115-014 How to build an AI agent, Udacity]]"
+  - "[[CO-20261116-001 Brain maintenance fixes from KHR-20261116-001]]"
 aliases:
   - Simplest agent design first
 ---
@@ -46,7 +48,7 @@ The source writes for developers who build LLM applications, from the authors' w
 ## Relationships
 
 - [[CON-20261115-003 Workflows and agents|Workflows and agents]] (concepts): the terms that this claim uses. A link, not a dependency.
-- [[CLM-20261115-006 Agent autonomy raises cost and error risk|Agent autonomy raises cost and error risk]] (related): the source gives this as a reason for caution. A link, not a dependency. Link written with the draft title.
+- [[CLM-20261115-006 Agent autonomy raises cost and error risk|Agent autonomy raises cost and error risk]] (related): the source gives this as a reason for caution. A link, not a dependency.
 
 ## Disputes and caveats
 
