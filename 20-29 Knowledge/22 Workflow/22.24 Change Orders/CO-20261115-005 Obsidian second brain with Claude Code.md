@@ -2,9 +2,9 @@
 id: CO-20261115-005
 type: change-order
 title: "Obsidian Second Brain with Claude Code: agent-readable vault setup (Okhlopkov)"
-status: open
+status: applied
 created: 2026-11-15T18:43
-updated: 2026-11-15T18:45
+updated: 2026-11-15T18:49
 created-by: managing-editor
 schema-version: "0.11"
 assessment: "[[KAS-20261115-001 Obsidian second brain with Claude Code]]"
@@ -19,11 +19,11 @@ affected:
   - "[[CON-20261115-001 Agent memory protocol for file-based memory]]"
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T18:49
+decision-note: "1"
+applied: 2026-11-15T18:49
+brain-version-after: CO-20261115-005
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -116,4 +116,15 @@ Question: do you want these caveat and evidence rows now, or do you prefer to wa
 
 ## 7. Decision record
 
+2026-11-15T18:49. Justin chose option 1 of 4: "1" (approve all five rows). Decision: `approved`. Rows X1 to X5, as written.
+
 ## 8. Implementation record
+
+2026-11-15T18:49. The Orchestrator checked that `brain-version` (CO-20261115-004) matched the current Brain version before the change. Rows X1 to X5 applied as written. Files changed in `21 Brain`:
+
+- CON-20261113-004: X1, X2 (two caveat bullets, two source lines).
+- CON-20261115-001: X3 (one caveat bullet, one source line).
+- MOC-20261113-002: X4 (evidence line), X5 (the "Disputes and gaps" sentence).
+- `change-orders` and `updated` set on all three records.
+
+Brain version after: CO-20261115-005.

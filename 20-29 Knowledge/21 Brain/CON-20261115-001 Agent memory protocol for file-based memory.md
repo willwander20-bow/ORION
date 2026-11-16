@@ -4,7 +4,7 @@ type: concept
 title: Agent memory protocol for file-based memory
 status: accepted
 created: 2026-11-15T18:39
-updated: 2026-11-15T18:39
+updated: 2026-11-15T18:49
 created-by: orchestrator
 schema-version: "0.11"
 kind: process
@@ -14,6 +14,7 @@ related:
 last-reviewed: 2026-11-15
 change-orders:
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
 aliases:
   - Memory protocol
 ---
@@ -28,6 +29,7 @@ The rules come from one source, as the Brief reports them. Caveats:
 - One source. The rules are the author's proposal. The article gives no test or case study.
 - The Brief says that the source has nine rules. The count and the wording come from a WebFetch paraphrase, so only the five rules below are listed. The other four rules are not in the Brain.
 - The publisher sells a related product.
+- A second source (Okhlopkov, BRF-20261115-001, `source-quality: low`, no date, no data) states a rule that matches step 4 for raw input. The Brief quotes it: "Raw human input should not be rewritten just because an LLM wanted to be helpful." The same source says that a rules file must state where credentials must never be stored. This protocol has no credential rule, and this Change Order adds none as a step. Both are opinions with no test. The Brain does not show that the two authors are independent of each other.
 
 ## Steps
 
@@ -49,3 +51,4 @@ The rules come from one source, as the Brief reports them. Caveats:
 ## Sources
 
 - [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E6 · § Give the agent a memory protocol · opinion, no test
+- [[BRF-20261115-001 Obsidian second brain with Claude Code|Obsidian Second Brain with Claude Code (Okhlopkov, undated)]] · E6 · locator unavailable · raw-input rule; the quote was checked against the page · E4 · locator unavailable · credentials rule; a WebFetch summary, not checked

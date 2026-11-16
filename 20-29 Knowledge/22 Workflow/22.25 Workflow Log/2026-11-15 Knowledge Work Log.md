@@ -56,6 +56,11 @@
 | 18:43 | orchestrator | Change Order checked: Brain version current, change types valid, each row has exact text and a Brief E label, no new record, current-state text found in CON-004, decision fields empty, no agent write. Saved `draft`, not `open`: Justin decides first if the Editor must re-run (Rulebook §4.3 step 4). Source stays `assessed` | [[CO-20261115-005 Obsidian second brain with Claude Code]] | `draft` |
 | 18:45 | justin | Decision on the Editor re-run: "Send it as is". Decision on KHR-20261115-004 H1 and H2: "Yes, one Change Order" (run after CO-005 is decided; same record CON-004) | [[CO-20261115-005 Obsidian second brain with Claude Code]] | — |
 | 18:45 | orchestrator | Change Order set `open`. Source set `change-proposed`, `change-orders` set. Presented to Justin | [[CO-20261115-005 Obsidian second brain with Claude Code]] | `open` |
+| 18:49 | justin | Decision on the Change Order: "1" (approve all five rows) | [[CO-20261115-005 Obsidian second brain with Claude Code]] | `approved` |
+| 18:49 | orchestrator | Version check passed. Change Order applied: X1 to X5 on CON-004, CON-20261115-001, MOC-002. Source set `done`. Frontmatter Check and Link Check run | [[CO-20261115-005 Obsidian second brain with Claude Code]] | Brain version `CO-20261115-004` to `CO-20261115-005` |
+| 18:51 | curator | Impact review of CO-20261115-005. 2 findings: H1 ("One source" beside "second source" in CON-20261115-001, CON-004 line 31, MOC-002 line 34) and H2 (unchecked evidence not marked in caveat bullets). Orchestrator check: git diff shows only rows X1 to X5; both findings confirmed in the files; no file changed by the agent. Saved `validated` | [[KHR-20261115-005 Impact review of CO-20261115-005]] | PASS |
+| 18:51 | managing-editor | Run in health report mode on KHR-20261115-004 H1 and H2, Brain version CO-20261115-005. Orchestrator check: current text found in CLM-001, MOC-001, CON-003, CON-004; Ango conflict of interest confirmed in BRF-20261113-001 line 75 (the agent found a wrong clause in CLM-001); no file changed by the agent | [[KHR-20261115-004 Impact review of CO-20261115-004]] | PASS |
+| 18:51 | orchestrator | Change Order saved `open`. Presented to Justin. KHR-20261115-005 H1 and H2 are left for a later Change Order (they touch CON-004, CON-20261115-001, MOC-002) | [[CO-20261115-006 Fix opinion-source count and add back-links]] | `open` |
 
 ## Decisions
 
@@ -73,7 +78,7 @@
 
 ## Open
 
-- KHR-20261115-004 H1 and H2: Change Order after CO-20261115-005 is decided (Justin: "Yes, one Change Order").
+- KHR-20261115-004 H1 and H2: CO-20261115-006 is open for Justin. KHR-20261115-005 H1 and H2 need a later Change Order.
 
 - Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
 

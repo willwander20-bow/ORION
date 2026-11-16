@@ -4,7 +4,7 @@ type: moc
 title: AI-maintained knowledge bases
 status: active
 created: 2026-11-13T17:58
-updated: 2026-11-15T18:40
+updated: 2026-11-15T18:49
 created-by: orchestrator
 schema-version: "0.10"
 last-reviewed: 2026-11-13
@@ -12,6 +12,7 @@ change-orders:
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
   - "[[CO-20261115-003 Add Research Questions row 1 to MOC-002]]"
   - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
+  - "[[CO-20261115-005 Obsidian second brain with Claude Code]]"
 ---
 
 ## Topic summary
@@ -36,6 +37,7 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 
 - Describes: [[BRF-20261113-010 Self-improving Claude knowledge base, Lipsky|Build a Self Improving Claude Knowledge Base (Lipsky, 2026)]]. YouTube tutorial with the full prompt text, partly sponsored by Zapier, `source-quality: medium`. Reliable for what the prompt specifies. Weak for the effects that the creator claims: self-reports with no data.
 - Describes: [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]]. Opinion and design article with a nine-rule agent memory protocol, `source-quality: medium`, objectivity 2 of 5. It proposes a map file, search first, and a write boundary for agents. The wording comes from WebFetch summaries. No test or data.
+- Describes: [[BRF-20261115-001 Obsidian second brain with Claude Code|Obsidian Second Brain with Claude Code: My Agent-Readable Vault Setup (Okhlopkov, undated)]]. First-person account of one vault that Claude Code reads and writes, `source-quality: low`, no date, no data. It describes a central rules file (`AGENTS.md`), raw human notes that the AI does not edit, and AI output stored beside them. Three quotes were checked against the page. The other wording comes from WebFetch summaries.
 - Against: none yet.
 
 ## Related MOCs
@@ -49,6 +51,6 @@ Knowledge bases that an AI writes and keeps over a person's own files: how they 
 
 ## Disputes and gaps
 
-- One source, one creator, partly sponsored. A second source (Wall, BRF-20261115-002) is partly independent of the first on the map-first idea. It is opinion and partly promotional, so no source with data yet. The credit to Karpathy is secondhand.
+- One source, one creator, partly sponsored. A second source (Wall, BRF-20261115-002) is partly independent of the first on the map-first idea. It is opinion and partly promotional. A third source (Okhlopkov, BRF-20261115-001) is a first-person account of one vault, with `low` source quality, no date, and no data. The Brain does not show that the authors are independent of each other. No source with data or tests yet. The credit to Karpathy is secondhand.
 - No source shows how well a model follows the prompt, a nightly run, or a Tidy report.
 - The written approval rule does not cover the nightly wiki writes. No source tests what an AI changes without approval in this setup. One source proposes a write boundary as an option (see CON-004). It gives no test.
