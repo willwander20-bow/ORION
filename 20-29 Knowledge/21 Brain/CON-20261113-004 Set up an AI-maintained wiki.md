@@ -4,7 +4,7 @@ type: concept
 title: Set up an AI-maintained wiki
 status: accepted
 created: 2026-11-13T17:58
-updated: 2026-11-13T17:58
+updated: 2026-11-15T18:40
 created-by: orchestrator
 schema-version: "0.10"
 kind: process
@@ -14,6 +14,7 @@ related:
 last-reviewed: 2026-11-13
 change-orders:
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
+  - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
 aliases:
   - Knowledge Base Prompt
   - Ingest Answer Tidy loop
@@ -28,6 +29,7 @@ A setup prompt in six steps, from one source. It tells an AI to organize a folde
 The steps come from the prompt text in the source. Caveats:
 - One source. Advice only, with no tests. The prompt text shows what the AI is told to do. It is not evidence of how well a model follows it. The demo shows the setup and the scheduling of the nightly task. It does not show a nightly run or a Tidy report.
 - Approval-gate limit: the written approval rule covers file moves, renames and deletes only. No step asks for approval before the nightly task creates or updates wiki pages. The user approves the task wording once, at setup. This reading of the prompt is inferred, with medium confidence. The creator says that the AI never does anything without permission first. That statement is broader than the written rule.
+- Another source (Wall, BRF-20261115-002) proposes a different write boundary for an agent. It allows direct writes to an inbox and to working notes. It requires review for decisions and personal records. It requires inspection of broad rewrites, and it forbids silent rewrites of decisions, sources, or personal facts. This is a design opinion with no test. It shows an option for the gap above. It is no evidence of how a setup behaves, and it is not a step of this process.
 - The pages use normal Markdown links. The prompt specifies no frontmatter.
 - The prompt comes from a clipped copy. The link to the creator's Google Doc is truncated, so the copy cannot be checked against the creator's current document.
 - The setup uses Claude Cowork (folder access, scheduled tasks) as of 2026-06-25. These tools can have changed.
@@ -51,3 +53,4 @@ Ground rules (for all steps): work only inside the folder. Show a plan and get a
 ## Sources
 
 - [[BRF-20261113-010 Self-improving Claude knowledge base, Lipsky|Build a Self Improving Claude Knowledge Base (Lipsky, 2026)]] · E35 to E46 · § Knowledge Base Prompt · E28 · 10:09 · the creator's broader statement on permission
+- [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]] · E6 · § Give the agent a memory protocol · write-boundary option; no test

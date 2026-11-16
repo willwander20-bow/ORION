@@ -4,7 +4,7 @@ type: moc
 title: Note durability
 status: active
 created: 2026-11-13T10:27
-updated: 2026-11-15T17:46
+updated: 2026-11-15T18:40
 created-by: orchestrator
 schema-version: "0.6"
 last-reviewed: 2026-11-13
@@ -17,6 +17,7 @@ change-orders:
   - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
   - "[[CO-20261115-001 Brain maintenance fixes from health reports]]"
   - "[[CO-20261115-002 Align LoC access-measures wording]]"
+  - "[[CO-20261115-004 Obsidian is optional, plain Markdown]]"
 ---
 
 ## Topic summary
@@ -29,7 +30,8 @@ How to keep notes readable and usable for many years: file formats, ownership, a
 
 ## Important claims
 
-- [[CLM-20261113-001 Lasting notes belong in open files|Lasting notes belong in open files]] (evidence `weak`, two opinion sources and one institutional source with indirect support; one more opinion source qualifies its conditions; a second institutional source supports the encoding condition and ranks plain text lower)
+- [[CLM-20261113-001 Lasting notes belong in open files|Lasting notes belong in open files]] (evidence `weak`, three opinion sources, one of them partly promotional, and one institutional source with indirect support; one more opinion source qualifies its conditions; a second institutional source supports the encoding condition and ranks plain text lower)
+- [[CLM-20261115-002 Git history alone is not a full backup|Git history alone is not a full backup]] (evidence `weak`, one short opinion statement; recovery, not format)
 
 ## Processes and methods
 
@@ -39,6 +41,7 @@ How to keep notes readable and usable for many years: file formats, ownership, a
 
 - For: [[BRF-20261113-001 File over app|File over app (Ango, 2023)]]. Opinion essay.
 - For: [[BRF-20261113-003 Write plain text files|Write plain text files (Sivers, about 2022)]]. Opinion essay.
+- For: [[BRF-20261115-002 Obsidian is optional, plain Markdown|Obsidian Is Optional (Wall, 2026-08-29)]]. Opinion and design article. It says that a folder of plain Markdown files can be the durable memory layer. It also proposes standard relative links for portability. No data. The publisher sells a related product.
 - For (indirect): [[BRF-20261113-002 NARA file format tables|NARA file format tables (reviewed 2026)]]. Transfer guidance for federal records. It ranks plain text above Word formats. It gives no reasons. The lists can be older than the current format versions (page reviewed 2026-03-11; the DOCX row names Word 2007–2010 only).
 - Qualifies: [[BRF-20261113-005 Write hypertext, not plaintext|Write hypertext, not plaintext (Bologov, undated, updates 2023–2026)]]. Opinion essay, low source quality. It agrees that plain-text storage lasts. It says that storage alone is not enough for notes with links and metadata, and that Markdown has platform-specific behaviors. It does not contradict the claim.
 - Qualifies, and supports in part: [[BRF-20261113-006 LoC Recommended Formats, textual works|LoC Recommended Formats, textual works (undated)]]. The preferences of the Library of Congress for the textual works that it receives. It prefers nearly the same encodings as NARA. It ranks structured formats (XML with a schema, EPUB3, PDF/A, PDF/UA) above plain text, which is acceptable only. It requires no DRM or encryption that controls access to or prevents use of the digital work. It gives no reasons and no durability data. It does not contradict the claim.

@@ -2,9 +2,9 @@
 id: CO-20261115-004
 type: change-order
 title: "Obsidian Is Optional: plain Markdown second brain (Wall, 2026)"
-status: open
+status: applied
 created: 2026-11-15T18:33
-updated: 2026-11-15T18:33
+updated: 2026-11-15T18:40
 created-by: managing-editor
 schema-version: "0.11"
 assessment: "[[KAS-20261115-002 Obsidian is optional, plain Markdown]]"
@@ -23,11 +23,11 @@ affected:
   - "[[MOC-20261113-001 Note durability]]"
   - "[[MOC-20261113-002 AI-maintained knowledge bases]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-15T18:39
+decision-note: "1"
+applied: 2026-11-15T18:40
+brain-version-after: CO-20261115-004
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -181,4 +181,16 @@ Questions:
 
 ## 7. Decision record
 
+2026-11-15T18:39. Justin chose option 1 of 4: "1" (approve all 12 rows). Decision: `approved`. Rows X1 to X12, as written.
+
 ## 8. Implementation record
+
+2026-11-15T18:40. The Orchestrator checked that `brain-version` (CO-20261115-003) matched the current Brain version before the change. Rows X1 to X12 applied as written. Files changed in `21 Brain`:
+
+- CLM-20261113-001: X1, X2 (evidence lines E1, E7, E2; caveat bullet; link-form text in the Markdown limit). `confidence` and `evidence-strength` not changed.
+- CON-20261113-003: X3. CON-20261113-004: X4.
+- New records: CLM-20261115-001 Search plain files first, then add indexes (X5); CLM-20261115-002 Git history alone is not a full backup (X6); CON-20261115-001 Agent memory protocol for file-based memory (X7). All `accepted`, claims `low` and `weak`.
+- MOC-20261113-002: X8, X11, X12. MOC-20261113-001: X9, X10.
+- `change-orders` and `updated` set on all eight records.
+
+Brain version after: CO-20261115-004.

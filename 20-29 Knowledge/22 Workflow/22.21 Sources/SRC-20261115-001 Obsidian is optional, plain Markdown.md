@@ -2,9 +2,9 @@
 id: SRC-20261115-001
 type: source
 title: "Obsidian Is Optional: Build an AI Second Brain With Plain Markdown"
-status: change-proposed
+status: done
 created: 2026-11-15T18:25
-updated: 2026-11-15T18:33
+updated: 2026-11-15T18:40
 created-by: orchestrator
 schema-version: "0.11"
 url: https://aident.ai/blog/second-brain-without-obsidian-plain-markdown
