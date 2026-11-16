@@ -132,6 +132,9 @@
 | 22:14 | justin | Decision on the Change Order: "Yes approved" (CO-20261115-012, rows X1 to X4) | [[CO-20261115-012 Content for AI readers MOC]] | `approved` |
 | 22:12 | orchestrator | Version check passed (CO-20261115-011). Change Order applied: new MOC-20261115-001 (draft moved from `.staging`), one bullet each in MOC-001 and MOC-002, one Research Questions row. Frontmatter Check 0, Link Check 0 (the ORPHAN is resolved). `git diff`: only additions in the existing MOCs. `.staging` is empty. Curator Due: not due (13 of 15 Change Orders). Handoff updated (same approval as the earlier records for this work): KS-07 KS-D-53 and row 0.38; KS-08 §8.18 and row 0.46 | [[CO-20261115-012 Content for AI readers MOC]] | Brain version `CO-20261115-011` to `CO-20261115-012` |
 
+| 22:16 | justin | "Yes and they both passed for time": add the two Rulebook rules; the time test passed for both sources | `20.04 Orchestrator Rulebook` | `approved` |
+| 22:16 | orchestrator | Rulebook v0.10 (KS-D-54): §6 step 3 exception for a dependent Change Order (rebase after a check of each "Current" text); §4.5 item 3 (a second look that differs on the action goes to Justin with both views). Handoff: KS-07 KS-D-54 and row 0.39; KS-08 §8.18 updated (time test passed) and row 0.47. Stale "not yet tested" wording removed from the Reporter, Editor, Managing Editor, Schema, and area `CLAUDE.md` (now v0.18). Left as "not yet tested": the Curator write path (the Curator did not run in this test) | `20.04`, `.claude\agents`, `CLAUDE.md`, KS-07, KS-08 | OK |
+
 
 ## Decisions
 
@@ -152,7 +155,7 @@
 
 ## Open
 
-- Open for Justin: Rulebook rules for (1) a Change Order that builds on another one (rebase), and (2) an Editor second look that disagrees with the Managing Editor. Curator maintenance is due after 2 more Change Orders or on 2026-11-28.
+- Curator maintenance is due after 2 more Change Orders or on 2026-11-28. Its write path to `.staging` is untested. Success test of the new flow: all passed or held except the agent-token target (over with the double check).
 
 - Lean workflow (KS-D-50), merged records (KS-D-51), and the migration (KS-D-52): the new flow is untested with a new source. Knowledge HQ "Briefs and Assessments" view is empty. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
 - Intake: Justin is still developing the intake process.

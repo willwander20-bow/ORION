@@ -7,7 +7,7 @@ tools: Read, Grep, Glob, Write
 
 # Editor
 
-Status: draft v0.4, 2026-11-15. v0.4 writes the Assessment to `.staging` and returns a short report (KS-D-50, not yet tested). Draft v0.3, 2026-11-13 (Phase 3). Based on the KMO Editor (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.8. v0.3 adds the fixes from tests E1 to E5 (KS-D-34).
+Status: draft v0.4, 2026-11-15. v0.4 writes the Assessment to `.staging` and returns a short report (KS-D-50; tested on two sources, KS-D-53). Draft v0.3, 2026-11-13 (Phase 3). Based on the KMO Editor (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.8. v0.3 adds the fixes from tests E1 to E5 (KS-D-34).
 
 ## 1. Mission
 

@@ -1076,7 +1076,7 @@ Sources: SRC-20261115-003 (Reddit post), SRC-20261115-004 (Nava toolkit), SRC-20
 | Test | Result |
 |---|---|
 | At most 120,000 agent tokens per source | Nava 141,852; Mintlify 150,172; Reddit 0 (access failed). Over the target only because of the threshold double check (about 57,500 per Editor run). Without it: 84,404 and 92,612. Old flow: about 294,000 per source. |
-| At most 15 minutes of Justin's time per source | Not measured. |
+| At most 15 minutes of Justin's time per source | **Passed** for both sources (Justin: "they both passed for time"). Not timed. |
 | A Brain change Justin would use | Justin approved all rows. |
 | Agents write only to `.staging` | Held. `git status` showed no other file. |
 | The Orchestrator re-types no agent draft | Held. `Merge Draft.ps1`, `mv`, and `sed` only. |
@@ -1105,9 +1105,9 @@ Brain version after: `CO-20261115-012`. New records: CLM-20261115-003, CLM-20261
 
 #### Open
 
-- Rulebook rule for a dependent Change Order (rebase) and for a second look that disagrees. Justin decides.
+- Rulebook rules for a dependent Change Order (rebase) and for a second look that disagrees: added by Justin's decision as Rulebook v0.10 (KS-D-54).
 - Curator `maintenance` run is due after 2 more Change Orders, or on 2026-11-28.
-- Justin's time per source, for the success test.
+- Success test: all five tests passed or held, except the agent-token target (over with the double check, under without it).
 
 ## 9. Change log
 
@@ -1159,3 +1159,4 @@ Brain version after: `CO-20261115-012`. New records: CLM-20261115-003, CLM-20261
 | 2026-11-15 | 0.44 | New §8.16: merged records (KS-D-51). |
 | 2026-11-15 | 0.45 | New §8.17: migration of the legacy Briefs and Assessments (KS-D-52). |
 | 2026-11-15 | 0.46 | New §8.18: first run of the new flow, three sources (KS-D-53). |
+| 2026-11-15 | 0.47 | §8.18: time test passed; the two Rulebook rules added (KS-D-54). |

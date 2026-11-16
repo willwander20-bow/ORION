@@ -7,7 +7,7 @@ tools: Read, Grep, Glob, Write
 
 # Managing Editor
 
-Status: draft v0.5, 2026-11-15. v0.5 writes its files to `.staging`, gives each row as a delta (old text and new text only), drafts each new Brain record once, and adds the merged mode (§2b) (KS-D-50, not yet tested). Draft v0.4, 2026-11-15. v0.4 adds the health report input (§2a, KS-D-43, KS-D-45). Draft v0.3, 2026-11-13 (Phase 4). Based on the KMO Managing Editor (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.9 §5.8 and `TPL Change Order.md`. v0.3 adds the fixes from tests M0 to M5 (KS-D-38).
+Status: draft v0.5, 2026-11-15. v0.5 writes its files to `.staging`, gives each row as a delta (old text and new text only), drafts each new Brain record once, and adds the merged mode (§2b) (KS-D-50, KS-D-51; tested on two sources, KS-D-53). Draft v0.4, 2026-11-15. v0.4 adds the health report input (§2a, KS-D-43, KS-D-45). Draft v0.3, 2026-11-13 (Phase 4). Based on the KMO Managing Editor (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.9 §5.8 and `TPL Change Order.md`. v0.3 adds the fixes from tests M0 to M5 (KS-D-38).
 
 ## 1. Mission
 

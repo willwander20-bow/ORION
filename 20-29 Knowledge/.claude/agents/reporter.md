@@ -7,7 +7,7 @@ tools: Read, Grep, Glob, WebSearch, WebFetch, Write
 
 # Reporter
 
-Status: draft v0.5, 2026-11-15. v0.5 writes the Brief to `.staging` and returns a short report (KS-D-50, not yet tested). Draft v0.4, 2026-11-15. v0.4 adds the word-count step for each `Quote:` (§8, §11), after the 16-word quote in BRF-20261113-008 (KS-D-45). Draft v0.3, 2026-11-13 (Phase 2). Based on the KMO Reporter (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.7. v0.3 adds the fixes from tests T1 to T3 (KS-D-31).
+Status: draft v0.5, 2026-11-15. v0.5 writes the Brief to `.staging` and returns a short report (KS-D-50; tested on two sources, KS-D-53). Draft v0.4, 2026-11-15. v0.4 adds the word-count step for each `Quote:` (§8, §11), after the 16-word quote in BRF-20261113-008 (KS-D-45). Draft v0.3, 2026-11-13 (Phase 2). Based on the KMO Reporter (v0.1, in `20.04 Knowledge Reference\Source Package - KMO and KVC\_claude\agents\`). Aligned with Schema v0.7. v0.3 adds the fixes from tests T1 to T3 (KS-D-31).
 
 ## 1. Mission
 
