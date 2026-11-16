@@ -1,4 +1,4 @@
-# Quote Check v0.3 (KS-D-40, KS-D-42). Orchestrator Rulebook section 4.1.
+# Quote Check v0.4 (KS-D-40, KS-D-42). v0.4 reads the page as UTF-8 (v0.3 garbled a curly apostrophe). Orchestrator Rulebook section 4.1.
 # Checks each Quote: "..." in a Reference Brief against the raw web page (area CLAUDE.md rule 9a),
 # or against a companion text file (Schema 5.2) when -File is given.
 # Pass: each quote is in the page text and has 15 words or fewer. Output ends with "Failed: N".
@@ -21,7 +21,10 @@ if ($File) {
   if (-not (Test-Path -LiteralPath $File)) { "ERROR: file not found: $File"; exit 1 }
   $raw = (Get-Content -Encoding UTF8 -LiteralPath $File) -join "`n"
 } else {
-  $raw = (curl.exe -s -L --max-time 30 -A "Mozilla/5.0" $Url) -join "`n"
+  $tmp = [IO.Path]::GetTempFileName()
+  curl.exe -s -L --max-time 30 -A "Mozilla/5.0" -o $tmp $Url
+  $raw = [IO.File]::ReadAllText($tmp, (New-Object System.Text.UTF8Encoding $false))
+  Remove-Item $tmp -ErrorAction SilentlyContinue
 }
 if (-not $raw) { "ERROR: no text from $Url$File"; exit 1 }
 $raw = [regex]::Replace($raw, '(?is)<(script|style)[^>]*>.*?</\1>', ' ')

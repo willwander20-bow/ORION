@@ -104,6 +104,25 @@
 | 20:46 | justin | Plugin discussion. Justin: "Write the rules to a note. I have the ability to override any rules. Lets also make a short list off plug ins to consider. Give me 10". Finding: `dataview` is installed and enabled; no note uses Dataview syntax | `.obsidian\plugins` (read only) | — |
 | 20:46 | orchestrator | `Obsidian Plugin Policy.md` v0.1 (draft) written in `20.04 Knowledge Reference`: base rule, six rules, a check list, the four installed plugins, ten plugins to consider (status not checked), a do-not-install list. States that Justin can override any rule. Nothing in `.obsidian` changed | `20.04 Obsidian Plugin Policy` | OK, draft |
 
+| 21:50 | justin | "Lets run these sources": three URLs (a Reddit post, a Nava toolkit page, a Mintlify article) with a reason for the first two. The first real test of the new flow (KS-D-50, KS-D-51) | SRC-20261115-003 to 005 | — |
+| 21:50 | orchestrator | **Success test, set before the run:** (1) at most 120,000 agent tokens per source (the old flow: about 294,000); (2) at most 15 minutes of Justin's time per source; (3) at least one Brain change that Justin would use. Also check: the Reporters write only to `.staging`; the Orchestrator re-types no draft; the Curator is not needed (Curator Due says not due) | all three | set |
+| 21:50 | orchestrator | Sources made: SRC-20261115-003 (Reddit), -004 (Nava), -005 (Mintlify). Duplicate check: no same `url`. Access check: Nava 200 (1,596 words), Mintlify 200 (2,441 words), Reddit **403** (curl) and the fetch tool refuses reddit.com. Not work content. SRC-003: `access-status: none`, status `failed`, no Reporter (Rulebook §1 step 5). SRC-004 and SRC-005 routed `full-review` | SRC-20261115-003, -004, -005 | 003 `failed`; 004 and 005 `routed` |
+
+| 21:51 | reporter | **New flow, first run.** The Reporter for SRC-005 wrote its Brief to `.staging` and returned a 150-word report (35,050 agent tokens, about 45 seconds). `git status`: no other file written. Access `partial` (a fetch summary) | SRC-20261115-005 | OK |
+| 21:51 | orchestrator | Brief draft checked in `.staging`: 8 claims, 3 quotes found on the raw page (Quote Check 3 of 3), author (Emma Adler) and date (2025-10-06) confirmed on the page and set. `Merge Draft.ps1 -Mode Brief` merged it into the Source note (no re-typing); draft removed. Source `briefed` | [[SRC-20261115-005 Structure documentation for AI and humans, Mintlify]] | PASS, `briefed` |
+| 21:52 | reporter | The Reporter for SRC-004 wrote its Brief to `.staging` and returned a short report (34,854 agent tokens, about 63 seconds). `git status`: no other file written. Access full (a fetch summary and a few quotes) | SRC-20261115-004 | OK |
+| 21:52 | orchestrator | **Bug found in my own script:** `Quote Check.ps1` v0.3 failed a valid quote because PowerShell read the curl output with the console code page and garbled a curly apostrophe. Fixed in v0.4 (reads UTF-8). Re-ran: the Nava Brief 5 of 5, the Mintlify Brief 3 of 3, an older Brief 3 of 3 | `Quote Check.ps1` | OK |
+| 21:52 | orchestrator | Nava Brief checked in `.staging`: 8 claims; author (Greg Jordan-Detamore) and date (2025-03-06) confirmed on the page and set. Merged with `Merge Draft.ps1` (no re-typing); draft removed. Source `briefed` | [[SRC-20261115-004 Readable AI content, Nava]] | PASS, `briefed` |
+| 21:56 | managing-editor | Merged mode on SRC-004 (Nava), Brain version CO-20261115-009. Wrote the Change Order and 2 new record drafts to `.staging` (49,550 agent tokens). Threshold: yes (makes records) | SRC-20261115-004 | OK |
+| 21:56 | managing-editor | Merged mode on SRC-005 (Mintlify), told about the pending Nava drafts. Wrote the Change Order and 1 new record draft (57,562 agent tokens). Threshold: yes | SRC-20261115-005 | OK |
+| 21:56 | editor | Independent second look on SRC-004 (it did not see the Change Order): 9 findings, `advance` (57,448 agent tokens). Merged into the Change Order as section 1b by `Merge Draft.ps1` | SRC-20261115-004 | OK |
+| 21:56 | orchestrator | Comparison of 1a and 1b for SRC-004: agree on 7 of 9 points; two caveats missing from the Change Order (PDF/A against the Nava ranking; metadata against Bologov), added as a note. IDs assigned: CLM-20261115-003, CON-20261115-002, CLM-20261115-004 (drafts in `.staging\proposed`, not in the Brain); placeholder links fixed; one file name shortened to 60 characters. Change Order saved `open` as CO-20261115-010; Source `change-proposed` | [[CO-20261115-010 Readable AI content, Nava]] | `open` |
+| 21:56 | editor | Independent second look on SRC-005 (it did not see the Change Order): 8 findings, **recommended action `investigate`** (57,560 agent tokens) | SRC-20261115-005 | differs from the Managing Editor |
+
+| 21:57 | orchestrator | Comparison of 1a and 1b for SRC-005: **the Managing Editor and the Editor differ on the action** (four rows against `investigate`). Merged the Editor's second look as 1b with `Merge Draft.ps1`; added a comparison note with three options for Justin; noted the dependency on CO-20261115-010. Change Order saved `open` as CO-20261115-011; Source `change-proposed`. Frontmatter Check 0, Link Check 0 | [[CO-20261115-011 Structure documentation for AI and humans, Mintlify]] | `open` |
+
+| 21:57 | orchestrator | Checks on the drafts and the run: Frontmatter Check 0 on the 3 proposed records; the 3 quotes in them are in the Source notes (12, 9, and 5 words); `git status` shows no file outside `.staging`, the Source notes, the Change Orders, and the log. Not run: Brain, Curator, apply. **Agent tokens, new flow, 2 sources:** SRC-004 141,852 (Reporter 34,854, Managing Editor 49,550, Editor 57,448); SRC-005 150,172 (35,050; 57,562; 57,560); SRC-003 0 (access failed). Without the threshold double check: 84,404 and 92,612. Orchestrator re-typing of agent output: none (Merge Draft.ps1 and mv). Old flow: about 294,000 per source | `22.21`, `22.24` | measured |
+
 
 ## Decisions
 
@@ -123,6 +142,8 @@
 - Justin: "Views work" (Knowledge HQ v1 renders in Obsidian).
 
 ## Open
+
+- Test run of 3 sources (Justin: "Lets run these sources"): CO-20261115-010 (Nava) and CO-20261115-011 (Mintlify) wait for Justin. SRC-20261115-003 (Reddit) failed: needs a saved copy or another link. Three proposed Brain records wait in `.stagingproposed` (CLM-20261115-003, CLM-20261115-004, CON-20261115-002).
 
 - Lean workflow (KS-D-50), merged records (KS-D-51), and the migration (KS-D-52): the new flow is untested with a new source. Knowledge HQ "Briefs and Assessments" view is empty. Rollback tags: pre-lean-workflow, pre-merge-types. The first real source is the test. Agent definitions load at session start, so the next session sees the new agent files. Rollback: git tag pre-lean-workflow.
 - Intake: Justin is still developing the intake process.
