@@ -4,7 +4,7 @@ type: concept
 title: Prompting rules in a Claude beginner guide
 status: accepted
 created: 2026-11-16T05:45
-updated: 2026-11-16T05:45
+updated: 2026-11-16T05:48
 created-by: managing-editor
 schema-version: "0.13"
 kind: concept
@@ -13,6 +13,7 @@ related:
 last-reviewed:
 change-orders:
   - "[[CO-20261116-003 Claude for dummies, Hassid]]"
+  - "[[CO-20261116-005 Prompt engineering 101, Hassid]]"
 aliases:
   - Five prompting rules for Claude
 ---
@@ -33,9 +34,10 @@ The terms are the author's own (SRC-20261116-001). The quotes below were checked
 
 Caveats:
 
-- One source. The author sells a paid newsletter and promotes his own guides (Brief §10). The source-quality score for objectivity is 2 of 5.
+- Two sources by one author. The author sells a paid newsletter and promotes his own guides (Brief §10). The source-quality score for objectivity is 2 of 5.
 - The guide is for beginners and gives no data, no test, and no named study for any rule.
 - The Brief gives no information on whether the rules hold for all tasks or all Claude versions. The guide is dated 2026-04-19.
+- Another guide by the same author ([[SRC-20261116-002 Prompt engineering 101, Hassid|Prompt Engineering 101]], free preview of a paid post) says the opposite on rule 2: it says removing examples improved results and that a clear goal works better. It gives the study as 'EPFL/Apple/Mistral', with no title, link, or figures. The two guides do not agree on examples. The same preview adds, with unnamed studies, advice to avoid tag questions such as 'right?', to skip 'step by step', and to give about 3 rules at most.
 - The Brain makes no Claim from these rules. They are advice from one opinion source.
 
 ## Related claims
@@ -49,3 +51,4 @@ Caveats:
 ## Sources
 
 - [[SRC-20261116-001 Claude for dummies, Hassid|Claude For Dummies (Hassid, 2026-04-19)]] · E11, E12, E13, E14, E15 · quotes checked against the page
+- [[SRC-20261116-002 Prompt engineering 101, Hassid|Prompt Engineering 101 (Hassid, 2026-08-19, free preview of a paid post)]] · E1, E2, E4, E5 · access partial

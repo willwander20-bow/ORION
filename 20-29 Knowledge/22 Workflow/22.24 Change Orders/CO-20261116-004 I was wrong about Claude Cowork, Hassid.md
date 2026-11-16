@@ -2,23 +2,23 @@
 id: CO-20261116-004
 type: change-order
 title: Cowork setup with Skills and Projects, Hassid
-status: open
+status: applied
 created: 2026-11-16T00:32
-updated: 2026-11-16T00:33
+updated: 2026-11-16T05:49
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261116-004 I was wrong about Claude Cowork, Hassid]]"
-brain-version: CO-20261116-002
+brain-version: CO-20261116-003
 change-types: [create, relate]
 affected:
   - "[[CON-20261113-004 Set up an AI-maintained wiki]]"
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T05:49
+decision-note: "I approve. This new claim does not impact the brain. I agree with a flat structure for cowork"
+applied: 2026-11-16T05:49
+brain-version-after: CO-20261116-004
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -149,4 +149,10 @@ Does Justin approve the process Concept "Set up Claude Cowork with Skills and Pr
 
 ## 7. Decision record
 
+2026-11-16T05:49. Justin: "I approve. This new claim does not impact the brain. I agree with a flat structure for cowork". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists). Justin did not ask for the caveat that the Editor suggested (CO-004, finding A1): he agrees with a flat structure for Cowork.
+
 ## 8. Implementation record
+
+2026-11-16T05:49. Rebased from CO-20261116-002 to CO-20261116-003 (Rulebook §6 step 3 exception, KS-D-54): this Change Order depends on CO-20261116-003, which made the MOC that X2 edits. The Orchestrator checked that the MOC section "Processes and methods" and its text "None yet." were present. X1: new CON-20261116-002 Set up Claude Cowork with Skills and Projects (moved from `.staging\proposed`). X2: one bullet in MOC-20261116-001 replaces "None yet." under Processes and methods. X3: one link line in CON-20261113-004. The row names the section "Related concepts", but that record has no such heading; its links to other Concepts are under "Related claims", so the line was added there (a difference from the row, recorded). `change-orders` and `updated` set on the changed records.
+
+Brain version after: CO-20261116-004.

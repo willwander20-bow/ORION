@@ -14,14 +14,16 @@ Earlier events of this session, after midnight (the Curator maintenance run, CO-
 | 00:34 | orchestrator | Checks: Frontmatter Check 0 problems (103 files), Link Check 0 problems. `21 Brain` changed only in `Research Questions.md`. `.staging\proposed` holds 3 drafts (UC x2, P4 x1). Dependencies: CO-005 and CO-004 depend on CO-003. | | OK |
 | 05:46 | justin | **Decision:** "Approve as written. Ive read the other COs and they'll add to the new MOC". CO-20261116-003 approved, option A. The remark on the other Change Orders is not read as an approval of CO-004 or CO-005. | CO-20261116-003 | approved |
 | 05:46 | orchestrator | **Apply CO-20261116-003.** Brain version CO-20261116-002 to CO-20261116-003. New: CON-20261116-001 Prompting rules in a Claude beginner guide, MOC-20261116-001 Using Claude. Edited: one line in MOC-20261115-002 (Related MOCs). SRC-20261116-001 set to `done`. Frontmatter Check 0 (105 files), Link Check 0 (27 records). Curator Due: not due (3 of 15). | CO-20261116-003 | applied |
+| 05:49 | justin | **Decision:** "I approve. This new claim does not impact the brain. I agree with a flat structure for cowork". CO-20261116-004 and CO-20261116-005 approved as written. The Editor's suggested caveat (CO-004, A1) was not requested. | CO-20261116-004, -005 | approved |
+| 05:49 | orchestrator | **Apply CO-20261116-004, then -005** (both rebased by the Orchestrator onto the Change Order before: dependent on CO-003, KS-D-54). Brain version CO-20261116-003 to CO-20261116-004 to CO-20261116-005. New: CON-20261116-002 Set up Claude Cowork with Skills and Projects. Edited: MOC-20261116-001 (Processes and methods, Against line, one gap line), CON-20261113-004 (one link line, under "Related claims": the row said "Related concepts", which that record does not have), CON-20261116-001 (caveat, Sources line). SRC-20261116-002 and -004 set to `done`. Frontmatter Check 0 (106 files), Link Check 0 (28 records). Curator Due: not due (5 of 15). `.staging` is empty. | CO-20261116-004, -005 | applied |
 
 ## Decisions
 
-CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: not decided.
+CO-20261116-003: approved (see above). CO-20261116-004 and CO-20261116-005: approved (see above).
 
 ## Open
 
-- CO-20261116-004 and CO-20261116-005 wait for Justin. Both depend on CO-003 (applied): after approval each needs a rebase onto CO-20261116-003 and its draft links changed to the real IDs (MOC-20261116-001, CON-20261116-001).
+- No Change Order of this TikTok batch is open.
 - The other 8 guides of the TikTok list (SRC not made) wait for Justin.
 - Paid posts: only the free preview was read. A saved copy of the full text from Justin would allow a fuller Brief.
 

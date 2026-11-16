@@ -1,10 +1,10 @@
 ---
-id:
+id: CON-20261116-002
 type: concept
 title: Set up Claude Cowork with Skills and Projects
 status: accepted
-created:
-updated:
+created: 2026-11-16T05:48
+updated: 2026-11-16T05:48
 created-by: managing-editor
 schema-version: "0.13"
 kind: process
@@ -12,7 +12,8 @@ related:
   - "[[CON-20261113-004 Set up an AI-maintained wiki]]"
   - "[[CON-20261115-005 Context engineering]]"
 last-reviewed:
-change-orders: []
+change-orders:
+  - "[[CO-20261116-004 I was wrong about Claude Cowork, Hassid]]"
 aliases:
   - Cowork setup, Skills and Projects
 ---

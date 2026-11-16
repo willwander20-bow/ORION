@@ -2,9 +2,9 @@
 id: SRC-20261116-002
 type: source
 title: "Prompt Engineering 101"
-status: change-proposed
+status: done
 created: 2026-11-16T00:25
-updated: 2026-11-16T00:32
+updated: 2026-11-16T05:49
 created-by: orchestrator
 schema-version: "0.13"
 url: https://ruben.substack.com/p/how-to-ask-ai-once

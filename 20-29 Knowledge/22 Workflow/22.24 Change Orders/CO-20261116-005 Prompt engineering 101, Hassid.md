@@ -2,22 +2,22 @@
 id: CO-20261116-005
 type: change-order
 title: Prompting rules in a paid preview, Hassid (edits to CO-20261116-003 drafts)
-status: open
+status: applied
 created: 2026-11-16T00:32
-updated: 2026-11-16T00:32
+updated: 2026-11-16T05:49
 created-by: managing-editor
 schema-version: "0.13"
 assessment:
 source: "[[SRC-20261116-002 Prompt engineering 101, Hassid]]"
-brain-version: CO-20261116-002
+brain-version: CO-20261116-004
 change-types: [create]
 affected: []
 priority: low
-decision:
-decided:
-decision-note:
-applied:
-brain-version-after:
+decision: approved
+decided: 2026-11-16T05:49
+decision-note: "I approve. This new claim does not impact the brain. I agree with a flat structure for cowork"
+applied: 2026-11-16T05:49
+brain-version-after: CO-20261116-005
 ---
 
 <!-- Propose. Do not apply. Do not approve. Only Justin sets "decision". Schema §5.8. -->
@@ -88,4 +88,10 @@ Does Justin approve the conflict note and the second source in the Concept (X1) 
 
 ## 7. Decision record
 
+2026-11-16T05:49. Justin: "I approve. This new claim does not impact the brain. I agree with a flat structure for cowork". Decision: `approved`, all rows, as written (option A of the Orchestrator comparison, where one exists). Justin did not ask for the caveat that the Editor suggested (CO-004, finding A1): he agrees with a flat structure for Cowork.
+
 ## 8. Implementation record
+
+2026-11-16T05:49. Rebased from CO-20261116-003 to CO-20261116-004. This Change Order depends on CO-20261116-003 (it edits records that CO-003 made) and was applied after CO-20261116-004. The Orchestrator checked each "Current" text in CON-20261116-001 and MOC-20261116-001 (all found). X1: first caveat reworded to two sources, one new caveat, one Sources line, in CON-20261116-001. X2: the "Against" line and one Disputes and gaps line in MOC-20261116-001. No Claim made.
+
+Brain version after: CO-20261116-005.
