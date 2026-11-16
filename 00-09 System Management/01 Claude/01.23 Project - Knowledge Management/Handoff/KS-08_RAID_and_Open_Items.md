@@ -971,6 +971,28 @@ Start state: Phases 0 to 6 passed. No Phase 6 item is open. Brain version `CO-20
 
 Risks: Bases is new and may not filter every field. A Source with two Change Orders needs a list field.
 
+#### Test results (2026-11-15)
+
+Sources for the test: SRC-20261115-001 (Aident, "Obsidian Is Optional", Wall) and SRC-20261115-002 (Okhlopkov, "Obsidian Second Brain with Claude Code"). Justin: "find a source related to second brains, obsidian, or Claude"; "Do both". Both found by web search, `submission-context` in Justin's words.
+
+| Test | Result |
+|---|---|
+| D1 Submit | PASS. Two Sources made and routed `full-review`. Duplicate and access checks ran. |
+| D2 Status | PASS. Each Source moved `new`, `routed`, `briefed`, `assessed`, `change-proposed`, `done`. The board followed each state. |
+| D3 Outputs | PASS. Justin: "link works". A Source row opens its Brief, Assessment, and Change Order. |
+| D4 Review | PASS. Each open Change Order showed under "Waiting for Justin" and left after Justin's decision. |
+
+Workflow results: 2 Briefs (quote checks 5 of 5 and 3 of 3), 2 Assessments (both `advance`), Change Orders CO-20261115-004 to -007, Brain version `CO-20261115-007`, Curator reports KHR-20261115-001 to -007.
+
+Findings from the test:
+- The Orchestrator typed some `created` times by hand, ahead of the clock. Corrected. Rule for the Orchestrator: take every time from the system clock.
+- The Curator review after every apply produced a loop of small wording fixes (six reviews, three follow-up Change Orders). Rulebook v0.7 sets a threshold (KS-D-48).
+- Bases rewrote the `.base` files on first open (filters without quotes). Committed as Obsidian saved them.
+- A Brief from WebFetch has `partial` access and `unavailable` locators. The Brain texts mark such evidence "not checked against the page".
+- A page can contain text aimed at AI agents (Aident SETUP.md). The Reporter did not follow it.
+
+Phase 7 exit test: PASS, subject to Justin's review. Open: the MOC-002 "partly independent" wording (KHR-20261115-007 H1, Change Order in progress). Not in v1: the web application (after everything is complete and running), agent profiles, scheduled runs (Phase 8).
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -1015,3 +1037,4 @@ Risks: Bases is new and may not filter every field. A Source with two Change Ord
 | 2026-11-15 | 0.38 | New §8.13: Phase 6 follow-up. G1, G3, the companion-file quote check, the Rulebook edit, `routed` to `skipped`, and the Reporter word-count step closed (KS-D-45). |
 | 2026-11-15 | 0.39 | §8.13: all open items closed (KS-D-46). Three Change Orders applied, Brain version `CO-20261115-003`. |
 | 2026-11-15 | 0.40 | New §8.14: Phase 7 plan approved (KS-D-47). KS-C-15 resolved for v1. |
+| 2026-11-15 | 0.41 | §8.14: Phase 7 test results D1 to D4 (all PASS, subject to Justin's review). Findings listed (KS-D-48). |

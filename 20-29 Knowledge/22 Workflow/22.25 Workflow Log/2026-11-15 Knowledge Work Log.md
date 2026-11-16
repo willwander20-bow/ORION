@@ -70,6 +70,9 @@
 | 18:58 | orchestrator | Version check passed. Change Order applied: X1 to X6 on CON-004, CON-20261115-001, MOC-002. git diff matches the Change Order. Frontmatter Check 0, Link Check 0 | [[CO-20261115-007 Fix source counts and mark unchecked evidence]] | Brain version `CO-20261115-006` to `CO-20261115-007` |
 | 18:58 | orchestrator | Orchestrator Rulebook v0.7: §6 step 10 threshold for the Curator review (made a record; changed a Claim's text, status, confidence or evidence strength; edited 3 or more records). KS-D-48 recorded here only: the Handoff folder is not yet updated | `20.04 Orchestrator Rulebook` | OK |
 | 18:59 | curator | Impact review of CO-20261115-007 (3 records, so inside the new threshold). 1 finding: H1, MOC-002 "partly independent" (wording from CO-004 X12) conflicts with "independence not shown". Confirmed in the file. No file changed by the agent. Saved `validated` | [[KHR-20261115-007 Impact review of CO-20261115-007]] | PASS |
+| 19:01 | justin | "1 yes 2 yes 3 link works": make a Change Order for KHR-007 H1; update the Handoff folder; Knowledge HQ D3 confirmed (the Source row links open). Also: "increase the threshold we just set" | `22.27 Knowledge HQ`, `20.04 Orchestrator Rulebook` | D3 PASS |
+| 19:01 | orchestrator | Rulebook v0.7 threshold raised from 3 to 5 edited Brain records (Justin: "increase the threshold"; the Orchestrator chose 5; Justin can change it). Managing Editor started on KHR-20261115-007 H1 | `20.04 Orchestrator Rulebook` | OK |
+| 19:02 | orchestrator | Handoff updated outside the area on Justin's instruction ("2 yes"): KS-07 new KS-D-48 and change-log row; KS-08 §8.14 test results D1 to D4 and findings, and change-log row 0.41 | KS-07, KS-08 (Handoff folder) | OK |
 
 ## Decisions
 
@@ -89,7 +92,7 @@
 
 ## Open
 
-- KHR-20261115-007 H1 (MOC-002 "partly independent" wording): Change Order needs Justin's go-ahead. Handoff folder (KS-07 KS-D-48, KS-08 §8.14 test results) not updated: needs Justin's approval.
+- KHR-20261115-007 H1 (MOC-002 "partly independent" wording): Change Order in progress (Justin: "1 yes").
 
 - Phase 7: Knowledge HQ v1 views render (Justin). Tests D1 to D4 need a real new source (D1) and run next.
 
