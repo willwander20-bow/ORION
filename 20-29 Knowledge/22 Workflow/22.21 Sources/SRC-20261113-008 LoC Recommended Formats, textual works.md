@@ -4,7 +4,7 @@ type: source
 title: "Recommended Formats Statement - Textual Works"
 status: done
 created: 2026-11-13T13:35
-updated: 2026-11-13T14:55
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.9"
 url: https://www.loc.gov/preservation/resources/rfs/text.html
@@ -20,6 +20,9 @@ processing-level: full-review
 submission-context: 'Phase 5 test O1 (KS-D-39). The Orchestrator proposed the source, and Justin approved it ("Approve all three"). Reason in the plan: the MOC asks for a source with reasons on format durability, and the Brain has none.'
 duplicate-of:
 brief: "[[BRF-20261113-006 LoC Recommended Formats, textual works]]"
+assessment: "[[KAS-20261113-006 LoC Recommended Formats, textual works]]"
+change-orders:
+  - "[[CO-20261113-007 LoC Recommended Formats, textual works]]"
 ---
 
 # Notes

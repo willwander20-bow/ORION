@@ -32,6 +32,10 @@
 | 17:56 | orchestrator | Times corrected on SRC-009 to 012 (`updated`), BRF-007 to 010, KAS-007 to 009, CO-008 (`created`), KHR-003. Limits from git commit times: records in git by 17:44, CO-008 by 17:55, KHR-003 by 18:01. Order kept. Approximate | 13 records (22 Workflow) | OK |
 | 17:56 | orchestrator | Review period set to 12 months (KS-G-29, Justin: "12 months"). Knowledge Curator draft v0.3; area `CLAUDE.md` names Curator v0.3 and Managing Editor v0.4 | `.claudegentsknowledge-curator.md`, `CLAUDE.md` | OK |
 | 17:58 | orchestrator | Handoff updated outside the area on Justin's instruction ("Yes, update Handoff"): KS-07 new KS-D-46 and change-log row; KS-08 §8.13 open items closed and change-log row | KS-07, KS-08 (Handoff folder) | OK |
+| 18:08 | orchestrator | Phase 7 plan approved (Justin: "Approve plan"; dashboard first, web app later). Plan recorded in KS-08 §8.14 and KS-07 KS-D-47 (Handoff folder, as approved). Vault search: ID `22.27` and KS-D-47 unused. Folder `22.27 Knowledge HQ` made | KS-07, KS-08, `22.27 Knowledge HQ` | OK |
+| 18:08 | orchestrator | Schema v0.11: folder `22.27` (§2.4); Source fields `assessment` and `change-orders` (§5.4). Templates set to `schema-version` 0.11; `TPL Source.md` has the two fields. Rulebook v0.6: §4.2 and §4.3 set the fields | `20.04 Knowledge Reference`, `20.07 Knowledge Templates` | OK |
+| 18:08 | orchestrator | Backfill of `assessment` and `change-orders` on the 12 Sources (from the `source` field of each Assessment and Change Order; withdrawn Change Orders included). `updated` set. Frontmatter Check 0 problems | SRC-20261113-001 to 012 | OK |
+| 18:08 | orchestrator | Knowledge HQ v1 made: four `.base` views (Source board, Change Orders, Briefs and Assessments, Brain and health) and the note `Knowledge HQ.md`. Not yet opened in Obsidian. Tests D1 to D4 not run | `22.27 Knowledge HQ` | OK, untested |
 
 ## Decisions
 
@@ -44,8 +48,11 @@
 - Justin: "Change Order B"; "Approve" (CO-20261115-003, row X1).
 - Justin: "Yes, decide now": add both MOC-001 rows to Research Questions; review period 12 months; correct BRF-006; correct the 2026-11-13 times.
 - Justin: "Yes, update Handoff" (KS-07, KS-08).
+- Justin: "Yes, plan Phase 7"; "Lets start with the Dashboard and we can create the web app once everything is complete and running"; "Approve plan" (ID 22.27, two Source fields, Handoff record; KS-D-47).
 
 ## Open
+
+- Phase 7: Knowledge HQ v1 is built but not opened in Obsidian. Justin opens `Knowledge HQ.md` and checks the views. Tests D1 to D4 need a real new source (D1) and run next.
 
 - KHR-20261115-001: H1, H2, H3 resolved (CO-20261115-002, BRF-006 corrected). H4 (optional, "confidence low" in the MOC-001 claim line) not approved.
 

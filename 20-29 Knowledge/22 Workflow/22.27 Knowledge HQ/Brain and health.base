@@ -1,0 +1,57 @@
+filters:
+  or:
+    - file.inFolder("20-29 Knowledge/21 Brain")
+    - file.inFolder("20-29 Knowledge/22 Workflow/22.26 Knowledge Health Reports")
+properties:
+  file.name:
+    displayName: Record
+  type:
+    displayName: Type
+  status:
+    displayName: Status
+  confidence:
+    displayName: Confidence
+  evidence-strength:
+    displayName: Evidence
+  last-reviewed:
+    displayName: Last reviewed
+  change-orders:
+    displayName: Change Orders
+  mode:
+    displayName: Mode
+  brain-version:
+    displayName: Brain version
+views:
+  - type: table
+    name: Brain records
+    filters:
+      or:
+        - 'type == "brain-claim"'
+        - 'type == "concept"'
+        - 'type == "moc"'
+    order:
+      - file.name
+      - type
+      - status
+      - confidence
+      - evidence-strength
+      - last-reviewed
+      - change-orders
+    sort:
+      - property: last-reviewed
+        direction: ASC
+  - type: table
+    name: Health reports
+    filters:
+      and:
+        - 'type == "knowledge-health-report"'
+    order:
+      - file.name
+      - mode
+      - status
+      - brain-version
+      - trigger
+      - created
+    sort:
+      - property: created
+        direction: DESC

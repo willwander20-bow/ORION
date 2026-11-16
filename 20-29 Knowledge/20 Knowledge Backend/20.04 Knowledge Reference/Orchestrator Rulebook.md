@@ -10,7 +10,7 @@ updated: 2026-11-15
 
 This note gives the rules that the Orchestrator follows for each source. Justin controls this note (KS-03 §6.2, KS-D-39). The Orchestrator does not change it without Justin's approval.
 
-Status: v0.5. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
+Status: v0.6. Justin approved the rules marked (KS-D-41). They were new rules in draft v0.1. Justin approved the v0.5 and v0.6 edits on 2026-11-15 (section 8). All other rules come from the documents named in the rule.
 
 Other sources of rules: area `CLAUDE.md` §5 and §7, the Schema, and the agent files. Where this note and those documents differ, those documents govern. Record the difference in the work log and tell Justin.
 
@@ -106,7 +106,7 @@ Pass: set the Brief to `validated` and the Source to `briefed`.
 5. `title` is copied from the Brief.
 6. `git status` shows no file changed by the Editor.
 
-Pass: set the Assessment to `validated` and the Source to `assessed`.
+Pass: set the Assessment to `validated` and the Source to `assessed`. Set `assessment` on the Source (Schema §5.4, KS-D-47).
 
 ### 4.3 Change Order
 
@@ -117,7 +117,7 @@ Pass: set the Assessment to `validated` and the Source to `assessed`.
 5. Open Change Orders on the same records: one Managing Editor run at a time. Save each Change Order before the next run.
 6. `git status` shows no file changed by the Managing Editor. `21 Brain` is not changed.
 
-Pass: save the Change Order with status `open`, set the Source to `change-proposed`, and present it to Justin.
+Pass: save the Change Order with status `open`, set the Source to `change-proposed`, add the Change Order to `change-orders` on the Source (Schema §5.4, KS-D-47), and present it to Justin.
 
 ### 4.4 Knowledge Health Report
 
@@ -181,3 +181,4 @@ Log each state change and each decision in `22.25 Workflow Log\YYYY-MM-DD Knowle
 | 2026-11-13 | 0.3 | Justin approved the new rules (KS-D-41). Status `approved`. |
 | 2026-11-13 | 0.4 | New §4.0: frontmatter rule and `Frontmatter Check.ps1` (F4). `Quote Check.ps1` v0.2: inline tags removed with no space (F3). KS-D-42. |
 | 2026-11-15 | 0.5 | Justin approved six edits. §2: `routed` to `skipped`. §4.0: `22.26` in the default paths (`Frontmatter Check.ps1` v0.2). §4.1: `-File` for companion files (`Quote Check.ps1` v0.3). New §4.4: Knowledge Health Report. §6 step 10: `Link Check.ps1` and Curator impact review after an apply. Schema version "0.10". |
+| 2026-11-15 | 0.6 | Phase 7 (KS-D-47): §4.2 sets `assessment` on the Source. §4.3 adds the Change Order to `change-orders` on the Source. |

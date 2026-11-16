@@ -4,7 +4,7 @@ type: source
 title: "Build a Self Improving Claude Knowledge Base"
 status: done
 created: 2026-11-13T17:35
-updated: 2026-11-13T17:36
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.10"
 url:
@@ -20,6 +20,9 @@ processing-level: full-review
 submission-context: 'Justin, 2026-11-13: "As a test - review the contents of the clippings folder. run these through the full process." Justin saved this clipping in the vault folder Clippings.'
 duplicate-of:
 brief: "[[BRF-20261113-010 Self-improving Claude knowledge base, Lipsky]]"
+assessment: "[[KAS-20261113-009 Self-improving Claude knowledge base, Lipsky]]"
+change-orders:
+  - "[[CO-20261113-008 Self-improving Claude knowledge base, Lipsky]]"
 ---
 
 # Notes

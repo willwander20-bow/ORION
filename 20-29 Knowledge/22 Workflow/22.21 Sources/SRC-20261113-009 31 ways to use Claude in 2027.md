@@ -4,7 +4,7 @@ type: source
 title: "31 Life-Changing Ways to Use Claude in 2027"
 status: skipped
 created: 2026-11-13T17:35
-updated: 2026-11-13T17:36
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.10"
 url: https://www.youtube.com/watch?v=KDyPHt4lW60
@@ -20,6 +20,8 @@ processing-level: full-review
 submission-context: 'Justin, 2026-11-13: "As a test - review the contents of the clippings folder. run these through the full process." Justin saved this clipping in the vault folder Clippings.'
 duplicate-of:
 brief:
+assessment:
+change-orders: []
 ---
 
 # Notes

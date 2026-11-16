@@ -4,7 +4,7 @@ type: source
 title: Write plain text files
 status: done
 created: 2026-11-13T11:00
-updated: 2026-11-13T12:05
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.6"
 url: https://sive.rs/plaintext
@@ -20,6 +20,9 @@ processing-level: full-review
 submission-context: "Phase 2 test T2, approved by Justin (KS-D-30)."
 duplicate-of:
 brief: "[[BRF-20261113-003 Write plain text files]]"
+assessment: "[[KAS-20261113-002 Write plain text files]]"
+change-orders:
+  - "[[CO-20261113-002 Write plain text files]]"
 ---
 
 # Notes

@@ -2,15 +2,15 @@
 title: Knowledge System Schema
 type: reference
 status: approved
-schema-version: "0.10"
-updated: 2026-11-13
+schema-version: "0.11"
+updated: 2026-11-15
 ---
 
 # Knowledge System Schema
 
 This note is the one source of truth for names, IDs, and fields in the Knowledge System (KV-13). Templates, agents, and Justin use the same rules.
 
-Status: v0.10, Phase 6. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
+Status: v0.11, Phase 7. Justin approved sections 1 to 4 (KS-D-21) and section 5 (KS-D-27). New records use the current `schema-version` in the frontmatter of this note. Phase 1 adds the fields for each record type in section 5.
 
 ## 1. Two kinds of ID
 
@@ -70,6 +70,7 @@ Reserved prefix: `RQ` for a Research Question, if one becomes its own note later
 | Brain Claim, Concept, MOC | `21 Brain`, flat (KS-D-10) |
 | `Research Questions.md` (one list note, no record ID) | `21 Brain` |
 | Routing rulebook | `20.04 Knowledge Reference` |
+| Knowledge HQ: the dashboard note and its `.base` views (no record ID, KS-D-47) | `22.27 Knowledge HQ` |
 
 ### 2.5 Content that is not a note (KS-D-25)
 
@@ -228,6 +229,8 @@ Below the core block.
 | `submission-context` | Text | Justin's reason for the save, in his words. Keep it separate from the source content. |
 | `duplicate-of` | Link | Only if the source is a duplicate. |
 | `brief` | Link | The Reference Brief. |
+| `assessment` | Link | The Knowledge Assessment. The Orchestrator sets it when the Assessment is `validated` (KS-D-47). Empty before. |
+| `change-orders` | List of links | Each Change Order that came from this Source. The Orchestrator adds a link when it saves the Change Order (KS-D-47). Empty if none. A Change Order that came from a health report has no Source. |
 
 The Source has no `content_hash` field (KS-D-27). Evidence rows in the Brief (§8) record directness and limits only. Brief §11 records source quality.
 
@@ -387,3 +390,4 @@ Rules:
 | 2026-11-13 | 0.8 | §2.5: `Research Questions.md` needs no Change Order; the Orchestrator adds rows (KS-D-33). |
 | 2026-11-13 | 0.9 | §5.8: change types for a MOC edit (KS-D-38). |
 | 2026-11-13 | 0.10 | Phase 6 (KS-D-43): `KHR` prefix (§2.2), folder `22.26` (§2.4), §5.12 Knowledge Health Report fields. §5.11: MOC rule kept. |
+| 2026-11-15 | 0.11 | Phase 7 (KS-D-47): folder `22.27 Knowledge HQ` (§2.4). §5.4: Source fields `assessment` and `change-orders`. |

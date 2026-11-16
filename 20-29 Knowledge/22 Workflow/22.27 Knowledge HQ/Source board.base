@@ -1,0 +1,70 @@
+filters:
+  and:
+    - file.inFolder("20-29 Knowledge/22 Workflow/22.21 Sources")
+    - '!file.name.contains("(text)")'
+properties:
+  file.name:
+    displayName: Source
+  status:
+    displayName: Status
+  processing-level:
+    displayName: Level
+  source-type:
+    displayName: Type
+  access-status:
+    displayName: Access
+  brief:
+    displayName: Brief
+  assessment:
+    displayName: Assessment
+  change-orders:
+    displayName: Change Orders
+views:
+  - type: table
+    name: In progress
+    filters:
+      and:
+        - 'status != "done"'
+        - 'status != "skipped"'
+        - 'status != "archived"'
+        - 'status != "failed"'
+    order:
+      - file.name
+      - status
+      - processing-level
+      - source-type
+      - brief
+      - assessment
+      - change-orders
+      - updated
+    sort:
+      - property: updated
+        direction: DESC
+  - type: table
+    name: Needs review or failed
+    filters:
+      or:
+        - 'status == "needs-review"'
+        - 'status == "failed"'
+    order:
+      - file.name
+      - status
+      - access-status
+      - updated
+    sort:
+      - property: updated
+        direction: DESC
+  - type: table
+    name: All sources
+    order:
+      - file.name
+      - status
+      - processing-level
+      - source-type
+      - captured
+      - brief
+      - assessment
+      - change-orders
+    sort:
+      - property: captured
+        direction: DESC

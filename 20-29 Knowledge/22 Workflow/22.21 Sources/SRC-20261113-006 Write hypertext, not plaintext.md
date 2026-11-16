@@ -4,7 +4,7 @@ type: source
 title: Write hypertext, not plaintext
 status: done
 created: 2026-11-13T11:23
-updated: 2026-11-13T12:18
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.8"
 url: https://aartaka.me/hypertext
@@ -20,6 +20,10 @@ processing-level: full-review
 submission-context: "Phase 3 test E3 (challenges), KS-08 §8.9."
 duplicate-of:
 brief: "[[BRF-20261113-005 Write hypertext, not plaintext]]"
+assessment: "[[KAS-20261113-005 Write hypertext, not plaintext]]"
+change-orders:
+  - "[[CO-20261113-004 Write hypertext, not plaintext]]"
+  - "[[CO-20261113-006 Write hypertext, not plaintext]]"
 ---
 
 # Notes

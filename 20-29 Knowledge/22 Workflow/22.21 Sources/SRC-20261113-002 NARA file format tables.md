@@ -4,7 +4,7 @@ type: source
 title: "Appendix A: Tables of File Formats"
 status: done
 created: 2026-11-13T10:49
-updated: 2026-11-13T12:13
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.6"
 url: https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html
@@ -20,6 +20,10 @@ processing-level: full-review
 submission-context: "Phase 2 test T1, approved by Justin (KS-D-30)."
 duplicate-of:
 brief: "[[BRF-20261113-002 NARA file format tables]]"
+assessment: "[[KAS-20261113-003 NARA file format tables]]"
+change-orders:
+  - "[[CO-20261113-003 NARA file format tables]]"
+  - "[[CO-20261113-005 NARA file format tables]]"
 ---
 
 # Notes

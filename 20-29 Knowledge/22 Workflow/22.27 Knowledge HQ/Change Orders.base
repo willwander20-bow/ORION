@@ -1,0 +1,61 @@
+filters:
+  and:
+    - file.inFolder("20-29 Knowledge/22 Workflow/22.24 Change Orders")
+properties:
+  file.name:
+    displayName: Change Order
+  status:
+    displayName: Status
+  priority:
+    displayName: Priority
+  change-types:
+    displayName: Change types
+  affected:
+    displayName: Affected records
+  brain-version:
+    displayName: Brain version
+  decision:
+    displayName: Decision
+views:
+  - type: table
+    name: Waiting for Justin
+    filters:
+      or:
+        - 'status == "open"'
+        - 'status == "needs-review"'
+    order:
+      - file.name
+      - priority
+      - change-types
+      - affected
+      - brain-version
+      - created
+    sort:
+      - property: created
+        direction: ASC
+  - type: table
+    name: Decided, not applied
+    filters:
+      and:
+        - 'status == "decided"'
+    order:
+      - file.name
+      - decision
+      - decided
+      - affected
+      - brain-version
+    sort:
+      - property: decided
+        direction: DESC
+  - type: table
+    name: All Change Orders
+    order:
+      - file.name
+      - status
+      - decision
+      - affected
+      - brain-version
+      - applied
+    sort:
+      - property: created
+        direction: DESC

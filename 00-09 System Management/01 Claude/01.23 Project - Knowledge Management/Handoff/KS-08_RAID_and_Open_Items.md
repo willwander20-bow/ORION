@@ -934,6 +934,43 @@ Justin: "Fix the scripts first"; "Approve all"; "Update the Handoff folder then 
 
 Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 applies. The plan needs Justin's approval.
 
+### 8.14 Phase 7: Knowledge HQ (plan approved 2026-11-15)
+
+Status: APPROVED, 2026-11-15 (KS-D-47). Justin: "Lets start with the Dashboard and we can create the web app once everything is complete and running"; "Approve plan".
+
+KS-06 Phase 7: dashboard, Mailroom label, agent profiles, recent activity, pending review queue, search, knowledge health. Exit test: "the user can submit a source, see its status, open its outputs, and review proposed changes."
+
+Start state: Phases 0 to 6 passed. No Phase 6 item is open. Brain version `CO-20261115-003`. Core Bases is on. Dataview is not installed. KS-C-15 (Dashboard note against web application) is decided for v1: a dashboard in Obsidian.
+
+#### Decisions (KS-D-47)
+
+1. Knowledge HQ v1 is an Obsidian dashboard on core Bases. It is read-only. No plugin and no `.obsidian` change. The web application follows when everything is complete and running. KS-C-15 RESOLVED for v1.
+2. New ID `22.27 Knowledge HQ` in `22 Workflow`. Vault search: no use of `22.27`.
+3. Two optional Source fields, `assessment` and `change-order` (Schema v0.11). The Orchestrator sets them at each stage.
+4. Out of scope for v1: the web application, agent profiles and the "office" look, scheduled or event-triggered runs (Phase 8), new capture channels (Intake System, X-D-04).
+
+#### Steps
+
+| Step | Work |
+|---|---|
+| 1 | Folder `22.27 Knowledge HQ`. |
+| 2 | Schema v0.11 (two Source fields), `TPL Source.md`, one Rulebook line. Backfill the 12 Sources. |
+| 3 | Bases views: Source board, Review queue, Outputs, Health, Research Questions. |
+| 4 | Note `Knowledge HQ.md` with the views and a "Submit a source" section. Submission stays by hand (KS-D-06). |
+| 5 | Tests D1 to D4. |
+| 6 | Log, commit, push. Exit test to Justin. |
+
+#### Tests
+
+| Test | Pass if |
+|---|---|
+| D1 Submit | Justin gives a real new source. The Orchestrator makes the Source. It shows on the Source board as `new`. |
+| D2 Status | The Source moves through the workflow. The board shows each state with no manual edit of the dashboard. |
+| D3 Outputs | From the Source row, Justin opens its Brief, Assessment, and Change Order. |
+| D4 Review | A proposed Change Order shows in the review queue. After Justin decides, it leaves the queue. |
+
+Risks: Bases is new and may not filter every field. A Source with two Change Orders needs a list field.
+
 ## 9. Change log
 
 | Date | Version | Change |
@@ -977,3 +1014,4 @@ Next: Phase 7 (KS-06 §3). Area `CLAUDE.md` rule 11 applies. The plan needs Just
 | 2026-11-13 | 0.37 | §8.12: Clippings test results and open items. |
 | 2026-11-15 | 0.38 | New §8.13: Phase 6 follow-up. G1, G3, the companion-file quote check, the Rulebook edit, `routed` to `skipped`, and the Reporter word-count step closed (KS-D-45). |
 | 2026-11-15 | 0.39 | §8.13: all open items closed (KS-D-46). Three Change Orders applied, Brain version `CO-20261115-003`. |
+| 2026-11-15 | 0.40 | New §8.14: Phase 7 plan approved (KS-D-47). KS-C-15 resolved for v1. |

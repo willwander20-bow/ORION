@@ -4,7 +4,7 @@ type: source
 title: O2 test, page does not exist
 status: failed
 created: 2026-11-13T13:00
-updated: 2026-11-13T13:00
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.9"
 url: https://www.loc.gov/preservation/resources/rfs/textual-durability-o2-test.html
@@ -20,6 +20,8 @@ processing-level: full-review
 submission-context: Phase 5 test O2 (KS-D-39). A URL that does not exist on a real site.
 duplicate-of:
 brief:
+assessment:
+change-orders: []
 ---
 
 # Notes

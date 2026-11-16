@@ -4,7 +4,7 @@ type: source
 title: What is a second brain app
 status: assessed
 created: 2026-11-13T11:09
-updated: 2026-11-13T11:23
+updated: 2026-11-15T18:07
 created-by: orchestrator
 schema-version: "0.6"
 url: https://nemos-landing.pages.dev/faq/what-is-a-second-brain-app
@@ -20,6 +20,8 @@ processing-level: full-review
 submission-context: "Phase 2 test T3, approved by Justin (KS-D-30)."
 duplicate-of:
 brief: "[[BRF-20261113-004 What is a second brain app]]"
+assessment: "[[KAS-20261113-004 What is a second brain app]]"
+change-orders: []
 ---
 
 # Notes

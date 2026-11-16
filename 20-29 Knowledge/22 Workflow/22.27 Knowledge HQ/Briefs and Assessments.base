@@ -1,0 +1,50 @@
+filters:
+  or:
+    - file.inFolder("20-29 Knowledge/22 Workflow/22.22 Reference Briefs")
+    - file.inFolder("20-29 Knowledge/22 Workflow/22.23 Knowledge Assessments")
+properties:
+  file.name:
+    displayName: Output
+  type:
+    displayName: Type
+  status:
+    displayName: Status
+  source:
+    displayName: Source
+  brief:
+    displayName: Brief
+  recommended-action:
+    displayName: Action
+  source-quality:
+    displayName: Source quality
+views:
+  - type: table
+    name: Reference Briefs
+    filters:
+      and:
+        - 'type == "reference-brief"'
+    order:
+      - file.name
+      - status
+      - source
+      - source-quality
+      - extraction-completeness
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Knowledge Assessments
+    filters:
+      and:
+        - 'type == "knowledge-assessment"'
+    order:
+      - file.name
+      - status
+      - recommended-action
+      - brief
+      - source
+      - brain-version
+    sort:
+      - property: created
+        direction: DESC
